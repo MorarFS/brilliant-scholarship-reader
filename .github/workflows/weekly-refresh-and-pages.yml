@@ -1,0 +1,75 @@
+name: Refresh papers and publish Pages
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 6 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-build-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out the tracker
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh open scholarly metadata
+        if: github.event_name != 'push'
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          CROSSREF_MAILTO: ${{ vars.CROSSREF_MAILTO }}
+        run: python scripts/fetch_papers.py
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Install and verify
+        run: |
+          npm ci
+          npm test
+
+      - name: Commit refreshed data
+        if: github.event_name != 'push'
+        run: |
+          if git diff --quiet -- public/data; then
+            echo "No metadata changes to commit."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data/papers.json public/data/state.json
+          git commit -m "data: weekly paper refresh [skip ci]"
+          git push
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
