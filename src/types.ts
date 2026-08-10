@@ -4,6 +4,7 @@ export type Paper = {
   authors: string[];
   publicationDate: string;
   journal: string;
+  feed: "digital-humanities" | "ai-history";
   issn: string | null;
   quartile: string;
   sjrYear: number | null;
@@ -19,9 +20,25 @@ export type Paper = {
     score: number;
     reason: string;
     signals: string[];
-    classifier: "rules-v1" | "llm";
+    methodSignals: string[];
+    humanitiesSignals: string[];
+    qualifies: boolean;
+    classifier: "rules-v2" | "llm";
   };
   metadataSources: string[];
+};
+
+export type MonitoredJournal = {
+  title: string;
+  issns: string[];
+  quartile: string;
+  sjrYear: number | null;
+  focus: string;
+  feed: "digital-humanities" | "ai-history";
+  feedLabel: string;
+  journalUrl: string | null;
+  qualificationNote: string;
+  resultCount: number;
 };
 
 export type TrackerData = {
@@ -31,5 +48,7 @@ export type TrackerData = {
   journalCount: number;
   sjrYear: number | null;
   sourceCounts: Record<string, number>;
+  feedCounts: Record<"digital-humanities" | "ai-history", number>;
+  journals: MonitoredJournal[];
   papers: Paper[];
 };

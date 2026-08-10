@@ -19,12 +19,14 @@ from scripts.fetch_papers import (
 class CollectorTests(unittest.TestCase):
     def setUp(self):
         self.journal = Journal(
-            title="Example Historical Journal",
+            title="Example Digital Humanities Journal",
             issns=("1234-567X",),
             quartile="Q1",
             year=2024,
-            focus="history",
+            focus="digital humanities",
+            feed="digital-humanities",
             journal_url="https://example.org/journal",
+            qualification_note="Pinned test venue",
         )
 
     def test_reconstructs_openalex_abstract_in_order(self):
@@ -51,17 +53,76 @@ class CollectorTests(unittest.TestCase):
         }
         result = classify(paper, self.journal)
         self.assertGreaterEqual(result["score"], 75)
-        self.assertEqual(result["classifier"], "rules-v1")
-        self.assertIn("text-as-data method", result["signals"])
-        self.assertIn("Q1 history venue", result["signals"])
+        self.assertTrue(result["qualifies"])
+        self.assertEqual(result["classifier"], "rules-v2")
+        self.assertIn("NLP or text-as-data method", result["methodSignals"])
+        self.assertIn("historical research or sources", result["humanitiesSignals"])
+        self.assertIn("Digital & Computational Humanities venue", result["signals"])
+
+    def test_generic_history_does_not_qualify_without_computational_method(self):
+        result = classify(
+            {"title": "Trade and diplomacy in nineteenth-century Europe", "abstract": "A study of archival sources.", "topics": ["History"]},
+            self.journal,
+        )
+        self.assertFalse(result["qualifies"])
+        self.assertEqual(result["methodSignals"], [])
+
+    def test_generic_ai_does_not_qualify_without_humanities_connection(self):
+        result = classify(
+            {"title": "A large language model benchmark", "abstract": "We improve transformer efficiency on code tasks.", "topics": ["Artificial intelligence"]},
+            self.journal,
+        )
+        self.assertFalse(result["qualifies"])
+        self.assertEqual(result["humanitiesSignals"], [])
+
+    def test_generic_digital_humanities_does_not_replace_historical_evidence(self):
+        result = classify(
+            {"title": "Inclusive digital humanities infrastructures", "abstract": "A digital humanities platform for current classroom collaboration.", "topics": ["Digital humanities"]},
+            self.journal,
+        )
+        self.assertFalse(result["qualifies"])
+        self.assertEqual(result["humanitiesSignals"], [])
+
+    def test_llm_applied_to_manuscripts_qualifies_for_secondary_feed(self):
+        secondary = Journal(
+            title="Example History Journal",
+            issns=("9999-9999",),
+            quartile="Q1",
+            year=2024,
+            focus="history monitored for AI",
+            feed="ai-history",
+            journal_url="https://example.org/history",
+            qualification_note="Pinned Q1 history venue",
+        )
+        result = classify(
+            {"title": "Large language models for medieval manuscripts", "abstract": "NLP extracts people from archival documents.", "topics": []},
+            secondary,
+        )
+        self.assertTrue(result["qualifies"])
+        self.assertIn("AI & LLMs in History feed", result["reason"])
 
     def test_non_research_headings_fall_below_inclusion_threshold(self):
         result = classify(
             {"title": "From the Editor’s Desk", "abstract": "A history editorial.", "topics": ["History"]},
             self.journal,
         )
-        self.assertLess(result["score"], 35)
+        self.assertEqual(result["score"], 0)
+        self.assertFalse(result["qualifies"])
         self.assertIn("non-research item signal", result["signals"])
+
+    def test_bibliographic_book_review_title_is_excluded(self):
+        result = classify(
+            {"title": "Ada Historian. Algorithms and the Medieval Archive", "abstract": "This book considers digital humanities methods for manuscripts.", "topics": []},
+            self.journal,
+        )
+        self.assertFalse(result["qualifies"])
+        self.assertIn("non-research item signal", result["signals"])
+
+        initials_result = classify(
+            {"title": "Eric C. Nystrom and R. A. R. Edwards. Ordinary Lives", "abstract": "Digital humanities approaches to census history.", "topics": []},
+            self.journal,
+        )
+        self.assertFalse(initials_result["qualifies"])
 
     def test_crossref_complements_missing_openalex_fields(self):
         primary = {"abstract": None, "authors": [], "topics": [], "metadataSources": ["OpenAlex"]}
@@ -98,12 +159,14 @@ class CollectorTests(unittest.TestCase):
             path = Path(directory) / "journals.csv"
             with path.open("w", newline="", encoding="utf-8") as handle:
                 writer = csv.writer(handle)
-                writer.writerow(["Title", "Issn", "SJR Best Quartile", "Year"])
-                writer.writerow(["Keep Me", "1234-567X", "Q1", "2024"])
+                writer.writerow(["Title", "Issn", "SJR Best Quartile", "Year", "Feed", "Qualification note"])
+                writer.writerow(["Keep Me", "1234-567X", "Q1", "2024", "ai-history", "Pinned test list"])
                 writer.writerow(["Not Q1", "2222-3333", "Q2", "2024"])
                 writer.writerow(["No ISSN", "", "Q1", "2024"])
             journals = read_journals(path)
         self.assertEqual([journal.title for journal in journals], ["Keep Me"])
+        self.assertEqual(journals[0].feed, "ai-history")
+        self.assertEqual(journals[0].qualification_note, "Pinned test list")
 
 
 if __name__ == "__main__":

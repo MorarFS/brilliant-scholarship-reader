@@ -37,29 +37,40 @@ class Journal:
     quartile: str
     year: int | None
     focus: str
+    feed: str
     journal_url: str | None
+    qualification_note: str
 
     @property
     def primary_issn(self) -> str:
         return self.issns[0]
 
 
-RULES: tuple[tuple[str, int, str], ...] = (
-    (r"\bdigital humanit(?:y|ies)\b", 22, "digital humanities"),
-    (r"\bcomputational (?:history|humanities|analysis)\b", 18, "computational method"),
-    (r"\b(?:text mining|topic model|named entity|natural language processing|corpus linguistics)\b", 14, "text-as-data method"),
-    (r"\b(?:historical gis|geographic information system|spatial history|digital mapping)\b", 14, "spatial history method"),
-    (r"\b(?:ocr|optical character recognition|handwritten text recognition)\b", 12, "document digitisation"),
-    (r"\b(?:digital archive|digital collection|digitization|digitisation|database|linked open data)\b", 10, "digital source or infrastructure"),
-    (r"\b(?:history|historical|historiography|historian|archival|archive)\b", 10, "explicit historical framing"),
-    (r"\b(?:medieval|ancient|early modern|modernity|colonial|postcolonial|imperial)\b", 8, "historical period or framing"),
-    (r"\b(?:eighteenth|nineteenth|twentieth|century|cold war|world war|interwar)\b", 8, "historical period"),
-    (r"\b(?:oral history|public history|memory studies|material culture|museum|heritage)\b", 10, "history field or practice"),
-    (r"\b(?:manuscript|epigraphy|palaeograph|paleograph|codicolog|primary sources?)\b", 9, "historical source method"),
+FEED_LABELS = {
+    "digital-humanities": "Digital & Computational Humanities",
+    "ai-history": "AI & LLMs in History",
+}
+
+METHOD_RULES: tuple[tuple[str, int, str], ...] = (
+    (r"\b(?:digital|computational) humanit(?:y|ies)\b", 38, "digital or computational humanities"),
+    (r"\b(?:artificial intelligence|machine learning|deep learning|neural networks?|large language models?|\bllms?\b|generative ai|transformers?)\b", 30, "AI / ML / LLM method"),
+    (r"\b(?:natural language processing|\bnlp\b|text mining|topic model(?:ling|ing)?|stylometr|named entity recognition|information extraction|word embeddings?|corpus analysis|distant reading)\b", 25, "NLP or text-as-data method"),
+    (r"\b(?:optical character recognition|handwritten text recognition|\bocr\b|\bhtr\b|document image analysis)\b", 24, "OCR / HTR method"),
+    (r"\b(?:computer vision|image processing|photogrammetr|lidar|remote sensing|3d reconstruction|virtual reality|augmented reality|digital twin)\b", 22, "visual or spatial computing method"),
+    (r"\b(?:geographic information systems?|\bgis\b|spatial analysis|network analysis|digital mapping)\b", 20, "spatial or network method"),
+    (r"\b(?:knowledge graphs?|linked open data|semantic web|ontology|digital archives?|digital collections?|digitization|digitisation|research database)\b", 18, "digital knowledge infrastructure"),
+)
+
+HUMANITIES_RULES: tuple[tuple[str, int, str], ...] = (
+    (r"\b(?:historical (?:sources?|documents?|records?|texts?|newspapers?|maps?|data|datasets?|corpora?|corpus|language|linguistics)|primary sources?|history|historiograph|historian)\b", 26, "historical research or sources"),
+    (r"\b(?:archives?|archival|manuscripts?|palaeograph|paleograph|codicolog|epigraph|papyr|inscriptions?)\b", 25, "archives or documentary evidence"),
+    (r"\b(?:cultural heritage|digital heritage|heritage science|heritage sites?|historic buildings?|museums?|collections?|cultural memory|memory studies|material culture)\b", 25, "heritage, memory, or collections"),
+    (r"\b(?:archaeolog|ancient|antiquity|medieval|early modern|colonial|postcolonial|imperial|eighteenth-century|nineteenth-century|twentieth-century)\b", 22, "historical period or archaeology"),
+    (r"\b(?:historical linguistics|philolog|diachronic language|language change|ancient languages?|historical corpora?)\b", 24, "historical language evidence"),
 )
 
 NEGATIVE_RULES: tuple[tuple[str, int, str], ...] = (
-    (r"^(?:review\s*:|(?:book review|review of|books received|corrigendum|erratum|correction(?: to)?|editor(?:’|')?s corner|from the editor(?:’|')?s desk|editorial|front matter|back matter|volume index|index to volume|notes on contributors)\b)", -100, "non-research item signal"),
+    (r"^(?:review\s*:|inside the history lab\b|(?:book review|review of|books received|corrigendum|erratum|correction(?: to)?|editor(?:’|')?s corner|from the editor(?:’|')?s desk|editorial|introduction|front matter|back matter|volume index|index to volume|notes on contributors)\b)", -100, "non-research item signal"),
 )
 
 
@@ -94,8 +105,10 @@ def read_journals(path: Path) -> list[Journal]:
                     issns=issns,
                     quartile="Q1",
                     year=int(raw_year) if raw_year.isdigit() else None,
-                    focus=row.get("focus") or "history",
+                    focus=row.get("focus") or "computational humanities",
+                    feed=row.get("feed") if row.get("feed") in FEED_LABELS else "digital-humanities",
                     journal_url=row.get("journalurl") or row.get("sourceurl") or None,
+                    qualification_note=row.get("qualificationnote") or row.get("provenancenote") or "Pinned Q1 starter venue; review annually",
                 )
             )
     if not journals:
@@ -146,32 +159,66 @@ def journal_for_issns(journals: list[Journal], issns: Iterable[str]) -> Journal 
 
 
 def classify(paper: dict[str, Any], journal: Journal) -> dict[str, Any]:
-    focus = journal.focus.lower()
-    base = 38 if "history" in focus else 32
-    signals = [f"Q1 {journal.focus} venue"]
-    score = base
+    base = 15 if journal.feed == "digital-humanities" else 10
+    venue_signal = f"{FEED_LABELS[journal.feed]} venue"
     title = paper.get("title") or ""
     abstract = paper.get("abstract") or ""
     topics = " ".join(paper.get("topics") or [])
     text = f"{title} {abstract} {topics}".lower()
+    evidence_text = text if journal.feed == "digital-humanities" else f"{title} {abstract[:1200]}".lower()
     title_lower = title.lower()
 
-    for pattern, weight, label in RULES:
-        if re.search(pattern, text, flags=re.I):
-            score += weight
-            signals.append(label)
-    for pattern, weight, label in NEGATIVE_RULES:
-        if re.search(pattern, title_lower, flags=re.I):
-            score += weight
-            signals.append(label)
+    method_matches: list[tuple[int, str]] = []
+    humanities_matches: list[tuple[int, str]] = []
+    for pattern, weight, label in METHOD_RULES:
+        if re.search(pattern, evidence_text, flags=re.I):
+            method_matches.append((weight, label))
+    for pattern, weight, label in HUMANITIES_RULES:
+        if re.search(pattern, evidence_text, flags=re.I):
+            humanities_matches.append((weight, label))
 
+    negative_signals: list[str] = []
+    for pattern, _weight, label in NEGATIVE_RULES:
+        if re.search(pattern, title_lower, flags=re.I):
+            negative_signals.append(label)
+    looks_like_book_review = bool(
+        re.search(r"\beds?\.\s", title, flags=re.I)
+        or re.search(r"\b(?:and|&)\s+(?:(?:[A-Z]\.)\s*){0,3}[A-Z][A-Za-zÀ-ÿ'’.-]+\.\s+", title)
+        or (
+            re.match(r"^(?:[A-Z][\w'’.-]+\s+){1,5}[A-Z][\w'’.-]+\.\s+", title)
+            and re.search(r"\b(?:book|monograph|volume)\b", abstract[:700], flags=re.I)
+        )
+    )
+    if looks_like_book_review and "non-research item signal" not in negative_signals:
+        negative_signals.append("non-research item signal")
+
+    method_signals = [label for _, label in method_matches]
+    humanities_signals = [label for _, label in humanities_matches]
+    qualifies = bool(method_signals and humanities_signals and not negative_signals)
+    score = base + min(40, sum(weight for weight, _ in method_matches)) + min(40, sum(weight for weight, _ in humanities_matches))
+    if negative_signals:
+        score = 0
     score = max(0, min(100, score))
-    evidence = [signal for signal in signals[1:] if "non-research" not in signal]
-    if evidence:
-        reason = f"Published in a pinned Q1 {journal.focus} journal; matched {', '.join(evidence[:3])}."
+    signals = [venue_signal, *method_signals, *humanities_signals, *negative_signals]
+    if qualifies:
+        reason = (
+            f"Matched computational evidence ({', '.join(method_signals[:2])}) and humanities evidence "
+            f"({', '.join(humanities_signals[:2])}) in the {FEED_LABELS[journal.feed]} feed."
+        )
+    elif negative_signals:
+        reason = "Excluded as likely editorial, review, correction, or other non-research matter."
     else:
-        reason = f"Published in a pinned Q1 {journal.focus} journal; no additional keyword evidence was needed for the baseline match."
-    return {"score": score, "reason": reason, "signals": signals, "classifier": "rules-v1"}
+        missing = "computational-method" if not method_signals else "history / heritage"
+        reason = f"Excluded because no {missing} evidence was found in the available title, abstract, or topics."
+    return {
+        "score": score,
+        "reason": reason,
+        "signals": signals,
+        "methodSignals": method_signals,
+        "humanitiesSignals": humanities_signals,
+        "qualifies": qualifies,
+        "classifier": "rules-v2",
+    }
 
 
 def request_json(url: str, attempts: int = 3) -> dict[str, Any]:
@@ -217,6 +264,7 @@ def openalex_record(work: dict[str, Any], journals: list[Journal]) -> dict[str, 
         "issn": source.get("issn_l") or journal.primary_issn,
         "quartile": journal.quartile,
         "sjrYear": journal.year,
+        "feed": journal.feed,
         "doi": doi,
         "doiUrl": f"https://doi.org/{doi}" if doi else None,
         "articleUrl": primary.get("landing_page_url"),
@@ -233,7 +281,7 @@ def openalex_record(work: dict[str, Any], journals: list[Journal]) -> dict[str, 
 
 def fetch_openalex(journals: list[Journal], start: dt.date, end: dt.date, api_key: str | None) -> list[dict[str, Any]]:
     papers: list[dict[str, Any]] = []
-    issns = [journal.primary_issn for journal in journals]
+    issns = list(dict.fromkeys(issn for journal in journals for issn in journal.issns))
     select = ",".join((
         "id", "doi", "display_name", "publication_date", "publication_year", "authorships",
         "primary_location", "best_oa_location", "abstract_inverted_index", "open_access",
@@ -242,7 +290,7 @@ def fetch_openalex(journals: list[Journal], start: dt.date, end: dt.date, api_ke
     for batch in chunks(issns, 90):
         cursor: str | None = "*"
         pages = 0
-        while cursor and pages < 25:
+        while cursor and pages < 100:
             filters = f"primary_location.source.issn:{'|'.join(batch)},from_publication_date:{start},to_publication_date:{end},type:article"
             params = {"filter": filters, "per_page": "100", "cursor": cursor, "select": select}
             if api_key:
@@ -292,6 +340,7 @@ def crossref_record(item: dict[str, Any], journal: Journal) -> dict[str, Any] | 
         "issn": next(iter(item.get("ISSN") or []), journal.primary_issn),
         "quartile": journal.quartile,
         "sjrYear": journal.year,
+        "feed": journal.feed,
         "doi": doi,
         "doiUrl": f"https://doi.org/{doi}" if doi else None,
         "articleUrl": article_url,
@@ -396,7 +445,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--since", type=dt.date.fromisoformat)
     parser.add_argument("--until", type=dt.date.fromisoformat)
     parser.add_argument("--max-papers", type=int, default=0, help="Optional output cap; 0 retains every matching paper")
-    parser.add_argument("--min-score", type=int, default=35)
+    parser.add_argument("--min-score", type=int, default=50)
     return parser.parse_args()
 
 
@@ -438,17 +487,20 @@ def main() -> int:
         key = work_key(paper)
         by_key[key] = merge_record(by_key[key], paper) if key in by_key else paper
 
+    qualified: list[dict[str, Any]] = []
     for paper in by_key.values():
         journal = journal_for_issns(journals, [paper.get("issn") or ""])
-        if journal:
-            paper["journal"] = journal.title
-            paper["quartile"] = journal.quartile
-            paper["sjrYear"] = journal.year
-            paper["relevance"] = classify(paper, journal)
+        if not journal:
+            continue
+        paper["journal"] = journal.title
+        paper["quartile"] = journal.quartile
+        paper["sjrYear"] = journal.year
+        paper["feed"] = journal.feed
+        paper["relevance"] = classify(paper, journal)
+        if paper["relevance"]["qualifies"] and paper["relevance"]["score"] >= args.min_score:
+            qualified.append(paper)
 
-    papers = sort_papers_newest_first(
-        paper for paper in by_key.values() if paper.get("relevance", {}).get("score", 0) >= args.min_score
-    )
+    papers = sort_papers_newest_first(qualified)
     if args.max_papers > 0:
         papers = papers[:args.max_papers]
     source_counts = {
@@ -462,6 +514,25 @@ def main() -> int:
         "journalCount": len(journals),
         "sjrYear": max((journal.year or 0 for journal in journals), default=0) or None,
         "sourceCounts": source_counts,
+        "feedCounts": {
+            feed: sum(paper.get("feed") == feed for paper in papers)
+            for feed in FEED_LABELS
+        },
+        "journals": [
+            {
+                "title": journal.title,
+                "issns": list(journal.issns),
+                "quartile": journal.quartile,
+                "sjrYear": journal.year,
+                "focus": journal.focus,
+                "feed": journal.feed,
+                "feedLabel": FEED_LABELS[journal.feed],
+                "journalUrl": journal.journal_url,
+                "qualificationNote": journal.qualification_note,
+                "resultCount": sum(paper.get("journal") == journal.title for paper in papers),
+            }
+            for journal in journals
+        ],
         "papers": papers,
     }
     atomic_write_json(args.output, payload)

@@ -1,134 +1,153 @@
-# Chronicle — History Research Tracker
+# Chronicle — Computational Humanities Research Tracker
 
-Chronicle is a standalone static research tracker for newly published work in history and digital humanities. It scans a pinned list of SJR Q1 journals, retrieves open scholarly metadata, assigns a transparent rule-based relevance score, and presents readable abstracts with reliable article links.
+Chronicle is a standalone, static tracker with two deliberately separated research feeds:
 
-It is designed for GitHub Pages. The included GitHub Actions workflow refreshes metadata weekly, commits the generated JSON, verifies the project, and republishes the site.
+1. **Digital & Computational Humanities** (the default): computational methods applied to history, historical sources, archives, heritage, cultural memory, historical language, and historical data in leading specialist or closely adjacent venues.
+2. **AI & LLMs in History** (secondary): AI, machine-learning, LLM, NLP, and other computational-method papers found in selected history journals, only when they are substantively tied to historical research or materials.
 
-## What the first version does
+Generic history and generic AI papers are excluded. Chronicle uses open scholarly metadata, preserves the evidence behind every match, and links readers to the article. It never scrapes publisher full text, signs into a library, or downloads papers.
 
-- uses OpenAlex as the primary paper metadata source;
-- uses Crossref to complement missing records, authors, dates, DOI data, and abstracts;
-- backfills and refreshes the current and previous calendar years by publication date, then merges and deduplicates records;
-- scores history relevance from the pinned journal focus plus visible title, abstract, topic, period, archival, and digital-method signals;
-- stores the score, reason, matched signals, and classifier version on every paper;
-- displays a substantial abstract when metadata supplies one, and says plainly when it does not;
-- opens the DOI resolver first, or falls back to the best article landing page when no DOI exists;
-- keeps DOI, article page, journal, and legal open-access-copy links distinct;
-- never scrapes publisher full text, signs into a library, or downloads papers.
+The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the two-calendar-year archive weekly, commits the generated JSON, verifies the project, and republishes the static site.
 
-The checked-in data contains the current two-calendar-year archive, so the site is useful immediately before its first automated refresh.
+## What it does
+
+- iterates the configured journal ISSNs directly; there is no opaque broad web search;
+- uses OpenAlex as the primary metadata source and Crossref as a complement/fallback;
+- scans 1 January of the previous calendar year through the current UTC date;
+- admits a paper only when metadata contains **both** a computational-method signal and a relevant historical/humanities signal;
+- records its feed, score, sentence-length reason, method signals, humanities signals, and `classifier: rules-v2`;
+- sorts each feed newest-first and exposes clear 2026/2025 counts and filters;
+- displays readable abstracts when supplied by metadata;
+- opens the DOI resolver first, or falls back to the specific article landing page when a DOI is absent;
+- labels DOI, Article page, Journal, and legal Open-access copy links separately;
+- publishes the complete monitored-journal list, ISSNs, feed membership, Q1 edition/note, result count, journal link, and last scan time on the site.
 
 ## Run locally
 
-Prerequisites: Node.js 20 or newer and Python 3.11 or newer. The collector uses only Python’s standard library.
+Prerequisites: Node.js 20+ and Python 3.11+. The collector itself uses only Python’s standard library.
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open the local address shown by Vite. To run the rule tests and production build:
+Run deterministic collector tests, TypeScript checks, and the production build:
 
 ```bash
 npm test
+npm run lint
 ```
 
-To refresh the paper data manually:
+Refresh public metadata manually:
 
 ```bash
 python scripts/fetch_papers.py
 ```
 
-Useful optional settings:
+Optional environment settings:
 
-- `OPENALEX_API_KEY`: a free OpenAlex key increases the API allowance. The collector currently works without one within OpenAlex’s anonymous allowance and falls back to Crossref if OpenAlex is unavailable.
-- `CROSSREF_MAILTO`: identifies the client to Crossref’s polite pool. It is not a password.
+- `OPENALEX_API_KEY`: a free key can increase the OpenAlex allowance.
+- `CROSSREF_MAILTO`: identifies the client to Crossref’s polite pool; it is not a password.
 
-Neither value is requested by the app, written to files, or committed. If supplied, keep it in your shell environment or in GitHub repository settings—not in the repository.
+Neither value is requested by the browser app, written to files, or committed. No Vertex AI, library, or LibKey credentials are required.
 
-## Obtain and pin a maintained SJR Q1 journal list
+## The pinned monitored-journal starter list
 
-The practical, lawful approach is an **annual, human-reviewed export from SCImago**, not automated scraping:
+`config/journals.csv` is the collector’s complete venue universe. Each row has `Title`, `Issn`, `SJR Best Quartile`, `Year`, `Focus`, `Feed`, `Journal URL`, and a plain-language `Qualification note`. The collector ignores rows that are not marked Q1.
+
+### Primary: Digital & Computational Humanities
+
+| Journal | ISSN(s) | Why it is monitored |
+|---|---|---|
+| [Digital Scholarship in the Humanities](https://academic.oup.com/dsh) | 2055-7671; 2055-768X | Specialist digital-humanities venue |
+| [Journal of Computer Applications in Archaeology](https://journal.caa-international.org/) | 2514-8362 | Computational archaeology |
+| [Digital Applications in Archaeology and Cultural Heritage](https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage) | 2212-0548 | Digital archaeology and heritage |
+| [ACM Journal on Computing and Cultural Heritage](https://dl.acm.org/journal/jocch) | 1556-4673; 1556-4711 | Computing and cultural heritage |
+| [Journal of Cultural Heritage](https://www.sciencedirect.com/journal/journal-of-cultural-heritage) | 1296-2074; 1778-3674 | Adjacent heritage venue, strictly content-filtered |
+| [Heritage Science](https://heritagesciencejournal.springeropen.com/) | 2050-7445 | Adjacent heritage-science venue, strictly content-filtered |
+| [Virtual Archaeology Review](https://polipapers.upv.es/index.php/var) | 1989-9947 | Virtual archaeology and digital heritage |
+
+### Secondary: AI & LLMs in History
+
+The American Historical Review, Past & Present, History Workshop Journal, The Historical Journal, History and Theory, Journal of Social History, The Journal of Modern History, and The Public Historian are monitored only for dual-evidence computational work. Membership in these journals never qualifies an ordinary history paper by itself. Their ISSNs, links, notes, and current result counts are visible on the live site and pinned in `config/journals.csv`.
+
+### Maintaining Q1 status lawfully
+
+The practical approach is an **annual, human-reviewed SCImago export**, not automated scraping:
 
 1. Open [SCImago Journal Rankings](https://www.scimagojr.com/journalrank.php).
-2. Select the latest completed year, publication type **Journals**, and the relevant areas/categories—at minimum **Arts and Humanities → History**. For a broader digital-humanities watchlist, also review adjacent Arts and Humanities categories.
-3. Use SCImago’s **Download data** control in the browser.
-4. Keep the downloaded CSV as a dated provenance file, for example `config/sjr-history-2025.csv`.
-5. Review the chosen scope, then replace `config/journals.csv`. The collector recognizes the official `Title`, `Issn`, and `SJR Best Quartile` columns and keeps only `Q1` rows. Add a `Year` column to make the edition visible in the interface. Optional `Focus` and `Journal URL` columns improve explanations and journal links.
-6. Commit that dated list so future runs are reproducible. Repeat after SCImago’s annual update, rather than silently changing the journal universe mid-year.
+2. Select the latest completed year, publication type **Journals**, and the relevant categories. Review Arts and Humanities categories plus the categories in which specialist digital-heritage/computing venues are ranked.
+3. Use SCImago’s browser **Download data** control and preserve the dated original, for example `config/sjr-reviewed-2025.csv`.
+4. Verify journal title, ISSN, best quartile, and category against the journal’s own site and the SCImago journal page.
+5. Review `config/journals.csv`, retaining the two feed labels and a transparent qualification note. Commit both the reviewed configuration and provenance date.
+6. Repeat after the annual SJR update.
 
-Why this route: SCImago describes SJR as a publicly available, annually updated portal based on Scopus data; its FAQ says site information may be used with citation and notes that the ranking is a static annual snapshot. Its product page states that ranking data can be downloaded in Excel format. SCImago does not publish a stable public journal-ranking API, so scripting the web interface would be brittle and unnecessary. See [SCImago’s SJR product description](https://www.scimagolab.com/products/sjr-scimago-journal-country-rank/) and [SCImago’s FAQ](https://www.scimagolab.com/faqs-2/).
+SCImago describes SJR as an annually updated portal based on Scopus data and provides ranking downloads. It does not offer a stable public journal-ranking API. See the [SJR product description](https://www.scimagolab.com/products/sjr-scimago-journal-country-rank/) and [SCImago FAQ](https://www.scimagolab.com/faqs-2/).
 
-The included `config/journals.csv` is a deliberately small starter subset for demonstration. Treat it as a pinned seed, not a complete or perpetual claim about every current Q1 history journal. Replace it with your reviewed official export before relying on the tracker for comprehensive monitoring.
+Important limitation: “Q1” is category- and year-specific, not a timeless or universal quality label. A journal can be Q1 in one category and lower in another. The included list records the **2024 SJR best quartile** and is a curated starter list, not a claim to cover every suitable venue. The on-site monitored-journals section makes this boundary auditable.
 
-Suggested citation for the pinned list, following SCImago’s guidance:
+Suggested attribution:
 
 > SCImago, (n.d.). SJR — SCImago Journal & Country Rank [Portal]. Retrieved [date], from https://www.scimagojr.com
 
-## Collection and relevance logic
+## Collection window and source behavior
 
-### Two-calendar-year collection
+Each run queries from January 1 of the previous calendar year through the run date. On 10 August 2026 the window is **2025-01-01 through 2026-08-10**; in 2027 it advances to 2026–2027. Existing records inside the window are merged so temporarily missing API fields are retained. DOI is the preferred deduplication key, with stable source identifiers or normalized title/date fallbacks.
 
-Each run starts on January 1 of the previous calendar year and queries through the current UTC date. On 10 August 2026, that means **1 January 2025 through 10 August 2026**. Records are merged by DOI (or stable source identifier when no DOI exists), sorted newest-first, and retained for those two calendar years. When the year changes, the window advances automatically; in 2027 it will cover 2026 and 2027. `public/data/state.json` records the successful run date and archive boundary.
+OpenAlex is queried by the configured ISSNs and date range. Crossref is then queried journal-by-journal over the same range, filling missing DOI, author, abstract, and landing-page fields. Re-querying the full window weekly helps recover delayed or corrected deposits while keeping the logic date-based and deterministic.
 
-OpenAlex is queried first with the journal ISSNs and the two-year publication-date window. Crossref is then queried by journal ISSN over the same window and fills gaps. Crossref’s own synchronization guidance prefers created/updated dates for a complete deposit mirror; this tracker intentionally uses publication dates because the product question is “what was published in the archive period?” and because those filters remain available without premium access. Re-querying the complete two-year window each week helps pick up delayed or corrected deposits, though manual review remains important.
+## Rules v2: strict dual evidence
 
-The interface shows explicit counts for 2026 and 2025, offers a publication-year filter, and always groups the newer year before the older year—even when sorting by relevance score within each year. Results are rendered in batches for a responsive experience.
+The classifier searches title, available abstract, and OpenAlex/Crossref topics in two independent dimensions.
 
-### Rules v1
+**Computational-method evidence** includes digital/computational humanities; AI, ML, neural networks, LLMs, and transformers; NLP, text mining, topic modeling, stylometry, named entities, corpus analysis, and distant reading; OCR/HTR; computer vision, photogrammetry, LiDAR, GIS, spatial/network analysis; and knowledge graphs, linked data, digital archives, or research databases.
 
-The starting score comes from membership in a pinned Q1 history/digital-humanities journal. Additional weighted signals include:
+**Historical/humanities evidence** includes historical research and sources; archives, manuscripts, palaeography, epigraphy, and primary sources; cultural heritage, museums, collections, memory, and material culture; archaeology and historical periods; and historical linguistics, philology, or diachronic language evidence.
 
-- explicit history, historiography, archive, or historian language;
-- historical periods such as early modern, colonial, nineteenth century, or Cold War;
-- public history, oral history, memory, museum, heritage, manuscript, and primary-source methods;
-- digital humanities, text mining, topic modeling, corpus, GIS, OCR/HTR, digital archive, database, and linked-data methods.
+A record must have at least one match in each dimension and must not look like an editorial, review, correction, or front-matter item. Venue membership adds a modest score but cannot pass the gate. Thus:
 
-Likely non-research matter such as corrigenda, front matter, and book-review headings is penalized. The final score is capped at 100. Every output record contains `score`, a sentence-length `reason`, the exact `signals`, and `classifier: rules-v1`, so the logic can be unit tested and audited.
+- “Trade and diplomacy in nineteenth-century Europe” is excluded without a computational method.
+- “A faster LLM benchmark for code” is excluded without historical/humanities evidence.
+- “Large language models for entity extraction from medieval manuscripts” qualifies.
 
-Tune the rules and weights in `scripts/fetch_papers.py`. Tune the inclusion threshold with `--min-score`.
+The generated record preserves `methodSignals`, `humanitiesSignals`, `qualifies`, `reason`, and `score`. Tune rules and weights in `scripts/fetch_papers.py`; tune the numeric floor with `--min-score`. Any future LLM classifier should be optional, second-stage, and preserve these rule results for comparison.
 
-## GitHub Pages setup
+## Article, DOI, OA, and library access
 
-1. Create a GitHub repository and push this project to its `main` branch.
-2. In **Settings → Pages**, choose **GitHub Actions** as the source.
-3. In **Settings → Actions → General**, allow workflows **Read and write permissions**. The weekly job needs this to commit generated data. If `main` is protected, allow the GitHub Actions bot to write or change the workflow to open a pull request instead.
-4. Run **Refresh papers and publish Pages** once from the Actions tab, or wait for the Monday schedule.
-
-The workflow uses GitHub’s built-in `GITHUB_TOKEN`; no personal access token is needed in the normal setup. It does not store library credentials. An optional `OPENALEX_API_KEY` may be added as an Actions secret and `CROSSREF_MAILTO` as an Actions variable, but neither is required for the checked-in sample or basic fallback operation.
-
-For a manual publication, authenticate to GitHub locally or through the GitHub interface, create or choose the destination repository, and authorize the workflow permissions described above.
-
-## Link and library-access behavior
-
-The primary **Open article** button follows this chain:
+The primary **Open article** action follows this chain:
 
 1. `https://doi.org/<doi>` when a DOI exists;
-2. otherwise, the publisher/journal landing-page URL supplied by OpenAlex or Crossref;
+2. otherwise, the specific publisher/journal landing-page URL supplied by OpenAlex or Crossref;
 3. otherwise, a clear “No article link in open metadata” message.
 
-The DOI resolver is intentionally preferred because it is durable and should hand off cleanly to institutional link tools such as LibKey when configured in the browser or institution. Chronicle does not integrate with LibKey, attempt authenticated access, automate a download, or bypass access controls. A known legal open-access location is shown separately as **Open-access copy**.
+The DOI resolver should hand off normally to institutional browser tools such as LibKey. Chronicle does not integrate with LibKey, automate authenticated access, download articles, or bypass controls. A legal OA location is shown separately as **Open-access copy** when metadata provides one.
+
+## GitHub Pages and weekly refresh
+
+1. Push the project to a GitHub repository’s `main` branch.
+2. In **Settings → Pages**, choose **GitHub Actions**.
+3. In **Settings → Actions → General**, allow workflows **Read and write permissions** so the refresh job can commit generated JSON. Adjust branch protection if needed.
+4. Run **Refresh papers and publish Pages** once from Actions, or wait for its Monday schedule.
+
+The workflow uses GitHub’s built-in `GITHUB_TOKEN`; no personal access token is stored in the repository. Optional OpenAlex/Crossref settings belong in GitHub repository secrets/variables, not source files.
 
 ## Metadata, licensing, and limitations
 
-- [OpenAlex](https://developers.openalex.org/) is the primary open scholarly index. It supplies works, authors, sources, topics, locations, OA status, and abstracts as an inverted index. OpenAlex notes that abstract coverage is incomplete and is better for newer work.
-- [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) supplies publisher-deposited bibliographic metadata without sign-up. Crossref says almost all metadata may be reused, but some deposited abstracts may remain copyrighted by their publishers or authors.
-- Chronicle stores and displays metadata/abstract material returned by those APIs; it does not fetch article HTML or PDFs. If you operate a public deployment, review abstract reuse against your institution’s policy and jurisdiction. You can shorten or suppress abstracts in the collector without affecting the DOI/link workflow.
-- Dates, titles, author lists, journal assignments, OA status, and retraction flags can be incomplete or delayed. Links can change. A score is a triage aid, not a scholarly judgment or quality rating.
-- SJR quartiles change annually and can differ by category. The pinned CSV documents the edition used; it must be reviewed rather than treated as timeless.
-- SCImago data originates from Scopus. Attribute the pinned SJR list as described above and preserve the original dated export.
+- [OpenAlex](https://developers.openalex.org/) supplies open work, author, source, topic, location, OA, and reconstructed abstract metadata. Abstract coverage is incomplete.
+- [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) supplies publisher-deposited bibliographic metadata. Most metadata is reusable, but deposited abstracts may carry publisher/author copyright.
+- Chronicle stores metadata returned by these APIs; it does not fetch article HTML or PDFs. Public operators should review abstract reuse under their institutional policy and jurisdiction.
+- Dates, author lists, journal assignments, abstracts, links, OA status, and topics can be incomplete or delayed. Rule matches are triage signals, not scholarly or quality judgments.
+- Strict rules reduce noise but can miss relevant papers whose titles/abstracts do not name both dimensions. The visible journal list and preserved reasons make that tradeoff inspectable.
 
-## Optional future LLM / Vertex AI classifier
+## Optional future Vertex AI classifier
 
-The JSON schema already identifies the classifier on each result. A later second-stage classifier could review borderline rule scores, return a structured label/reason, and write `classifier: llm` while preserving the rules score for comparison.
-
-For Vertex AI, a future implementation would need a Google Cloud project, enabled Vertex AI API, a service account with the minimum prediction role, a region/model choice, and GitHub workload identity federation or an encrypted repository secret. Do not place a service-account key in this repository. No Vertex AI credentials are needed or used in this version.
+A later opt-in stage could send only borderline metadata to a structured classifier and record `classifier: llm` while preserving rules-v2 evidence. Vertex AI would require a Google Cloud project, enabled API, region/model choice, least-privilege prediction role, and workload identity federation or an encrypted repository secret. Never commit a service-account key. This version needs and uses no Vertex AI credentials.
 
 ## Project map
 
-- `src/` — static React interface and styling
-- `config/journals.csv` — pinned Q1 journal seed
-- `scripts/fetch_papers.py` — two-calendar-year OpenAlex/Crossref collector and rules classifier
-- `public/data/` — generated data and collection state
-- `tests/test_collector.py` — deterministic rules/data tests
-- `.github/workflows/weekly-refresh-and-pages.yml` — weekly refresh, commit, build, and Pages deployment
+- `config/journals.csv` — complete pinned two-feed venue configuration
+- `scripts/fetch_papers.py` — OpenAlex/Crossref collector and rules-v2 classifier
+- `public/data/` — generated two-year data, journal manifest, and scan state
+- `src/` — static two-feed React interface and monitored-journals audit section
+- `tests/test_collector.py` — deterministic rules, feed, date, link, and CSV tests
+- `.github/workflows/weekly-refresh-and-pages.yml` — weekly refresh, verification, commit, and Pages deployment
