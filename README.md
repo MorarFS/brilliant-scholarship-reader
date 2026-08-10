@@ -21,6 +21,7 @@ The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the t
 - opens the DOI resolver first, or falls back to the specific article landing page when a DOI is absent;
 - labels DOI, Article page, Journal, and legal Open-access copy links separately;
 - publishes the complete monitored-journal list, ISSNs, feed membership, Q1 edition/note, result count, journal link, and last scan time on the site.
+- lets readers save or unsave papers in a private browser-local reading list, with JSON export/import for backup and transfer.
 
 ## Run locally
 
@@ -53,13 +54,15 @@ Neither value is requested by the browser app, written to files, or committed. N
 
 ## The pinned monitored-journal starter list
 
-`config/journals.csv` is the collector’s complete venue universe. Each row has `Title`, `Issn`, `SJR Best Quartile`, `Year`, `Focus`, `Feed`, `Journal URL`, and a plain-language `Qualification note`. The collector ignores rows that are not marked Q1.
+`config/journals.csv` is the collector’s complete venue universe. Each row has `Title`, `Issn`, `SJR Best Quartile`, `Year`, `Focus`, `Feed`, `Journal URL`, a plain-language `Qualification note`, and `Inclusion Basis`. The collector accepts reviewed Q1 rows and explicitly marked `user-curated specialist` rows; other non-Q1 rows are ignored.
 
 ### Primary: Digital & Computational Humanities
 
 | Journal | ISSN(s) | Why it is monitored |
 |---|---|---|
 | [Digital Scholarship in the Humanities](https://academic.oup.com/dsh) | 2055-7671; 2055-768X | Specialist digital-humanities venue |
+| [Journal of Cultural Analytics](https://culturalanalytics.org/) | 2371-4549 | User-requested specialist venue; confirmed by the [ISSN International Centre](https://portal.issn.org/resource/ISSN/2371-4549) |
+| [Computational Humanities Research](https://www.cambridge.org/core/journals/computational-humanities-research) | 2977-8158 | User-requested specialist venue launched in 2025; confirmed by [Cambridge University Press](https://www.cambridge.org/core/journals/computational-humanities-research) and the [ISSN International Centre](https://portal.issn.org/resource/ISSN/2977-8158) |
 | [Journal of Computer Applications in Archaeology](https://journal.caa-international.org/) | 2514-8362 | Computational archaeology |
 | [Digital Applications in Archaeology and Cultural Heritage](https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage) | 2212-0548 | Digital archaeology and heritage |
 | [ACM Journal on Computing and Cultural Heritage](https://dl.acm.org/journal/jocch) | 1556-4673; 1556-4711 | Computing and cultural heritage |
@@ -84,7 +87,7 @@ The practical approach is an **annual, human-reviewed SCImago export**, not auto
 
 SCImago describes SJR as an annually updated portal based on Scopus data and provides ranking downloads. It does not offer a stable public journal-ranking API. See the [SJR product description](https://www.scimagolab.com/products/sjr-scimago-journal-country-rank/) and [SCImago FAQ](https://www.scimagolab.com/faqs-2/).
 
-Important limitation: “Q1” is category- and year-specific, not a timeless or universal quality label. A journal can be Q1 in one category and lower in another. The included list records the **2024 SJR best quartile** and is a curated starter list, not a claim to cover every suitable venue. The on-site monitored-journals section makes this boundary auditable.
+Important limitation: “Q1” is category- and year-specific, not a timeless or universal quality label. A journal can be Q1 in one category and lower in another. Most of the included list records the **2024 SJR best quartile**. Journal of Cultural Analytics and Computational Humanities Research are separately and visibly included as user-curated specialist venues at the user’s request; Q1 is neither claimed nor required for those two rows. The on-site monitored-journals section makes both inclusion paths auditable.
 
 Suggested attribution:
 
@@ -122,6 +125,14 @@ The primary **Open article** action follows this chain:
 
 The DOI resolver should hand off normally to institutional browser tools such as LibKey. Chronicle does not integrate with LibKey, automate authenticated access, download articles, or bypass controls. A legal OA location is shown separately as **Open-access copy** when metadata provides one.
 
+## Saved papers and reading-list portability
+
+Every paper card has a **Save paper** control. The **Saved papers** view keeps the same abstract, DOI, article-page, journal, and open-access links and supports the existing search, journal, method, year, and sort filters.
+
+The reading list is stored in the browser’s local storage. It is private to that browser profile: Chronicle does not create an account, sync the list to a server, or receive the saved data. This also means the list does **not** automatically appear on another device or browser, and clearing site data can erase it.
+
+Use **Export JSON** to download a complete backup and **Import JSON** to merge that backup into another Chronicle browser. The export stores paper metadata snapshots so saved abstracts and links can remain available even after a paper leaves the moving two-year feed. Imported external URLs are restricted to HTTP/HTTPS. Treat the JSON file as personal research data and store it wherever you normally keep private backups.
+
 ## GitHub Pages and weekly refresh
 
 1. Push the project to a GitHub repository’s `main` branch.
@@ -145,9 +156,9 @@ A later opt-in stage could send only borderline metadata to a structured classif
 
 ## Project map
 
-- `config/journals.csv` — complete pinned two-feed venue configuration
+- `config/journals.csv` — complete two-feed venue configuration with Q1 and user-curated inclusion bases
 - `scripts/fetch_papers.py` — OpenAlex/Crossref collector and rules-v2 classifier
 - `public/data/` — generated two-year data, journal manifest, and scan state
-- `src/` — static two-feed React interface and monitored-journals audit section
+- `src/` — static two-feed React interface, browser-local reading list, and monitored-journals audit section
 - `tests/test_collector.py` — deterministic rules, feed, date, link, and CSV tests
 - `.github/workflows/weekly-refresh-and-pages.yml` — weekly refresh, verification, commit, and Pages deployment

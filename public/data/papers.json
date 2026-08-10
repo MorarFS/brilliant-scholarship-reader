@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-10T12:52:24+00:00",
+  "generatedAt": "2026-08-10T13:15:09+00:00",
   "windowStart": "2025-01-01",
   "windowEnd": "2026-08-10",
-  "journalCount": 15,
+  "journalCount": 17,
   "sjrYear": 2024,
   "sourceCounts": {
-    "OpenAlex": 356,
-    "Crossref": 352
+    "OpenAlex": 383,
+    "Crossref": 379
   },
   "feedCounts": {
-    "digital-humanities": 363,
+    "digital-humanities": 390,
     "ai-history": 6
   },
   "journals": [
@@ -26,7 +26,38 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://academic.oup.com/dsh",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-humanities venue",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 111
+    },
+    {
+      "title": "Journal of Cultural Analytics",
+      "issns": [
+        "2371-4549"
+      ],
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "focus": "cultural analytics and computational cultural research",
+      "feed": "digital-humanities",
+      "feedLabel": "Digital & Computational Humanities",
+      "journalUrl": "https://culturalanalytics.org/",
+      "qualificationNote": "User-curated specialist journal; ISSN and journal link verified through the ISSN International Centre and publisher site",
+      "inclusionBasis": "user-curated specialist",
+      "resultCount": 8
+    },
+    {
+      "title": "Computational Humanities Research",
+      "issns": [
+        "2977-8158"
+      ],
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "focus": "computational and quantitative humanities research",
+      "feed": "digital-humanities",
+      "feedLabel": "Digital & Computational Humanities",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "qualificationNote": "User-curated specialist journal launched in 2025; online ISSN and scope verified through Cambridge University Press and the ISSN International Centre",
+      "inclusionBasis": "user-curated specialist",
+      "resultCount": 19
     },
     {
       "title": "Journal of Computer Applications in Archaeology",
@@ -40,6 +71,7 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://journal.caa-international.org/",
       "qualificationNote": "2024 SJR best quartile Q1 in Archaeology; specialist computational venue",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 19
     },
     {
@@ -54,6 +86,7 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-heritage venue",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 78
     },
     {
@@ -69,6 +102,7 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://dl.acm.org/journal/jocch",
       "qualificationNote": "2024 SJR best quartile Q1; computing-and-heritage specialist",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 83
     },
     {
@@ -84,6 +118,7 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
       "qualificationNote": "2024 SJR best quartile Q1; adjacent heritage venue filtered for computational and historical evidence",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 45
     },
     {
@@ -98,6 +133,7 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://heritagesciencejournal.springeropen.com/",
       "qualificationNote": "2024 SJR best quartile Q1; adjacent heritage venue filtered for computational and historical evidence",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 0
     },
     {
@@ -112,6 +148,7 @@
       "feedLabel": "Digital & Computational Humanities",
       "journalUrl": "https://polipapers.upv.es/index.php/var",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-archaeology venue",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 27
     },
     {
@@ -127,6 +164,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://academic.oup.com/ahr",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 4
     },
     {
@@ -142,6 +180,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://academic.oup.com/past",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 0
     },
     {
@@ -157,6 +196,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://academic.oup.com/hwj",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 0
     },
     {
@@ -172,6 +212,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://www.cambridge.org/core/journals/historical-journal",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 1
     },
     {
@@ -187,6 +228,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
       "qualificationNote": "2024 SJR best quartile Q1 in History and Philosophy; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 0
     },
     {
@@ -202,6 +244,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://academic.oup.com/jsh",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 0
     },
     {
@@ -217,6 +260,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://www.journals.uchicago.edu/toc/jmh/current",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 0
     },
     {
@@ -232,6 +276,7 @@
       "feedLabel": "AI & LLMs in History",
       "journalUrl": "https://online.ucpress.edu/tph",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
+      "inclusionBasis": "sjr-q1",
       "resultCount": 1
     }
   ],
@@ -394,6 +439,58 @@
         "humanitiesSignals": [
           "archives or documentary evidence",
           "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7171673506",
+      "title": "The Heresy of Vector Embeddings: Early Modern Manuscript Verse and LLMs between Meaning, Form, and History",
+      "authors": [
+        "Erin McCarthy"
+      ],
+      "publicationDate": "2026-07-29",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10043",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10043",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10043",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10043",
+      "openAccessStatus": "diamond",
+      "abstract": "The European Research Council-funded project \"STEMMA: Systems of Transmitting Early Modern Manuscript Verse, 1475 to 1700\" computationally models the manuscript circulation of early modern poetry to gain macro-level insights into the overlapping contexts in which it was written, read, and copied.To facilitate STEMMA's ultimate goal of modeling the circulation of manuscript poetry as a large-scale network, the project began by combining and reconciling five of the most authoritative sources of relevant data using staged LLM-assisted pipelines.These pipelines were effective on a large proportion of the data, but they struggled in relation to particular features of early modern poetics, including imitation, translation, and unique works.This paper considers how general models' shortcomings in relation to early modern poetry can be considered a feature rather than a bug, pointing up new insights into poetics by defamiliarizing them.It considers productive intersections between literary theory and criticism and recent scholarship on LLMs and suggests that two seemingly very different fields of study address what are, at core, rather similar fundamental questions. Plain Language SummaryThis paper discusses LLM-assisted methods for cleaning a large dataset about handwritten copies of English-language poetry created between 1475 and 1700.It shows that these methods were not only helpful for their intended purpose of cleaning the data but also provided new insights into the poems themselves, particularly when the LLMs struggled.Specifically, the LLM-assisted methods struggled where early modern poetics were at odds with the modern prose on which general models are trained.Fundamental early modern practices such as imitation and translation and unique poems posed particular challenges for the computational methods used.The essay concludes with a reflection on concerns shared by early modern studies and literary theory as well as linguistics and natural language processing.The structure meant is a structure of meanings, evaluations, and interpretations; and the principle of unity which informs it seems to be one of balancing and harmonizing connotations, attitudes, and meanings. . ..The unity is not a unity of the sort to be achieved by the reduction and simplification appropriate to an algebraic formula.",
+      "topics": [
+        "Historical Philosophy and Science",
+        "Reformation and Early Modern Christianity",
+        "Renaissance and Early Modern Studies"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, NLP or text-as-data method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
@@ -2167,6 +2264,64 @@
       }
     },
     {
+      "id": "https://openalex.org/W7164927558",
+      "title": "Interpretable Visual Feature Discovery using Multiple Instance Learning: A Case Study of Colonial Korean Print",
+      "authors": [
+        "Aron Van de Pol",
+        "Jelena Prokić",
+        "Angus Mol"
+      ],
+      "publicationDate": "2026-06-16",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10036",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10036",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10036",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10036",
+      "openAccessStatus": "diamond",
+      "abstract": "Colonial Korean printshops (1910-1945) operated within severe material constraints that produced apparent typographic standardization.Manual bibliography has nevertheless identified subtle shop-specific signatures in letterforms.This paper tests whether computational methods can detect these signatures systematically across large corpora.We apply Multiple Instance Learning to 57,583 page images from four major printshops in Kyŏngsŏng (Seoul).To avoid same-book leakage, we evaluate page classification with all pages from each tested book held out from training.Under this stricter protocol, the model assigns pages to printshops with 84.5% accuracy while producing interpretable attention maps.Clustering high-attention patches reveals that the four presses occupy the same regions of the embedding space, reflecting their shared typographic infrastructure.Differentiation emerges through density patterns within this shared space rather than through distinct typographic vocabularies.Each press concentrates disproportionately in clusters capturing specific sub-character features such as terminal angles, serif weight, and stroke thickness.These computationally identified patterns align with features that De Fremery and Ryu documented through intensive manual analysis of individual volumes.The correspondence supports the approach while extending it to scales that manual bibliography cannot achieve.This framework shows how computational analysis can test and extend humanities scholarship on historical print culture by surfacing the specific visual features that distinguish institutional outputs within materially constrained production systems. Plain Language SummaryHistorians working with large collections of printed or handwritten documents often want to know whether visual features can be traced back to the institutions that produced them.A scriptorium, a printshop, or a publishing house leaves traces in the materials it produces, traces that reflect equipment, training, economic decisions, and the habits of daily practice.When these traces survive in the printed or written record, they constitute a material archive that can speak to questions conventional documentation cannot answer.Deep learning offers a natural approach to reading this archive at scale.Models can be trained to distinguish the outputs of different institutions based on visual properties alone, and recent work in font classification and writer identification has demonstrated that such models can perform well on historical materials.Yet high performance on these tasks frequently obscures more than it reveals.For the historian, knowing that a model can tell two printshops apart is only the beginning of the inquiry.The substantive question is which visual features drive that distinction and whether those features correspond to anything historically meaningful.A model that achieves high accuracy by learning artifacts of digitization or idiosyncrasies of page layout has answered a technical question while leaving the historical one untouched.We test three computational approaches on 57,583 digitized pages from four colonial Korean printshops .Colonial Korean print provides a particularly demanding case because the visual differences between shops are subtle.Metal type was extraordinarily expensive, and most printshops purchased matrices from the same limited pool of Japanese foundries, creating apparent standardization across publications.Yet scholars such as De Fremery (De Fremery 2014) and Ryu (Ryu 2015) have identified shop-specific signatures in stroke weight, terminal angles, and character component design through painstaking manual examination of individual volumes.Whether these patterns hold systematically across large corpora has remained an open question.",
+      "topics": [
+        "Handwritten Text Recognition Techniques",
+        "Image Retrieval and Classification Techniques",
+        "Multimodal Machine Learning Applications"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, OCR / HTR method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "OCR / HTR method",
+          "digital knowledge infrastructure",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "OCR / HTR method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W7170780312",
       "title": "Towards a human-centered evaluation of 3D Gaussian Splatting for cultural heritage visualization",
       "authors": [
@@ -3424,6 +3579,54 @@
       }
     },
     {
+      "id": "https://openalex.org/W7160623116",
+      "title": "Bibliographic metadata as relational data: A cross-disciplinary methodological reflection",
+      "authors": [
+        "Rossana Scebba"
+      ],
+      "publicationDate": "2026-05-08",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1787",
+      "doiUrl": "https://doi.org/10.22148/jca.1787",
+      "articleUrl": "https://doi.org/10.22148/jca.1787",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1787",
+      "openAccessStatus": "diamond",
+      "abstract": "In this paper, I reflect on the growing cross-disciplinary convergence around the use of bibliographic metadata as empirical material in digital/computational history and quantitative economic history. I outline the main challenges in preprocessing library catalog metadata, drawing on examples from both fields. A pilot case on the academic collection of the Old University of Louvain demonstrates key steps in data transformation and preparation, with the aim of aligning common routines and creating reusable resources across disciplines. I then examine how metadata can be applied in historical network analysis, discussing underlying premises, potential caveats, and key modeling decisions. Based on this examination, I propose a multilayer network representation as a structurally faithful base to represent bibliographic metadata. Finally, by drawing a comparison to practices in quantitative economic history, I show how adopting hypothesis-driven modeling and statistical inference can address skepticism toward digital approaches and thereby advance the computational development of digital history.",
+      "topics": [
+        "Library Science and Information Systems",
+        "Research Data Management Practices",
+        "Information Retrieval and Search Behavior"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 75,
+        "reason": "Matched computational evidence (spatial or network method) and humanities evidence (historical research or sources, heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "spatial or network method",
+          "historical research or sources",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "spatial or network method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W7162578919",
       "title": "Quality estimation of AI-driven translations of ancient Buddhist scriptures: a multi-model automated translation and evaluation framework",
       "authors": [
@@ -4437,6 +4640,124 @@
       }
     },
     {
+      "id": "https://openalex.org/W7148956862",
+      "title": "A Digital Collection for a Coahuiltecan Ethnohistory",
+      "authors": [
+        "Paloma Vargas Montes",
+        "Miriam Rojas Solís"
+      ],
+      "publicationDate": "2026-04-03",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1061",
+      "doiUrl": "https://doi.org/10.22148/jca.1061",
+      "articleUrl": "https://doi.org/10.22148/jca.1061",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1061",
+      "openAccessStatus": "diamond",
+      "abstract": "This is an accepted article with a DOI pre-assigned that is not yet published.During the XVIII century, the Coahuiltecan language was spoken by various Indigenous nations who lived a nomadic lifestyle in the territory of nowadays South Texas, United States, and the Mexican States of Coahuila and Nuevo Leon. A comprehensive linguistic corpus of the Coahuiltecan language, along with the names of the nations of its speakers, has been obtained from a set of religious documents produced around 1760 in the Franciscan missions of San Antonio, Texas. Following the trail of the 18 Indigenous nations mentioned by the religious documents, we created the digital project titled \"Indigenous Epistemes of the Borderlands\" in the US Center for Latino Digital Humanities of the University of Houston. The primary purpose was the development of digital infrastructure that facilitates the study of the ethnohistory of the Coahuiltecan-speakers nations. The decolonial perspective in the ethnohistorical analysis is fundamental for understanding the territory as a cultural region in which the Indigenous nations shared forms of knowledge or epistemes. By actively collecting and digitizing sources corresponding to the nations, we began to build a navigable digital collection that will constitute a documentary base that revitalizes these nations cultural understanding and epistemes. The digital dimension of the collection makes these archives available to audiences that previously had limited access. The collection provides an open-access alternative to looking at the archives as a catalogued and mapped whole to understand Coahuiltecan-speaking nations. Multiple digital tools were utilized, such as Optical Character Recognition (OCR) tools, Generative Artificial Intelligence, Large Language Models (LLM), text mining tools, Geographic Information System (GIS) software, and editing platforms. Each tool was used for its purpose, such as transcribing, summarising, identifying, locating. Continuous exploration was conducted to find the most valuable tools for making a digital collection like this one available.The first documentary repository in which the methodology was applied was the Archivo General de Indias Collection, located at the Briscoe Center for American History at the University of Texas at Austin. The collection, formed by the historian Eugene Bolton, his colleagues, and students in the first decades of the 20th century, is fundamental for Bolton's historiographical concept of Borderlands. Furthermore, allowing us to reflect on the ways we create and understand the history of this territory. Our methodology enabled the identification of the Alazapas and the Mezcales as the two nations of Coahuiltecan-speakers most highly mentioned in the corpus, derived from the Archivo General de Indias Collection. This finding, in turn, facilitated the analysis of their representation in the archive through a combination of distant and close reading. The paper offers a case study about the Alazapas, a Coahuiltecan speaking nation that established alliances with the Spaniards for the evangelization and the governance of a village in Coahuila at the end of the XVII century. This case study contributes to the scholarship of Indigenous Borderlands by analysing the agencies, strategies, and alliances of Coahuiltecan-speakers nations during the Colonial period. Moreover, establishing a database that associates historical documents mentioning Indigenous nations with spatiotemporal data will facilitate more profound analyses of the territory as a cultural region that has shifted over time. The application of this methodology to other non-digitized corpora will contribute significantly to addressing the multiplicity of ethnic denominations that the literature has presented in the past as one of the leading research problems in the field of regional Indigenous ethnohistory.",
+      "topics": [
+        "Latin American history and culture",
+        "Historical Studies in Central America",
+        "Digital Humanities and Scholarship"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "OCR / HTR method",
+          "spatial or network method",
+          "digital knowledge infrastructure",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "OCR / HTR method",
+          "spatial or network method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7148979935",
+      "title": "Modeling Oral Narrative in Central Veracruz, Mexico: A Digital Itinerant Community-Based Library/Museum",
+      "authors": [
+        "Julieta Flores-Muñoz",
+        "I. Sauceda Meza",
+        "Zian Fanti",
+        "Alicia Mayahua-Calihua",
+        "Víctor Quiahua",
+        "Aracely Mayahua-Calihua"
+      ],
+      "publicationDate": "2026-04-03",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1059",
+      "doiUrl": "https://doi.org/10.22148/jca.1059",
+      "articleUrl": "https://doi.org/10.22148/jca.1059",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1059",
+      "openAccessStatus": "diamond",
+      "abstract": "This is an accepted article with a DOI pre-assigned that is not yet published.Oral narratives represent a vital, yet often undervalued, source for understanding how the different communities interpret, inhabit, and remember the world. Despite their epistemic richness, they have long been marginalized within academic canons. This article addresses the challenge of integrating oral knowledge into rigorous processes of documentation, analysis, and preservation by developing collaborative methodologies and technologies attuned to its complexity. Here, we present what we have named: “Digital Itinerant Community-based Library/Museum model” a dynamic platform built upon digital repositories, deep mapping, and semantic cartograms, which aims to revitalize oral narratives in Nahuatl, a living Indigenous language still spoken in the Sierra de Zongolica, Mexico, through a critical recontextualization within their cultural and spatial referents. This model proposes an alternative to conventional archival practices by enabling communities to manage, curate, and share their stories through an interactive interface that brings geography, history, and memory into dialogue. The use of computational tools does not replace the oral or situated nature of knowledge but amplifies its potential by connecting it to new modes of visualization, navigation, and analysis. Based on an initial collaborative annotation workshop held in Mixtla de Altamirano, the article explores the challenges and possibilities of constructing historical discourse from the margins, through a decolonial lens and an ethics of accompaniment. This experience suggests that the critical use of digital humanities, grounded in community-driven and participatory methodologies, can destabilize traditional epistemic hierarchies and open new pathways for historical production. The Digital Itinerant Community-based Library/Museum thus emerges as a transformative model for placing oral narratives/histories at the center of academic debates on heritage, memory, and epistemic justice in the Global South",
+      "topics": [
+        "Digital Humanities and Scholarship",
+        "Latin American history and culture",
+        "Oral History, Memory, Narrative Analysis"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 93,
+        "reason": "Matched computational evidence (digital or computational humanities) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "digital or computational humanities"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W7149016933",
       "title": "The lighthouse of Torre San Giovanni in Ugento (Lecce, Italy): technical and architectural analysis of the construction phases",
       "authors": [
@@ -4480,6 +4801,54 @@
         "humanitiesSignals": [
           "archives or documentary evidence",
           "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7148827857",
+      "title": "Mapping the Intangible: Challenges and Innovations in the Spatial Analysis of Purulia Chhau",
+      "authors": [
+        "Barkha Rani Lakra",
+        "Nirban Manna",
+        "Ahmed Sameer"
+      ],
+      "publicationDate": "2026-04-03",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1060",
+      "doiUrl": "https://doi.org/10.22148/jca.1060",
+      "articleUrl": "https://doi.org/10.22148/jca.1060",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1060",
+      "openAccessStatus": "diamond",
+      "abstract": "This is an accepted article with a DOI pre-assigned that is not yet published.The growing integration of digital tools and methodologies in cultural heritage studies has transformed how we engage with and interpret intangible practices across diverse contexts. This study examines the spatiotemporal performance patterns of various Purulia Chhau troupes, a vibrant folk dance-drama tradition from West Bengal, India, over a year. The novelty of this study lies in studying the performance pattern of locally organized folk dance ensembles, unlike classical or institutional dance collectives, where performance records are readily available. Methodologically, this study reflects on the challenges posed by digital approaches in analyzing Intangible Cultural Heritage. The research faced challenges in multiple areas: data-related issues, technical difficulties, and challenges of cultural representation. Starting with data collection, where gaps and fragmented information hindered progress, missing data made it challenging to build a complete dataset, and the data of several teams had to be discarded. Moreover, as humanities researchers with no technical background in GIS (Geographic Information System), working with and manipulating spatial data proved daunting, requiring extensive learning and adaptation. This also affected the scope of the analysis. Additionally, the inherent complexity of humanities data posed challenges in maintaining the richness of cultural meanings while converting them into spatial representations. The oversimplification of nuanced cultural elements during this conversion process was a constant concern, as spatial visualization often risks reducing multi-dimensional cultural practices to one-dimensional representations. Overcoming data collection and mapping challenges, this research innovatively employs different mapping techniques to reveal patterns in the monthly distribution of Purulia Chhau performances over a year. It uncovers links between performance and factors like festivals, logistics, and local cultures, while identifying regions with high performance concentration, offering insights into cultural engagement and popularity. This exploratory study highlights the potential of spatial analysis to deepen our understanding of intangible cultural heritage. It shows how digital methodologies can reveal hidden patterns within folk traditions while acknowledging the complexities of representing dynamic cultural practices.",
+      "topics": [
+        "Human Motion and Animation",
+        "Geographies of human-animal interactions",
+        "Diversity and Impact of Dance"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 60,
+        "reason": "Matched computational evidence (spatial or network method) and humanities evidence (heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "spatial or network method",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "spatial or network method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
@@ -4788,6 +5157,53 @@
         "humanitiesSignals": [
           "archives or documentary evidence",
           "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7142747451",
+      "title": "MajinBook: An Open Catalogue of Digitally Mediated World Literature",
+      "authors": [
+        "Antoine Mazières",
+        "Thierry Poibeau"
+      ],
+      "publicationDate": "2026-03-29",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1164",
+      "doiUrl": "https://doi.org/10.22148/jca.1164",
+      "articleUrl": "https://doi.org/10.22148/jca.1164",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1164",
+      "openAccessStatus": "diamond",
+      "abstract": "This is an accepted article with a DOI pre-assigned that is not yet published.This data paper introduces MajinBook, an open catalogue designed to facilitate the use of shadow libraries—such as Library Genesis and Z-Library—for computational social science and cultural analytics. By linking metadata from these vast, crowd-sourced archives with structured bibliographic data from Goodreads, we create a high-precision corpus of over 539,000 references to English-language books spanning three centuries, enriched with first publication dates, genres, and popularity metrics like ratings and reviews. Our methodology prioritizes natively digital EPUB files to ensure machine-readable quality, while addressing biases in traditional corpora like HathiTrust, and includes secondary datasets for French, German, and Spanish. We evaluate the linkage strategy for accuracy, release all underlying data openly, and discuss the project's legal permissibility under EU and US frameworks for text and data mining in research.",
+      "topics": [
+        "Computational and Text Analysis Methods",
+        "Digital Humanities and Scholarship",
+        "Authorship Attribution and Profiling"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 78,
+        "reason": "Matched computational evidence (digital or computational humanities) and humanities evidence (archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [
+          "digital or computational humanities"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
@@ -6035,6 +6451,56 @@
       }
     },
     {
+      "id": "https://openalex.org/W7131782224",
+      "title": "Fine-Tuning the Historian's Macroscope: Data Reuse and Medieval Korean Biographical Records in Neo4j",
+      "authors": [
+        "Javier Cha"
+      ],
+      "publicationDate": "2026-02-27",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1027",
+      "doiUrl": "https://doi.org/10.22148/jca.1027",
+      "articleUrl": "https://doi.org/10.22148/jca.1027",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1027",
+      "openAccessStatus": "diamond",
+      "abstract": "This is an accepted article with a DOI pre-assigned that is not yet published.This article explores the development and application of a historian’s macroscope, a computational framework that enables multiscalar exploration of medieval Korean biographical records using Neo4j. While digitization has greatly expanded access to historical sources, existing methodologies struggle to integrate large, heterogeneous datasets while maintaining interpretive rigor and contextual specificity. This research demonstrates how a graph database model enhances historical inquiry by enabling the dynamic traversing of patronage and kinship networks. Unlike conventional network visualization tools, which often impose a rigid divide between individual detail and macrostructural patterns, Neo4j facilitates seamless transitions across different levels of analysis. This discussion illustrates how the macroscope helps historians uncover obscured relationships, refine analytical focus, and generate new research questions. More broadly, it highlights the need for methodologies in digital history that move beyond large-scale visualization to critically engage with the complexities of historical sources.",
+      "topics": [
+        "Computational and Text Analysis Methods",
+        "Data Visualization and Analytics",
+        "Digital Humanities and Scholarship"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, digital knowledge infrastructure) and humanities evidence (historical research or sources, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "digital knowledge infrastructure",
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W7131787976",
       "title": "Extracting Linear Features in Archaeological Contexts",
       "authors": [
@@ -7149,6 +7615,266 @@
         ],
         "humanitiesSignals": [
           "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4416103244",
+      "title": "Fine-tuning vision–language models as OCR systems for low-resource languages: A case study of Manchu",
+      "authors": [
+        "Yan Hon Michael Chung",
+        "Donghyeok Choi"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10042",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10042",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10042",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10042",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract Manchu, a low-resource language essential for understanding early modern Eastern Eurasian history, lacks effective optical character recognition (OCR) systems that can handle real-world historical documents. This study develops high-performing OCR systems by fine-tuning three open-source vision–language models (Llama-3.2-11B-Vision, Qwen2.5-VL-7B, and Qwen2.5-VL-3B) on 60,000 synthetic Manchu word images using parameter-efficient training. Llama-3.2-11B-Vision achieved exceptional performance with 98.6 percent word accuracy and a character error rate of 0.002 on synthetic data, while maintaining 87.4 percent word-level accuracy (95% CI: 85.1%–89.7%) on scanned word images from formal Qing administrative manuscripts and printed documents. Comparative evaluation reveals substantial advantages over traditional approaches: while a convolutional recurrent neural network baseline achieved 99.9 percent synthetic accuracy, it suffered severe degradation to 56.8 percent on scanned documents. Our approach demonstrates effective synthetic-to-real domain transfer, providing a cost-effective solution deployable on accessible infrastructure. This work establishes a transferable framework for endangered language OCR that reduces technical and financial barriers in digital humanities, enabling historians and linguists to process historical archives without specialized computing resources.",
+      "topics": [
+        "Handwritten Text Recognition Techniques",
+        "Natural Language Processing Techniques",
+        "Digital Humanities and Scholarship"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "OCR / HTR method",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "OCR / HTR method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7126167903",
+      "title": "Fine-tuning large-language models for early modern Dutch translation",
+      "authors": [
+        "Gavin Lip",
+        "Victor de Boer",
+        "Arno Bosse",
+        "David Grantsaan"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10022",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10022",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10022",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10022",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract Large-language models (LLMs) have transformed natural language processing and opened new possibilities for the computational social sciences and digital humanities. Yet translating historical sources remains difficult because early modern varieties are scarcely represented in contemporary training corpora and because standard tokenizers fragment their non-standard orthography. This article tackles these gaps by adapting open LLMs to early modern Dutch-to-English translation and advances two concrete contributions: (i) a memory-efficient fine-tuning workflow that runs on a single consumer GPU, comparing order-reward policy optimization with the Unsloth supervised fine-tuning approach and (ii) a verifiable evaluation protocol that combines embedding-based metrics with systematic expert review. Experiments on testimonial texts (1680–1792) show that fine-tuning choice decisively shapes quality: the Unsloth-tuned Mistral model attains the highest BERTScore and METEOR values and most faithfully preserves historical nuance. The framework supports a collaborative workflow where machine-generated drafts accelerate expert translation, making archival texts more accessible while maintaining scholarly oversight through domain-expert validation.",
+      "topics": [
+        "Computational and Text Analysis Methods",
+        "Digital Humanities and Scholarship",
+        "Authorship Attribution and Profiling"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7154018432",
+      "title": "Introducing reproducible navigation of a web archive: SolrWayback navigation tracker",
+      "authors": [
+        "Victor Harbo Johnston"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10030",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10030",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10030",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10030",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract Web archives are an exhaustive source for humanities research. They are, however, hard to navigate and research with material from web archives is often opaque as no existing software for exploring web archives provide researcher with the possibility to track their pathways around the archive. This article presents an extension of the Open-Source software SolrWayback, which provides researchers with a navigation tracking feature that supports a more reproducible and transparent methodology for documenting how a web archive collection has been explored as part of research. The functionality has been developed from a user- and test-driven approach, where the needs of contemporary historians have decided how the feature was implemented. This user-centered approach provides new functionality for a piece of software that has primarily been developed by archiving institutions.",
+      "topics": [
+        "Web Data Mining and Analysis",
+        "Digital Humanities and Scholarship",
+        "Personal Information Management and User Behavior"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 93,
+        "reason": "Matched computational evidence (digital or computational humanities) and humanities evidence (archives or documentary evidence, heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "digital or computational humanities"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7160892535",
+      "title": "Messy data, low-resource languages, and LLMs: Narrative analysis of pre-modern Slavic Lives of Saints",
+      "authors": [
+        "Achim Rabus",
+        "Alexander Ermakov",
+        "Iris Ferrazzo"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10032",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10032",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10032",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10032",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract This study addresses the challenges of performing narratological analysis on low-resource languages, with a focus on Old Church Slavonic. Understanding the roles, interactions, and networks of persons is central to narrative analysis, yet such investigation is hindered by the scarcity of experts and the limited availability of annotated resources. We explore both established natural language processing (NLP) methods and large language models (LLMs) for analyzing pre-modern Slavic Lives of Saints, including several Slavic versions, the Greek original, and an English translation. Pre-modern Slavic texts pose particular difficulties due to rich morphology, orthographic variation, and limited standardization, which complicate the application of both traditional NLP tools and off-the-shelf LLMs. Through experiments using annotated and non-annotated ground truth data, we demonstrate that while conventional NLP methods often reach their limits on such low-resource, highly variable texts, LLMs provide complementary capabilities that can support narratological insights, especially in tracking persons and their interactions, albeit with important caveats regarding accuracy and coverage.",
+      "topics": [
+        "Historical Geopolitical and Social Dynamics",
+        "Historical Studies of British Isles",
+        "Balkans: History, Politics, Society"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 81,
+        "reason": "Matched computational evidence (AI / ML / LLM method, NLP or text-as-data method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W7165157916",
+      "title": "A theory-first approach toward using generative AI for humanities research",
+      "authors": [
+        "Andrew Piper"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10039",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10039",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10039",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10039",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract The integration of generative AI into humanities research presents both new opportunities and significant methodological challenges. While generative AI enables more sophisticated textual, visual, and historical analysis than ever before, it also introduces novel methodological risks. Prompts now function as measurement instruments, construct validity is entangled with model fluency, the increasing abstraction and subjectivity of tasks challenge single-answer evaluations, small changes in prompt or model configuration can materially alter substantive conclusions, and model training encodes strong theoretical assumptions prior to human interaction. This article advances a theory-first framework for generative-AI-assisted humanities research that traces how theoretical commitments intervene across the research lifecycle. Drawing on examples from the computational humanities and social sciences, it argues that theory operates as methodological infrastructure that constrains degrees of freedom, supports reproducibility, and enables principled iteration. By reframing generative AI as a site of theoretical inscription, the article outlines practical strategies for building robust and theoretically grounded humanities research in the era of generative AI.",
+      "topics": [
+        "Digital Humanities and Scholarship",
+        "Artificial Intelligence in Games",
+        "Computational and Text Analysis Methods"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 80,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
@@ -10380,6 +11106,52 @@
       }
     },
     {
+      "id": "https://openalex.org/W4415400747",
+      "title": "Tug-of-War of Emotion: Measuring and Modeling Sentiment Cycles in Chinese-Language Pop Song Lyrics, 1967-2023",
+      "authors": [
+        "Xiaolu Wang"
+      ],
+      "publicationDate": "2025-10-21",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/001c.144809",
+      "doiUrl": "https://doi.org/10.22148/001c.144809",
+      "articleUrl": "https://doi.org/10.22148/001c.144809",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/001c.144809",
+      "openAccessStatus": "diamond",
+      "abstract": "Scholars of popular music often assume that trends in the sentiment of pop song lyrics (becoming more positive or negative over time) “mirror” those in listeners’ preferences or the ethos of societies. For example, the detected monotone downward trend in the sentiment of English-language pop lyrics is typically interpreted as “reflecting” the deteriorating emotional and mental state in listener populations and/or the increasing demand for more negative (or less positive) lyric sentiment. This study challenges this “mirror interpretation” with an alternative “equilibration interpretation,” which posits that the average listener sentiment preference may remain largely stable across decades, and it is the equilibrating process that either brings the sentiment of pop lyrics closer to the listener preference or make the lyric sentiment oscillate around the listener preference. Exploring this alternative interpretation, this study measures and models the movement of lyric sentiment in more than 260,000 Chinese-language pop songs over six decades (1967–2023). To quantify the sentiment of a large volume of lyrics, a novel approach of combining large language model (LLM) and lexicon-based sentiment analysis is developed to extract affective information from lyrics. The resulting trajectory of measured average lyric sentiment exhibits a (damped) sine-wave-like pattern with an estimated period of 34 to 35 years. Moreover, this study does not stop at identifying sentiment patterns but goes further to build a math model that explains the possible cultural process—interactions between music listeners and lyricists—underlying the formation of such patterns. A parsimonious Damped Harmonic Oscillation (DHO) model can explicate both the periodic (in Chinese lyrics) and nonperiodic (in English lyrics) patterns of lyric sentiment movements, and the model parameters are estimated statistically. The explanatory power of the DHO model over empirical data lends support to the equilibration interpretation. In general, this study complicates any attempt to use changing features of mass cultural products as proxies for some underlying socio-psychological trends.",
+      "topics": [
+        "Music History and Culture",
+        "Social and Cultural Dynamics",
+        "Computational and Text Analysis Methods"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 71,
+        "reason": "Matched computational evidence (AI / ML / LLM method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4415366404",
       "title": "Proximity and Segregation in Industrial Manchester",
       "authors": [
@@ -10622,6 +11394,56 @@
         ],
         "humanitiesSignals": [
           "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4415033376",
+      "title": "Generative Aesthetics: On formal stuckness in AI verse",
+      "authors": [
+        "Ryan Heuser"
+      ],
+      "publicationDate": "2025-10-10",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/001c.144825",
+      "doiUrl": "https://doi.org/10.22148/001c.144825",
+      "articleUrl": "https://doi.org/10.22148/001c.144825",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/001c.144825",
+      "openAccessStatus": "diamond",
+      "abstract": "This paper examines the formal and aesthetic patterns of AI-generated poems through a series of computational experiments. Through analyses of rhyme and rhythm, it reveals how large language models (LLMs) exhibit a stubborn, formal stuckness in their outputs. The paper demonstrates that LLMs often ossify poetic forms by producing formally conservative texts that adhere more rigidly to traditional poetic conventions than even the most formally strict periods of literary history. The paper interprets these findings as evidence of a computational logic of idealization that privileges the satisfaction of formal expectation over its artful frustration, regularity over variation, and conformity over contradiction. It proposes “generative formalism” as a critical framework that extends traditional as well as quantitative and formalist methods to understand how generative systems process, flatten, and reify cultural production.",
+      "topics": [
+        "Digital Humanities and Scholarship",
+        "Topic Modeling",
+        "Artificial Intelligence in Games"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 81,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
@@ -18412,6 +19234,57 @@
       }
     },
     {
+      "id": "https://openalex.org/W4416268161",
+      "title": "Digital collections explorer: An open-source, multimodal viewer for searching digital collections",
+      "authors": [
+        "Yingyin Huang",
+        "Benjamin Charles Germain Lee"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10017",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10017",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10017",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10017",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract We present Digital Collections Explorer, a web-based, open-source exploratory search platform that leverages Contrastive Language-Image Pre-training for enhanced visual discovery of digital collections. Our Digital Collections Explorer can be installed locally and configured to run on a visual collection of interest on disk in just a few steps. Building upon recent advances in multimodal search techniques, our interface enables natural language queries and reverse image searches over digital collections with visual features. This article describes the system’s architecture, implementation and application to various cultural heritage collections, demonstrating its potential for democratizing access to digital archives, especially those with impoverished metadata. We present case studies with maps, photographs and PDFs extracted from web archives in order to demonstrate the flexibility of the Digital Collections Explorer, as well as its ease of use. We demonstrate that the Digital Collections Explorer scales to hundreds of thousands of images on a MacBook Pro with an M4 chip. Lastly, we host a public demo of Digital Collections Explorer.",
+      "topics": [
+        "Advanced Image and Video Retrieval Techniques",
+        "Image Retrieval and Classification Techniques",
+        "Multimodal Machine Learning Applications"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, digital knowledge infrastructure) and humanities evidence (archives or documentary evidence, heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "digital knowledge infrastructure",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4410504351",
       "title": "Deep Learning in Archiving Indus Script and Motif Information",
       "authors": [
@@ -18471,6 +19344,212 @@
       }
     },
     {
+      "id": "https://openalex.org/W4411458340",
+      "title": "It takes a village to write a book: Mapping anonymous contributions in Stephen Langton’s Quaestiones Theologiae",
+      "authors": [
+        "Jan Maliszewski"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10004",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10004",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10004",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10004",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract While the indirect evidence suggests that already in the early scholastic period the literary production based on records of oral teaching (so-called reportationes ) was not uncommon, there are very few sources commenting on the practice. This article details the design of a study applying stylometric techniques of authorship attribution to a collection developed from reportationes – Stephen Langton’s Quaestiones Theologiae – aiming to uncover layers of editorial work and thus validate some hypotheses regarding the collection’s formation. Following Camps, Clérice, and Pinche (2021), I discuss the implementation of an HTR pipeline and stylometric analysis based on the most frequent words, POS tags, and pseudo-affixes. The proposed study will offer two methodological gains relevant to computational research on the scholastic tradition: it will directly compare performance on manually composed and automatically extracted data, and it will test the validity of transformer-based OCR and automated transcription alignment for workflows applied to scholastic Latin corpora. If successful, this study will provide an easily reusable template for the exploratory analysis of collaborative literary production stemming from medieval universities.",
+      "topics": [
+        "Catholicism and Religious Studies"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, OCR / HTR method) and humanities evidence (heritage, memory, or collections, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "OCR / HTR method",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "OCR / HTR method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4414709284",
+      "title": "LLM agents for interactive exploration of historical cadastre data: framework and application to Venice",
+      "authors": [
+        "Tristan Karch",
+        "Jakhongir Saydaliev",
+        "Isabella di Lenardo",
+        "Frédé́ric Kaplan"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10014",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10014",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10014",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10014",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract Cadastral data reveal key information about the historical organization of cities but are often non-standardized due to diverse formats and human annotations, complicating large-scale analysis. We explore as a case study Venice’s urban history during the critical period from 1740 to 1808, capturing the transition following the fall of the ancient Republic and the Ancien Régime. This era’s complex cadastral data, marked by its volume and lack of uniform structure, presents unique challenges that our approach adeptly navigates, enabling us to generate spatial queries that bridge past and present urban landscapes. We present a text-to-programs framework that leverages large language models to process natural language queries as executable code for analyzing historical cadastral records. Our methodology implements two complementary techniques: a SQL agent for handling structured queries about specific cadastral information, and a coding agent for complex analytical operations requiring custom data manipulation. We propose a taxonomy that classifies historical research questions based on their complexity and analytical requirements, mapping them to the most appropriate technical approach. This framework is supported by an investigation into the execution consistency of the system, alongside a qualitative analysis of the answers it produces. By ensuring interpretability and minimizing hallucination through verifiable program outputs, we demonstrate the system’s effectiveness in reconstructing past population information, property features and spatiotemporal comparisons in Venice.",
+      "topics": [
+        "3D Modeling in Geospatial Applications",
+        "Medieval Architecture and Archaeology",
+        "Image Processing and 3D Reconstruction"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, visual or spatial computing method) and humanities evidence (historical research or sources, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "visual or spatial computing method",
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "visual or spatial computing method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4414879219",
+      "title": "Style evolution in Western choral music: A corpus-based strategy",
+      "authors": [
+        "Benjamin Henzel",
+        "Meinard Müller",
+        "Ch. Weiß"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10016",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10016",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10016",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10016",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract This article introduces a strategy for the large-scale corpus analysis of music audio recordings, aimed at identifying long-term trends and testing hypotheses regarding the repertoire represented in a given corpus. Our approach centers on computing evolution curves (ECs), which map style-relevant features, such as musical complexity, onto historical timelines. Unlike traditional approaches that rely on sheet music, we use audio recordings, leveraging their widespread availability and the performance nuances they capture. We also emphasize the benefits of pitch-class features based on deep learning, which improve the robustness and accuracy of tonal complexity measures compared to traditional signal processing methods. Addressing the frequent lack of exact work dates (year of composition) in historical corpora, we propose a heuristic method that aligns works with timelines using composers’ life dates. This method effectively preserves historical trends with minimal deviation compared to using actual work dates, as validated against available metadata from the Carus Audio Corpus, which spans 450 years of choral and sacred music and contains 5,729 tracks with detailed metadata. We demonstrate the utility of our strategy through case studies of this corpus, showing how ECs provide insights into stylistic developments that confirm expectations from musicology, thus highlighting the potential of computational studies in this field. For example, we observe a steady increase in tonal complexity from the Renaissance through the Baroque period, stable complexity levels in the 19th and 20th centuries, and consistently higher complexity in minor-key works compared to major-key works. Our visualizations also reveal that vocal music was more complex than instrumental music in the 18th century, but less complex in the 20th century. Finally, we conduct comparative analyses of individual composers, exploring how historical and biographical contexts may have influenced their works. Our findings highlight the potential of this strategy for computational corpus studies in musicological research.",
+      "topics": [
+        "Music and Audio Processing",
+        "Music Technology and Sound Studies",
+        "Neuroscience and Music Perception"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, NLP or text-as-data method) and humanities evidence (historical research or sources, historical language evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources",
+          "historical language evidence"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical language evidence"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4416300449",
+      "title": "Topic-RAG for historical newspapers: Enhancing information retrieval in humanities research through topic-based retrieval-augmented generation",
+      "authors": [
+        "Keerthana Murugaraj",
+        "Salima Lamsiyah",
+        "Marten Düring",
+        "Martin Theobald"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10018",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10018",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10018",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10018",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract The exploration and retrieval of information from large, unstructured document collections remain challenging. Unsupervised techniques, such as clustering and topic modeling, provide only a coarse overview of thematic structure, while traditional keyword searches often require extensive manual effort. Recent advances in large language models and retrieval-augmented generation (RAG) introduce new opportunities by enabling focused retrieval of relevant documents or chunks tailored to a user’s query. This allows for dynamic, chat-like interactions that streamline exploration and improve access to pertinent information. This article introduces Topic-RAG , a chat engine that integrates topic modeling with RAG to support interactive and exploratory document retrieval. Topic-RAG uses BERTopic to identify the most relevant topics for a given query and restricts retrieval to documents or chunks within those topics. This targeted strategy enhances retrieval relevance by narrowing the search space to thematically aligned content. We utilize the pipeline on 4,711 articles related to nuclear energy from the Impresso historical Swiss newspaper corpus. Our experimental results demonstrate that Topic-RAG outperforms a baseline RAG architecture that does not incorporate topic modeling, as measured by widely recognized metrics, such as BERTScore (including Precision, Recall and F1), ROUGE and UniEval. Topic-RAG also achieves improvements in computational efficiency for both single and batch query processing. In addition, we performed a qualitative analysis in collaboration with domain experts, who assessed the system’s effectiveness in supporting historically grounded research. Although our evaluation is focused on historical newspaper articles, the proposed approach more generally integrates topic information to enhance retrieval performance within a transparent and user-configurable pipeline effectively. It supports the targeted retrieval of contextually rich and semantically relevant content while also allowing users to adjust key parameters such as the number of documents retrieved. This flexibility provides greater control and adaptability to meet diverse research needs in historical inquiry, literary analysis and cultural studies. Due to copyright restrictions, the raw data cannot be publicly shared. Data access instructions are provided in the repository, and the replication code is available on GitHub: https://github.com/KeerthanaMurugaraj/Topic-RAG-for-Historical-Newspapers .",
+      "topics": [
+        "Information Retrieval and Search Behavior",
+        "Topic Modeling",
+        "Computational and Text Analysis Methods"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, NLP or text-as-data method) and humanities evidence (historical research or sources, heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4416354668",
       "title": "Computer-Assisted Reading Tools Marks: First Step of a Promising Protocol",
       "authors": [
@@ -18523,6 +19602,166 @@
       }
     },
     {
+      "id": "https://openalex.org/W4416894740",
+      "title": "Retrieving information from unstructured historical sources using large language models",
+      "authors": [
+        "Spencer Dean Stewart",
+        "Sanskriti Sinha"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10019",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10019",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10019",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10019",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract The volumes of historical data locked behind unstructured formats have long been a challenge for researchers in the computational humanities. While optical character recognition (OCR) and natural language processing have enabled large-scale text mining projects, the irregular formatting, inconsistent terminology and evolving printing practices complicate automated parsing and information extraction efforts for historical documents. This study explores the potential of large language models (LLMs) in processing and structuring irregular and non-standardized historical materials, using the U.S. Department of Agriculture’s Plant Inventory books (1898–2008) as a test case. Given the frequent evolution of these historical records, we implemented a pipeline combining OCR, custom segmentation rules and LLMs to extract structured data from the scanned texts. It provides an example of how incorporating LLMs into data-processing pipelines can enhance the accessibility and usability of historical and archival materials for scholars.",
+      "topics": [
+        "Handwritten Text Recognition Techniques",
+        "Topic Modeling",
+        "Advanced Text Analysis Techniques"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "OCR / HTR method",
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "OCR / HTR method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4412008231",
+      "title": "From dictionaries to LLMs – an evaluation of sentiment analysis techniques for German language data",
+      "authors": [
+        "Jannis Klähn",
+        "Janos Borst",
+        "Manuel Burghardt"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10005",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10005",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10005",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10005",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract In this study, we perform a comprehensive evaluation of sentiment classification for German language data using three different approaches: (1) dictionary-based methods, (2) fine-tuned transformer models such as BERT and XLM-T and (3) various large language models (LLMs) with zero-shot capabilities, including natural language inference models, Siamese models and dialog-based models. The evaluation considers a variety of German language datasets, including contemporary social media texts, product reviews and humanities datasets. Our results confirm that dictionary-based methods, while computationally efficient and interpretable, fall short in classification accuracy. Fine-tuned models offer strong performance, but require significant training data and computational resources. LLMs with zero-shot capabilities, particularly dialog-based models, demonstrate competitive performance, often rivaling fine-tuned models, while eliminating the need for task-specific training. However, challenges remain regarding non-determinism, prompt sensitivity and the high resource requirements of large LLMs. The results suggest that for sentiment analysis in the computational humanities, where non-English and historical language data are common, LLM-based zero-shot classification is a viable alternative to fine-tuned models and dictionaries. Nevertheless, model selection remains highly context-dependent, requiring careful consideration of trade-offs between accuracy, resource efficiency and transparency.",
+      "topics": [
+        "Natural Language Processing Techniques",
+        "Authorship Attribution and Profiling",
+        "Sentiment Analysis and Opinion Mining"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 81,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4414709701",
+      "title": "Expanding conceptual histories: using contextualized word embeddings for the history and philosophy of the virtual particle concept",
+      "authors": [
+        "Michael Zichert",
+        "Arno Simons",
+        "Adrian Wüthrich"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10013",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10013",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10013",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10013",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract This article explores the potential of large language models (LLMs), particularly through the use of contextualized word embeddings, to trace the evolution of scientific concepts. It thus aims to extend the potential of LLMs, currently transforming much of humanities research, to the specialized field of history and philosophy of science. Using the concept of the virtual particle – a fundamental idea in understanding elementary particle interactions – as a case study, we domain-adapted a pretrained Bidirectional Encoder Representations from Transformers model on nearly a century of Physical Review publications. By employing semantic change detection techniques, we examined shifts in the meaning and usage of the term “virtual.” Our analysis reveals that the dominant meaning of “virtual” stabilized after the 1950s, aligning with the formalization of the virtual particle concept, while the polysemy of “virtual” continued to grow. Augmenting these findings with dependency parsing and qualitative analysis, we identify pivotal historical transitions in the term’s usage. In a broader methodological discussion, we address challenges such as the complex relationship between words and concepts, the influence of historical and linguistic biases in datasets, and the exclusion of mathematical formulas from text-based approaches.",
+      "topics": [
+        "Digital Humanities and Scholarship",
+        "Semantic Web and Ontologies"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 81,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "digital knowledge infrastructure",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4406115856",
       "title": "Virtual Reality Tours as an Immersive Approach to Archaeology in Higher Education",
       "authors": [
@@ -18569,6 +19808,57 @@
         ],
         "humanitiesSignals": [
           "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4412949327",
+      "title": "Undate: humanistic dates for computation",
+      "authors": [
+        "Rebecca Sutton Koeser",
+        "Julia Damerow",
+        "Robert Casties",
+        "Cole Crawford"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10006",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10006",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10006",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10006",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract undate is an ambitious, in-progress effort to develop a pragmatic Python package for computation and analysis of temporal information in humanistic and cultural data, with a particular emphasis on uncertain, incomplete, and imprecise dates and with support for multiple calendars. The development of undate is grounded in domain-specific work on digital and computational humanities projects from multiple institutions, including Shakespeare and Company Project , Princeton Geniza Project , and Islamic Scientific Manuscript Initiative . With increasing support for different formats and calendars, Undate aims to bridge technical gaps across different communities and methodologies. In this article, we describe the undate software package and the functionality of the core Undate and UndateInterval classes to work with dates and date intervals. We discuss why this software exists, how it expands on and generalizes prior work, how it compares to other approaches and tools, and its current limitations. We describe the development methodology used to create the software, our plans for active and continuing development, and the potential undate has to impact computational humanities research.",
+      "topics": [
+        "Artificial Intelligence in Games",
+        "Algorithms and Data Compression",
+        "Computability, Logic, AI Algorithms"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 80,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
@@ -18680,6 +19970,57 @@
       }
     },
     {
+      "id": "https://openalex.org/W4414294975",
+      "title": "Evaluating large language models with a word-level translation alignment task between Ancient Greek and English",
+      "authors": [
+        "Peter Nadel",
+        "Gregory Crane"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10010",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10010",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10010",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10010",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract In this article, we evaluate several large language models (LLMs) on a word-level translation alignment task between Ancient Greek and English. Comparing model performance to a human gold standard, we examine the performance of four different LLMs, two open-weight and two proprietary. We then take the best-performing model and generate examples of word-level alignments for further finetuning of the open-weight models. We observe significant improvement of open-weight models due to finetuning on synthetic data. These findings suggest that open-weight models, though not able to perform a certain task themselves, can be bolstered through finetuning to achieve impressive results. We believe that this work can help inform the development of more such tools in the digital classics and the computational humanities at large.",
+      "topics": [
+        "Natural Language Processing Techniques",
+        "Topic Modeling",
+        "Text Readability and Simplification"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 77,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4406084735",
       "title": "Color reconstruction by photometric stereo with unknown lighting of rock art carvings found in two Sardinian Domus de Janas",
       "authors": [
@@ -18733,6 +20074,57 @@
       }
     },
     {
+      "id": "https://openalex.org/W4414294931",
+      "title": "Whose news? Critical methods for assessing bias in large historical datasets",
+      "authors": [
+        "Kaspar Beelen",
+        "Jon Lawrence",
+        "Katherine McDonough",
+        "Daniel H. Wilson"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10007",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10007",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10007",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10007",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract This article implements a critical method for assessing bias in large historical datasets that we term the “Environmental Scan.” The Environmental Scan sheds new light on newspaper collections by linking newly available “reference metadata” gathered from historical sources to existing full-text and catalogue metadata. The rise of computational methods in history and the social sciences, in tandem with newly “datafied” source materials, creates a challenge for researchers to adapt their existing critical practices to the increasing scale and complexity of computational research. To help address this challenge, the Environmental Scan situates big historical datasets in much greater context, including estimating what materials are missing, thereby revealing the ways digital collections can be “oligoptic” in nature. Using the British Newspaper Archive (BNA) as a case study, we diagnose the biases and imbalances in the digitised Victorian press. We determine which voices are under- or over-represented in relation to the political composition of the collection as well as its content and we trace the origins of these biases in the digitisation process. This article informs future interdisciplinary discussions about data bias and offers a conceptual model adaptable to diverse historical datasets. The Environmental Scan provides a more nuanced and accurate understanding of how newspaper data reflects past societies, making it a valuable tool for researchers.",
+      "topics": [
+        "Computational and Text Analysis Methods"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 73,
+        "reason": "Matched computational evidence (digital knowledge infrastructure) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital knowledge infrastructure",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4410168009",
       "title": "Deep Learning for Detection of Underwater Aircraft Wrecks from US Conflicts",
       "authors": [
@@ -18775,6 +20167,53 @@
         ],
         "methodSignals": [
           "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
+      "id": "https://openalex.org/W4414365627",
+      "title": "An unsupervised information-theoretic approach to identifying formulaic clusters in textual data",
+      "authors": [
+        "Gideon Yoffe",
+        "Yair Segev",
+        "Barak Sober"
+      ],
+      "publicationDate": "2025-01-01",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2025.10011",
+      "doiUrl": "https://doi.org/10.1017/chr.2025.10011",
+      "articleUrl": "https://doi.org/10.1017/chr.2025.10011",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2025.10011",
+      "openAccessStatus": "diamond",
+      "abstract": "Abstract Texts, whether literary or historical, exhibit structural and stylistic patterns shaped by their purpose, authorship and cultural context. Formulaic texts, which are characterized by repetition and constrained expression, tend to differ in their information content (as defined by Shannon) compared to more dynamic compositions. Identifying such patterns in historical documents, particularly multi-author texts like the Hebrew Bible, provides insights into their origins, purpose and transmission. This study aims to identify formulaic clusters: sections exhibiting systematic repetition and structural constraints, by analyzing recurring phrases, syntactic structures and stylistic markers. However, distinguishing formulaic from non-formulaic elements in an unsupervised manner presents a computational challenge, especially in high-dimensional and sample-poor data sets where patterns must be inferred without predefined labels. To address this, we develop an information-theoretic algorithm leveraging weighted self-information distributions to detect structured patterns in text. Our approach directly models variations in sample-wise self-information to identify formulaicity. By extending classical discrete self-information measures with a continuous formulation based on differential self-information in multivariate Gaussian distributions, our method remains applicable across different types of textual representations, including neural embeddings under Gaussian priors. Applied to hypothesized authorial divisions in the Hebrew Bible, our approach successfully isolates stylistic layers, providing a quantitative framework for textual stratification. This method enhances our ability to analyze compositional patterns, offering deeper insights into the literary and cultural evolution of texts shaped by complex authorship and editorial processes.",
+      "topics": [
+        "Natural Language Processing Techniques",
+        "Advanced Text Analysis Techniques"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 66,
+        "reason": "Matched computational evidence (NLP or text-as-data method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "NLP or text-as-data method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "NLP or text-as-data method"
         ],
         "humanitiesSignals": [
           "historical research or sources"

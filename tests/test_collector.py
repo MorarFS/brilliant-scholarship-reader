@@ -27,6 +27,7 @@ class CollectorTests(unittest.TestCase):
             feed="digital-humanities",
             journal_url="https://example.org/journal",
             qualification_note="Pinned test venue",
+            inclusion_basis="sjr-q1",
         )
 
     def test_reconstructs_openalex_abstract_in_order(self):
@@ -93,6 +94,7 @@ class CollectorTests(unittest.TestCase):
             feed="ai-history",
             journal_url="https://example.org/history",
             qualification_note="Pinned Q1 history venue",
+            inclusion_basis="sjr-q1",
         )
         result = classify(
             {"title": "Large language models for medieval manuscripts", "abstract": "NLP extracts people from archival documents.", "topics": []},
@@ -109,6 +111,12 @@ class CollectorTests(unittest.TestCase):
         self.assertEqual(result["score"], 0)
         self.assertFalse(result["qualifies"])
         self.assertIn("non-research item signal", result["signals"])
+
+        placeholder = classify(
+            {"title": "Title Pending", "abstract": "Digital humanities analysis of historical archives.", "topics": []},
+            self.journal,
+        )
+        self.assertFalse(placeholder["qualifies"])
 
     def test_bibliographic_book_review_title_is_excluded(self):
         result = classify(
@@ -159,14 +167,17 @@ class CollectorTests(unittest.TestCase):
             path = Path(directory) / "journals.csv"
             with path.open("w", newline="", encoding="utf-8") as handle:
                 writer = csv.writer(handle)
-                writer.writerow(["Title", "Issn", "SJR Best Quartile", "Year", "Feed", "Qualification note"])
-                writer.writerow(["Keep Me", "1234-567X", "Q1", "2024", "ai-history", "Pinned test list"])
+                writer.writerow(["Title", "Issn", "SJR Best Quartile", "Year", "Feed", "Qualification note", "Inclusion Basis"])
+                writer.writerow(["Keep Me", "1234-567X", "Q1", "2024", "ai-history", "Pinned test list", "sjr-q1"])
+                writer.writerow(["User Pick", "4444-5555", "", "", "digital-humanities", "Requested specialist", "user-curated specialist"])
                 writer.writerow(["Not Q1", "2222-3333", "Q2", "2024"])
                 writer.writerow(["No ISSN", "", "Q1", "2024"])
             journals = read_journals(path)
-        self.assertEqual([journal.title for journal in journals], ["Keep Me"])
+        self.assertEqual([journal.title for journal in journals], ["Keep Me", "User Pick"])
         self.assertEqual(journals[0].feed, "ai-history")
         self.assertEqual(journals[0].qualification_note, "Pinned test list")
+        self.assertEqual(journals[1].quartile, "User-curated specialist")
+        self.assertEqual(journals[1].inclusion_basis, "user-curated specialist")
 
 
 if __name__ == "__main__":

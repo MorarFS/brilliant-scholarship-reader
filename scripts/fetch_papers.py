@@ -40,6 +40,7 @@ class Journal:
     feed: str
     journal_url: str | None
     qualification_note: str
+    inclusion_basis: str
 
     @property
     def primary_issn(self) -> str:
@@ -70,7 +71,7 @@ HUMANITIES_RULES: tuple[tuple[str, int, str], ...] = (
 )
 
 NEGATIVE_RULES: tuple[tuple[str, int, str], ...] = (
-    (r"^(?:review\s*:|inside the history lab\b|(?:book review|review of|books received|corrigendum|erratum|correction(?: to)?|editor(?:’|')?s corner|from the editor(?:’|')?s desk|editorial|introduction|front matter|back matter|volume index|index to volume|notes on contributors)\b)", -100, "non-research item signal"),
+    (r"^(?:review\s*:|inside the history lab\b|title pending\b|(?:book review|review of|books received|corrigendum|erratum|correction(?: to)?|editor(?:’|')?s corner|from the editor(?:’|')?s desk|editorial|introduction|front matter|back matter|volume index|index to volume|notes on contributors)\b)", -100, "non-research item signal"),
 )
 
 
@@ -92,7 +93,9 @@ def read_journals(path: Path) -> list[Journal]:
         for raw in reader:
             row = {normalise_header(key): (value or "").strip() for key, value in raw.items() if key}
             quartile = row.get("sjrbestquartile") or row.get("bestquartile") or row.get("quartile") or ""
-            if quartile.upper() != "Q1":
+            inclusion_basis = (row.get("inclusionbasis") or "sjr-q1").lower()
+            is_user_curated = inclusion_basis == "user-curated specialist"
+            if quartile.upper() != "Q1" and not is_user_curated:
                 continue
             title = row.get("title") or row.get("journal") or row.get("sourcetitle") or ""
             issns = parse_issns(row.get("issn") or row.get("issns") or "")
@@ -103,16 +106,17 @@ def read_journals(path: Path) -> list[Journal]:
                 Journal(
                     title=title,
                     issns=issns,
-                    quartile="Q1",
+                    quartile="User-curated specialist" if is_user_curated else "Q1",
                     year=int(raw_year) if raw_year.isdigit() else None,
                     focus=row.get("focus") or "computational humanities",
                     feed=row.get("feed") if row.get("feed") in FEED_LABELS else "digital-humanities",
                     journal_url=row.get("journalurl") or row.get("sourceurl") or None,
                     qualification_note=row.get("qualificationnote") or row.get("provenancenote") or "Pinned Q1 starter venue; review annually",
+                    inclusion_basis="user-curated specialist" if is_user_curated else "sjr-q1",
                 )
             )
     if not journals:
-        raise ValueError(f"No Q1 journals with usable ISSNs found in {path}")
+        raise ValueError(f"No eligible Q1 or user-curated specialist journals with usable ISSNs found in {path}")
     return journals
 
 
@@ -455,7 +459,7 @@ def main() -> int:
     archive_start = archive_start_date(today)
     start = args.since or archive_start
     journals = read_journals(args.journals)
-    print(f"Collecting {start} through {today} from {len(journals)} pinned Q1 journals")
+    print(f"Collecting {start} through {today} from {len(journals)} configured journals")
 
     openalex_ok = False
     try:
@@ -529,6 +533,7 @@ def main() -> int:
                 "feedLabel": FEED_LABELS[journal.feed],
                 "journalUrl": journal.journal_url,
                 "qualificationNote": journal.qualification_note,
+                "inclusionBasis": journal.inclusion_basis,
                 "resultCount": sum(paper.get("journal") == journal.title for paper in papers),
             }
             for journal in journals

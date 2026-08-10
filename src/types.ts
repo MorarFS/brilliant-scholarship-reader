@@ -38,6 +38,7 @@ export type MonitoredJournal = {
   feedLabel: string;
   journalUrl: string | null;
   qualificationNote: string;
+  inclusionBasis: "sjr-q1" | "user-curated specialist";
   resultCount: number;
 };
 
