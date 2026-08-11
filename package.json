@@ -9,11 +9,12 @@
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.app.json && vite build",
     "preview": "vite preview",
-    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && npm run build",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && vitest run && npm run build",
     "lint": "eslint src --max-warnings=0",
     "fetch-papers": "python3 scripts/fetch_papers.py"
   },
   "dependencies": {
+    "pdfjs-dist": "^6.2.108",
     "react": "19.2.6",
     "react-dom": "19.2.6"
   },
@@ -31,7 +32,8 @@
     "globals": "16.4.0",
     "typescript": "5.9.3",
     "typescript-eslint": "8.59.3",
-    "vite": "8.0.13"
+    "vite": "8.0.13",
+    "vitest": "^4.1.10"
   },
   "type": "module"
 }

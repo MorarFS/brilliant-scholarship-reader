@@ -156,11 +156,13 @@ class CollectorTests(unittest.TestCase):
             },
             "authorships": [],
             "topics": [],
+            "best_oa_location": {"landing_page_url": "https://example.org/oa/123", "pdf_url": "https://example.org/oa/123.pdf"},
         }
         paper = openalex_record(work, [self.journal])
         self.assertIsNotNone(paper)
         self.assertIsNone(paper["doiUrl"])
         self.assertEqual(paper["articleUrl"], "https://example.org/articles/123")
+        self.assertEqual(paper["openAccessPdfUrl"], "https://example.org/oa/123.pdf")
 
     def test_csv_loader_keeps_q1_and_requires_issn(self):
         with tempfile.TemporaryDirectory() as directory:

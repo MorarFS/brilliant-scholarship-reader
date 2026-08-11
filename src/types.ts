@@ -13,6 +13,7 @@ export type Paper = {
   articleUrl: string | null;
   journalUrl: string | null;
   openAccessUrl: string | null;
+  openAccessPdfUrl: string | null;
   openAccessStatus: string | null;
   abstract: string | null;
   topics: string[];
@@ -26,6 +27,18 @@ export type Paper = {
     classifier: "rules-v2" | "llm";
   };
   metadataSources: string[];
+};
+
+export type Annotation = {
+  id: string;
+  paperId: string;
+  citation: string;
+  quote: string;
+  note: string;
+  page: number | null;
+  source: "open-access PDF" | "user-uploaded PDF" | "citation only";
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type MonitoredJournal = {

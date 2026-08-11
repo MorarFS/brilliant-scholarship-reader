@@ -5,7 +5,7 @@ Chronicle is a standalone, static tracker with two deliberately separated resear
 1. **Digital & Computational Humanities** (the default): computational methods applied to history, historical sources, archives, heritage, cultural memory, historical language, and historical data in leading specialist or closely adjacent venues.
 2. **AI & LLMs in History** (secondary): AI, machine-learning, LLM, NLP, and other computational-method papers found in selected history journals, only when they are substantively tied to historical research or materials.
 
-Generic history and generic AI papers are excluded. Chronicle uses open scholarly metadata, preserves the evidence behind every match, and links readers to the article. It never scrapes publisher full text, signs into a library, or downloads papers.
+Generic history and generic AI papers are excluded. Chronicle uses open scholarly metadata, preserves the evidence behind every match, and links readers to the article. The collector never scrapes publisher full text or signs into a library. The browser Reading Room processes only a direct legal OA PDF that the source allows it to fetch, or a PDF the user attaches locally.
 
 The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the two-calendar-year archive weekly, commits the generated JSON, verifies the project, and republishes the static site.
 
@@ -22,6 +22,8 @@ The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the t
 - labels DOI, Article page, Journal, and legal Open-access copy links separately;
 - publishes the complete monitored-journal list, ISSNs, feed membership, Q1 edition/note, result count, journal link, and last scan time on the site.
 - lets readers save or unsave papers in a private browser-local reading list, with JSON export/import for backup and transfer.
+- opens a local-first Reading Room with selectable extracted PDF text, original-PDF view, passage highlights, attached notes, paper-level notes, citation copy, and RIS export;
+- allows a legally obtained PDF to be attached to an existing tracked paper and processed only in the browser, without upload or library automation.
 
 ## Run locally
 
@@ -125,13 +127,25 @@ The primary **Open article** action follows this chain:
 
 The DOI resolver should hand off normally to institutional browser tools such as LibKey. Chronicle does not integrate with LibKey, automate authenticated access, download articles, or bypass controls. A legal OA location is shown separately as **Open-access copy** when metadata provides one.
 
-## Saved papers and reading-list portability
+## Reading Room, annotations, and saved-paper portability
 
-Every paper card has a **Save paper** control. The **Saved papers** view keeps the same abstract, DOI, article-page, journal, and open-access links and supports the existing search, journal, method, year, and sort filters.
+Every paper card has a Reading Room action. When OpenAlex supplies a direct legal OA PDF URL, **Read & annotate** asks the source for that PDF from the browser. If the source permits cross-origin access and returns a valid PDF, Chronicle extracts selectable text locally, preserves page boundaries, offers the original PDF in a second tab, and lets the user capture selected passages. A highlight may have an attached note; paper-level notes need no selection. Every annotation records the stable paper identity, readable citation, page when available, timestamp, and source indicator (`open-access PDF`, `user-uploaded PDF`, or `citation only`).
 
-The reading list is stored in the browser’s local storage. It is private to that browser profile: Chronicle does not create an account, sync the list to a server, or receive the saved data. This also means the list does **not** automatically appear on another device or browser, and clearing site data can erase it.
+When a source blocks browser fetching through CORS, returns a landing page instead of a PDF, or supplies no PDF URL, Chronicle switches honestly to citation-and-notes mode. It links to the legal OA/source location and explains that the document must be read there. It does not proxy the source, bypass controls, scrape publisher pages, or attempt authenticated access.
 
-Use **Export JSON** to download a complete backup and **Import JSON** to merge that backup into another Chronicle browser. The export stores paper metadata snapshots so saved abstracts and links can remain available even after a paper leaves the moving two-year feed. Imported external URLs are restricted to HTTP/HTTPS. Treat the JSON file as personal research data and store it wherever you normally keep private backups.
+### Uploading a legally obtained PDF
+
+The Reading Room’s **Upload PDF** control is scoped to the currently selected tracked paper. A PDF obtained manually through a library, proxy, repository, or publisher can be attached to that paper’s stable citation. The file is parsed in the browser and is never sent to Chronicle, GitHub Pages, OpenAlex, Crossref, or another server.
+
+Chronicle attempts to retain the file in that browser’s IndexedDB storage so it can reopen with the same paper. Browser quota, private-browsing rules, clearing site data, or a device/browser change can remove it; in those cases the user must reattach the file. **Forget local PDF** removes the retained local copy. Uploaded PDF bytes are deliberately excluded from JSON export.
+
+### Privacy, persistence, and export
+
+Every annotation automatically saves its paper. The **Saved papers** view keeps abstracts and DOI/article/journal/OA links, shows annotation counts, and supports the existing filters. Papers are stored in local storage; attached PDF files use IndexedDB. There is no Chronicle account, cloud sync, or server-side research profile.
+
+**Export JSON** produces a versioned backup containing saved paper snapshots, citations, highlights, notes, page references, timestamps, and annotation source indicators. **Import JSON** merges those records on another browser or device. The JSON never contains PDF bytes; legally obtained PDFs must be reattached on the destination. Imported external URLs are restricted to HTTP/HTTPS.
+
+The Reading Room can copy a readable author-date citation and download an RIS journal record for citation managers. Citation formatting is intentionally lightweight and should be checked against the user’s required style. Treat exported JSON as personal research data and store it accordingly.
 
 ## GitHub Pages and weekly refresh
 
@@ -146,7 +160,10 @@ The workflow uses GitHub’s built-in `GITHUB_TOKEN`; no personal access token i
 
 - [OpenAlex](https://developers.openalex.org/) supplies open work, author, source, topic, location, OA, and reconstructed abstract metadata. Abstract coverage is incomplete.
 - [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/) supplies publisher-deposited bibliographic metadata. Most metadata is reusable, but deposited abstracts may carry publisher/author copyright.
-- Chronicle stores metadata returned by these APIs; it does not fetch article HTML or PDFs. Public operators should review abstract reuse under their institutional policy and jurisdiction.
+- The collector stores metadata returned by these APIs; it does not fetch article HTML or PDFs. The optional browser Reading Room fetches only metadata-identified OA PDF URLs after a user opens it, with no credentials, and holds the resulting bytes locally.
+- OA metadata can point to a landing page, a moved file, or a server that rejects CORS. In-app reading is therefore best-effort. The source-site link and citation/notes panel remain available when embedding fails.
+- PDF text extraction can lose columns, footnotes, formulae, images, or reading order. The original-PDF tab is the authoritative visual copy; annotations are research aids rather than changes to the source file.
+- Local browser storage is not a preservation service. Quota, private mode, site-data clearing, and device changes can remove notes or attached files unless the JSON research record is exported and PDFs are retained separately.
 - Dates, author lists, journal assignments, abstracts, links, OA status, and topics can be incomplete or delayed. Rule matches are triage signals, not scholarly or quality judgments.
 - Strict rules reduce noise but can miss relevant papers whose titles/abstracts do not name both dimensions. The visible journal list and preserved reasons make that tradeoff inspectable.
 
@@ -159,6 +176,7 @@ A later opt-in stage could send only borderline metadata to a structured classif
 - `config/journals.csv` — complete two-feed venue configuration with Q1 and user-curated inclusion bases
 - `scripts/fetch_papers.py` — OpenAlex/Crossref collector and rules-v2 classifier
 - `public/data/` — generated two-year data, journal manifest, and scan state
-- `src/` — static two-feed React interface, browser-local reading list, and monitored-journals audit section
+- `src/` — static tracker, PDF Reading Room, browser-local annotations/files, citation utilities, reading list, and monitored-journals audit section
+- `src/readingRoom.test.ts` — deterministic citation, stable-identity, annotation-import, and merge tests
 - `tests/test_collector.py` — deterministic rules, feed, date, link, and CSV tests
 - `.github/workflows/weekly-refresh-and-pages.yml` — weekly refresh, verification, commit, and Pages deployment

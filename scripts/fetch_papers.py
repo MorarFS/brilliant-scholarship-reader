@@ -252,7 +252,8 @@ def openalex_record(work: dict[str, Any], journals: list[Journal]) -> dict[str, 
         return None
     doi = normalise_doi(work.get("doi"))
     best_oa = work.get("best_oa_location") or {}
-    oa_url = best_oa.get("landing_page_url") or best_oa.get("pdf_url")
+    oa_pdf_url = best_oa.get("pdf_url")
+    oa_url = best_oa.get("landing_page_url") or oa_pdf_url
     authors = [
         authorship.get("author", {}).get("display_name")
         for authorship in work.get("authorships") or []
@@ -274,6 +275,7 @@ def openalex_record(work: dict[str, Any], journals: list[Journal]) -> dict[str, 
         "articleUrl": primary.get("landing_page_url"),
         "journalUrl": journal.journal_url or source.get("id"),
         "openAccessUrl": oa_url,
+        "openAccessPdfUrl": oa_pdf_url,
         "openAccessStatus": (work.get("open_access") or {}).get("oa_status"),
         "abstract": reconstruct_abstract(work.get("abstract_inverted_index")),
         "topics": topics,
@@ -350,6 +352,7 @@ def crossref_record(item: dict[str, Any], journal: Journal) -> dict[str, Any] | 
         "articleUrl": article_url,
         "journalUrl": journal.journal_url,
         "openAccessUrl": None,
+        "openAccessPdfUrl": None,
         "openAccessStatus": None,
         "abstract": clean_abstract(item.get("abstract")),
         "topics": list(item.get("subject") or [])[:6],
@@ -401,7 +404,7 @@ def fetch_crossref(journals: list[Journal], start: dt.date, end: dt.date, mailto
 
 def merge_record(preferred: dict[str, Any], complement: dict[str, Any]) -> dict[str, Any]:
     merged = dict(preferred)
-    for field in ("abstract", "doi", "doiUrl", "articleUrl", "journalUrl", "openAccessUrl", "openAccessStatus"):
+    for field in ("abstract", "doi", "doiUrl", "articleUrl", "journalUrl", "openAccessUrl", "openAccessPdfUrl", "openAccessStatus"):
         if not merged.get(field) and complement.get(field):
             merged[field] = complement[field]
     if not merged.get("authors") and complement.get("authors"):
