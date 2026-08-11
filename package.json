@@ -9,7 +9,7 @@
     "dev": "vite",
     "build": "tsc --noEmit -p tsconfig.app.json && vite build",
     "preview": "vite preview",
-    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && vitest run && npm run build",
+    "test": "python3 -m unittest discover -s tests -p 'test_*.py' && vitest run && npm --prefix backend test && npm run build",
     "lint": "eslint src --max-warnings=0",
     "fetch-papers": "python3 scripts/fetch_papers.py"
   },

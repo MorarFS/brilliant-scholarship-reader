@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
+import { AiSummary } from "./AiSummary";
 import ReadingRoom from "./ReadingRoom";
 import type { Annotation, MonitoredJournal, Paper, TrackerData } from "./types";
 import { mergeAnnotations, parseAnnotation, stablePaperId } from "./readingRoomData";
@@ -120,6 +121,7 @@ function PaperCard({ paper, saved, annotationCount, onToggleSaved, onOpenReader 
       <p className="authors">{paper.authors.length ? paper.authors.join(", ") : "Authors not listed in open metadata"}</p>
       <section className="abstract-block" aria-label="Abstract"><p className="eyebrow">Abstract</p>{abstractText ? <><p className="abstract-text">{abstractText}</p>{isLong && <button className="text-button" type="button" onClick={() => setExpanded((value) => !value)}>{expanded ? "Show less" : "Read full abstract"}</button>}</> : <p className="abstract-missing">No abstract was supplied by OpenAlex or Crossref. The article page may include one.</p>}</section>
       <div className="relevance-panel"><div className="score-orbit" style={{ "--score": `${paper.relevance.score * 3.6}deg` } as React.CSSProperties}><span>{paper.relevance.score}</span></div><div><p className="eyebrow">{scoreLabel(paper.relevance.score)} · rules v2</p><p>{paper.relevance.reason}</p><div className="signal-list" aria-label="Relevance signals">{paper.relevance.signals.slice(0, 5).map((signal) => <span key={signal}>{signal}</span>)}</div></div></div>
+      <AiSummary paper={paper} />
       <footer className="paper-actions"><div className="paper-actions__primary">{openArticleUrl ? <LinkButton href={openArticleUrl} label="Open article" primary /> : <span className="unavailable">No article link in open metadata</span>}<button className="reader-button" type="button" onClick={() => onOpenReader(paper)}><span aria-hidden="true">▤</span>{paper.openAccessPdfUrl ? "Read & annotate" : "Notes / upload PDF"}{annotationCount > 0 && <strong>{annotationCount}</strong>}</button><button className={saved ? "save-button is-saved" : "save-button"} type="button" onClick={() => onToggleSaved(paper)} aria-pressed={saved} aria-label={`${saved ? "Remove" : "Save"} ${paper.title} ${saved ? "from" : "to"} reading list`}><span aria-hidden="true">{saved ? "✓" : "+"}</span>{saved ? "Saved" : "Save paper"}</button></div><div className="paper-actions__links" aria-label="Paper links">{paper.doiUrl && <LinkButton href={paper.doiUrl} label="DOI" />}{showArticlePage && <LinkButton href={paper.articleUrl!} label="Article page" />}{paper.journalUrl && <LinkButton href={paper.journalUrl} label="Journal" />}{paper.openAccessUrl && <LinkButton href={paper.openAccessUrl} label="Open-access copy" />}</div></footer>
     </article>
   );

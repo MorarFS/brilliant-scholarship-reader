@@ -190,6 +190,26 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .signal-list { display: flex; flex-wrap: wrap; gap: 5px; }
 .signal-list span { padding: 4px 7px; border: 1px solid #d1d6c0; color: #5c6e65; font-size: 9px; letter-spacing: .04em; text-transform: uppercase; }
 
+.ai-summary { margin: -10px 0 25px; }
+.summary-button { min-height: 38px; display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; border: 1px solid #9b9fba; background: #f0eff8; color: #424568; font-size: 10px; font-weight: 700; cursor: pointer; }
+.summary-button > span { color: #6c5ea2; font-size: 15px; }
+.summary-button:disabled { opacity: .55; cursor: not-allowed; }
+.summary-panel { margin-top: 9px; padding: 20px 22px; border: 1px solid #c8c6d8; background: #f8f7fc; }
+.summary-panel__heading { display: flex; align-items: start; justify-content: space-between; gap: 20px; }
+.summary-panel__heading h3 { margin: 5px 0 0; color: #2f3453; font: 500 24px/1.1 "Newsreader", Georgia, serif; }
+.summary-panel__heading > button, .summary-regenerate { padding: 5px 0; border: 0; border-bottom: 1px solid #6c5ea2; background: transparent; color: #5c5380; font-size: 9px; font-weight: 700; cursor: pointer; }
+.summary-auth p, .summary-privacy, .summary-result > p { margin: 13px 0; color: #53576c; font-size: 11px; line-height: 1.55; }
+.summary-signin { min-height: 40px; }
+.summary-status { color: #676b79; font-style: italic; }
+.summary-generate { padding: 9px 12px; border: 1px solid #4c4f76; background: #4c4f76; color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
+.summary-generate:disabled, .summary-regenerate:disabled { opacity: .55; cursor: wait; }
+.summary-result > p:first-child { color: #30354d; font: 400 16px/1.65 "Newsreader", Georgia, serif; }
+.summary-result h4 { margin: 16px 0 7px; color: #454963; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
+.summary-result ul { margin: 0; padding-left: 19px; color: #4d5269; font-size: 11px; line-height: 1.55; }
+.summary-result li + li { margin-top: 5px; }
+.summary-result .summary-disclaimer { padding-top: 11px; border-top: 1px solid #d8d6e2; color: #707385; font-size: 9px; }
+.summary-error { margin: 11px 0 0; color: #9d5138; font-size: 10px; font-weight: 600; }
+
 .paper-actions { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding-top: 23px; border-top: 1px solid #e4e0d7; }
 .paper-actions__primary { display: flex; flex-wrap: wrap; gap: 7px; }
 .paper-actions__links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 6px; }

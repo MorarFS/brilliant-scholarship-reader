@@ -45,8 +45,13 @@ jobs:
           cache: npm
 
       - name: Install and verify
+        env:
+          # These repository variables are public browser configuration, never credentials.
+          VITE_SUMMARY_API_URL: ${{ vars.VITE_SUMMARY_API_URL }}
+          VITE_GOOGLE_CLIENT_ID: ${{ vars.VITE_GOOGLE_CLIENT_ID }}
         run: |
           npm ci
+          npm ci --prefix backend
           npm test
 
       - name: Commit refreshed data

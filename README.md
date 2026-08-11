@@ -24,13 +24,15 @@ The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the t
 - lets readers save or unsave papers in a private browser-local reading list, with JSON export/import for backup and transfer.
 - opens a local-first Reading Room with selectable extracted PDF text, original-PDF view, passage highlights, attached notes, paper-level notes, citation copy, and RIS export;
 - allows a legally obtained PDF to be attached to an existing tracked paper and processed only in the browser, without upload or library automation.
+- includes a disabled-by-default, authenticated Vertex AI summary integration: the public frontend can call only a separate protected backend, never Vertex directly.
 
 ## Run locally
 
-Prerequisites: Node.js 20+ and Python 3.11+. The collector itself uses only Python’s standard library.
+Prerequisites: Node.js 22+ and Python 3.11+. The collector itself uses only Python’s standard library.
 
 ```bash
 npm install
+npm install --prefix backend
 npm run dev
 ```
 
@@ -52,7 +54,7 @@ Optional environment settings:
 - `OPENALEX_API_KEY`: a free key can increase the OpenAlex allowance.
 - `CROSSREF_MAILTO`: identifies the client to Crossref’s polite pool; it is not a password.
 
-Neither value is requested by the browser app, written to files, or committed. No Vertex AI, library, or LibKey credentials are required.
+Neither value is requested by the browser app, written to files, or committed. No library or LibKey credentials are required. Vertex summaries remain off unless their two public build variables are deliberately configured.
 
 ## The pinned monitored-journal starter list
 
@@ -156,6 +158,8 @@ The Reading Room can copy a readable author-date citation and download an RIS jo
 
 The workflow uses GitHub’s built-in `GITHUB_TOKEN`; no personal access token is stored in the repository. Optional OpenAlex/Crossref settings belong in GitHub repository secrets/variables, not source files.
 
+The repository may be private on a GitHub plan that supports Pages from private repositories, but the deployed Pages site and every compiled frontend asset remain public. Repository privacy is never a place to hide frontend credentials.
+
 ## Metadata, licensing, and limitations
 
 - [OpenAlex](https://developers.openalex.org/) supplies open work, author, source, topic, location, OA, and reconstructed abstract metadata. Abstract coverage is incomplete.
@@ -167,9 +171,15 @@ The workflow uses GitHub’s built-in `GITHUB_TOKEN`; no personal access token i
 - Dates, author lists, journal assignments, abstracts, links, OA status, and topics can be incomplete or delayed. Rule matches are triage signals, not scholarly or quality judgments.
 - Strict rules reduce noise but can miss relevant papers whose titles/abstracts do not name both dimensions. The visible journal list and preserved reasons make that tradeoff inspectable.
 
-## Optional future Vertex AI classifier
+## Secure Vertex AI summaries scaffold
 
-A later opt-in stage could send only borderline metadata to a structured classifier and record `classifier: llm` while preserving rules-v2 evidence. Vertex AI would require a Google Cloud project, enabled API, region/model choice, least-privilege prediction role, and workload identity federation or an encrypted repository secret. Never commit a service-account key. This version needs and uses no Vertex AI credentials.
+`backend/` contains an isolated Cloud Run API scaffold; the collector and rules-v2 classifier remain deterministic and do not call an LLM. The summary UI is compiled out of normal use unless both `VITE_SUMMARY_API_URL` and `VITE_GOOGLE_CLIENT_ID` are supplied as public build variables.
+
+When enabled, the browser obtains a Google ID token through Google Identity Services and keeps it only in page memory. The backend verifies the token audience, verified email, explicit email allowlist, origin, request limit, and bounded metadata contract **before** calling Vertex AI. Only the paper title, authors, date, journal, DOI, and open abstract are sent. PDFs, annotations, highlights, library data, and saved-list contents are excluded. Summaries are visibly labeled as abstract-based and are not saved automatically.
+
+Vertex access uses a dedicated Cloud Run service account with `roles/aiplatform.user` and Application Default Credentials. No service-account key, OAuth client secret, access token, or Vertex credential belongs in the frontend, repository, GitHub Actions, browser storage, or JSON export. The API refuses key-file configuration.
+
+Deployment is intentionally not automatic. It still requires a confirmed billed project; deployer authorization; Cloud Run region and Vertex model/location choices; enabled Vertex AI/Cloud Run/Cloud Build/Artifact Registry APIs; an OAuth web client with `https://morarfs.github.io` as an authorized JavaScript origin; an explicit allowed-user email list; and selected quota/budget controls. See [`backend/README.md`](backend/README.md) for commands, IAM boundaries, configuration, and verification.
 
 ## Project map
 
@@ -177,6 +187,8 @@ A later opt-in stage could send only borderline metadata to a structured classif
 - `scripts/fetch_papers.py` — OpenAlex/Crossref collector and rules-v2 classifier
 - `public/data/` — generated two-year data, journal manifest, and scan state
 - `src/` — static tracker, PDF Reading Room, browser-local annotations/files, citation utilities, reading list, and monitored-journals audit section
+- `src/AiSummary.tsx` and `src/summaryApi.ts` — memory-only Google sign-in and metadata-only protected summary client
+- `backend/` — separately deployable, authenticated Cloud Run/Vertex AI summary API scaffold and security tests
 - `src/readingRoom.test.ts` — deterministic citation, stable-identity, annotation-import, and merge tests
 - `tests/test_collector.py` — deterministic rules, feed, date, link, and CSV tests
 - `.github/workflows/weekly-refresh-and-pages.yml` — weekly refresh, verification, commit, and Pages deployment
