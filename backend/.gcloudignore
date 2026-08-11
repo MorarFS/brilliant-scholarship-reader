@@ -1,0 +1,7 @@
+.gcloudignore
+.git
+.env*
+node_modules
+dist
+coverage
+*.log

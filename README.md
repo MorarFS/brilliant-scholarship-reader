@@ -179,7 +179,7 @@ When enabled, the browser obtains a Google ID token through Google Identity Serv
 
 Vertex access uses a dedicated Cloud Run service account with `roles/aiplatform.user` and Application Default Credentials. No service-account key, OAuth client secret, access token, or Vertex credential belongs in the frontend, repository, GitHub Actions, browser storage, or JSON export. The API refuses key-file configuration.
 
-Deployment is intentionally not automatic. It still requires a confirmed billed project; deployer authorization; Cloud Run region and Vertex model/location choices; enabled Vertex AI/Cloud Run/Cloud Build/Artifact Registry APIs; an OAuth web client with `https://morarfs.github.io` as an authorized JavaScript origin; an explicit allowed-user email list; and selected quota/budget controls. See [`backend/README.md`](backend/README.md) for commands, IAM boundaries, configuration, and verification.
+Backend deployment is deliberately separate from Pages publishing. It requires a confirmed billed project; deployer authorization; Cloud Run region and Vertex model/location choices; enabled Vertex AI/Cloud Run/Cloud Build/Artifact Registry APIs; an OAuth web client with `https://morarfs.github.io` as an authorized JavaScript origin; an explicit allowed-user email list; and selected quota/budget controls. Google OAuth web-client creation is completed in Google Auth Platform's Console; only the public client ID and Cloud Run endpoint go into GitHub repository variables. See [`backend/README.md`](backend/README.md) for commands, IAM boundaries, configuration, and verification.
 
 ## Project map
 

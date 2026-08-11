@@ -20,7 +20,7 @@ The health route is public and does not call Vertex. The summary route is never 
 2. An authenticated Google Cloud administrator/deployer who can enable APIs, create a service account, deploy Cloud Run, and grant `roles/aiplatform.user` plus `roles/iam.serviceAccountUser` on the runtime service account.
 3. A chosen Cloud Run region and Vertex model/location. The checked-in default is `gemini-2.5-flash` at Vertex location `global`; confirm current model availability and pricing before deployment.
 4. Vertex AI, Cloud Run, Cloud Build, and Artifact Registry APIs enabled.
-5. An OAuth consent screen and an OAuth 2.0 **Web application** client ID. Add `https://morarfs.github.io` as an authorized JavaScript origin; add `http://localhost:5173` only for local development.
+5. An OAuth consent screen and an OAuth 2.0 **Web application** client ID. Create this in **Google Auth Platform → Clients**; ordinary OAuth client creation is a Google Console action rather than a `gcloud` operation. Add `https://morarfs.github.io` as an authorized JavaScript origin; add `http://localhost:5173` only for local development. The popup flow does not need a redirect URI.
 6. At least one verified Google account email for `ALLOWED_EMAILS`.
 
 No OAuth client secret is used by the static popup flow. The web client ID and Cloud Run URL are public identifiers, not credentials.
@@ -52,7 +52,7 @@ gcloud iam service-accounts create chronicle-summary-api --project "$PROJECT_ID"
 gcloud projects add-iam-policy-binding "$PROJECT_ID" --member "serviceAccount:${SERVICE_ACCOUNT}" --role roles/aiplatform.user
 ```
 
-Deploy from this directory. `--allow-unauthenticated` makes the HTTPS service reachable from GitHub Pages; application code still rejects the cost-bearing route until it verifies a Google ID token and email allowlist. Start with one maximum instance for a personal research service.
+Deploy from this directory. `--no-invoker-iam-check` makes the HTTPS service reachable from GitHub Pages; application code still rejects the cost-bearing route until it verifies a Google ID token and email allowlist. The explicit `--default-url` keeps the generated `run.app` endpoint available. Start with no more than two maximum instances for this personal research service.
 
 ```bash
 gcloud run deploy chronicle-summary-api \
@@ -60,9 +60,10 @@ gcloud run deploy chronicle-summary-api \
   --project "$PROJECT_ID" \
   --region "$RUN_REGION" \
   --service-account "$SERVICE_ACCOUNT" \
-  --allow-unauthenticated \
+  --no-invoker-iam-check \
+  --default-url \
   --min-instances 0 \
-  --max-instances 1 \
+  --max-instances 2 \
   --set-env-vars "GOOGLE_CLOUD_PROJECT=${PROJECT_ID},GOOGLE_CLOUD_LOCATION=global,VERTEX_MODEL=gemini-2.5-flash,GOOGLE_WEB_CLIENT_ID=YOUR_PUBLIC_WEB_CLIENT_ID,ALLOWED_EMAILS=YOUR_AUTHORIZED_EMAIL,ALLOWED_ORIGINS=https://morarfs.github.io,MAX_REQUESTS_PER_USER_PER_HOUR=20"
 ```
 
@@ -75,6 +76,8 @@ After deployment, add these **GitHub repository variables** (not secrets) and re
 
 The frontend stays disabled when either variable is absent. Never add a service-account key, access token, OAuth client secret, or `GOOGLE_APPLICATION_CREDENTIALS` to GitHub variables, secrets, Pages assets, or Actions logs.
 
+Google currently requires ordinary OAuth web clients to be created in the Cloud Console. Choose **Web application**, set the exact authorized JavaScript origin to `https://morarfs.github.io`, and copy only the public client ID ending in `.apps.googleusercontent.com`. Never copy or configure the client secret for this static popup flow.
+
 ## Verification checklist
 
 - `GET /healthz` returns `200` without calling Vertex.
@@ -83,3 +86,5 @@ The frontend stays disabled when either variable is absent. Never add a service-
 - A disallowed browser origin returns `403`.
 - An allowed signed-in user can summarize a paper with an abstract.
 - Built Pages assets contain only the public service URL and web client ID—no service identity, token, key, or allowlist.
+
+If the generated `run.app` URL returns a Google-branded `404` and no request appears in Cloud Run request logs, first confirm `ingress=all`, the default URL is enabled, and `RoutesReady=True`. That symptom occurs before the container and is distinct from Chronicle's JSON `404`; consult Cloud Run's platform troubleshooting guidance rather than weakening application authentication.
