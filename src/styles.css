@@ -67,6 +67,18 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .header-nav a, .header-nav button { border: 0; background: transparent; color: var(--green); font: 700 12px "DM Sans", sans-serif; text-decoration: none; cursor: pointer; }
 .header-nav a:hover, .header-nav button:hover { color: var(--coral); }
 .header-nav button span { display: inline-grid; min-width: 19px; height: 19px; margin-left: 4px; place-items: center; border-radius: 50%; background: var(--green); color: white; font-size: 9px; }
+.reading-mode-toggle { padding: 7px 9px !important; border: 1px solid #aeb6ac !important; }
+.reading-mode-toggle.is-active { border-color: var(--green) !important; background: var(--green) !important; color: white !important; }
+
+/* Optional preference: based on BDA/WCAG visual-presentation guidance. */
+.dyslexia-mode { --ink: #252525; --ink-soft: #4f4f4b; --paper: #f5f0e4; --paper-deep: #e8dfcd; --line: #aaa79e; --green: #234f43; --green-dark: #234f43; font-family: Arial, Verdana, Tahoma, sans-serif; background: var(--paper); }
+.dyslexia-mode, .dyslexia-mode button, .dyslexia-mode input, .dyslexia-mode select, .dyslexia-mode textarea { font-family: Arial, Verdana, Tahoma, sans-serif !important; }
+.dyslexia-mode .brand-mark, .dyslexia-mode .brand strong, .dyslexia-mode .hero h1, .dyslexia-mode .paper-card h2, .dyslexia-mode .reader-page > div, .dyslexia-mode .abstract-text, .dyslexia-mode .abstract-missing, .dyslexia-mode .summary-result > p:first-child { font-family: Arial, Verdana, Tahoma, sans-serif !important; font-style: normal; letter-spacing: .025em; }
+.dyslexia-mode .reader-page > div { max-width: 68ch; font-size: 19px; line-height: 1.8; word-spacing: .14em; }
+.dyslexia-mode .abstract-text, .dyslexia-mode .abstract-missing, .dyslexia-mode .summary-result > p:first-child { line-height: 1.8; word-spacing: .12em; }
+.dyslexia-mode .reader-page, .dyslexia-mode .paper-card, .dyslexia-mode .summary-panel, .dyslexia-mode .annotation-panel, .dyslexia-mode .feed-switcher button { background: #fffdf5; box-shadow: none; }
+.dyslexia-mode .kicker, .dyslexia-mode .eyebrow, .dyslexia-mode .paper-card__topline, .dyslexia-mode .feed-pill, .dyslexia-mode .quartile, .dyslexia-mode .brand small, .dyslexia-mode .reader-source-row span { letter-spacing: .04em; text-transform: none; }
+.dyslexia-mode .reader-page mark { background: #ffe78a; box-shadow: 0 0 0 2px #ffe78a; }
 
 .hero {
   position: relative;

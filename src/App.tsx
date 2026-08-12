@@ -7,6 +7,7 @@ import { loadLocalPdf } from "./localPdfStore";
 const DATA_URL = `${import.meta.env.BASE_URL}data/papers.json`;
 const SAVED_STORAGE_KEY = "chronicle-saved-papers-v1";
 const ANNOTATION_STORAGE_KEY = "chronicle-annotations-v1";
+const READING_MODE_STORAGE_KEY = "chronicle-dyslexia-reading-mode";
 const PAGE_SIZE = 40;
 type Feed = "digital-humanities" | "ai-history";
 type View = Feed | "saved";
@@ -145,8 +146,10 @@ export default function App() {
   const [uploadedPdfIds, setUploadedPdfIds] = useState<Set<string>>(() => new Set());
   const [activePaper, setActivePaper] = useState<Paper | null>(null);
   const [savedStatus, setSavedStatus] = useState("");
+  const [dyslexiaMode, setDyslexiaMode] = useState(() => localStorage.getItem(READING_MODE_STORAGE_KEY) === "on");
 
   useEffect(() => { fetch(DATA_URL).then((response) => { if (!response.ok) throw new Error(`Data request failed (${response.status})`); return response.json() as Promise<TrackerData>; }).then(setData).catch((reason: Error) => setError(reason.message)); }, []);
+  useEffect(() => { try { localStorage.setItem(READING_MODE_STORAGE_KEY, dyslexiaMode ? "on" : "off"); } catch { /* The preference remains active for this visit. */ } }, [dyslexiaMode]);
   useEffect(() => {
     let cancelled = false;
     void Promise.all(savedPapers.map(async (paper) => (await loadLocalPdf(stablePaperId(paper))) ? stablePaperId(paper) : null)).then((ids) => {
@@ -204,8 +207,8 @@ export default function App() {
   const abstractCoverage = data?.papers.length ? Math.round((data.papers.filter((paper) => paper.abstract).length / data.papers.length) * 100) : 0;
   const viewLabel = view === "saved" ? "Saved papers" : FEEDS[view].label;
 
-  return <div className="app-shell">
-    <header className="site-header"><a className="brand" href="#top" aria-label="Chronicle home"><span className="brand-mark" aria-hidden="true">C</span><span><strong>Chronicle</strong><small>Computational humanities tracker</small></span></a><nav className="header-nav" aria-label="Page navigation"><a href="#feeds">Research feeds</a><button type="button" onClick={() => selectView("saved")}>Saved papers <span>{savedPapers.length}</span></button><a href="#journals">Monitored journals</a><a href="#method">How it works</a></nav></header>
+  return <div className={dyslexiaMode ? "app-shell dyslexia-mode" : "app-shell"}>
+    <header className="site-header"><a className="brand" href="#top" aria-label="Chronicle home"><span className="brand-mark" aria-hidden="true">C</span><span><strong>Chronicle</strong><small>Computational humanities tracker</small></span></a><nav className="header-nav" aria-label="Page navigation"><a href="#feeds">Research feeds</a><button type="button" onClick={() => selectView("saved")}>Saved papers <span>{savedPapers.length}</span></button><a href="#journals">Monitored journals</a><a href="#method">How it works</a><button className={dyslexiaMode ? "reading-mode-toggle is-active" : "reading-mode-toggle"} type="button" aria-pressed={dyslexiaMode} onClick={() => setDyslexiaMode((value) => !value)}>Reading mode</button></nav></header>
     <main id="top"><section className="hero"><div><p className="kicker">Focused scholarship, clearly surfaced</p><h1>Methods meet<br />the archive.</h1><p className="hero-copy">A weekly, two-feed scan for computational humanities—and for AI or LLM work that genuinely engages historical evidence.</p></div><div className="hero-rule" aria-hidden="true"><span>Focused feeds</span><span>Private reading list</span><span>Dual evidence</span></div></section>
       {error ? <div className="state-card" role="alert"><p className="eyebrow">Data could not be loaded</p><h2>The journal desk is temporarily unavailable.</h2><p>{error}. Serve the project locally or check that <code>public/data/papers.json</code> is present.</p></div> : !data ? <div className="state-card" aria-live="polite"><div className="loading-line" /><p>Opening the latest research desk…</p></div> : <>
         <section className="stat-strip" aria-label="Collection summary"><div><span>{data.feedCounts["digital-humanities"]}</span><p>primary-feed papers</p></div><div><span>{data.feedCounts["ai-history"]}</span><p>AI-in-history papers</p></div><div><span>{data.journalCount}</span><p>configured venues</p></div><div><span>{abstractCoverage}%</span><p>with readable abstracts</p></div></section>
