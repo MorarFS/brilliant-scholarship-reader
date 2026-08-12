@@ -23,8 +23,9 @@ describe("backend validation", () => {
   });
 
   it("accepts only the bounded paper metadata contract", () => {
-    expect(parsePaperInput({ paper: { id: "id", title: "Title", authors: [], publicationDate: "2026-01-02", journal: "Journal", doi: null, abstract: "Abstract evidence" } })?.title).toBe("Title");
-    expect(parsePaperInput({ paper: { id: "id", title: "Title", authors: [], publicationDate: "bad", journal: "Journal", doi: null, abstract: "Abstract evidence" } })).toBeNull();
+    const extractedText = "Extracted paper evidence. ".repeat(30);
+    expect(parsePaperInput({ paper: { id: "id", title: "Title", authors: [], publicationDate: "2026-01-02", journal: "Journal", doi: null, extractedText } })?.title).toBe("Title");
+    expect(parsePaperInput({ paper: { id: "id", title: "Title", authors: [], publicationDate: "bad", journal: "Journal", doi: null, extractedText } })).toBeNull();
   });
 
   it("validates structured model output", () => {

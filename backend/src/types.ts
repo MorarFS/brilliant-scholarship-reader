@@ -16,7 +16,7 @@ export type PaperInput = {
   publicationDate: string;
   journal: string;
   doi: string | null;
-  abstract: string;
+  extractedText: string;
 };
 
 export type SummaryResult = {

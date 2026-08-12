@@ -25,9 +25,10 @@ describe("secure summary client", () => {
     expect(normalizeGoogleClientId("not-a-client-id")).toBeNull();
   });
 
-  it("builds a metadata-only request and requires an abstract", () => {
-    expect(buildSummaryRequest(paper)).toEqual({ paper: { id: paper.doi, title: paper.title, authors: paper.authors, publicationDate: paper.publicationDate, journal: paper.journal, doi: paper.doi, abstract: paper.abstract } });
-    expect(buildSummaryRequest({ ...paper, abstract: null })).toBeNull();
+  it("builds a bounded uploaded-text request and rejects short text", () => {
+    const text = "Extracted paper text. ".repeat(100);
+    expect(buildSummaryRequest(paper, text)).toEqual({ paper: { id: paper.doi, title: paper.title, authors: paper.authors, publicationDate: paper.publicationDate, journal: paper.journal, doi: paper.doi, extractedText: text.trim() } });
+    expect(buildSummaryRequest(paper, "too short")).toBeNull();
   });
 
   it("validates and bounds backend responses", () => {

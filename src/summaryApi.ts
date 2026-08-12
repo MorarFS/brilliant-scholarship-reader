@@ -8,7 +8,7 @@ export type SummaryRequest = {
     publicationDate: string;
     journal: string;
     doi: string | null;
-    abstract: string;
+    extractedText: string;
   };
 };
 
@@ -43,9 +43,9 @@ export const SUMMARY_API_URL = normalizeSummaryApiUrl(import.meta.env.VITE_SUMMA
 export const GOOGLE_WEB_CLIENT_ID = normalizeGoogleClientId(import.meta.env.VITE_GOOGLE_CLIENT_ID);
 export const SUMMARY_FEATURE_CONFIGURED = Boolean(SUMMARY_API_URL && GOOGLE_WEB_CLIENT_ID);
 
-export function buildSummaryRequest(paper: Paper): SummaryRequest | null {
-  const abstract = paper.abstract?.trim();
-  if (!abstract) return null;
+export function buildSummaryRequest(paper: Paper, extractedText: string): SummaryRequest | null {
+  const text = extractedText.trim();
+  if (text.length < 500) return null;
   return {
     paper: {
       id: paper.doi || paper.id,
@@ -54,7 +54,7 @@ export function buildSummaryRequest(paper: Paper): SummaryRequest | null {
       publicationDate: paper.publicationDate,
       journal: paper.journal,
       doi: paper.doi,
-      abstract: abstract.slice(0, 12_000),
+      extractedText: text.slice(0, 60_000),
     },
   };
 }
