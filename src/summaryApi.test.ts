@@ -32,7 +32,7 @@ describe("secure summary client", () => {
   });
 
   it("validates and bounds backend responses", () => {
-    expect(parseSummaryResponse({ summary: "Brief", keyPoints: ["One"], caveats: ["Abstract only"], model: "gemini", generatedAt: "2026-08-11T00:00:00Z" })?.summary).toBe("Brief");
-    expect(parseSummaryResponse({ summary: "", keyPoints: [], caveats: [], model: "gemini", generatedAt: "now" })).toBeNull();
+    expect(parseSummaryResponse({ summary: "Brief", keyPoints: ["One"], sections: [{ heading: "Methods", summary: "Summary" }], caveats: ["PDF may be incomplete"], model: "gemini", generatedAt: "2026-08-11T00:00:00Z" })?.summary).toBe("Brief");
+    expect(parseSummaryResponse({ summary: "", keyPoints: [], sections: [], caveats: [], model: "gemini", generatedAt: "now" })).toBeNull();
   });
 });

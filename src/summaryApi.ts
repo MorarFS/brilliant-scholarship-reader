@@ -15,6 +15,7 @@ export type SummaryRequest = {
 export type PaperSummary = {
   summary: string;
   keyPoints: string[];
+  sections: Array<{ heading: string; summary: string }>;
   caveats: string[];
   model: string;
   generatedAt: string;
@@ -64,12 +65,14 @@ export function parseSummaryResponse(value: unknown): PaperSummary | null {
   if (
     typeof response.summary !== "string" || !response.summary.trim() ||
     !Array.isArray(response.keyPoints) || !response.keyPoints.every((item) => typeof item === "string") ||
+    !Array.isArray(response.sections) || !response.sections.every((item) => item && typeof item === "object" && typeof (item as { heading?: unknown }).heading === "string" && typeof (item as { summary?: unknown }).summary === "string") ||
     !Array.isArray(response.caveats) || !response.caveats.every((item) => typeof item === "string") ||
     typeof response.model !== "string" || typeof response.generatedAt !== "string"
   ) return null;
   return {
     summary: response.summary.trim(),
     keyPoints: response.keyPoints.slice(0, 6).map((item) => item.trim()).filter(Boolean),
+    sections: response.sections.slice(0, 20).map((item) => item as { heading: string; summary: string }).map((item) => ({ heading: item.heading.trim(), summary: item.summary.trim() })).filter((item) => item.heading && item.summary),
     caveats: response.caveats.slice(0, 4).map((item) => item.trim()).filter(Boolean),
     model: response.model,
     generatedAt: response.generatedAt,

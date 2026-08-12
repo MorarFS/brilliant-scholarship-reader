@@ -192,6 +192,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 
 .ai-summary { margin: -10px 0 25px; }
 .reader-summary { padding: 14px 28px 0; border-bottom: 1px solid #d8d6e2; background: #fff; }
+.reader-summary--document { margin: 16px 0; padding: 14px 18px 0; border: 1px solid #d8d6e2; }
 .reader-summary .ai-summary { margin: 0 0 14px; }
 .summary-button { min-height: 38px; display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; border: 1px solid #9b9fba; background: #f0eff8; color: #424568; font-size: 10px; font-weight: 700; cursor: pointer; }
 .summary-button > span { color: #6c5ea2; font-size: 15px; }
@@ -208,6 +209,10 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .summary-result > p:first-child { color: #30354d; font: 400 16px/1.65 "Newsreader", Georgia, serif; }
 .summary-result h4 { margin: 16px 0 7px; color: #454963; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
 .summary-result ul { margin: 0; padding-left: 19px; color: #4d5269; font-size: 11px; line-height: 1.55; }
+.summary-sections { display: grid; gap: 10px; }
+.summary-sections section { padding: 12px 14px; border: 1px solid #d8d6e2; background: white; }
+.summary-sections h5 { margin: 0 0 6px; color: #363b59; font-size: 11px; }
+.summary-sections p { margin: 0; color: #53576c; font-size: 11px; line-height: 1.55; }
 .summary-result li + li { margin-top: 5px; }
 .summary-result .summary-disclaimer { padding-top: 11px; border-top: 1px solid #d8d6e2; color: #707385; font-size: 9px; }
 .summary-error { margin: 11px 0 0; color: #9d5138; font-size: 10px; font-weight: 600; }
@@ -259,7 +264,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .journal-card dd { margin: 4px 0 0; color: var(--ink); font-size: 10px; }
 .journal-card .journal-card__note { margin-bottom: 16px; padding-top: 14px; border-top: 1px solid #e4e0d7; }
 
-.reading-room { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-rows: auto auto auto minmax(0, 1fr); background: #ecebe1; color: var(--ink); }
+.reading-room { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-rows: auto auto minmax(0, 1fr); background: #ecebe1; color: var(--ink); }
 .reading-room__header { min-height: 118px; display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; padding: 22px 30px 19px; background: var(--green-dark); color: white; }
 .reading-room__header > div { min-width: 0; }
 .reading-room__header h1 { max-width: 980px; margin: 5px 0 6px; font: 500 clamp(25px, 3vw, 40px)/1.05 "Newsreader", Georgia, serif; }

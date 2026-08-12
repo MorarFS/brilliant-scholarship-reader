@@ -22,6 +22,7 @@ export type PaperInput = {
 export type SummaryResult = {
   summary: string;
   keyPoints: string[];
+  sections: Array<{ heading: string; summary: string }>;
   caveats: string[];
   model: string;
   generatedAt: string;

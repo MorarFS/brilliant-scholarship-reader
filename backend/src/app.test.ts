@@ -14,7 +14,7 @@ const config: RuntimeConfig = {
   port: 8080,
 };
 const paper = { paper: { id: "10.1234/example", title: "Archive methods", authors: ["A. Scholar"], publicationDate: "2026-01-02", journal: "DH Journal", doi: "10.1234/example", pdfBase64: "A".repeat(1_000) } };
-const result: SummaryResult = { summary: "Brief", keyPoints: ["Point"], caveats: ["Extraction may be imperfect."], model: "test-model", generatedAt: "2026-08-11T00:00:00Z" };
+const result: SummaryResult = { summary: "Brief", keyPoints: ["Point"], sections: [{ heading: "Methods", summary: "Method summary." }], caveats: ["Extraction may be imperfect."], model: "test-model", generatedAt: "2026-08-11T00:00:00Z" };
 
 describe("summary API security boundary", () => {
   it("rejects requests before the summarizer when authentication is missing", async () => {
