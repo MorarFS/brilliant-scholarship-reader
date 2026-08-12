@@ -16,6 +16,7 @@ type Props = {
   onClose: () => void;
 };
 
+
 function safeId() {
   return typeof crypto.randomUUID === "function" ? crypto.randomUUID() : `annotation-${Date.now()}-${Math.random().toString(16).slice(2)}`;
 }
