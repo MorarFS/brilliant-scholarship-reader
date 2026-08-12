@@ -55,7 +55,7 @@ class CollectorTests(unittest.TestCase):
         result = classify(paper, self.journal)
         self.assertGreaterEqual(result["score"], 75)
         self.assertTrue(result["qualifies"])
-        self.assertEqual(result["classifier"], "rules-v2")
+        self.assertEqual(result["classifier"], "rules-v3")
         self.assertIn("NLP or text-as-data method", result["methodSignals"])
         self.assertIn("historical research or sources", result["humanitiesSignals"])
         self.assertIn("Digital & Computational Humanities venue", result["signals"])
@@ -172,14 +172,25 @@ class CollectorTests(unittest.TestCase):
                 writer.writerow(["Title", "Issn", "SJR Best Quartile", "Year", "Feed", "Qualification note", "Inclusion Basis"])
                 writer.writerow(["Keep Me", "1234-567X", "Q1", "2024", "ai-history", "Pinned test list", "sjr-q1"])
                 writer.writerow(["User Pick", "4444-5555", "", "", "digital-humanities", "Requested specialist", "user-curated specialist"])
-                writer.writerow(["Not Q1", "2222-3333", "Q2", "2024"])
+                writer.writerow(["Q2 Venue", "2222-3333", "Q2", "2024"])
                 writer.writerow(["No ISSN", "", "Q1", "2024"])
             journals = read_journals(path)
-        self.assertEqual([journal.title for journal in journals], ["Keep Me", "User Pick"])
+        self.assertEqual([journal.title for journal in journals], ["Keep Me", "User Pick", "Q2 Venue"])
         self.assertEqual(journals[0].feed, "ai-history")
         self.assertEqual(journals[0].qualification_note, "Pinned test list")
         self.assertEqual(journals[1].quartile, "User-curated specialist")
         self.assertEqual(journals[1].inclusion_basis, "user-curated specialist")
+        self.assertEqual(journals[2].quartile, "Q2")
+        self.assertEqual(journals[2].inclusion_basis, "sjr-q2")
+
+    def test_emotions_feed_is_separate_from_history_gate(self):
+        result = classify(
+            {"title": "Sentiment analysis of modern novels", "abstract": "We identify grief and joy in a literary corpus.", "topics": ["Literature"]},
+            self.journal,
+        )
+        self.assertTrue(result["emotionQualifies"])
+        self.assertFalse(result["qualifies"])
+        self.assertIn("computational emotion or sentiment analysis", result["emotionSignals"])
 
 
 if __name__ == "__main__":

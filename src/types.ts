@@ -24,7 +24,9 @@ export type Paper = {
     methodSignals: string[];
     humanitiesSignals: string[];
     qualifies: boolean;
-    classifier: "rules-v2" | "llm";
+    emotionSignals?: string[];
+    emotionQualifies?: boolean;
+    classifier: "rules-v2" | "rules-v3" | "llm";
   };
   metadataSources: string[];
 };
@@ -51,8 +53,12 @@ export type MonitoredJournal = {
   feedLabel: string;
   journalUrl: string | null;
   qualificationNote: string;
-  inclusionBasis: "sjr-q1" | "user-curated specialist";
+  inclusionBasis: "sjr-q1" | "sjr-q2" | "user-curated specialist";
   resultCount: number;
+  emotionResultCount?: number;
+  candidateCount?: number;
+  unreviewedCount?: number;
+  knownIssueCount?: number;
 };
 
 export type TrackerData = {
@@ -63,6 +69,16 @@ export type TrackerData = {
   sjrYear: number | null;
   sourceCounts: Record<string, number>;
   feedCounts: Record<"digital-humanities" | "ai-history", number>;
+  emotionFeedCount?: number;
+  audit?: {
+    candidateCount: number;
+    historyIncludedCount: number;
+    emotionIncludedCount: number;
+    unreviewedCount: number;
+    definition: string;
+  };
   journals: MonitoredJournal[];
   papers: Paper[];
+  emotionPapers?: Paper[];
+  auditPapers?: Paper[];
 };

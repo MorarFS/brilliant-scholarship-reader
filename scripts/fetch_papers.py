@@ -52,6 +52,9 @@ FEED_LABELS = {
     "ai-history": "AI & LLMs in History",
 }
 
+EMOTIONS_FEED = "emotions-humanities"
+EMOTIONS_FEED_LABEL = "Emotions in Digital & Computational Humanities"
+
 METHOD_RULES: tuple[tuple[str, int, str], ...] = (
     (r"\b(?:digital|computational) humanit(?:y|ies)\b", 38, "digital or computational humanities"),
     (r"\b(?:artificial intelligence|machine learning|deep learning|neural networks?|large language models?|\bllms?\b|generative ai|transformers?)\b", 30, "AI / ML / LLM method"),
@@ -62,12 +65,18 @@ METHOD_RULES: tuple[tuple[str, int, str], ...] = (
     (r"\b(?:knowledge graphs?|linked open data|semantic web|ontology|digital archives?|digital collections?|digitization|digitisation|research database)\b", 18, "digital knowledge infrastructure"),
 )
 
-HUMANITIES_RULES: tuple[tuple[str, int, str], ...] = (
+HISTORY_RULES: tuple[tuple[str, int, str], ...] = (
     (r"\b(?:historical (?:sources?|documents?|records?|texts?|newspapers?|maps?|data|datasets?|corpora?|corpus|language|linguistics)|primary sources?|history|historiograph|historian)\b", 26, "historical research or sources"),
     (r"\b(?:archives?|archival|manuscripts?|palaeograph|paleograph|codicolog|epigraph|papyr|inscriptions?)\b", 25, "archives or documentary evidence"),
     (r"\b(?:cultural heritage|digital heritage|heritage science|heritage sites?|historic buildings?|museums?|collections?|cultural memory|memory studies|material culture)\b", 25, "heritage, memory, or collections"),
     (r"\b(?:archaeolog|ancient|antiquity|medieval|early modern|colonial|postcolonial|imperial|eighteenth-century|nineteenth-century|twentieth-century)\b", 22, "historical period or archaeology"),
     (r"\b(?:historical linguistics|philolog|diachronic language|language change|ancient languages?|historical corpora?)\b", 24, "historical language evidence"),
+)
+
+EMOTION_RULES: tuple[tuple[str, int, str], ...] = (
+    (r"\b(?:emotion(?:s|al|ally)?|affect(?:ive|s)?|feeling(?:s)?|sentiment(?:s|al)?|mood(?:s)?|empathy|empathic)\b", 30, "emotion, affect, sentiment, or feeling"),
+    (r"\b(?:joy|happiness|sadness|grief|mourning|anger|fear|anxiety|shame|guilt|love|desire|passion|trauma|well-?being)\b", 22, "named emotion or affective state"),
+    (r"\b(?:emotion recognition|emotion detection|sentiment analysis|affective computing|affect analysis)\b", 34, "computational emotion or sentiment analysis"),
 )
 
 NEGATIVE_RULES: tuple[tuple[str, int, str], ...] = (
@@ -95,7 +104,8 @@ def read_journals(path: Path) -> list[Journal]:
             quartile = row.get("sjrbestquartile") or row.get("bestquartile") or row.get("quartile") or ""
             inclusion_basis = (row.get("inclusionbasis") or "sjr-q1").lower()
             is_user_curated = inclusion_basis == "user-curated specialist"
-            if quartile.upper() != "Q1" and not is_user_curated:
+            is_ranked = quartile.upper() in {"Q1", "Q2"}
+            if not is_ranked and not is_user_curated:
                 continue
             title = row.get("title") or row.get("journal") or row.get("sourcetitle") or ""
             issns = parse_issns(row.get("issn") or row.get("issns") or "")
@@ -106,13 +116,13 @@ def read_journals(path: Path) -> list[Journal]:
                 Journal(
                     title=title,
                     issns=issns,
-                    quartile="User-curated specialist" if is_user_curated else "Q1",
+                    quartile="User-curated specialist" if is_user_curated else quartile.upper(),
                     year=int(raw_year) if raw_year.isdigit() else None,
                     focus=row.get("focus") or "computational humanities",
                     feed=row.get("feed") if row.get("feed") in FEED_LABELS else "digital-humanities",
                     journal_url=row.get("journalurl") or row.get("sourceurl") or None,
                     qualification_note=row.get("qualificationnote") or row.get("provenancenote") or "Pinned Q1 starter venue; review annually",
-                    inclusion_basis="user-curated specialist" if is_user_curated else "sjr-q1",
+                    inclusion_basis="user-curated specialist" if is_user_curated else ("sjr-q2" if quartile.upper() == "Q2" else "sjr-q1"),
                 )
             )
     if not journals:
@@ -173,13 +183,17 @@ def classify(paper: dict[str, Any], journal: Journal) -> dict[str, Any]:
     title_lower = title.lower()
 
     method_matches: list[tuple[int, str]] = []
-    humanities_matches: list[tuple[int, str]] = []
+    history_matches: list[tuple[int, str]] = []
+    emotion_matches: list[tuple[int, str]] = []
     for pattern, weight, label in METHOD_RULES:
         if re.search(pattern, evidence_text, flags=re.I):
             method_matches.append((weight, label))
-    for pattern, weight, label in HUMANITIES_RULES:
+    for pattern, weight, label in HISTORY_RULES:
         if re.search(pattern, evidence_text, flags=re.I):
-            humanities_matches.append((weight, label))
+            history_matches.append((weight, label))
+    for pattern, weight, label in EMOTION_RULES:
+        if re.search(pattern, text, flags=re.I):
+            emotion_matches.append((weight, label))
 
     negative_signals: list[str] = []
     for pattern, _weight, label in NEGATIVE_RULES:
@@ -197,13 +211,15 @@ def classify(paper: dict[str, Any], journal: Journal) -> dict[str, Any]:
         negative_signals.append("non-research item signal")
 
     method_signals = [label for _, label in method_matches]
-    humanities_signals = [label for _, label in humanities_matches]
+    humanities_signals = [label for _, label in history_matches]
+    emotion_signals = [label for _, label in emotion_matches]
     qualifies = bool(method_signals and humanities_signals and not negative_signals)
-    score = base + min(40, sum(weight for weight, _ in method_matches)) + min(40, sum(weight for weight, _ in humanities_matches))
+    emotion_qualifies = bool(journal.feed == "digital-humanities" and emotion_signals and not negative_signals)
+    score = base + min(40, sum(weight for weight, _ in method_matches)) + min(40, sum(weight for weight, _ in history_matches))
     if negative_signals:
         score = 0
     score = max(0, min(100, score))
-    signals = [venue_signal, *method_signals, *humanities_signals, *negative_signals]
+    signals = [venue_signal, *method_signals, *humanities_signals, *emotion_signals, *negative_signals]
     if qualifies:
         reason = (
             f"Matched computational evidence ({', '.join(method_signals[:2])}) and humanities evidence "
@@ -220,8 +236,10 @@ def classify(paper: dict[str, Any], journal: Journal) -> dict[str, Any]:
         "signals": signals,
         "methodSignals": method_signals,
         "humanitiesSignals": humanities_signals,
+        "emotionSignals": emotion_signals,
+        "emotionQualifies": emotion_qualifies,
         "qualifies": qualifies,
-        "classifier": "rules-v2",
+        "classifier": "rules-v3",
     }
 
 
@@ -277,6 +295,8 @@ def openalex_record(work: dict[str, Any], journals: list[Journal]) -> dict[str, 
         "openAccessUrl": oa_url,
         "openAccessPdfUrl": oa_pdf_url,
         "openAccessStatus": (work.get("open_access") or {}).get("oa_status"),
+        "volume": (work.get("biblio") or {}).get("volume"),
+        "issue": (work.get("biblio") or {}).get("issue"),
         "abstract": reconstruct_abstract(work.get("abstract_inverted_index")),
         "topics": topics,
         "metadataSources": ["OpenAlex"],
@@ -291,7 +311,7 @@ def fetch_openalex(journals: list[Journal], start: dt.date, end: dt.date, api_ke
     select = ",".join((
         "id", "doi", "display_name", "publication_date", "publication_year", "authorships",
         "primary_location", "best_oa_location", "abstract_inverted_index", "open_access",
-        "topics", "is_retracted", "is_paratext",
+        "topics", "biblio", "is_retracted", "is_paratext",
     ))
     for batch in chunks(issns, 90):
         cursor: str | None = "*"
@@ -354,6 +374,8 @@ def crossref_record(item: dict[str, Any], journal: Journal) -> dict[str, Any] | 
         "openAccessUrl": None,
         "openAccessPdfUrl": None,
         "openAccessStatus": None,
+        "volume": item.get("volume"),
+        "issue": item.get("issue"),
         "abstract": clean_abstract(item.get("abstract")),
         "topics": list(item.get("subject") or [])[:6],
         "metadataSources": ["Crossref"],
@@ -377,7 +399,7 @@ def fetch_crossref(journals: list[Journal], start: dt.date, end: dt.date, mailto
                         "filter": f"from-pub-date:{start},until-pub-date:{end},type:journal-article",
                         "rows": "200",
                         "cursor": cursor,
-                        "select": "DOI,title,author,published,published-online,published-print,issued,container-title,ISSN,URL,resource,abstract,subject",
+                        "select": "DOI,title,author,published,published-online,published-print,issued,container-title,ISSN,URL,resource,abstract,subject,volume,issue",
                     }
                     if mailto:
                         params["mailto"] = mailto
@@ -404,7 +426,7 @@ def fetch_crossref(journals: list[Journal], start: dt.date, end: dt.date, mailto
 
 def merge_record(preferred: dict[str, Any], complement: dict[str, Any]) -> dict[str, Any]:
     merged = dict(preferred)
-    for field in ("abstract", "doi", "doiUrl", "articleUrl", "journalUrl", "openAccessUrl", "openAccessPdfUrl", "openAccessStatus"):
+    for field in ("abstract", "doi", "doiUrl", "articleUrl", "journalUrl", "openAccessUrl", "openAccessPdfUrl", "openAccessStatus", "volume", "issue"):
         if not merged.get(field) and complement.get(field):
             merged[field] = complement[field]
     if not merged.get("authors") and complement.get("authors"):
@@ -418,7 +440,11 @@ def load_existing(path: Path) -> list[dict[str, Any]]:
     if not path.exists():
         return []
     try:
-        return (json.loads(path.read_text(encoding="utf-8")).get("papers") or [])
+        payload = json.loads(path.read_text(encoding="utf-8"))
+        records: list[dict[str, Any]] = []
+        for key in ("papers", "emotionPapers", "auditPapers"):
+            records.extend(payload.get(key) or [])
+        return records
     except (OSError, json.JSONDecodeError):
         return []
 
@@ -495,6 +521,8 @@ def main() -> int:
         by_key[key] = merge_record(by_key[key], paper) if key in by_key else paper
 
     qualified: list[dict[str, Any]] = []
+    emotion_papers: list[dict[str, Any]] = []
+    audit_papers: list[dict[str, Any]] = []
     for paper in by_key.values():
         journal = journal_for_issns(journals, [paper.get("issn") or ""])
         if not journal:
@@ -506,8 +534,14 @@ def main() -> int:
         paper["relevance"] = classify(paper, journal)
         if paper["relevance"]["qualifies"] and paper["relevance"]["score"] >= args.min_score:
             qualified.append(paper)
+        if paper["relevance"]["emotionQualifies"]:
+            emotion_papers.append(paper)
+        if not paper["relevance"]["qualifies"]:
+            audit_papers.append(paper)
 
     papers = sort_papers_newest_first(qualified)
+    emotion_papers = sort_papers_newest_first(emotion_papers)
+    audit_papers = sort_papers_newest_first(audit_papers)
     if args.max_papers > 0:
         papers = papers[:args.max_papers]
     source_counts = {
@@ -525,6 +559,14 @@ def main() -> int:
             feed: sum(paper.get("feed") == feed for paper in papers)
             for feed in FEED_LABELS
         },
+        "emotionFeedCount": len(emotion_papers),
+        "audit": {
+            "candidateCount": len(by_key),
+            "historyIncludedCount": len(papers),
+            "emotionIncludedCount": len(emotion_papers),
+            "unreviewedCount": len(audit_papers),
+            "definition": "Every available article record from each configured ISSN, retained when it does not pass the history rule so it can be inspected instead of silently discarded.",
+        },
         "journals": [
             {
                 "title": journal.title,
@@ -538,10 +580,16 @@ def main() -> int:
                 "qualificationNote": journal.qualification_note,
                 "inclusionBasis": journal.inclusion_basis,
                 "resultCount": sum(paper.get("journal") == journal.title for paper in papers),
+                "emotionResultCount": sum(paper.get("journal") == journal.title for paper in emotion_papers),
+                "candidateCount": sum(paper.get("journal") == journal.title for paper in by_key.values()),
+                "unreviewedCount": sum(paper.get("journal") == journal.title for paper in audit_papers),
+                "knownIssueCount": len({f"{paper.get('volume') or ''}:{paper.get('issue') or ''}" for paper in by_key.values() if paper.get("journal") == journal.title and (paper.get("volume") or paper.get("issue"))}),
             }
             for journal in journals
         ],
         "papers": papers,
+        "emotionPapers": emotion_papers,
+        "auditPapers": audit_papers,
     }
     atomic_write_json(args.output, payload)
     atomic_write_json(

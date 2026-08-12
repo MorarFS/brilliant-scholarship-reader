@@ -1,9 +1,12 @@
 # Chronicle — Computational Humanities Research Tracker
 
-Chronicle is a standalone, static tracker with two deliberately separated research feeds:
+Chronicle is a standalone, static tracker with three deliberately separated research feeds and an audit queue:
 
 1. **Digital & Computational Humanities** (the default): computational methods applied to history, historical sources, archives, heritage, cultural memory, historical language, and historical data in leading specialist or closely adjacent venues.
 2. **AI & LLMs in History** (secondary): AI, machine-learning, LLM, NLP, and other computational-method papers found in selected history journals, only when they are substantively tied to historical research or materials.
+3. **Emotions in Digital & Computational Humanities** (tertiary): emotion, affect, sentiment, feeling, and affective-computing scholarship in the specialist DH/CH venue set. History is intentionally not required in this separate feed.
+
+**Audit mode** keeps every available article record collected from the configured ISSNs that did not pass the history rule. It reports collection totals per venue and known volume/issue labels when metadata supplies them, so borderline work is reviewable rather than silently excluded.
 
 Generic history and generic AI papers are excluded. Chronicle uses open scholarly metadata, preserves the evidence behind every match, and links readers to the article. The collector never scrapes publisher full text or signs into a library. The browser Reading Room processes only a direct legal OA PDF that the source allows it to fetch, or a PDF the user attaches locally.
 
@@ -14,7 +17,9 @@ The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the t
 - iterates the configured journal ISSNs directly; there is no opaque broad web search;
 - uses OpenAlex as the primary metadata source and Crossref as a complement/fallback;
 - scans 1 January of the previous calendar year through the current UTC date;
-- admits a paper only when metadata contains **both** a computational-method signal and a relevant historical/humanities signal;
+- admits a history-feed paper only when metadata contains **both** a computational-method signal and a relevant historical/humanities signal;
+- separately identifies emotion/affect work in the specialist DH/CH venues, without treating it as historical work by default;
+- retains non-matching records in Audit mode with their reason and evidence signals;
 - records its feed, score, sentence-length reason, method signals, humanities signals, and `classifier: rules-v2`;
 - sorts each feed newest-first and exposes clear 2026/2025 counts and filters;
 - displays readable abstracts when supplied by metadata;
@@ -58,13 +63,15 @@ Neither value is requested by the browser app, written to files, or committed. N
 
 ## The pinned monitored-journal starter list
 
-`config/journals.csv` is the collector’s complete venue universe. Each row has `Title`, `Issn`, `SJR Best Quartile`, `Year`, `Focus`, `Feed`, `Journal URL`, a plain-language `Qualification note`, and `Inclusion Basis`. The collector accepts reviewed Q1 rows and explicitly marked `user-curated specialist` rows; other non-Q1 rows are ignored.
+`config/journals.csv` is the collector’s complete venue universe. Each row has `Title`, `Issn`, `SJR Best Quartile`, `Year`, `Focus`, `Feed`, `Journal URL`, a plain-language `Qualification note`, and `Inclusion Basis`. The collector accepts reviewed Q1 and Q2 rows, plus explicitly marked `user-curated specialist` venues. “Field-significant” is never silently presented as a quartile: it is visibly labeled as a user-curated specialist choice.
 
 ### Primary: Digital & Computational Humanities
 
 | Journal | ISSN(s) | Why it is monitored |
 |---|---|---|
 | [Digital Scholarship in the Humanities](https://academic.oup.com/dsh) | 2055-7671; 2055-768X | Specialist digital-humanities venue |
+| [Digital Humanities Quarterly](https://www.digitalhumanities.org/dhq/) | 1938-4122 | Foundational field-significant specialist venue |
+| [International Journal of Digital Humanities](https://link.springer.com/journal/42803) | 2524-7832 | Field-significant specialist venue |
 | [Journal of Cultural Analytics](https://culturalanalytics.org/) | 2371-4549 | User-requested specialist venue; confirmed by the [ISSN International Centre](https://portal.issn.org/resource/ISSN/2371-4549) |
 | [Computational Humanities Research](https://www.cambridge.org/core/journals/computational-humanities-research) | 2977-8158 | User-requested specialist venue launched in 2025; confirmed by [Cambridge University Press](https://www.cambridge.org/core/journals/computational-humanities-research) and the [ISSN International Centre](https://portal.issn.org/resource/ISSN/2977-8158) |
 | [Journal of Computer Applications in Archaeology](https://journal.caa-international.org/) | 2514-8362 | Computational archaeology |
@@ -73,6 +80,7 @@ Neither value is requested by the browser app, written to files, or committed. N
 | [Journal of Cultural Heritage](https://www.sciencedirect.com/journal/journal-of-cultural-heritage) | 1296-2074; 1778-3674 | Adjacent heritage venue, strictly content-filtered |
 | [Heritage Science](https://heritagesciencejournal.springeropen.com/) | 2050-7445 | Adjacent heritage-science venue, strictly content-filtered |
 | [Virtual Archaeology Review](https://polipapers.upv.es/index.php/var) | 1989-9947 | Virtual archaeology and digital heritage |
+| [Manuscript Studies](https://muse.jhu.edu/journal/754) | 2380-1190; 2381-5329 | 2024 SJR Q2; digital-age manuscript studies |
 
 ### Secondary: AI & LLMs in History
 
