@@ -259,7 +259,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .journal-card dd { margin: 4px 0 0; color: var(--ink); font-size: 10px; }
 .journal-card .journal-card__note { margin-bottom: 16px; padding-top: 14px; border-top: 1px solid #e4e0d7; }
 
-.reading-room { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-rows: auto auto minmax(0, 1fr); background: #ecebe1; color: var(--ink); }
+.reading-room { position: fixed; inset: 0; z-index: 100; display: grid; grid-template-rows: auto auto auto minmax(0, 1fr); background: #ecebe1; color: var(--ink); }
 .reading-room__header { min-height: 118px; display: flex; align-items: flex-start; justify-content: space-between; gap: 30px; padding: 22px 30px 19px; background: var(--green-dark); color: white; }
 .reading-room__header > div { min-width: 0; }
 .reading-room__header h1 { max-width: 980px; margin: 5px 0 6px; font: 500 clamp(25px, 3vw, 40px)/1.05 "Newsreader", Georgia, serif; }
