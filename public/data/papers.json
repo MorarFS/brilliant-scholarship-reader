@@ -1,15 +1,15 @@
 {
-  "generatedAt": "2026-08-11T13:23:24+00:00",
+  "generatedAt": "2026-08-12T01:57:37+00:00",
   "windowStart": "2025-01-01",
-  "windowEnd": "2026-08-11",
+  "windowEnd": "2026-08-12",
   "journalCount": 17,
   "sjrYear": 2024,
   "sourceCounts": {
-    "OpenAlex": 383,
-    "Crossref": 379
+    "OpenAlex": 385,
+    "Crossref": 381
   },
   "feedCounts": {
-    "digital-humanities": 390,
+    "digital-humanities": 392,
     "ai-history": 6
   },
   "journals": [
@@ -42,7 +42,7 @@
       "journalUrl": "https://culturalanalytics.org/",
       "qualificationNote": "User-curated specialist journal; ISSN and journal link verified through the ISSN International Centre and publisher site",
       "inclusionBasis": "user-curated specialist",
-      "resultCount": 8
+      "resultCount": 9
     },
     {
       "title": "Computational Humanities Research",
@@ -57,7 +57,7 @@
       "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
       "qualificationNote": "User-curated specialist journal launched in 2025; online ISSN and scope verified through Cambridge University Press and the ISSN International Centre",
       "inclusionBasis": "user-curated specialist",
-      "resultCount": 19
+      "resultCount": 20
     },
     {
       "title": "Journal of Computer Applications in Archaeology",
@@ -281,6 +281,62 @@
     }
   ],
   "papers": [
+    {
+      "id": "https://openalex.org/W7202086628",
+      "title": "ALMA: Automated Alignment of Ancient Texts using Linguistic and Semantic Analysis",
+      "authors": [
+        "Sophie Robert-Hayek",
+        "Andrew Hardwick",
+        "Davide D’Amico",
+        "Frédérique Rey"
+      ],
+      "publicationDate": "2026-08-10",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10045",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10045",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10045",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10045",
+      "openAccessPdfUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/4267FDB026BD3433D4BAEC2ED254778E/S2977815826100451a.pdf/div-class-title-alma-automated-alignment-of-ancient-texts-using-linguistic-and-semantic-analysis-div.pdf",
+      "openAccessStatus": "diamond",
+      "abstract": "Textual criticism, the task of reconstructing a text as close as possible to its original form based on multiple ancient copies, is a central concern of philologists studying ancient literature.After identifying and cataloging the available manuscripts, scholars align the texts to produce a list of variants, a process known as collation.Automating this task has been one of the earliest areas of interest for applying computational methods to the humanities.Most current approaches rely on sequence alignment algorithms, originally developed for bioinformatics.However, recent advances in mono and multilingual neural alignment, capable of modeling semantic, syntactic, and grammatical relationships, remain largely underutilized in this field.In this paper, we introduce ALMA (Alignment and Learning for Manuscript Analysis).This new pipeline integrates lexical, grammatical, and semantic analysis to perform automatic textual alignment.We evaluate ALMA against three established alignment methods, each representing a different paradigm, on four manuscripts of the Gospel of John, two in Latin and two in Greek.ALMA achieves mean alignment scores of 94.12% (Latin) and 95.77% (Greek), significantly outperforming all baseline methods: alignment scores are improved over a deep learning-only approach by 1.93% and 1.09%, over a grammar-based approach by 23.39% and 10.14%, and over a sequence alignment method by 38.57% and 13.39%, respectively, for Latin and Greek.Notably, in this study, ALMA is the only approach to achieve a perfect median of 100% success on both datasets.These results highlight ALMA's substantial potential for advancing computational approaches for textual collation and more generally for computational philology.",
+      "topics": [
+        "Digital Humanities and Scholarship",
+        "Topic Modeling",
+        "Natural Language Processing Techniques"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (archives or documentary evidence, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
     {
       "id": "https://openalex.org/W7172408838",
       "title": "Reconstructing Temple D in Agrigento (Italy): Integrated digital methodologies for archaeological research",
@@ -17355,6 +17411,64 @@
       }
     },
     {
+      "id": "https://openalex.org/W4408609775",
+      "title": "Quantifying the Presence of Ancient Greek and Latin Classics in Early Modern Britain",
+      "authors": [
+        "Margherita Fantoli",
+        "Jukka Suomela",
+        "Toon Van Hal",
+        "Mark Depauw",
+        "Lari Virkki",
+        "Mikko Tolonen"
+      ],
+      "publicationDate": "2025-03-19",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/001c.128008",
+      "doiUrl": "https://doi.org/10.22148/001c.128008",
+      "articleUrl": "https://doi.org/10.22148/001c.128008",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/001c.128008",
+      "openAccessPdfUrl": "https://culturalanalytics.org/article/128008.pdf",
+      "openAccessStatus": "diamond",
+      "abstract": "This paper explores the reception of classical works in Early Modern Britain during the hand press era, between the 1470s and 1790s. It investigates canon formation, knowledge transmission, and the integration of digital archives in quantitative book history. The study quantitatively maps changing perceptions of the classical canon across time, offering a panoramic view of 'shifting canons'. The analysis is based on three data archives: the English Short Title Catalogue (ESTC), Early English Books Online (EEBO), and Eighteenth Century Collections Online (ECCO). We conclude that we can observe a “canonization” of the set of classical authors printed in Early Modern England, which is reflected in a significant loss of diversity in publications, despite a general increase of the publication of classical works. Preferences also shift, with ancient Greek authors of the early centuries gaining significantly more space in the 18th century. This finding however is balanced by the observation that the circulation of Ancient Greek editions in the original language does not increase during this time. This multidimensional approach contributes to a comprehensive understanding of the reception of Classics in Early Modern Britain, shedding light on cultural and intellectual transformations.",
+      "topics": [
+        "Historical and Literary Studies",
+        "Reformation and Early Modern Christianity",
+        "Historical Influence and Diplomacy"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 73,
+        "reason": "Matched computational evidence (digital knowledge infrastructure) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital knowledge infrastructure",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4408564313",
       "title": "New Perspectives and Usual Challenges: Present Technologies for Document Management in Architectural Heritage Conservation-Restoration Works",
       "authors": [
@@ -18776,6 +18890,55 @@
       }
     },
     {
+      "id": "https://openalex.org/W4407036583",
+      "title": "Information processes in Virtual 3D reconstruction of Roman Three-Bay Double Arch of Musti (Tunisia)",
+      "authors": [
+        "Jakub Franczuk"
+      ],
+      "publicationDate": "2025-01-31",
+      "journal": "Virtual Archaeology Review",
+      "issn": "1989-9947",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.4995/var.2024.22543",
+      "doiUrl": "https://doi.org/10.4995/var.2024.22543",
+      "articleUrl": "https://doi.org/10.4995/var.2024.22543",
+      "journalUrl": "https://polipapers.upv.es/index.php/var",
+      "openAccessUrl": "https://doi.org/10.4995/var.2024.22543",
+      "openAccessPdfUrl": "https://polipapers.upv.es/index.php/var/article/download/22543/17223",
+      "openAccessStatus": "diamond",
+      "abstract": "Highlights: The article highlights the integration of advanced modelling software, showcasing their potential in reconstructing historical monuments with high accuracy and detail. The study uses modern techniques such as LiDAR, photogrammetry, and HBIM compared with historical documentation in digital 3D reconstruction. Reality-based parametric modelling and virtual anastylosis were employed to verify and visualise hypotheses about the original structure of the arch. Abstract: The case study focuses on the virtual hypothetical 3D reconstruction of the Roman Three-bay Double Arch of Musti, Tunisia. This work, part of the AFRIPAL project, aims to enhance understanding of the Romanization and urban development of Musti between the 5th century BC and the 3rd century AD. It builds on research by Professor Naïdè Ferchiou, who provided a detailed reconstruction hypothesis based on measurements and documentation from the 1990s. Modern techniques such as LiDAR scanning, photogrammetry, Building Information Modeling (BIM), and parametric modeling were employed to visualize and verify this reconstruction. Scans of existing architectural fragments were used to create high and low-polygon models, enabling the testing of various hypotheses. The study highlights the use of tools like Reality Capture, Archicad, Rhino, and Grasshopper to reconstruct historical monuments, focusing on accuracy in modeling and detailed parametric representations. One of the main challenges was reconstructing the arch despite significant alterations due to centuries of redevelopment and later modifications. That challenge was addressed by cross-referencing historical documentation with modern scanning technologies and photogrammetry. Textured mesh and BREP modeling were incorporated with virtual anastylosis of elements to hypothesize the original structure. The study concludes by showcasing photorealistic visualizations of the reconstructed arch and discussing the potential for automating aspects of the reconstruction process using modern software. This work brings to life an ancient Roman monument and sets a workflow for future detailed virtual reconstructions of cultural architectural heritage.",
+      "topics": [
+        "3D Surveying and Cultural Heritage",
+        "Archaeological Research and Protection",
+        "Conservation Techniques and Studies"
+      ],
+      "metadataSources": [
+        "OpenAlex",
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 77,
+        "reason": "Matched computational evidence (visual or spatial computing method) and humanities evidence (heritage, memory, or collections, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "visual or spatial computing method",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "visual or spatial computing method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "qualifies": true,
+        "classifier": "rules-v2"
+      }
+    },
+    {
       "id": "https://openalex.org/W4407036823",
       "title": "Digital 3D reconstructions of synagogues for an innovative approach on Jewish architectural heritage in East Central Europe",
       "authors": [
@@ -18821,55 +18984,6 @@
         "humanitiesSignals": [
           "historical research or sources",
           "heritage, memory, or collections"
-        ],
-        "qualifies": true,
-        "classifier": "rules-v2"
-      }
-    },
-    {
-      "id": "https://openalex.org/W4407036583",
-      "title": "Information processes in Virtual 3D reconstruction of Roman Three-Bay Double Arch of Musti (Tunisia)",
-      "authors": [
-        "Jakub Franczuk"
-      ],
-      "publicationDate": "2025-01-31",
-      "journal": "Virtual Archaeology Review",
-      "issn": "1989-9947",
-      "quartile": "Q1",
-      "sjrYear": 2024,
-      "feed": "digital-humanities",
-      "doi": "10.4995/var.2024.22543",
-      "doiUrl": "https://doi.org/10.4995/var.2024.22543",
-      "articleUrl": "https://doi.org/10.4995/var.2024.22543",
-      "journalUrl": "https://polipapers.upv.es/index.php/var",
-      "openAccessUrl": "https://doi.org/10.4995/var.2024.22543",
-      "openAccessPdfUrl": "https://polipapers.upv.es/index.php/var/article/download/22543/17223",
-      "openAccessStatus": "diamond",
-      "abstract": "Highlights: The article highlights the integration of advanced modelling software, showcasing their potential in reconstructing historical monuments with high accuracy and detail. The study uses modern techniques such as LiDAR, photogrammetry, and HBIM compared with historical documentation in digital 3D reconstruction. Reality-based parametric modelling and virtual anastylosis were employed to verify and visualise hypotheses about the original structure of the arch. Abstract: The case study focuses on the virtual hypothetical 3D reconstruction of the Roman Three-bay Double Arch of Musti, Tunisia. This work, part of the AFRIPAL project, aims to enhance understanding of the Romanization and urban development of Musti between the 5th century BC and the 3rd century AD. It builds on research by Professor Naïdè Ferchiou, who provided a detailed reconstruction hypothesis based on measurements and documentation from the 1990s. Modern techniques such as LiDAR scanning, photogrammetry, Building Information Modeling (BIM), and parametric modeling were employed to visualize and verify this reconstruction. Scans of existing architectural fragments were used to create high and low-polygon models, enabling the testing of various hypotheses. The study highlights the use of tools like Reality Capture, Archicad, Rhino, and Grasshopper to reconstruct historical monuments, focusing on accuracy in modeling and detailed parametric representations. One of the main challenges was reconstructing the arch despite significant alterations due to centuries of redevelopment and later modifications. That challenge was addressed by cross-referencing historical documentation with modern scanning technologies and photogrammetry. Textured mesh and BREP modeling were incorporated with virtual anastylosis of elements to hypothesize the original structure. The study concludes by showcasing photorealistic visualizations of the reconstructed arch and discussing the potential for automating aspects of the reconstruction process using modern software. This work brings to life an ancient Roman monument and sets a workflow for future detailed virtual reconstructions of cultural architectural heritage.",
-      "topics": [
-        "3D Surveying and Cultural Heritage",
-        "Archaeological Research and Protection",
-        "Conservation Techniques and Studies"
-      ],
-      "metadataSources": [
-        "OpenAlex",
-        "Crossref"
-      ],
-      "relevance": {
-        "score": 77,
-        "reason": "Matched computational evidence (visual or spatial computing method) and humanities evidence (heritage, memory, or collections, historical period or archaeology) in the Digital & Computational Humanities feed.",
-        "signals": [
-          "Digital & Computational Humanities venue",
-          "visual or spatial computing method",
-          "heritage, memory, or collections",
-          "historical period or archaeology"
-        ],
-        "methodSignals": [
-          "visual or spatial computing method"
-        ],
-        "humanitiesSignals": [
-          "heritage, memory, or collections",
-          "historical period or archaeology"
         ],
         "qualifies": true,
         "classifier": "rules-v2"
