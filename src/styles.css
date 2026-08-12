@@ -304,6 +304,8 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .reader-selection-tools { position: sticky; top: -22px; z-index: 2; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; padding: 10px 13px; border: 1px solid #cbd0c0; background: #f3f3e8; box-shadow: 0 6px 18px rgba(35, 49, 43, .07); }
 .reader-selection-tools p { margin: 0; color: var(--ink-soft); font-size: 11px; }
 .reader-selection-tools > div { display: flex; flex-wrap: wrap; gap: 7px; }
+.speech-rate { display: inline-flex; align-items: center; gap: 5px; padding: 0 8px; border: 1px solid #cbd0c0; background: white; color: var(--ink-soft); font-size: 9px; font-weight: 700; }
+.speech-rate select { border: 0; background: transparent; color: var(--green); font: inherit; cursor: pointer; }
 .reader-speech-status { margin: -7px 0 15px; color: var(--green); font-size: 10px; }
 .reader-selection-tools button { padding: 8px 11px; border: 1px solid var(--green); background: var(--green); color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
 .reader-pages { max-width: 880px; margin: 0 auto; }
