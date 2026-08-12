@@ -68,6 +68,8 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
   const [draftPage, setDraftPage] = useState<number | null>(null);
   const [draftNote, setDraftNote] = useState("");
   const [actionStatus, setActionStatus] = useState("");
+  const [speechText, setSpeechText] = useState("");
+  const [speechState, setSpeechState] = useState<"idle" | "playing" | "paused">("idle");
   const textPaneRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
@@ -142,6 +144,7 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
   }, [onClose]);
 
   useEffect(() => () => { if (pdfObjectUrl) URL.revokeObjectURL(pdfObjectUrl); }, [pdfObjectUrl]);
+  useEffect(() => () => { window.speechSynthesis?.cancel(); }, []);
 
   const captureSelection = () => {
     const selection = window.getSelection();
@@ -156,6 +159,28 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
     setDraftPage(pageElement ? Number(pageElement.dataset.readerPage) : null);
     setActionStatus("Selection captured. Add an optional note, then save the annotation.");
   };
+
+  const readSelection = () => {
+    const selection = window.getSelection();
+    const text = selection?.toString().trim() || "";
+    if (!text || !textPaneRef.current?.contains(selection?.anchorNode || null)) { setActionStatus("Select text in the extracted-text view first, then choose Read selection aloud."); return; }
+    if (!("speechSynthesis" in window)) { setActionStatus("Text-to-speech is unavailable in this browser."); return; }
+    window.speechSynthesis.cancel();
+    const utterance = new SpeechSynthesisUtterance(text.slice(0, 12_000));
+    utterance.lang = "en-US";
+    utterance.onend = () => setSpeechState("idle");
+    utterance.onerror = () => { setSpeechState("idle"); setActionStatus("Speech playback could not start."); };
+    setSpeechText(text);
+    setSpeechState("playing");
+    window.speechSynthesis.speak(utterance);
+    setActionStatus("Reading the selected passage aloud on this device.");
+  };
+
+  const toggleSpeech = () => {
+    if (speechState === "playing") { window.speechSynthesis.pause(); setSpeechState("paused"); }
+    else if (speechState === "paused") { window.speechSynthesis.resume(); setSpeechState("playing"); }
+  };
+  const stopSpeech = () => { window.speechSynthesis?.cancel(); setSpeechState("idle"); setSpeechText(""); };
 
   const saveAnnotation = () => {
     const note = draftNote.trim();
@@ -214,7 +239,7 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
       <div className={`reader-notice reader-notice--${readerState}`} role="status"><strong>{readerState === "ready" ? "Reading copy ready" : readerState === "loading" ? "Preparing reading copy" : "Citation and notes mode"}</strong><p>{readerMessage}</p></div>
       {readerState === "loading" && <div className="reader-loading" aria-hidden="true" />}
       {readerState === "fallback" && <section className="reader-fallback"><h2>The source must stay outside Chronicle.</h2><p>Publisher access rules and browser CORS protections are respected. Open the source in a new tab, or use <strong>Upload PDF</strong> above to attach a copy you obtained legally through your library or proxy. The file is processed locally and is never sent to Chronicle.</p></section>}
-      {readerState === "ready" && mode === "text" && <><div className="reader-selection-tools"><p>Select a passage below, then capture it.</p><button type="button" onClick={captureSelection}>Highlight selection</button></div><div className="reader-summary reader-summary--document"><AiSummary paper={paper} pdf={summaryPdf} /></div><div className="reader-pages" ref={textPaneRef}>{pages.map((page, index) => <article className="reader-page" data-reader-page={index + 1} key={index}><p className="eyebrow">Page {index + 1}</p><div>{highlightedText(page, annotations.filter((item) => item.page === index + 1))}</div></article>)}</div></>}
+      {readerState === "ready" && mode === "text" && <><div className="reader-selection-tools"><p>Select a passage below, then highlight or hear it.</p><div><button type="button" onClick={captureSelection}>Highlight selection</button><button type="button" onClick={readSelection}>Read selection aloud</button>{speechState !== "idle" && <><button type="button" onClick={toggleSpeech}>{speechState === "playing" ? "Pause" : "Resume"}</button><button type="button" onClick={stopSpeech}>Stop</button></>}</div></div>{speechText && <p className="reader-speech-status">Speaking selection locally in your browser.</p>}<div className="reader-summary reader-summary--document"><AiSummary paper={paper} pdf={summaryPdf} /></div><div className="reader-pages" ref={textPaneRef}>{pages.map((page, index) => <article className="reader-page" data-reader-page={index + 1} key={index}><p className="eyebrow">Page {index + 1}</p><div>{highlightedText(page, annotations.filter((item) => item.page === index + 1))}</div></article>)}</div></>}
       {readerState === "ready" && mode === "pdf" && pdfObjectUrl && <><div className="reader-summary reader-summary--document"><AiSummary paper={paper} pdf={summaryPdf} /></div><iframe className="reader-pdf-frame" src={pdfObjectUrl} title={`Original PDF of ${paper.title}`} /></>}
     </main>
     <aside className="annotation-panel" aria-label="Notes and highlights"><div className="annotation-compose"><p className="eyebrow">New annotation</p>{draftQuote ? <blockquote><span>Selected{draftPage ? ` · page ${draftPage}` : ""}</span>{draftQuote}</blockquote> : <p className="annotation-compose__hint">Capture a passage in Selectable text, or add a paper-level note without a highlight.</p>}<label>Note<textarea value={draftNote} onChange={(event) => setDraftNote(event.target.value)} rows={4} placeholder="Why does this passage matter?" /></label><button type="button" onClick={saveAnnotation}>Save annotation</button><p className="reader-action-status" aria-live="polite">{actionStatus}</p></div>
