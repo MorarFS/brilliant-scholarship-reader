@@ -129,6 +129,7 @@ export function AiSummary({ paper, pdf }: { paper: Paper; pdf: Blob | null }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [summary, setSummary] = useState<PaperSummary | null>(() => { try { return parseSummaryResponse(JSON.parse(localStorage.getItem(summaryKey(paper)) || "null")); } catch { return null; } });
+  const [saved, setSaved] = useState(() => { try { return Boolean(parseSummaryResponse(JSON.parse(localStorage.getItem(summaryKey(paper)) || "null"))); } catch { return false; } });
   const [request, setRequest] = useState<ReturnType<typeof buildSummaryRequest>>(null);
 
   useEffect(() => { let active = true; if (!pdf || pdf.size > 10 * 1024 * 1024) { void Promise.resolve().then(() => { if (active) setRequest(null); }); return () => { active = false; }; } void pdf.arrayBuffer().then((bytes) => { if (!active) return; setRequest(buildSummaryRequest(paper, base64FromBytes(new Uint8Array(bytes)))); }).catch(() => { if (active) setRequest(null); }); return () => { active = false; }; }, [paper, pdf]);
@@ -155,7 +156,7 @@ export function AiSummary({ paper, pdf }: { paper: Paper; pdf: Blob | null }) {
       const parsed = parseSummaryResponse(await response.json());
       if (!parsed) throw new Error("The summary service returned an unexpected response.");
       setSummary(parsed);
-      try { localStorage.setItem(summaryKey(paper), JSON.stringify(parsed)); } catch { /* The visible result remains available for this session. */ }
+      setSaved(false);
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "The summary could not be generated.");
     } finally {
@@ -163,11 +164,17 @@ export function AiSummary({ paper, pdf }: { paper: Paper; pdf: Blob | null }) {
     }
   };
 
+  const saveSummary = () => {
+    if (!summary) return;
+    try { localStorage.setItem(summaryKey(paper), JSON.stringify(summary)); setSaved(true); }
+    catch { setError("This browser could not save the summary. Export your reading-list notes as a backup."); }
+  };
+
   return <div className="ai-summary">
     <button className="summary-button" type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} disabled={!request} title={request ? undefined : "Upload a PDF of up to 10 MB before requesting a full-paper summary"}><span aria-hidden="true">✦</span>{request ? "AI summary" : "Upload PDF to summarize"}</button>
     {open && <section className="summary-panel" aria-label={`AI summary for ${paper.title}`}>
       <div className="summary-panel__heading"><div><p className="eyebrow">Optional Vertex AI summary</p><h3>Uploaded-paper research brief</h3></div>{auth.credential && <button type="button" onClick={auth.clearCredential}>Sign out</button>}</div>
-      {!request ? <p className="summary-privacy">Attach a PDF of up to 10 MB in the Reading Room first. Chronicle sends the complete PDF only for this request; it never sends highlights or notes.</p> : !auth.credential ? <div className="summary-auth"><p>Sign in before any paid model request. Only explicitly authorized Google accounts can use this backend.</p>{auth.ready ? <GoogleSignInButton /> : <p className="summary-status">{auth.error || "Preparing secure sign-in…"}</p>}</div> : !summary ? <><p className="summary-privacy">Chronicle sends this complete PDF plus citation metadata to the protected backend for this request. The PDF is not retained by Chronicle.</p><button className="summary-generate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Generating securely…" : "Generate full-paper summary"}</button></> : <div className="summary-result"><p>{summary.summary}</p>{summary.keyPoints.length > 0 && <><h4>Key points</h4><ul>{summary.keyPoints.map((item) => <li key={item}>{item}</li>)}</ul></>}{summary.sections.length > 0 && <><h4>Section-by-section</h4><div className="summary-sections">{summary.sections.map((item) => <section key={`${item.heading}-${item.summary}`}><h5>{item.heading}</h5><p>{item.summary}</p></section>)}</div></>}{summary.caveats.length > 0 && <><h4>Limits to verify</h4><ul>{summary.caveats.map((item) => <li key={item}>{item}</li>)}</ul></>}<p className="summary-disclaimer">AI-generated from the uploaded PDF with {summary.model}. Saved privately in this browser with the paper.</p><button className="summary-regenerate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Regenerating…" : "Regenerate"}</button></div>}
+      {!request ? <p className="summary-privacy">Attach a PDF of up to 10 MB in the Reading Room first. Chronicle sends the complete PDF only for this request; it never sends highlights or notes.</p> : !auth.credential ? <div className="summary-auth"><p>Sign in before any paid model request. Only explicitly authorized Google accounts can use this backend.</p>{auth.ready ? <GoogleSignInButton /> : <p className="summary-status">{auth.error || "Preparing secure sign-in…"}</p>}</div> : !summary ? <><p className="summary-privacy">Chronicle sends this complete PDF plus citation metadata to the protected backend for this request. The PDF is not retained by Chronicle.</p><button className="summary-generate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Generating securely…" : "Generate full-paper summary"}</button></> : <div className="summary-result"><p>{summary.summary}</p>{summary.keyPoints.length > 0 && <><h4>Key points</h4><ul>{summary.keyPoints.map((item) => <li key={item}>{item}</li>)}</ul></>}{summary.sections.length > 0 && <><h4>Section-by-section</h4><div className="summary-sections">{summary.sections.map((item) => <section key={`${item.heading}-${item.summary}`}><h5>{item.heading}</h5><p>{item.summary}</p></section>)}</div></>}{summary.caveats.length > 0 && <><h4>Limits to verify</h4><ul>{summary.caveats.map((item) => <li key={item}>{item}</li>)}</ul></>}<p className="summary-disclaimer">AI-generated from the uploaded PDF with {summary.model}. {saved ? "Saved privately in this browser with the paper." : "Save it to keep it after refresh."}</p><div className="summary-actions"><button className="summary-generate" type="button" onClick={saveSummary} disabled={saved}>{saved ? "Summary saved" : "Save summary"}</button><button className="summary-regenerate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Regenerating…" : "Regenerate"}</button></div></div>}
       {error && <p className="summary-error" role="alert">{error}</p>}
     </section>}
   </div>;

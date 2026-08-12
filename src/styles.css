@@ -217,6 +217,8 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .summary-signin { min-height: 40px; }
 .summary-status { color: #676b79; font-style: italic; }
 .summary-generate { padding: 9px 12px; border: 1px solid #4c4f76; background: #4c4f76; color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
+.summary-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.summary-actions .summary-regenerate { padding: 5px 0; }
 .summary-generate:disabled, .summary-regenerate:disabled { opacity: .55; cursor: wait; }
 .summary-result > p:first-child { color: #30354d; font: 400 16px/1.65 "Newsreader", Georgia, serif; }
 .summary-result h4 { margin: 16px 0 7px; color: #454963; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
