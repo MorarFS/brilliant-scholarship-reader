@@ -191,6 +191,8 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .signal-list span { padding: 4px 7px; border: 1px solid #d1d6c0; color: #5c6e65; font-size: 9px; letter-spacing: .04em; text-transform: uppercase; }
 
 .ai-summary { margin: -10px 0 25px; }
+.reader-summary { padding: 14px 28px 0; border-bottom: 1px solid #d8d6e2; background: #fff; }
+.reader-summary .ai-summary { margin: 0 0 14px; }
 .summary-button { min-height: 38px; display: inline-flex; align-items: center; gap: 7px; padding: 8px 12px; border: 1px solid #9b9fba; background: #f0eff8; color: #424568; font-size: 10px; font-weight: 700; cursor: pointer; }
 .summary-button > span { color: #6c5ea2; font-size: 15px; }
 .summary-button:disabled { opacity: .55; cursor: not-allowed; }
