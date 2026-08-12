@@ -8,7 +8,7 @@ export type SummaryRequest = {
     publicationDate: string;
     journal: string;
     doi: string | null;
-    extractedText: string;
+    pdfBase64: string;
   };
 };
 
@@ -43,9 +43,8 @@ export const SUMMARY_API_URL = normalizeSummaryApiUrl(import.meta.env.VITE_SUMMA
 export const GOOGLE_WEB_CLIENT_ID = normalizeGoogleClientId(import.meta.env.VITE_GOOGLE_CLIENT_ID);
 export const SUMMARY_FEATURE_CONFIGURED = Boolean(SUMMARY_API_URL && GOOGLE_WEB_CLIENT_ID);
 
-export function buildSummaryRequest(paper: Paper, extractedText: string): SummaryRequest | null {
-  const text = extractedText.trim();
-  if (text.length < 500) return null;
+export function buildSummaryRequest(paper: Paper, pdfBase64: string): SummaryRequest | null {
+  if (!/^[A-Za-z0-9+/]+={0,2}$/.test(pdfBase64) || pdfBase64.length > 14_000_000) return null;
   return {
     paper: {
       id: paper.doi || paper.id,
@@ -54,7 +53,7 @@ export function buildSummaryRequest(paper: Paper, extractedText: string): Summar
       publicationDate: paper.publicationDate,
       journal: paper.journal,
       doi: paper.doi,
-      extractedText: text.slice(0, 60_000),
+      pdfBase64,
     },
   };
 }

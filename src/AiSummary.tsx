@@ -120,13 +120,18 @@ function GoogleSignInButton() {
   return <div className="summary-signin" ref={container} aria-label="Sign in with Google to use AI summaries" />;
 }
 
-export function AiSummary({ paper, extractedText }: { paper: Paper; extractedText: string | null }) {
+const summaryKey = (paper: Paper) => `chronicle-pdf-summary:${paper.doi || paper.id}`;
+function base64FromBytes(bytes: Uint8Array) { let binary = ""; for (let offset = 0; offset < bytes.length; offset += 0x8000) binary += String.fromCharCode(...bytes.subarray(offset, offset + 0x8000)); return btoa(binary); }
+
+export function AiSummary({ paper, pdf }: { paper: Paper; pdf: Blob | null }) {
   const auth = useContext(SummaryAuthContext);
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [summary, setSummary] = useState<PaperSummary | null>(null);
-  const request = extractedText ? buildSummaryRequest(paper, extractedText) : null;
+  const [summary, setSummary] = useState<PaperSummary | null>(() => { try { return parseSummaryResponse(JSON.parse(localStorage.getItem(summaryKey(paper)) || "null")); } catch { return null; } });
+  const [request, setRequest] = useState<ReturnType<typeof buildSummaryRequest>>(null);
+
+  useEffect(() => { let active = true; if (!pdf || pdf.size > 10 * 1024 * 1024) { setRequest(null); return; } void pdf.arrayBuffer().then((bytes) => { if (!active) return; setRequest(buildSummaryRequest(paper, base64FromBytes(new Uint8Array(bytes)))); }).catch(() => { if (active) setRequest(null); }); return () => { active = false; }; }, [paper, pdf]);
 
   if (!auth.configured || !SUMMARY_API_URL) return null;
 
@@ -150,6 +155,7 @@ export function AiSummary({ paper, extractedText }: { paper: Paper; extractedTex
       const parsed = parseSummaryResponse(await response.json());
       if (!parsed) throw new Error("The summary service returned an unexpected response.");
       setSummary(parsed);
+      try { localStorage.setItem(summaryKey(paper), JSON.stringify(parsed)); } catch { /* The visible result remains available for this session. */ }
     } catch (reason) {
       setError(reason instanceof Error ? reason.message : "The summary could not be generated.");
     } finally {
@@ -158,10 +164,10 @@ export function AiSummary({ paper, extractedText }: { paper: Paper; extractedTex
   };
 
   return <div className="ai-summary">
-    <button className="summary-button" type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} disabled={!request} title={request ? undefined : "Upload a readable PDF before requesting a full-paper summary"}><span aria-hidden="true">✦</span>{request ? "AI summary" : "Upload PDF to summarize"}</button>
+    <button className="summary-button" type="button" onClick={() => setOpen((value) => !value)} aria-expanded={open} disabled={!request} title={request ? undefined : "Upload a PDF of up to 10 MB before requesting a full-paper summary"}><span aria-hidden="true">✦</span>{request ? "AI summary" : "Upload PDF to summarize"}</button>
     {open && <section className="summary-panel" aria-label={`AI summary for ${paper.title}`}>
       <div className="summary-panel__heading"><div><p className="eyebrow">Optional Vertex AI summary</p><h3>Uploaded-paper research brief</h3></div>{auth.credential && <button type="button" onClick={auth.clearCredential}>Sign out</button>}</div>
-      {!request ? <p className="summary-privacy">Attach a readable PDF in the Reading Room first. Chronicle summarizes extracted text only; it never uploads the original PDF, your highlights, or notes.</p> : !auth.credential ? <div className="summary-auth"><p>Sign in before any paid model request. Only explicitly authorized Google accounts can use this backend.</p>{auth.ready ? <GoogleSignInButton /> : <p className="summary-status">{auth.error || "Preparing secure sign-in…"}</p>}</div> : !summary ? <><p className="summary-privacy">Chronicle sends a bounded portion of extracted text plus citation metadata to the protected backend for this request. It never sends the original PDF, highlights, notes, or library data.</p><button className="summary-generate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Generating securely…" : "Generate full-paper summary"}</button></> : <div className="summary-result"><p>{summary.summary}</p>{summary.keyPoints.length > 0 && <><h4>Key points</h4><ul>{summary.keyPoints.map((item) => <li key={item}>{item}</li>)}</ul></>}{summary.caveats.length > 0 && <><h4>Limits to verify</h4><ul>{summary.caveats.map((item) => <li key={item}>{item}</li>)}</ul></>}<p className="summary-disclaimer">AI-generated from uploaded-paper text with {summary.model}. Verify claims against the article. This result is not saved automatically.</p><button className="summary-regenerate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Regenerating…" : "Regenerate"}</button></div>}
+      {!request ? <p className="summary-privacy">Attach a PDF of up to 10 MB in the Reading Room first. Chronicle sends the complete PDF only for this request; it never sends highlights or notes.</p> : !auth.credential ? <div className="summary-auth"><p>Sign in before any paid model request. Only explicitly authorized Google accounts can use this backend.</p>{auth.ready ? <GoogleSignInButton /> : <p className="summary-status">{auth.error || "Preparing secure sign-in…"}</p>}</div> : !summary ? <><p className="summary-privacy">Chronicle sends this complete PDF plus citation metadata to the protected backend for this request. The PDF is not retained by Chronicle.</p><button className="summary-generate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Generating securely…" : "Generate full-paper summary"}</button></> : <div className="summary-result"><p>{summary.summary}</p>{summary.keyPoints.length > 0 && <><h4>Key points</h4><ul>{summary.keyPoints.map((item) => <li key={item}>{item}</li>)}</ul></>}{summary.caveats.length > 0 && <><h4>Limits to verify</h4><ul>{summary.caveats.map((item) => <li key={item}>{item}</li>)}</ul></>}<p className="summary-disclaimer">AI-generated from the uploaded PDF with {summary.model}. Saved privately in this browser with the paper.</p><button className="summary-regenerate" type="button" onClick={() => void generateSummary()} disabled={loading}>{loading ? "Regenerating…" : "Regenerate"}</button></div>}
       {error && <p className="summary-error" role="alert">{error}</p>}
     </section>}
   </div>;

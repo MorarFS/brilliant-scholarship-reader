@@ -13,7 +13,7 @@ const config: RuntimeConfig = {
   maxRequestsPerUserPerHour: 1,
   port: 8080,
 };
-const paper = { paper: { id: "10.1234/example", title: "Archive methods", authors: ["A. Scholar"], publicationDate: "2026-01-02", journal: "DH Journal", doi: "10.1234/example", extractedText: "Extracted paper text about computational analysis of historical archival evidence. ".repeat(20) } };
+const paper = { paper: { id: "10.1234/example", title: "Archive methods", authors: ["A. Scholar"], publicationDate: "2026-01-02", journal: "DH Journal", doi: "10.1234/example", pdfBase64: "A".repeat(1_000) } };
 const result: SummaryResult = { summary: "Brief", keyPoints: ["Point"], caveats: ["Extraction may be imperfect."], model: "test-model", generatedAt: "2026-08-11T00:00:00Z" };
 
 describe("summary API security boundary", () => {
@@ -36,7 +36,7 @@ describe("summary API security boundary", () => {
     const app = createApp(config, async () => ({ subject: "reader", email: "reader@example.com" }), summarize);
     const response = await request(app).post("/v1/summaries").set("Origin", "https://morarfs.github.io").set("Authorization", "Bearer valid").send(paper).expect(200);
     expect(response.body.summary).toBe("Brief");
-    expect(summarize).toHaveBeenCalledWith({ ...paper.paper, extractedText: paper.paper.extractedText.trim() });
+    expect(summarize).toHaveBeenCalledWith(paper.paper);
   });
 
   it("rate-limits an authenticated subject before a second Vertex call", async () => {

@@ -26,9 +26,9 @@ describe("secure summary client", () => {
   });
 
   it("builds a bounded uploaded-text request and rejects short text", () => {
-    const text = "Extracted paper text. ".repeat(100);
-    expect(buildSummaryRequest(paper, text)).toEqual({ paper: { id: paper.doi, title: paper.title, authors: paper.authors, publicationDate: paper.publicationDate, journal: paper.journal, doi: paper.doi, extractedText: text.trim() } });
-    expect(buildSummaryRequest(paper, "too short")).toBeNull();
+    const pdf = "A".repeat(1_000);
+    expect(buildSummaryRequest(paper, pdf)).toEqual({ paper: { id: paper.doi, title: paper.title, authors: paper.authors, publicationDate: paper.publicationDate, journal: paper.journal, doi: paper.doi, pdfBase64: pdf } });
+    expect(buildSummaryRequest(paper, "not base 64!")).toBeNull();
   });
 
   it("validates and bounds backend responses", () => {

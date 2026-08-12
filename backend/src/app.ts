@@ -35,7 +35,7 @@ export function createApp(config: RuntimeConfig, verifyUser: VerifyUser, summari
     if (request.method === "OPTIONS") { response.sendStatus(204); return; }
     next();
   });
-  app.use(express.json({ limit: "24kb", strict: true }));
+  app.use(express.json({ limit: "16mb", strict: true }));
 
   app.get("/healthz", (_request, response) => response.json({ status: "ok" }));
 
@@ -47,7 +47,7 @@ export function createApp(config: RuntimeConfig, verifyUser: VerifyUser, summari
     catch { response.status(401).json({ error: "Authentication failed." }); return; }
     if (!limiter.allow(user.subject)) { response.status(429).json({ error: "Summary limit reached." }); return; }
     const paper = parsePaperInput(request.body);
-    if (!paper) { response.status(400).json({ error: "A valid metadata-only paper record with an abstract is required." }); return; }
+    if (!paper) { response.status(400).json({ error: "A valid PDF summary request is required." }); return; }
     try {
       response.json(await summarize(paper));
     } catch {
