@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T14:50:28+00:00",
+  "generatedAt": "2026-08-12T14:54:14+00:00",
   "windowStart": "2025-01-01",
   "windowEnd": "2026-08-12",
   "journalCount": 20,
@@ -172106,17 +172106,11 @@
       }
     },
     {
-      "id": "doi:10.1016/j.culher.2024.12.003",
-      "title": "Investigation of cellulose nitrate film-based photographic materials (1902–1917) using a portable Raman spectrometer and chemometric methods",
+      "id": "doi:10.1016/j.culher.2024.11.002",
+      "title": "The hidden arsenic legacy in mid-19th century papered microscope slides",
       "authors": [
-        "Anastasia Povolotckaia",
-        "Maria Dynnikova",
-        "Valeria Lipovskaya (Kaputkina)",
-        "Irina Grigorieva",
-        "Svetlana Kaputkina",
-        "Evgenii Borisov",
-        "Anna Vasileva",
-        "Dmitrii Pankin"
+        "Leonardo Pantoja Munoz",
+        "Huw Jones"
       ],
       "publicationDate": "2025-01-01",
       "journal": "Journal of Cultural Heritage",
@@ -172124,9 +172118,9 @@
       "quartile": "Q1",
       "sjrYear": 2024,
       "feed": "digital-humanities",
-      "doi": "10.1016/j.culher.2024.12.003",
-      "doiUrl": "https://doi.org/10.1016/j.culher.2024.12.003",
-      "articleUrl": "https://doi.org/10.1016/j.culher.2024.12.003",
+      "doi": "10.1016/j.culher.2024.11.002",
+      "doiUrl": "https://doi.org/10.1016/j.culher.2024.11.002",
+      "articleUrl": "https://doi.org/10.1016/j.culher.2024.11.002",
       "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
@@ -172153,11 +172147,17 @@
       }
     },
     {
-      "id": "doi:10.1016/j.culher.2024.11.002",
-      "title": "The hidden arsenic legacy in mid-19th century papered microscope slides",
+      "id": "doi:10.1016/j.culher.2024.12.003",
+      "title": "Investigation of cellulose nitrate film-based photographic materials (1902–1917) using a portable Raman spectrometer and chemometric methods",
       "authors": [
-        "Leonardo Pantoja Munoz",
-        "Huw Jones"
+        "Anastasia Povolotckaia",
+        "Maria Dynnikova",
+        "Valeria Lipovskaya (Kaputkina)",
+        "Irina Grigorieva",
+        "Svetlana Kaputkina",
+        "Evgenii Borisov",
+        "Anna Vasileva",
+        "Dmitrii Pankin"
       ],
       "publicationDate": "2025-01-01",
       "journal": "Journal of Cultural Heritage",
@@ -172165,9 +172165,9 @@
       "quartile": "Q1",
       "sjrYear": 2024,
       "feed": "digital-humanities",
-      "doi": "10.1016/j.culher.2024.11.002",
-      "doiUrl": "https://doi.org/10.1016/j.culher.2024.11.002",
-      "articleUrl": "https://doi.org/10.1016/j.culher.2024.11.002",
+      "doi": "10.1016/j.culher.2024.12.003",
+      "doiUrl": "https://doi.org/10.1016/j.culher.2024.12.003",
+      "articleUrl": "https://doi.org/10.1016/j.culher.2024.12.003",
       "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
