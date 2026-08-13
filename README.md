@@ -1,6 +1,6 @@
-# Chronicle — Computational Humanities Research Tracker
+# Brilliant — Computational Humanities Research Tracker
 
-Chronicle is a standalone, static tracker with three deliberately separated research feeds and an audit queue:
+Brilliant is a standalone, static tracker with three deliberately separated research feeds and an audit queue:
 
 1. **Digital & Computational Humanities** (the default): computational methods applied to history, historical sources, archives, heritage, cultural memory, historical language, and historical data in leading specialist or closely adjacent venues.
 2. **AI & LLMs in History** (secondary): AI, machine-learning, LLM, NLP, and other computational-method papers found in selected history journals, only when they are substantively tied to historical research or materials.
