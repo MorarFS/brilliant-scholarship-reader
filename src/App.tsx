@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from "react";
 import ReadingRoom from "./ReadingRoom";
 import type { Annotation, MonitoredJournal, Paper, TrackerData } from "./types";
 import { mergeAnnotations, parseAnnotation, stablePaperId } from "./readingRoomData";
-import { loadLocalPdf } from "./localPdfStore";
+import { loadLocalPdf, saveLocalPdf } from "./localPdfStore";
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/papers.json`;
 const SAVED_STORAGE_KEY = "chronicle-saved-papers-v1";
@@ -11,6 +11,8 @@ const READING_MODE_STORAGE_KEY = "chronicle-dyslexia-reading-mode";
 const PAGE_SIZE = 40;
 type Feed = "digital-humanities" | "ai-history";
 type View = Feed | "emotions-humanities" | "audit" | "saved";
+
+type ImportedCitation = Pick<Paper, "title" | "authors" | "publicationDate" | "journal" | "doi" | "doiUrl" | "articleUrl" | "abstract">;
 
 const FEEDS: Record<Feed, { label: string; shortLabel: string; description: string }> = {
   "digital-humanities": {
@@ -59,6 +61,36 @@ function safeExternalUrl(value: unknown): string | null {
   } catch {
     return null;
   }
+}
+
+function normaliseDoi(value: string) {
+  return value.trim().replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, "").replace(/^doi:\s*/i, "").replace(/[\s.]+$/, "").toLowerCase();
+}
+
+function dateFromCrossref(item: Record<string, unknown>) {
+  for (const field of ["published-online", "published-print", "published", "issued"]) {
+    const value = item[field] as { "date-parts"?: unknown } | undefined;
+    const parts = Array.isArray(value?.["date-parts"]) ? value?.["date-parts"]?.[0] : null;
+    if (Array.isArray(parts) && typeof parts[0] === "number") {
+      const [year, month = 1, day = 1] = parts;
+      return `${year}-${String(month).padStart(2, "0")}-${String(day).padStart(2, "0")}`;
+    }
+  }
+  return new Date().toISOString().slice(0, 10);
+}
+
+function citationFromCrossref(doi: string, item: Record<string, unknown>): ImportedCitation {
+  const authors = Array.isArray(item.author) ? item.author.flatMap((author) => {
+    if (!author || typeof author !== "object") return [];
+    const value = author as Record<string, unknown>;
+    const name = [value.given, value.family].filter((part): part is string => typeof part === "string" && Boolean(part.trim())).join(" ");
+    return name ? [name] : [];
+  }) : [];
+  const title = Array.isArray(item.title) && typeof item.title[0] === "string" ? item.title[0] : "Untitled paper";
+  const journal = Array.isArray(item["container-title"]) && typeof item["container-title"][0] === "string" ? item["container-title"][0] : "Journal not listed";
+  const abstract = typeof item.abstract === "string" ? item.abstract.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim() || null : null;
+  const articleUrl = typeof item.URL === "string" ? safeExternalUrl(item.URL) : null;
+  return { title, authors, publicationDate: dateFromCrossref(item), journal, doi, doiUrl: `https://doi.org/${doi}`, articleUrl, abstract };
 }
 
 function parseImportedPaper(value: unknown): Paper | null {
@@ -153,6 +185,15 @@ export default function App() {
   const [activePaper, setActivePaper] = useState<Paper | null>(null);
   const [savedStatus, setSavedStatus] = useState("");
   const [dyslexiaMode, setDyslexiaMode] = useState(() => localStorage.getItem(READING_MODE_STORAGE_KEY) === "on");
+  const [addPaperOpen, setAddPaperOpen] = useState(false);
+  const [doiDraft, setDoiDraft] = useState("");
+  const [manualTitle, setManualTitle] = useState("");
+  const [manualAuthors, setManualAuthors] = useState("");
+  const [manualJournal, setManualJournal] = useState("");
+  const [manualDate, setManualDate] = useState("");
+  const [pendingPdf, setPendingPdf] = useState<File | null>(null);
+  const [addPaperStatus, setAddPaperStatus] = useState("");
+  const [lookingUpDoi, setLookingUpDoi] = useState(false);
 
   useEffect(() => { fetch(DATA_URL).then((response) => { if (!response.ok) throw new Error(`Data request failed (${response.status})`); return response.json() as Promise<TrackerData>; }).then(setData).catch((reason: Error) => setError(reason.message)); }, []);
   useEffect(() => { try { localStorage.setItem(READING_MODE_STORAGE_KEY, dyslexiaMode ? "on" : "off"); } catch { /* The preference remains active for this visit. */ } }, [dyslexiaMode]);
@@ -172,6 +213,58 @@ export default function App() {
   const addAnnotation = (annotation: Annotation) => persistAnnotations(mergeAnnotations(annotations, [annotation]));
   const updateAnnotation = (id: string, note: string) => persistAnnotations(annotations.map((item) => item.id === id ? { ...item, note, updatedAt: new Date().toISOString() } : item));
   const deleteAnnotation = (id: string) => persistAnnotations(annotations.filter((item) => item.id !== id));
+  const addPersonalPaper = async () => {
+    const doi = normaliseDoi(doiDraft);
+    let citation: ImportedCitation | null = null;
+    setAddPaperStatus("");
+    if (doi) {
+      setLookingUpDoi(true);
+      try {
+        const response = await fetch(`https://api.crossref.org/works/${encodeURIComponent(doi)}`, { headers: { Accept: "application/json" } });
+        if (!response.ok) throw new Error("not found");
+        const payload = await response.json() as { message?: Record<string, unknown> };
+        if (!payload.message) throw new Error("missing metadata");
+        citation = citationFromCrossref(doi, payload.message);
+      } catch {
+        setAddPaperStatus("The DOI could not be looked up. You can still add the paper with the fields below.");
+      } finally { setLookingUpDoi(false); }
+    }
+    const title = manualTitle.trim() || citation?.title || "";
+    if (!title) { setAddPaperStatus("Add a DOI that resolves, or enter a title before saving."); return; }
+    const paper: Paper = {
+      id: doi ? `doi:${doi}` : `personal:${crypto.randomUUID?.() || `${Date.now()}-${Math.random().toString(16).slice(2)}`}`,
+      title,
+      authors: manualAuthors.trim() ? manualAuthors.split(/\s*;\s*|\s*,\s*/).filter(Boolean) : citation?.authors || [],
+      publicationDate: manualDate || citation?.publicationDate || new Date().toISOString().slice(0, 10),
+      journal: manualJournal.trim() || citation?.journal || "Personal library",
+      feed: "digital-humanities",
+      issn: null,
+      quartile: "Personal library",
+      sjrYear: null,
+      doi: doi || null,
+      doiUrl: doi ? `https://doi.org/${doi}` : null,
+      articleUrl: citation?.articleUrl || null,
+      journalUrl: null,
+      openAccessUrl: null,
+      openAccessPdfUrl: null,
+      openAccessStatus: null,
+      abstract: citation?.abstract || null,
+      topics: [],
+      relevance: { score: 0, reason: "Added manually to your private library.", signals: ["personal library"], methodSignals: [], humanitiesSignals: [], qualifies: true, classifier: "rules-v3" },
+      metadataSources: doi && citation ? ["Crossref DOI lookup"] : ["Personal entry"],
+    };
+    try {
+      if (pendingPdf) await saveLocalPdf(stablePaperId(paper), pendingPdf);
+      persistSaved([paper, ...savedPapers.filter((item) => item.id !== paper.id)]);
+      setUploadedPdfIds((current) => pendingPdf ? new Set([...current, stablePaperId(paper)]) : current);
+      setAddPaperOpen(false);
+      setDoiDraft(""); setManualTitle(""); setManualAuthors(""); setManualJournal(""); setManualDate(""); setPendingPdf(null);
+      setActivePaper(paper);
+      setSavedStatus(pendingPdf ? "Paper and local PDF added to your private library." : "Paper added to your private library.");
+    } catch {
+      setAddPaperStatus("The paper was not added because this browser could not retain the selected PDF. Try adding it without a PDF, then attach the PDF in the Reading Room.");
+    }
+  };
   const savedIds = useMemo(() => new Set(savedPapers.map((paper) => paper.id)), [savedPapers]);
   const annotationCounts = useMemo(() => { const counts = new Map<string, number>(); for (const annotation of annotations) counts.set(annotation.paperId, (counts.get(annotation.paperId) || 0) + 1); return counts; }, [annotations]);
   const sourcePapers = useMemo(() => {
@@ -223,7 +316,7 @@ export default function App() {
       {error ? <div className="state-card" role="alert"><p className="eyebrow">Data could not be loaded</p><h2>Research records are unavailable.</h2><p>{error}. Serve the project locally or check that <code>public/data/papers.json</code> is present.</p></div> : !data ? <div className="state-card" aria-live="polite"><div className="loading-line" /><p>Loading research records…</p></div> : <>
         <section className="stat-strip" aria-label="Collection summary"><div><span>{data.feedCounts["digital-humanities"]}</span><p>history-focused DH papers</p></div><div><span>{data.feedCounts["ai-history"]}</span><p>AI-in-history papers</p></div><div><span>{data.emotionFeedCount ?? 0}</span><p>emotion & affect papers</p></div><div><span>{data.audit?.candidateCount ?? "—"}</span><p>records audited</p></div></section>
         <section id="feeds" className="feed-switcher" aria-label="Choose research view">{(Object.keys(FEEDS) as Feed[]).map((feedId) => <button key={feedId} className={view === feedId ? "is-active" : ""} type="button" onClick={() => selectView(feedId)} aria-pressed={view === feedId}><span>{FEEDS[feedId].shortLabel}</span><strong>{FEEDS[feedId].label}</strong><small>{data.feedCounts[feedId]} qualifying papers</small></button>)}<button className={view === "emotions-humanities" ? "is-active" : ""} type="button" onClick={() => selectView("emotions-humanities")} aria-pressed={view === "emotions-humanities"}><span>{EMOTIONS_FEED.shortLabel}</span><strong>{EMOTIONS_FEED.label}</strong><small>{data.emotionFeedCount ?? 0} emotion-related papers</small></button><button className={view === "audit" ? "is-active" : ""} type="button" onClick={() => selectView("audit")} aria-pressed={view === "audit"}><span>Audit mode</span><strong>Review the remainder</strong><small>{data.audit?.unreviewedCount ?? 0} unreviewed records</small></button><button className={view === "saved" ? "is-active" : ""} type="button" onClick={() => selectView("saved")} aria-pressed={view === "saved"}><span>Private reading list</span><strong>Saved papers</strong><small>{savedPapers.length} saved in this browser</small></button><p>{view === "saved" ? "Your saved papers stay in this browser and are not sent to a server. Export a JSON backup to move the list to another browser or device." : view === "emotions-humanities" ? EMOTIONS_FEED.description : view === "audit" ? data.audit?.definition ?? "All available records that did not pass the primary history filter." : FEEDS[view].description}</p></section>
-        {view === "saved" && <section className="saved-tools" aria-label="Saved-list backup and restore"><div><p className="eyebrow">Local & private</p><h2>Reading list controls</h2><p>This list and its annotations live only in this browser. JSON export carries saved paper snapshots, citations, highlights, notes, page references, and source indicators—but never attached PDF bytes.</p></div><div><button type="button" onClick={exportSaved} disabled={!savedPapers.length}>Export JSON</button><label>Import JSON<input className="sr-only" type="file" accept="application/json,.json" onChange={(event) => { void importSaved(event.target.files?.[0]); event.target.value = ""; }} /></label></div><p className="saved-status" aria-live="polite">{savedStatus}</p></section>}
+        {view === "saved" && <section className="saved-tools" aria-label="Saved-list backup and restore"><div><p className="eyebrow">Local & private</p><h2>Reading list controls</h2><p>Add a DOI or a personal PDF, then read, annotate, and keep the citation in this browser. JSON export carries saved paper snapshots, citations, highlights, notes, page references, and source indicators—but never attached PDF bytes.</p></div><div><button type="button" onClick={() => { setAddPaperOpen((open) => !open); setAddPaperStatus(""); }}>{addPaperOpen ? "Close" : "Add paper"}</button><button type="button" onClick={exportSaved} disabled={!savedPapers.length}>Export JSON</button><label>Import JSON<input className="sr-only" type="file" accept="application/json,.json" onChange={(event) => { void importSaved(event.target.files?.[0]); event.target.value = ""; }} /></label></div>{addPaperOpen && <form className="add-paper-form" onSubmit={(event) => { event.preventDefault(); void addPersonalPaper(); }}><div className="add-paper-form__intro"><p className="eyebrow">Add to your private library</p><p>Paste a DOI for automatic citation metadata, or enter a title and attach a legally obtained PDF. The PDF stays in this browser.</p></div><label>DOI <input value={doiDraft} onChange={(event) => setDoiDraft(event.target.value)} placeholder="10.1234/example or https://doi.org/..." /></label><label>Title <input value={manualTitle} onChange={(event) => setManualTitle(event.target.value)} placeholder="Required if the DOI does not resolve" /></label><label>Authors <input value={manualAuthors} onChange={(event) => setManualAuthors(event.target.value)} placeholder="Separate authors with semicolons" /></label><label>Journal / source <input value={manualJournal} onChange={(event) => setManualJournal(event.target.value)} placeholder="Optional" /></label><label>Publication date <input type="date" value={manualDate} onChange={(event) => setManualDate(event.target.value)} /></label><label>PDF <input type="file" accept="application/pdf,.pdf" onChange={(event) => setPendingPdf(event.target.files?.[0] || null)} /><small>{pendingPdf ? pendingPdf.name : "Optional — attach it now or later in the Reading Room."}</small></label><div className="add-paper-form__actions"><button type="submit" disabled={lookingUpDoi}>{lookingUpDoi ? "Looking up DOI…" : "Add and open Reading Room"}</button><p aria-live="polite">{addPaperStatus}</p></div></form>}<p className="saved-status" aria-live="polite">{savedStatus}</p></section>}
         <section className="controls" aria-label="Filter papers"><label className="search-field"><span aria-hidden="true">⌕</span><span className="sr-only">Search title, author, abstract, or topic</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search title, author, abstract, or topic" />{query && <button type="button" onClick={() => setQuery("")} aria-label="Clear search">×</button>}</label><label><span className="sr-only">Journal</span><select value={journal} onChange={(event) => setJournal(event.target.value)}><option value="all">All journals in view</option>{journals.map((name) => <option key={name} value={name}>{name}</option>)}</select></label><label><span className="sr-only">Method</span><select value={focus} onChange={(event) => setFocus(event.target.value)}><option value="all">All qualifying methods</option><option value="ai">AI / ML / LLM / NLP</option><option value="text">Text & document methods</option><option value="spatial">Spatial & visual methods</option><option value="oa">Open-access copy</option></select></label><label><span className="sr-only">Sort</span><select value={sort} onChange={(event) => setSort(event.target.value)}><option value="newest">Newest first</option><option value="score">Highest score within year</option></select></label></section>
         <section className="year-filter" aria-label="Filter by publication year"><p>Publication year</p><div><button className={year === "all" ? "is-active" : ""} type="button" onClick={() => { setYear("all"); setVisibleCount(PAGE_SIZE); }} aria-pressed={year === "all"}>All years <span>{sourcePapers.length}</span></button>{yearCounts.map(([paperYear, count]) => <button key={paperYear} className={year === paperYear ? "is-active" : ""} type="button" onClick={() => { setYear(paperYear); setVisibleCount(PAGE_SIZE); }} aria-pressed={year === paperYear}>{paperYear} <span>{count}</span></button>)}</div></section>
         <div className="content-grid"><section className="results" aria-label={`${viewLabel} results`}><div className="results-heading"><div><p className="kicker">{view === "saved" ? "Private reading list" : view === "emotions-humanities" ? EMOTIONS_FEED.shortLabel : view === "audit" ? "Audit mode" : FEEDS[view].shortLabel} · {year === "all" ? "all saved years" : year}</p><h2>{filtered.length} {filtered.length === 1 ? "paper" : "papers"}</h2></div><p>{view === "saved" ? `${annotations.length} local annotations` : `${formatDate(data.windowStart)} — ${formatDate(data.windowEnd)}`}</p></div>{filtered.length ? <>{visiblePapers.map((paper) => <PaperCard key={paper.id} paper={paper} saved={savedIds.has(paper.id)} annotationCount={annotationCounts.get(stablePaperId(paper)) || 0} hasUploadedPdf={view === "saved" && uploadedPdfIds.has(stablePaperId(paper))} onToggleSaved={toggleSaved} onOpenReader={setActivePaper} />)}{visiblePapers.length < filtered.length && <button className="load-more" type="button" onClick={() => setVisibleCount((count) => count + PAGE_SIZE)}>Show more papers <span>{filtered.length - visiblePapers.length} remaining</span></button>}</> : view === "saved" && !savedPapers.length ? <div className="empty-state"><span aria-hidden="true">☆</span><h2>Your reading list is empty.</h2><p>Save papers or create an annotation in the Reading Room. Saved records retain citation metadata, highlights, notes, and the same article links.</p><button type="button" onClick={() => selectView("digital-humanities")}>Browse the primary feed</button></div> : <div className="empty-state"><span aria-hidden="true">∅</span><h2>No papers match these filters.</h2><p>Try another term or reset the year, journal, and method filters.</p><button type="button" onClick={() => { setQuery(""); setJournal("all"); setFocus("all"); setYear("all"); }}>Reset filters</button></div>}</section>

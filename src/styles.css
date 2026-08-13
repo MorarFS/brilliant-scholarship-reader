@@ -116,6 +116,17 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .saved-tools button:disabled { opacity: .45; cursor: not-allowed; }
 .saved-tools label { background: var(--green); color: white; }
 .saved-status { grid-column: 1 / -1; min-height: 1em; margin: 0; color: var(--green); font-size: 10px; }
+.add-paper-form { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 13px; padding-top: 18px; border-top: 1px solid #d2d0c5; }
+.add-paper-form__intro { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 16px; }
+.add-paper-form__intro p { margin: 0; color: var(--ink-soft); font: 400 13px/1.5 "Newsreader", Georgia, serif; }
+.add-paper-form label { display: grid; gap: 6px; color: var(--ink-soft); font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.add-paper-form input { min-width: 0; height: 39px; padding: 8px 9px; border: 1px solid #c8c7be; background: #fffefa; color: var(--ink); font: 400 12px/1.3 "DM Sans", sans-serif; letter-spacing: 0; text-transform: none; }
+.add-paper-form input[type="file"] { padding: 8px; font-size: 10px; }
+.add-paper-form small { color: var(--ink-soft); font-size: 9px; font-weight: 400; letter-spacing: 0; text-transform: none; }
+.add-paper-form__actions { grid-column: 1 / -1; display: flex; align-items: center; gap: 14px; }
+.add-paper-form__actions button { min-height: 39px; padding: 9px 13px; border: 1px solid var(--green); background: var(--green); color: #fff; font-size: 10px; font-weight: 700; cursor: pointer; }
+.add-paper-form__actions button:disabled { opacity: .65; cursor: wait; }
+.add-paper-form__actions p { margin: 0; color: #9d5138; font-size: 10px; }
 
 .controls {
   display: grid;
@@ -358,6 +369,8 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   .feed-switcher button:last-of-type { grid-column: auto; }
   .feed-switcher > p { grid-column: auto; }
   .saved-tools { grid-template-columns: 1fr; }
+  .add-paper-form { grid-template-columns: 1fr; }
+  .add-paper-form__intro, .add-paper-form__actions { align-items: flex-start; flex-direction: column; gap: 8px; }
   .saved-tools > div:nth-child(2) { flex-wrap: wrap; }
   .saved-status { grid-column: auto; }
   .reading-room__header { padding: 18px 16px; }
