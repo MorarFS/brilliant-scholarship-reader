@@ -30,6 +30,6 @@ describe("backend validation", () => {
 
   it("validates structured model output", () => {
     expect(parseModelOutput('{"summary":"Brief","keyPoints":["One"],"sections":[{"heading":"Methods","summary":"Summary"}],"caveats":["PDF may be incomplete"]}', "model", "now").model).toBe("model");
-    expect(() => parseModelOutput('{"summary":"Brief"}', "model")).toThrow(/key points/i);
+    expect(parseModelOutput('```json\n{"summary":"Brief"}\n```', "model")).toMatchObject({ summary: "Brief", keyPoints: [], sections: [], caveats: [] });
   });
 });

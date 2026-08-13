@@ -4,16 +4,24 @@ import type { PaperInput, SummarizePaper, SummaryResult } from "./types.js";
 type ModelJson = { summary?: unknown; keyPoints?: unknown; sections?: unknown; caveats?: unknown };
 
 export function parseModelOutput(text: string, model: string, generatedAt = new Date().toISOString()): SummaryResult {
-  const parsed = JSON.parse(text) as ModelJson;
+  const trimmed = text.trim().replace(/^```(?:json)?\s*/i, "").replace(/\s*```$/, "");
+  const start = trimmed.indexOf("{");
+  const end = trimmed.lastIndexOf("}");
+  const parsed = JSON.parse(start >= 0 && end > start ? trimmed.slice(start, end + 1) : trimmed) as ModelJson;
   if (typeof parsed.summary !== "string" || !parsed.summary.trim()) throw new Error("Model response is missing a summary.");
-  if (!Array.isArray(parsed.keyPoints) || !parsed.keyPoints.every((item) => typeof item === "string")) throw new Error("Model response has invalid key points.");
-  if (!Array.isArray(parsed.sections) || !parsed.sections.every((item) => item && typeof item === "object" && typeof (item as { heading?: unknown }).heading === "string" && typeof (item as { summary?: unknown }).summary === "string")) throw new Error("Model response has invalid sections.");
-  if (!Array.isArray(parsed.caveats) || !parsed.caveats.every((item) => typeof item === "string")) throw new Error("Model response has invalid caveats.");
+  const strings = (value: unknown, limit: number, length: number) => Array.isArray(value) ? value.filter((item): item is string => typeof item === "string").map((item) => item.trim().slice(0, length)).filter(Boolean).slice(0, limit) : [];
+  const sections = Array.isArray(parsed.sections) ? parsed.sections.flatMap((item) => {
+    if (!item || typeof item !== "object") return [];
+    const section = item as { heading?: unknown; summary?: unknown };
+    return typeof section.heading === "string" && typeof section.summary === "string" && section.heading.trim() && section.summary.trim()
+      ? [{ heading: section.heading.trim().slice(0, 500), summary: section.summary.trim().slice(0, 2_000) }]
+      : [];
+  }).slice(0, 20) : [];
   return {
     summary: parsed.summary.trim().slice(0, 3_000),
-    keyPoints: parsed.keyPoints.slice(0, 6).map((item) => item.trim().slice(0, 1_000)).filter(Boolean),
-    sections: parsed.sections.slice(0, 20).map((item) => item as { heading: string; summary: string }).map((item) => ({ heading: item.heading.trim().slice(0, 500), summary: item.summary.trim().slice(0, 2_000) })).filter((item) => item.heading && item.summary),
-    caveats: parsed.caveats.slice(0, 4).map((item) => item.trim().slice(0, 1_000)).filter(Boolean),
+    keyPoints: strings(parsed.keyPoints, 6, 1_000),
+    sections,
+    caveats: strings(parsed.caveats, 4, 1_000),
     model,
     generatedAt,
   };

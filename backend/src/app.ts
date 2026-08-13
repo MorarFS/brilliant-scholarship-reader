@@ -50,7 +50,9 @@ export function createApp(config: RuntimeConfig, verifyUser: VerifyUser, summari
     if (!paper) { response.status(400).json({ error: "A valid PDF summary request is required." }); return; }
     try {
       response.json(await summarize(paper));
-    } catch {
+    } catch (error) {
+      // Keep the browser response generic, but preserve a sanitized diagnostic for operators.
+      console.error("Vertex summary failed", error instanceof Error ? error.message.slice(0, 500) : "unknown error");
       response.status(502).json({ error: "The summary could not be generated." });
     }
   });
