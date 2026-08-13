@@ -1,20 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap");
 
 :root {
-  color: #20332d;
+  color: #172c48;
   background: #f3f0e8;
   font-family: "DM Sans", system-ui, sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  --ink: #19342c;
-  --ink-soft: #596961;
+  --ink: #102a4c;
+  --ink-soft: #55677e;
   --paper: #fbfaf5;
   --paper-deep: #ebe7dc;
   --line: #d8d4c9;
-  --green: #1c5141;
-  --green-dark: #12392f;
-  --lime: #d9e3a2;
-  --coral: #d86c52;
+  --green: #1d5fa7;
+  --green-dark: #123d72;
+  --lime: #dce9fa;
+  --coral: #e1262f;
 }
 
 * { box-sizing: border-box; }
@@ -23,7 +23,7 @@ body { margin: 0; min-width: 320px; min-height: 100vh; background: var(--paper);
 button, input, select { font: inherit; }
 a { color: inherit; }
 button, a, select { -webkit-tap-highlight-color: transparent; }
-:focus-visible { outline: 3px solid #d86c52; outline-offset: 3px; }
+:focus-visible { outline: 3px solid #e1262f; outline-offset: 3px; }
 
 .sr-only {
   position: absolute;
@@ -71,7 +71,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .reading-mode-toggle.is-active { border-color: var(--green) !important; background: var(--green) !important; color: white !important; }
 
 /* Optional preference: based on BDA/WCAG visual-presentation guidance. */
-.dyslexia-mode { --ink: #252525; --ink-soft: #4f4f4b; --paper: #f5f0e4; --paper-deep: #e8dfcd; --line: #aaa79e; --green: #234f43; --green-dark: #234f43; font-family: Arial, Verdana, Tahoma, sans-serif; background: var(--paper); }
+.dyslexia-mode { --ink: #252525; --ink-soft: #4f4f4b; --paper: #f5f0e4; --paper-deep: #e8dfcd; --line: #aaa79e; --green: #1d5fa7; --green-dark: #123d72; font-family: Arial, Verdana, Tahoma, sans-serif; background: var(--paper); }
 .dyslexia-mode, .dyslexia-mode button, .dyslexia-mode input, .dyslexia-mode select, .dyslexia-mode textarea { font-family: Arial, Verdana, Tahoma, sans-serif !important; }
 .dyslexia-mode .brand-mark, .dyslexia-mode .brand strong, .dyslexia-mode .hero h1, .dyslexia-mode .paper-card h2, .dyslexia-mode .reader-page > div, .dyslexia-mode .abstract-text, .dyslexia-mode .abstract-missing, .dyslexia-mode .summary-result > p:first-child { font-family: Arial, Verdana, Tahoma, sans-serif !important; font-style: normal; letter-spacing: .025em; }
 .dyslexia-mode .reader-page > div { font-family: "Newsreader", Georgia, serif !important; font-size: 17px; line-height: 1.75; letter-spacing: normal; word-spacing: normal; white-space: pre-wrap; }
@@ -104,8 +104,8 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .feed-switcher button strong { display: block; font: 500 20px/1.1 "Newsreader", Georgia, serif; }
 .feed-switcher button small { display: block; margin-top: 7px; color: var(--ink-soft); font-size: 9px; text-transform: uppercase; letter-spacing: .05em; }
 .feed-switcher button.is-active { border-color: var(--green); background: var(--green); color: white; }
-.feed-switcher button.is-active > span { color: #f3aa93; }
-.feed-switcher button.is-active small { color: #c8d7d0; }
+.feed-switcher button.is-active > span { color: #ffced1; }
+.feed-switcher button.is-active small { color: #d3e4f8; }
 .feed-switcher > p { grid-column: 1 / -1; margin: 3px 0 0; color: var(--ink-soft); font: 400 15px/1.5 "Newsreader", Georgia, serif; }
 
 .saved-tools { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 20px 40px; margin: 28px 0 0; padding: 24px 26px; background: var(--paper-deep); border: 1px solid #d8d5c7; }
@@ -167,7 +167,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .paper-card::before { content: ""; position: absolute; left: -1px; top: 27px; width: 3px; height: 35px; background: var(--coral); }
 .paper-card__topline { display: flex; align-items: center; flex-wrap: wrap; gap: 9px; color: var(--ink-soft); font-size: 10px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .dot { width: 3px; height: 3px; border-radius: 50%; background: #9da7a2; }
-.quartile { margin-left: auto; padding: 5px 8px; background: #e9edcc; color: #48613f; border-radius: 2px; }
+.quartile { margin-left: auto; padding: 5px 8px; background: #e4eefb; color: #20599a; border-radius: 2px; }
 .feed-pill { padding: 4px 7px; border: 1px solid #d2d7cc; color: var(--green); border-radius: 2px; font-size: 9px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
 .paper-card h2 { margin: 18px 0 10px; color: var(--ink); font: 500 clamp(27px, 3.2vw, 40px)/1.06 "Newsreader", Georgia, serif; letter-spacing: -.02em; }
 .authors { margin: 0 0 27px; color: var(--ink-soft); font-size: 13px; }
