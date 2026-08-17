@@ -23,6 +23,10 @@ export function commitLocalAnnotation(ensurePaperSaved: () => boolean, addAnnota
   return "saved";
 }
 
+export function hasSelectablePdfText(pages: string[]): boolean {
+  return pages.some((page) => page.trim().length > 0);
+}
+
 export function normalizePdfSelectionRects(pageRect: RectLike, selectionRects: RectLike[]) {
   if (!(pageRect.width > 0) || !(pageRect.height > 0)) return [];
   return selectionRects.slice(0, 200).flatMap((rect) => {

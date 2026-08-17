@@ -244,7 +244,12 @@ export default function App() {
     if (persisted) markActive(annotation.paperId);
     return persisted;
   };
-  const updateAnnotation = (id: string, note: string) => { const annotation = annotations.find((item) => item.id === id); if (annotation) markActive(annotation.paperId); persistAnnotations(annotations.map((item) => item.id === id ? { ...item, note, updatedAt: new Date().toISOString() } : item)); };
+  const updateAnnotation = (id: string, note: string) => {
+    const annotation = annotations.find((item) => item.id === id);
+    const persisted = persistAnnotations(annotations.map((item) => item.id === id ? { ...item, note, updatedAt: new Date().toISOString() } : item));
+    if (persisted && annotation) markActive(annotation.paperId);
+    return persisted;
+  };
   const deleteAnnotation = (id: string) => { const annotation = annotations.find((item) => item.id === id); if (annotation) markActive(annotation.paperId); persistAnnotations(annotations.filter((item) => item.id !== id)); };
   const addPersonalPaper = async () => {
     const doi = normaliseDoi(doiDraft);

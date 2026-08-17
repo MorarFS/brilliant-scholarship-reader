@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { citationToRis, commitLocalAnnotation, formatCitation, mergeAnnotations, normalizePdfSelectionRects, parseAnnotation, parseReadingLocation, stablePaperId, writeLocalJson } from "./readingRoomData";
+import { citationToRis, commitLocalAnnotation, formatCitation, hasSelectablePdfText, mergeAnnotations, normalizePdfSelectionRects, parseAnnotation, parseReadingLocation, stablePaperId, writeLocalJson } from "./readingRoomData";
 
 const paper = {
   id: "https://openalex.org/W1",
@@ -68,6 +68,11 @@ describe("reading-room research data", () => {
     expect(calls).toEqual(["paper", "annotation"]);
     expect(commitLocalAnnotation(() => false, () => true)).toBe("paper-storage-failed");
     expect(commitLocalAnnotation(() => true, () => false)).toBe("annotation-storage-failed");
+  });
+
+  it("distinguishes selectable PDFs from scans without a text layer", () => {
+    expect(hasSelectablePdfText(["", "  \n  "])).toBe(false);
+    expect(hasSelectablePdfText(["", "A real text layer"])).toBe(true);
   });
 
   it("merges annotations by stable annotation id", () => {
