@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import ReadingRoom from "./ReadingRoom";
 import type { Annotation, MonitoredJournal, Paper, TrackerData } from "./types";
-import { mergeAnnotations, parseAnnotation, stablePaperId } from "./readingRoomData";
+import { mergeAnnotations, parseAnnotation, stablePaperId, writeLocalJson } from "./readingRoomData";
 import { loadLocalPdf, saveLocalPdf } from "./localPdfStore";
 
 const DATA_URL = `${import.meta.env.BASE_URL}data/papers.json`;
@@ -217,13 +217,33 @@ export default function App() {
   }, [savedPapers]);
 
   const selectView = (next: View) => { setView(next); setJournal("all"); setFocus("all"); setYear("all"); setVisibleCount(PAGE_SIZE); };
-  const persistSaved = (next: Paper[]) => { setSavedPapers(next); try { localStorage.setItem(SAVED_STORAGE_KEY, JSON.stringify(next)); setSavedStatus(""); } catch { setSavedStatus("This browser could not update local storage. Export the list to keep a backup."); } };
-  const persistAnnotations = (next: Annotation[]) => { setAnnotations(next); try { localStorage.setItem(ANNOTATION_STORAGE_KEY, JSON.stringify(next)); } catch { setSavedStatus("This browser could not update annotation storage. Export your reading list now to keep a backup."); } };
+  const persistSaved = (next: Paper[]) => {
+    if (!writeLocalJson(localStorage, SAVED_STORAGE_KEY, next)) {
+      setSavedStatus("This browser could not update local storage. Export the list to keep a backup.");
+      return false;
+    }
+    setSavedPapers(next);
+    setSavedStatus("");
+    return true;
+  };
+  const persistAnnotations = (next: Annotation[]) => {
+    if (!writeLocalJson(localStorage, ANNOTATION_STORAGE_KEY, next)) {
+      setSavedStatus("This browser could not update annotation storage. Export your reading list now to keep a backup.");
+      return false;
+    }
+    setAnnotations(next);
+    setSavedStatus("");
+    return true;
+  };
   const markActive = (paperId: string) => setActivity((current) => ({ ...current, [paperId]: new Date().toISOString() }));
   const openReader = (paper: Paper) => { markActive(stablePaperId(paper)); setActivePaper(paper); };
-  const ensureSaved = (paper: Paper) => { markActive(stablePaperId(paper)); if (!savedPapers.some((item) => item.id === paper.id)) persistSaved([paper, ...savedPapers]); };
+  const ensureSaved = (paper: Paper) => { markActive(stablePaperId(paper)); return savedPapers.some((item) => item.id === paper.id) || persistSaved([paper, ...savedPapers]); };
   const toggleSaved = (paper: Paper) => { const removing = savedPapers.some((item) => item.id === paper.id); if (removing) persistSaved(savedPapers.filter((item) => item.id !== paper.id)); else { markActive(stablePaperId(paper)); persistSaved([paper, ...savedPapers]); } };
-  const addAnnotation = (annotation: Annotation) => { markActive(annotation.paperId); persistAnnotations(mergeAnnotations(annotations, [annotation])); };
+  const addAnnotation = (annotation: Annotation) => {
+    const persisted = persistAnnotations(mergeAnnotations(annotations, [annotation]));
+    if (persisted) markActive(annotation.paperId);
+    return persisted;
+  };
   const updateAnnotation = (id: string, note: string) => { const annotation = annotations.find((item) => item.id === id); if (annotation) markActive(annotation.paperId); persistAnnotations(annotations.map((item) => item.id === id ? { ...item, note, updatedAt: new Date().toISOString() } : item)); };
   const deleteAnnotation = (id: string) => { const annotation = annotations.find((item) => item.id === id); if (annotation) markActive(annotation.paperId); persistAnnotations(annotations.filter((item) => item.id !== id)); };
   const addPersonalPaper = async () => {

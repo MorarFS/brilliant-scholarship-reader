@@ -2,9 +2,25 @@ import type { Annotation, Paper } from "./types";
 
 export type ReadingLocation = { page: number; offset: number };
 export type RectLike = { left: number; top: number; width: number; height: number };
+export type AnnotationCommitResult = "saved" | "paper-storage-failed" | "annotation-storage-failed";
 
 function clamp(value: number, minimum: number, maximum: number) {
   return Math.min(maximum, Math.max(minimum, value));
+}
+
+export function writeLocalJson(storage: Pick<Storage, "setItem">, key: string, value: unknown): boolean {
+  try {
+    storage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+export function commitLocalAnnotation(ensurePaperSaved: () => boolean, addAnnotation: () => boolean): AnnotationCommitResult {
+  if (!ensurePaperSaved()) return "paper-storage-failed";
+  if (!addAnnotation()) return "annotation-storage-failed";
+  return "saved";
 }
 
 export function normalizePdfSelectionRects(pageRect: RectLike, selectionRects: RectLike[]) {

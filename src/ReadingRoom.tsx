@@ -2,20 +2,23 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import pdfWorker from "pdfjs-dist/build/pdf.worker.min.mjs?url";
 import type { PDFDocumentLoadingTask, PDFDocumentProxy } from "pdfjs-dist";
 import type { Annotation, Paper } from "./types";
-import { citationToRis, formatCitation, normalizePdfSelectionRects, parseReadingLocation, stablePaperId } from "./readingRoomData";
+import { citationToRis, commitLocalAnnotation, formatCitation, normalizePdfSelectionRects, parseReadingLocation, stablePaperId } from "./readingRoomData";
 import type { ReadingLocation } from "./readingRoomData";
 import { loadLocalPdf, removeLocalPdf, saveLocalPdf } from "./localPdfStore";
 import { AiSummary } from "./AiSummary";
 import PdfDocumentView from "./PdfDocumentView";
 
 type PdfSource = "open-access PDF" | "user-uploaded PDF";
+type CapturedPassage = Pick<Annotation, "quote" | "page" | "anchor">;
+type SelectionStatus = { tone: "success" | "error"; message: string };
+type SelectionCapture = { passage: CapturedPassage; error?: never; useRemembered?: never } | { passage?: never; error: string; useRemembered: boolean };
 type Props = {
   paper: Paper;
   annotations: Annotation[];
-  onAddAnnotation: (annotation: Annotation) => void;
+  onAddAnnotation: (annotation: Annotation) => boolean;
   onUpdateAnnotation: (id: string, note: string) => void;
   onDeleteAnnotation: (id: string) => void;
-  onEnsureSaved: (paper: Paper) => void;
+  onEnsureSaved: (paper: Paper) => boolean;
   onClose: () => void;
 };
 
@@ -68,11 +71,10 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
   const [readerState, setReaderState] = useState<"loading" | "ready" | "fallback">("loading");
   const [readerMessage, setReaderMessage] = useState("Preparing the legally available reading copy…");
   const [mode, setMode] = useState<"text" | "pdf">("text");
-  const [draftQuote, setDraftQuote] = useState("");
-  const [draftPage, setDraftPage] = useState<number | null>(null);
-  const [draftAnchor, setDraftAnchor] = useState<Annotation["anchor"]>();
   const [draftNote, setDraftNote] = useState("");
   const [actionStatus, setActionStatus] = useState("");
+  const [selectionStatus, setSelectionStatus] = useState<SelectionStatus | null>(null);
+  const [lastSavedAnnotationId, setLastSavedAnnotationId] = useState<string | null>(null);
   const [speechText, setSpeechText] = useState("");
   const [speechState, setSpeechState] = useState<"idle" | "playing" | "paused">("idle");
   const [speechRate, setSpeechRate] = useState(1);
@@ -82,6 +84,7 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
   const pdfLoadingTaskRef = useRef<PDFDocumentLoadingTask | null>(null);
   const pendingRestoreRef = useRef<ReadingLocation | null>(null);
   const readingLocationRef = useRef<ReadingLocation>(({ page: 1, offset: 0 }));
+  const lastSelectedPassageRef = useRef<CapturedPassage | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
 
   const locationStorageKey = `chronicle-reading-location:v1:${paperId}`;
@@ -243,40 +246,83 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
     const location = currentReadingLocation();
     storeReadingLocation(location);
     pendingRestoreRef.current = location;
+    lastSelectedPassageRef.current = null;
+    setSelectionStatus(null);
     setMode(nextMode);
   };
 
-  const captureSelection = () => {
+  const readSelectionCapture = useCallback((): SelectionCapture => {
     const selection = window.getSelection();
     const quote = selection?.toString().trim() || "";
     const range = selection?.rangeCount ? selection.getRangeAt(0) : null;
     const scope = mode === "pdf" ? pdfPaneRef.current : textPaneRef.current;
     if (!quote || !range || !scope?.contains(range.startContainer) || !scope.contains(range.endContainer)) {
-      setActionStatus(`Select text in the ${mode === "pdf" ? "PDF" : "extracted-text"} view first, then choose Highlight selection.`);
-      return;
+      return { error: `No passage was detected. Select text in the ${mode === "pdf" ? "PDF" : "extracted-text"} view, then choose Save highlight.`, useRemembered: true };
     }
     const startElement = range.startContainer instanceof Element ? range.startContainer : range.startContainer.parentElement;
     const endElement = range.endContainer instanceof Element ? range.endContainer : range.endContainer.parentElement;
     const pageElement = startElement?.closest<HTMLElement>("[data-reader-page]");
     const endPageElement = endElement?.closest<HTMLElement>("[data-reader-page]");
     if (!pageElement || pageElement !== endPageElement) {
-      setActionStatus("Select a passage within one page so Brilliant can preserve a precise page anchor.");
-      return;
+      return { error: "Select a passage within one page so Brilliant can preserve a precise page anchor.", useRemembered: false };
     }
     const page = Math.max(1, Number(pageElement.dataset.readerPage) || 1);
     let anchor: Annotation["anchor"];
     if (mode === "pdf") {
       const rects = normalizePdfSelectionRects(pageElement.getBoundingClientRect(), [...range.getClientRects()]);
       if (!rects.length) {
-        setActionStatus("The browser could not locate that PDF selection. Try selecting the passage again.");
-        return;
+        return { error: "Brilliant could not locate that PDF selection. Select the passage again within one page.", useRemembered: false };
       }
       anchor = { kind: "pdf", page, quote: quote.slice(0, 12000), rects };
     }
-    setDraftQuote(quote.slice(0, 12000));
-    setDraftPage(page);
-    setDraftAnchor(anchor);
-    setActionStatus(mode === "pdf" ? "PDF selection captured with its page and highlight geometry. Add an optional note, then save." : "Selection captured. Add an optional note, then save the annotation.");
+    return { passage: { quote: quote.slice(0, 12000), page, ...(anchor ? { anchor } : {}) } };
+  }, [mode]);
+
+  useEffect(() => {
+    lastSelectedPassageRef.current = null;
+    const rememberValidSelection = () => {
+      const capture = readSelectionCapture();
+      if (capture.passage) lastSelectedPassageRef.current = capture.passage;
+    };
+    document.addEventListener("selectionchange", rememberValidSelection);
+    return () => document.removeEventListener("selectionchange", rememberValidSelection);
+  }, [mode, paperId, readSelectionCapture]);
+
+  const saveSelectedHighlight = () => {
+    const capture = readSelectionCapture();
+    const passage = capture.passage || (capture.useRemembered ? lastSelectedPassageRef.current : null);
+    if (!passage) {
+      setSelectionStatus({ tone: "error", message: capture.error || "Select a passage, then choose Save highlight." });
+      return;
+    }
+    const id = safeId();
+    const now = new Date().toISOString();
+    const annotation: Annotation = {
+      id,
+      paperId,
+      citation,
+      quote: passage.quote,
+      note: "",
+      page: passage.page,
+      ...(passage.anchor ? { anchor: passage.anchor } : {}),
+      source: documentSource || "citation only",
+      createdAt: now,
+      updatedAt: now,
+    };
+    const result = commitLocalAnnotation(() => onEnsureSaved(paper), () => onAddAnnotation(annotation));
+    if (result !== "saved") {
+      setSelectionStatus({
+        tone: "error",
+        message: result === "paper-storage-failed"
+          ? "The highlight could not be saved because this browser could not retain the paper. The passage is ready to retry after browser storage is available."
+          : "The highlight could not be saved in this browser. The passage is ready to retry; export your reading list if storage remains unavailable.",
+      });
+      return;
+    }
+    lastSelectedPassageRef.current = null;
+    setLastSavedAnnotationId(id);
+    window.getSelection()?.removeAllRanges();
+    setSelectionStatus({ tone: "success", message: `Highlight saved on page ${passage.page}. ${annotations.length + 1} ${annotations.length ? "annotations are" : "annotation is"} now saved locally.` });
   };
 
   const readSelection = () => {
@@ -303,21 +349,23 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
   };
   const stopSpeech = () => { window.speechSynthesis?.cancel(); setSpeechState("idle"); setSpeechText(""); };
 
-  const saveAnnotation = () => {
+  const savePaperNote = () => {
     const note = draftNote.trim();
-    if (!draftQuote && !note) {
-      setActionStatus("Add a note or capture a passage before saving.");
+    if (!note) {
+      setActionStatus("Write a paper-level note before saving.");
       return;
     }
+    const id = safeId();
     const now = new Date().toISOString();
-    onEnsureSaved(paper);
-    onAddAnnotation({ id: safeId(), paperId, citation, quote: draftQuote, note, page: draftPage, ...(draftAnchor ? { anchor: draftAnchor } : {}), source: documentSource || "citation only", createdAt: now, updatedAt: now });
-    setDraftQuote("");
-    setDraftPage(null);
-    setDraftAnchor(undefined);
+    const annotation: Annotation = { id, paperId, citation, quote: "", note, page: null, source: documentSource || "citation only", createdAt: now, updatedAt: now };
+    const result = commitLocalAnnotation(() => onEnsureSaved(paper), () => onAddAnnotation(annotation));
+    if (result !== "saved") {
+      setActionStatus(result === "paper-storage-failed" ? "This browser could not retain the paper, so the note was not saved. Your text remains here to retry." : "This browser could not save the note. Your text remains here to retry or copy.");
+      return;
+    }
+    setLastSavedAnnotationId(id);
     setDraftNote("");
-    window.getSelection()?.removeAllRanges();
-    setActionStatus(draftAnchor ? "PDF highlight and note saved locally with a durable page anchor." : "Annotation saved locally with the paper and citation.");
+    setActionStatus("Paper-level note saved locally.");
   };
 
   const uploadPdf = async (file: File | undefined) => {
@@ -361,10 +409,10 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
       <div className={`reader-notice reader-notice--${readerState}`} role="status"><strong>{readerState === "ready" ? "Reading copy ready" : readerState === "loading" ? "Preparing reading copy" : "Citation and notes mode"}</strong><p>{readerMessage}</p></div>
       {readerState === "loading" && <div className="reader-loading" aria-hidden="true" />}
       {readerState === "fallback" && <section className="reader-fallback"><h2>The source must stay outside Brilliant.</h2><p>Publisher access rules and browser CORS protections are respected. Open the source in a new tab, or use <strong>Upload PDF</strong> above to attach a copy you obtained legally through your library or proxy. The file is processed locally and is never sent to Brilliant.</p></section>}
-      {readerState === "ready" && <><div className="reader-selection-tools"><p>Select a passage in the {mode === "pdf" ? "PDF" : "extracted text"}, then highlight or hear it.</p><div><button type="button" onClick={captureSelection}>Highlight selection</button><button type="button" onClick={readSelection}>Read selection aloud</button><label className="speech-rate">Speed<select value={speechRate} onChange={(event) => setSpeechRate(Number(event.target.value))}><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1">1×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option><option value="1.5">1.5×</option><option value="1.7">1.7×</option></select></label>{speechState !== "idle" && <><button type="button" onClick={toggleSpeech}>{speechState === "playing" ? "Pause" : "Resume"}</button><button type="button" onClick={stopSpeech}>Stop</button></>}</div></div>{speechText && <p className="reader-speech-status">Speaking selection locally in your browser at {speechRate}×.</p>}<div className="reader-summary reader-summary--document"><AiSummary paper={paper} pdf={summaryPdf} /></div>{mode === "text" && <div className="reader-pages" ref={textPaneRef}>{pages.map((page, index) => <article className="reader-page" data-reader-page={index + 1} key={index}><p className="eyebrow">Page {index + 1}</p><div>{highlightedText(page, annotations.filter((item) => item.page === index + 1))}</div></article>)}</div>}{mode === "pdf" && pdfDocument && <PdfDocumentView document={pdfDocument} pageDimensions={pageDimensions} annotations={annotations} paneRef={pdfPaneRef} />}</>}
+      {readerState === "ready" && <><div className="reader-selection-tools"><div className="reader-selection-instructions"><p>Select a passage in the {mode === "pdf" ? "PDF" : "extracted text"}, then choose <strong>Save highlight</strong>. It saves immediately; add commentary in the saved card.</p>{selectionStatus && <p className={`reader-selection-status reader-selection-status--${selectionStatus.tone}`} role="status" aria-live="polite">{selectionStatus.message}</p>}</div><div><button type="button" onMouseDown={(event) => event.preventDefault()} onClick={saveSelectedHighlight}>Save highlight</button><span className="reader-saved-count" aria-live="polite">{annotations.length} saved</span><button type="button" onClick={readSelection}>Read selection aloud</button><label className="speech-rate">Speed<select value={speechRate} onChange={(event) => setSpeechRate(Number(event.target.value))}><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1">1×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option><option value="1.5">1.5×</option><option value="1.7">1.7×</option></select></label>{speechState !== "idle" && <><button type="button" onClick={toggleSpeech}>{speechState === "playing" ? "Pause" : "Resume"}</button><button type="button" onClick={stopSpeech}>Stop</button></>}</div></div>{speechText && <p className="reader-speech-status">Speaking selection locally in your browser at {speechRate}×.</p>}<div className="reader-summary reader-summary--document"><AiSummary paper={paper} pdf={summaryPdf} /></div>{mode === "text" && <div className="reader-pages" ref={textPaneRef}>{pages.map((page, index) => <article className="reader-page" data-reader-page={index + 1} key={index}><p className="eyebrow">Page {index + 1}</p><div>{highlightedText(page, annotations.filter((item) => item.page === index + 1))}</div></article>)}</div>}{mode === "pdf" && pdfDocument && <PdfDocumentView document={pdfDocument} pageDimensions={pageDimensions} annotations={annotations} paneRef={pdfPaneRef} />}</>}
     </main>
-    <aside className="annotation-panel" aria-label="Notes and highlights"><div className="annotation-compose"><p className="eyebrow">New annotation</p>{draftQuote ? <blockquote><span>Selected{draftPage ? ` · page ${draftPage}` : ""}{draftAnchor ? " · PDF anchor" : ""}</span>{draftQuote}</blockquote> : <p className="annotation-compose__hint">Capture a passage in either reading view, or add a paper-level note without a highlight.</p>}<label>Note<textarea value={draftNote} onChange={(event) => setDraftNote(event.target.value)} rows={4} placeholder="Why does this passage matter?" /></label><button type="button" onClick={saveAnnotation}>Save annotation</button><p className="reader-action-status" aria-live="polite">{actionStatus}</p></div>
-      <div className="annotation-list"><div><p className="eyebrow">Research record</p><h2>{annotations.length} saved</h2></div>{annotations.length ? annotations.map((annotation) => <article key={annotation.id}><div className="annotation-meta"><span>{annotation.source}</span><span>{annotation.page ? `Page ${annotation.page}` : "Paper note"}</span><time dateTime={annotation.updatedAt}>{new Date(annotation.updatedAt).toLocaleDateString()}</time></div>{annotation.quote && <blockquote>{annotation.quote}</blockquote>}<label>Note<textarea value={annotation.note} onChange={(event) => onUpdateAnnotation(annotation.id, event.target.value)} rows={3} /></label><p className="annotation-citation"><strong>Citation</strong>{annotation.citation}</p><button type="button" onClick={() => onDeleteAnnotation(annotation.id)}>Delete annotation</button></article>) : <div className="annotation-empty"><span aria-hidden="true">✦</span><p>No annotations yet. Select a passage or add a paper-level note.</p></div>}</div>
+    <aside className="annotation-panel" aria-label="Notes and highlights"><div className="annotation-compose"><p className="eyebrow">Add paper note</p><p className="annotation-compose__hint">Highlights save immediately from the reading toolbar. Add commentary to a saved highlight below, or create a note about the whole paper here.</p><label>Paper note<textarea value={draftNote} onChange={(event) => setDraftNote(event.target.value)} rows={4} placeholder="What should you remember about this paper?" /></label><button type="button" onClick={savePaperNote}>Save paper note</button><p className="reader-action-status" aria-live="polite">{actionStatus}</p></div>
+      <div className="annotation-list"><div><p className="eyebrow">Research record</p><h2>{annotations.length} saved</h2></div>{annotations.length ? annotations.map((annotation) => <article className={annotation.id === lastSavedAnnotationId ? "is-new" : ""} key={annotation.id}><div className="annotation-meta"><span>{annotation.source}</span><span>{annotation.page ? `Page ${annotation.page}` : "Paper note"}</span><time dateTime={annotation.updatedAt}>{new Date(annotation.updatedAt).toLocaleDateString()}</time></div>{annotation.quote && <blockquote>{annotation.quote}</blockquote>}<label>Note<textarea value={annotation.note} onChange={(event) => onUpdateAnnotation(annotation.id, event.target.value)} rows={3} placeholder={annotation.quote ? "Add commentary to this highlight…" : "Edit paper note…"} /></label><p className="annotation-citation"><strong>Citation</strong>{annotation.citation}</p><button type="button" onClick={() => onDeleteAnnotation(annotation.id)}>Delete annotation</button></article>) : <div className="annotation-empty"><span aria-hidden="true">✦</span><p>No annotations yet. Select a passage and choose Save highlight, or add a paper-level note.</p></div>}</div>
     </aside></div>
   </div>;
 }

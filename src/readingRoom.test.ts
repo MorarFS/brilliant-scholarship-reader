@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { citationToRis, formatCitation, mergeAnnotations, normalizePdfSelectionRects, parseAnnotation, parseReadingLocation, stablePaperId } from "./readingRoomData";
+import { citationToRis, commitLocalAnnotation, formatCitation, mergeAnnotations, normalizePdfSelectionRects, parseAnnotation, parseReadingLocation, stablePaperId, writeLocalJson } from "./readingRoomData";
 
 const paper = {
   id: "https://openalex.org/W1",
@@ -53,6 +53,21 @@ describe("reading-room research data", () => {
   it("validates and bounds persisted reading locations", () => {
     expect(parseReadingLocation({ page: 4.8, offset: 1.5 })).toEqual({ page: 4, offset: 1 });
     expect(parseReadingLocation({ page: "4", offset: 0.2 })).toBeNull();
+  });
+
+  it("reports whether private browser storage actually accepted the annotation", () => {
+    let written = "";
+    expect(writeLocalJson({ setItem: (_key, value) => { written = value; } }, "annotations", [{ id: "a" }])).toBe(true);
+    expect(written).toBe('[{"id":"a"}]');
+    expect(writeLocalJson({ setItem: () => { throw new Error("quota"); } }, "annotations", [])).toBe(false);
+  });
+
+  it("commits a one-action highlight only after both paper and annotation storage succeed", () => {
+    const calls: string[] = [];
+    expect(commitLocalAnnotation(() => { calls.push("paper"); return true; }, () => { calls.push("annotation"); return true; })).toBe("saved");
+    expect(calls).toEqual(["paper", "annotation"]);
+    expect(commitLocalAnnotation(() => false, () => true)).toBe("paper-storage-failed");
+    expect(commitLocalAnnotation(() => true, () => false)).toBe("annotation-storage-failed");
   });
 
   it("merges annotations by stable annotation id", () => {
