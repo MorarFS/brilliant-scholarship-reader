@@ -461,9 +461,26 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
     setActionStatus("Downloaded a Markdown research note with citation, summary, highlights, and notes.");
   };
 
+  const selectionTools = readerState === "ready" ? <div className="reader-selection-tools reader-selection-tools--fixed">
+    <div className="reader-selection-instructions">
+      {selectableTextAvailable ? <>
+        <p>Drag across text in the {mode === "pdf" ? "PDF" : "extracted text"}. In PDF view, you can also click a text line. Wait for <strong>Selection ready</strong>, then choose <strong>Save highlight</strong>.</p>
+        {selectionStatus ? <p className={`reader-selection-status reader-selection-status--${selectionStatus.tone}`} role="status" aria-live="polite">{selectionStatus.message}</p> : <p className="reader-selection-capability" role="status">Selectable text layer detected. No passage is ready yet.</p>}
+      </> : <p className="reader-selection-status reader-selection-status--error" role="alert">This PDF has no selectable text layer and may be a scan. Highlighting is unavailable for this file. Attach an OCR-enabled PDF, switch to a text-enabled copy, or add a paper note.</p>}
+    </div>
+    <div>
+      <button type="button" disabled={!selectableTextAvailable} onClick={saveSelectedHighlight}>Save highlight</button>
+      <span className="reader-saved-count" aria-live="polite">{annotations.length} saved</span>
+      <button type="button" disabled={!selectableTextAvailable} onClick={readSelection}>Read selection aloud</button>
+      <label className="speech-rate">Speed<select value={speechRate} onChange={(event) => setSpeechRate(Number(event.target.value))}><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1">1×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option><option value="1.5">1.5×</option><option value="1.7">1.7×</option></select></label>
+      {speechState !== "idle" && <><button type="button" onClick={toggleSpeech}>{speechState === "playing" ? "Pause" : "Resume"}</button><button type="button" onClick={stopSpeech}>Stop</button></>}
+    </div>
+  </div> : null;
+
   return <div className="reading-room" role="dialog" aria-modal="true" aria-labelledby="reading-room-title">
     <header className="reading-room__header"><div><p className="eyebrow">Brilliant Reading Room</p><h1 id="reading-room-title">{paper.title}</h1><p>{citation}</p><div className="reader-source-row"><span>{documentSource || "citation only"}</span>{localFileName && <span>{localFileName}</span>}<span>{annotations.length} {annotations.length === 1 ? "annotation" : "annotations"}</span><span>Reader {readerRelease}</span></div></div><button ref={closeButtonRef} className="reader-close" type="button" onClick={closeReader} aria-label="Close Reading Room">×</button></header>
     <div className="reading-room__toolbar"><div>{readerState === "ready" && <><button className={mode === "text" ? "is-active" : ""} type="button" onClick={() => switchMode("text")}>Selectable text</button><button className={mode === "pdf" ? "is-active" : ""} type="button" onClick={() => switchMode("pdf")}>Original PDF</button></>}<button type="button" onClick={copyCitation}>Copy citation</button><button type="button" onClick={downloadNotes}>Download notes (.md)</button><button type="button" onClick={() => downloadText(`${paper.title.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}.ris`, citationToRis(paper), "application/x-research-info-systems")}>Export RIS</button></div><div><label className="reader-upload">Upload PDF<input className="sr-only" type="file" accept="application/pdf,.pdf" onChange={(event) => { void uploadPdf(event.target.files?.[0]); event.target.value = ""; }} /></label>{documentSource === "user-uploaded PDF" && <button type="button" onClick={() => void forgetLocalPdf()}>Forget local PDF</button>}{paper.openAccessUrl && <a href={paper.openAccessUrl} target="_blank" rel="noreferrer">Open OA source ↗</a>}</div></div>
+    {selectionTools}
     <div className="reading-room__workspace"><main className="reader-document" ref={readerDocumentRef} aria-label="Paper content">
       <div className={`reader-notice reader-notice--${readerState}`} role="status"><strong>{readerState === "ready" ? "Reading copy ready" : readerState === "loading" ? "Preparing reading copy" : "Citation and notes mode"}</strong><p>{readerMessage}</p></div>
       {readerState === "loading" && <div className="reader-loading" aria-hidden="true" />}
