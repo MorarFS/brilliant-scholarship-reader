@@ -78,6 +78,7 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
   const [capturedPassage, setCapturedPassage] = useState<CapturedPassage | null>(null);
   const [lastSavedAnnotationId, setLastSavedAnnotationId] = useState<string | null>(null);
   const [noteStatuses, setNoteStatuses] = useState<Record<string, SelectionStatus>>({});
+  const [noteDrafts, setNoteDrafts] = useState<Record<string, string>>({});
   const [speechText, setSpeechText] = useState("");
   const [speechState, setSpeechState] = useState<"idle" | "playing" | "paused">("idle");
   const [speechRate, setSpeechRate] = useState(1);
@@ -374,7 +375,13 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
     setSelectionStatus({ tone: "success", message: `Highlight saved on page ${passage.page}. ${annotations.length + 1} ${annotations.length ? "annotations are" : "annotation is"} now saved locally.` });
   };
 
-  const updateAnnotationNote = (id: string, note: string) => {
+  const editAnnotationNote = (id: string, note: string) => {
+    setNoteDrafts((current) => ({ ...current, [id]: note }));
+    setNoteStatuses((current) => ({ ...current, [id]: { tone: "ready", message: "Unsaved changes." } }));
+  };
+
+  const saveAnnotationNote = (id: string, fallback: string) => {
+    const note = noteDrafts[id] ?? fallback;
     const saved = onUpdateAnnotation(id, note);
     setNoteStatuses((current) => ({
       ...current,
@@ -382,6 +389,11 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
         ? { tone: "success", message: "Note saved locally." }
         : { tone: "error", message: "This browser could not save the note. Copy the text before retrying." },
     }));
+    if (saved) setNoteDrafts((current) => {
+      const next = { ...current };
+      delete next[id];
+      return next;
+    });
   };
 
   const readSelection = () => {
@@ -488,7 +500,7 @@ export default function ReadingRoom({ paper, annotations, onAddAnnotation, onUpd
       {readerState === "ready" && <><div className="reader-selection-tools"><div className="reader-selection-instructions">{selectableTextAvailable ? <><p>Drag across text in the {mode === "pdf" ? "PDF" : "extracted text"}. In PDF view, you can also click a text line. Wait for <strong>Selection ready</strong>, then choose <strong>Save highlight</strong>.</p>{selectionStatus ? <p className={`reader-selection-status reader-selection-status--${selectionStatus.tone}`} role="status" aria-live="polite">{selectionStatus.message}</p> : <p className="reader-selection-capability" role="status">Selectable text layer detected. No passage is ready yet.</p>}</> : <p className="reader-selection-status reader-selection-status--error" role="alert">This PDF has no selectable text layer and may be a scan. Highlighting is unavailable for this file. Attach an OCR-enabled PDF, switch to a text-enabled copy, or add a paper note.</p>}</div><div><button type="button" disabled={!selectableTextAvailable} onClick={saveSelectedHighlight}>Save highlight</button><span className="reader-saved-count" aria-live="polite">{annotations.length} saved</span><button type="button" disabled={!selectableTextAvailable} onClick={readSelection}>Read selection aloud</button><label className="speech-rate">Speed<select value={speechRate} onChange={(event) => setSpeechRate(Number(event.target.value))}><option value="0.75">0.75×</option><option value="0.9">0.9×</option><option value="1">1×</option><option value="1.15">1.15×</option><option value="1.3">1.3×</option><option value="1.5">1.5×</option><option value="1.7">1.7×</option></select></label>{speechState !== "idle" && <><button type="button" onClick={toggleSpeech}>{speechState === "playing" ? "Pause" : "Resume"}</button><button type="button" onClick={stopSpeech}>Stop</button></>}</div></div>{speechText && <p className="reader-speech-status">Speaking selection locally in your browser at {speechRate}×.</p>}<div className="reader-summary reader-summary--document"><AiSummary paper={paper} pdf={summaryPdf} /></div>{mode === "text" && <div className="reader-pages" ref={textPaneRef}>{pages.map((page, index) => <article className="reader-page" data-reader-page={index + 1} key={index}><p className="eyebrow">Page {index + 1}</p><div>{highlightedText(page, annotations.filter((item) => item.page === index + 1))}</div></article>)}</div>}{mode === "pdf" && pdfDocument && <PdfDocumentView document={pdfDocument} pageDimensions={pageDimensions} annotations={annotations} paneRef={pdfPaneRef} />}</>}
     </main>
     <aside className="annotation-panel" aria-label="Notes and highlights"><div className="annotation-compose"><p className="eyebrow">Add paper note</p><p className="annotation-compose__hint">Highlights save immediately from the reading toolbar. Add commentary to a saved highlight below, or create a note about the whole paper here.</p><label>Paper note<textarea value={draftNote} onChange={(event) => setDraftNote(event.target.value)} rows={4} placeholder="What should you remember about this paper?" /></label><button type="button" onClick={savePaperNote}>Save paper note</button><p className="reader-action-status" aria-live="polite">{actionStatus}</p></div>
-      <div className="annotation-list"><div><p className="eyebrow">Research record</p><h2>{annotations.length} saved</h2></div>{annotations.length ? annotations.map((annotation) => <article className={annotation.id === lastSavedAnnotationId ? "is-new" : ""} key={annotation.id}><div className="annotation-meta"><span>{annotation.source}</span><span>{annotation.page ? `Page ${annotation.page}` : "Paper note"}</span><time dateTime={annotation.updatedAt}>{new Date(annotation.updatedAt).toLocaleDateString()}</time></div>{annotation.quote && <blockquote>{annotation.quote}</blockquote>}<label>Note<textarea value={annotation.note} onChange={(event) => updateAnnotationNote(annotation.id, event.target.value)} rows={3} placeholder={annotation.quote ? "Add commentary to this highlight…" : "Edit paper note…"} /></label><p className={`annotation-save-status annotation-save-status--${noteStatuses[annotation.id]?.tone || "idle"}`} role="status" aria-live="polite">{noteStatuses[annotation.id]?.message || "Notes save locally as you type."}</p><p className="annotation-citation"><strong>Citation</strong>{annotation.citation}</p><button type="button" onClick={() => onDeleteAnnotation(annotation.id)}>Delete annotation</button></article>) : <div className="annotation-empty"><span aria-hidden="true">✦</span><p>No annotations yet. Select a passage and choose Save highlight, or add a paper-level note.</p></div>}</div>
+      <div className="annotation-list"><div><p className="eyebrow">Research record</p><h2>{annotations.length} saved</h2></div>{annotations.length ? annotations.map((annotation) => <article className={annotation.id === lastSavedAnnotationId ? "is-new" : ""} key={annotation.id}><div className="annotation-meta"><span>{annotation.source}</span><span>{annotation.page ? `Page ${annotation.page}` : "Paper note"}</span><time dateTime={annotation.updatedAt}>{new Date(annotation.updatedAt).toLocaleDateString()}</time></div>{annotation.quote && <blockquote>{annotation.quote}</blockquote>}<label>Note<textarea value={noteDrafts[annotation.id] ?? annotation.note} onChange={(event) => editAnnotationNote(annotation.id, event.target.value)} rows={3} placeholder={annotation.quote ? "Add commentary to this highlight…" : "Edit paper note…"} /></label><button type="button" onClick={() => saveAnnotationNote(annotation.id, annotation.note)}>Save note</button><p className={`annotation-save-status annotation-save-status--${noteStatuses[annotation.id]?.tone || "idle"}`} role="status" aria-live="polite">{noteStatuses[annotation.id]?.message || "Changes save only when you choose Save note."}</p><p className="annotation-citation"><strong>Citation</strong>{annotation.citation}</p><button type="button" onClick={() => onDeleteAnnotation(annotation.id)}>Delete annotation</button></article>) : <div className="annotation-empty"><span aria-hidden="true">✦</span><p>No annotations yet. Select a passage and choose Save highlight, or add a paper-level note.</p></div>}</div>
     </aside></div>
   </div>;
 }

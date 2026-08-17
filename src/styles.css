@@ -284,13 +284,13 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .reader-fallback { max-width: 720px; margin: 60px auto; padding: 36px; border: 1px solid #d2c8ba; background: #fffefa; text-align: center; }
 .reader-fallback h2 { margin: 0 0 10px; font: 500 31px/1.1 "Newsreader", Georgia, serif; }
 .reader-fallback p { margin: 0; color: var(--ink-soft); font: 400 15px/1.7 "Newsreader", Georgia, serif; }
-.reader-selection-tools { display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-bottom: 14px; padding: 10px 13px; border: 1px solid #cbd0c0; background: #f3f3e8; box-shadow: 0 6px 18px rgba(35, 49, 43, .07); }
+.reader-selection-tools { display: flex; flex-direction: column; align-items: flex-start; gap: 9px; margin-bottom: 14px; padding: 10px 13px; border: 1px solid #cbd0c0; background: #f3f3e8; box-shadow: 0 6px 18px rgba(35, 49, 43, .07); }
 .reader-selection-tools--fixed { margin: 0; border-width: 0 0 1px; box-shadow: none; }
 .reader-document > .reader-selection-tools:not(.reader-selection-tools--fixed) { display: none; }
 .reader-selection-tools p { margin: 0; color: var(--ink-soft); font-size: 11px; }
-.reader-selection-instructions { flex: 1 1 340px; min-width: 0; }
+.reader-selection-instructions { min-width: 0; }
 .reader-selection-instructions strong { color: var(--ink); }
-.reader-selection-tools > div:last-child { display: flex; flex: 0 1 auto; flex-wrap: wrap; align-items: center; gap: 7px; }
+.reader-selection-tools > div:last-child { display: flex; flex-wrap: wrap; align-items: center; gap: 7px; }
 .reader-selection-tools .reader-selection-status { margin-top: 5px; padding: 6px 8px; border-left: 3px solid currentColor; font-weight: 700; line-height: 1.35; }
 .reader-selection-status--ready { background: #eef3ff; color: #294f89 !important; }
 .reader-selection-status--success { background: #e4f2e9; color: #23633f !important; }
@@ -325,6 +325,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .annotation-compose__hint { margin: 12px 0; color: var(--ink-soft); font-size: 11px; line-height: 1.5; }
 .annotation-compose label, .annotation-list label { display: grid; gap: 6px; color: var(--ink-soft); font-size: 9px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
 .annotation-compose textarea, .annotation-list textarea { width: 100%; resize: vertical; padding: 10px; border: 1px solid #c9ccc2; background: white; color: var(--ink); font: 400 13px/1.5 "DM Sans", sans-serif; text-transform: none; letter-spacing: 0; }
+.annotation-compose textarea:focus, .annotation-list textarea:focus { border-color: var(--green); outline: 2px solid rgba(45, 103, 79, .18); outline-offset: 1px; }
 .annotation-compose > button { width: 100%; margin-top: 9px; padding: 10px 12px; border: 1px solid var(--green); background: var(--green); color: white; font-size: 11px; font-weight: 700; cursor: pointer; }
 .reader-action-status { min-height: 1.2em; margin: 9px 0 0; color: var(--green); font-size: 10px; line-height: 1.4; }
 .annotation-list { padding: 24px; }
@@ -336,6 +337,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .annotation-save-status--idle { color: var(--ink-soft); }
 .annotation-save-status--success { color: #23633f; }
 .annotation-save-status--error { color: #9d3e2f; }
+.annotation-list article > button { margin-top: 8px; padding: 7px 10px; border: 1px solid #202522; background: #202522; color: white; font-size: 10px; font-weight: 700; cursor: pointer; }
 @keyframes saved-annotation { from { background: #e4f2e9; } to { background: white; } }
 .annotation-meta { display: flex; flex-wrap: wrap; gap: 5px; }
 .annotation-meta span, .annotation-meta time { padding: 3px 5px; background: #eef0e5; color: #65746d; font-size: 8px; text-transform: uppercase; letter-spacing: .04em; }
