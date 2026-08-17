@@ -38,6 +38,12 @@ export type Annotation = {
   quote: string;
   note: string;
   page: number | null;
+  anchor?: {
+    kind: "pdf";
+    page: number;
+    quote: string;
+    rects: Array<{ x: number; y: number; width: number; height: number }>;
+  };
   source: "open-access PDF" | "user-uploaded PDF" | "citation only";
   createdAt: string;
   updatedAt: string;

@@ -295,7 +295,18 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
 .reader-page { margin: 0 0 18px; padding: 38px 48px 48px; border: 1px solid #d5d2c8; background: white; box-shadow: 0 6px 26px rgba(35, 49, 43, .055); }
 .reader-page > div { margin-top: 19px; white-space: pre-wrap; color: #263731; font: 400 17px/1.75 "Newsreader", Georgia, serif; }
 .reader-page mark { padding: 1px 0; background: #f6df7f; color: inherit; box-shadow: 0 0 0 2px #f6df7f; }
-.reader-pdf-frame { width: 100%; height: calc(100vh - 240px); border: 1px solid #c7c9bf; background: white; }
+.reader-pdf-pages { width: 100%; display: grid; justify-items: center; gap: 18px; }
+.reader-pdf-page { position: relative; max-width: 100%; overflow: hidden; border: 1px solid #c7c9bf; background: white; box-shadow: 0 6px 26px rgba(35, 49, 43, .09); }
+.reader-pdf-page > canvas { position: absolute; inset: 0; display: block; max-width: 100%; }
+.reader-pdf-page .textLayer { position: absolute; inset: 0; z-index: 2; overflow: clip; color-scheme: only light; line-height: 1; letter-spacing: normal; word-spacing: normal; text-align: initial; text-size-adjust: none; transform-origin: 0 0; caret-color: CanvasText; --text-scale-factor: calc(var(--total-scale-factor) * var(--min-font-size)); --min-font-size-inv: calc(1 / var(--min-font-size)); }
+.reader-pdf-page .textLayer :is(span, br) { position: absolute; color: transparent; white-space: pre; cursor: text; transform-origin: 0 0; user-select: text; }
+.reader-pdf-page .textLayer > :not(.markedContent), .reader-pdf-page .textLayer .markedContent span:not(.markedContent) { z-index: 1; font-size: calc(var(--text-scale-factor) * var(--font-height)); transform: rotate(var(--rotate)) scaleX(var(--scale-x)) scale(var(--min-font-size-inv)); }
+.reader-pdf-page .textLayer .markedContent { display: contents; }
+.reader-pdf-page .textLayer ::selection { background: rgba(49, 103, 161, .3); color: transparent; }
+.reader-pdf-highlights { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+.reader-pdf-highlights span { position: absolute; border-radius: 2px; background: rgba(246, 207, 63, .5); box-shadow: 0 0 0 1px rgba(171, 132, 5, .16); mix-blend-mode: multiply; }
+.reader-pdf-page-label { position: absolute; right: 8px; bottom: 7px; z-index: 3; padding: 3px 6px; border-radius: 2px; background: rgba(27, 55, 47, .82); color: white; font-size: 8px; letter-spacing: .04em; pointer-events: none; }
+.reader-pdf-page-error { position: absolute; inset: 40% 10% auto; z-index: 3; margin: 0; padding: 14px; background: #fff6f1; color: #9d5138; font-size: 11px; text-align: center; }
 .annotation-panel { min-height: 0; overflow: auto; border-left: 1px solid #c4c8bc; background: #fffefa; }
 .annotation-compose { padding: 24px; border-bottom: 1px solid var(--line); background: #f1f2e6; }
 .annotation-compose blockquote, .annotation-list blockquote { margin: 13px 0; padding: 12px 14px; border-left: 3px solid var(--coral); background: white; color: #394a43; font: 400 14px/1.55 "Newsreader", Georgia, serif; }
@@ -380,7 +391,7 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   .reader-document { padding: 16px 14px 40px; }
   .reader-page { padding: 28px 22px 34px; }
   .reader-page > div { font-size: 16px; }
-  .reader-pdf-frame { height: 70vh; }
+  .reader-pdf-pages { gap: 12px; }
   .search-field { grid-column: auto; }
   .year-filter { align-items: flex-start; flex-direction: column; gap: 10px; }
   .year-filter > div { justify-content: flex-start; }

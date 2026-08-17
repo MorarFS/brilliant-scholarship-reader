@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { citationToRis, formatCitation, mergeAnnotations, parseAnnotation, stablePaperId } from "./readingRoomData";
+import { citationToRis, formatCitation, mergeAnnotations, normalizePdfSelectionRects, parseAnnotation, parseReadingLocation, stablePaperId } from "./readingRoomData";
 
 const paper = {
   id: "https://openalex.org/W1",
@@ -28,6 +28,31 @@ describe("reading-room research data", () => {
     const parsed = parseAnnotation({ id: "a", paperId: "p", citation: "c", quote: "q", note: "n", page: 2.8, source: "user-uploaded PDF", createdAt: "2026-01-01" });
     expect(parsed?.page).toBe(2);
     expect(parsed?.source).toBe("user-uploaded PDF");
+  });
+
+  it("retains a validated PDF page, quote, and normalized selection geometry", () => {
+    const parsed = parseAnnotation({
+      id: "pdf-note", paperId: "p", citation: "c", quote: "Selected history", note: "n", page: 3,
+      source: "user-uploaded PDF", createdAt: "2026-01-01",
+      anchor: { kind: "pdf", page: 3, quote: "Selected history", rects: [{ x: 0.2, y: 0.3, width: 0.4, height: 0.05 }] },
+    });
+    expect(parsed?.anchor).toEqual({ kind: "pdf", page: 3, quote: "Selected history", rects: [{ x: 0.2, y: 0.3, width: 0.4, height: 0.05 }] });
+    expect(parseAnnotation({ id: "bad", paperId: "p", citation: "c", quote: "q", note: "n", createdAt: "2026-01-01", anchor: { kind: "pdf", page: 1, rects: [] } })?.anchor).toBeUndefined();
+  });
+
+  it("normalizes PDF selection rectangles and clips them to the page", () => {
+    expect(normalizePdfSelectionRects(
+      { left: 100, top: 200, width: 400, height: 800 },
+      [{ left: 140, top: 280, width: 200, height: 40 }, { left: 480, top: 980, width: 80, height: 80 }],
+    )).toEqual([
+      { x: 0.1, y: 0.1, width: 0.5, height: 0.05 },
+      { x: 0.95, y: 0.975, width: 0.05, height: 0.025 },
+    ]);
+  });
+
+  it("validates and bounds persisted reading locations", () => {
+    expect(parseReadingLocation({ page: 4.8, offset: 1.5 })).toEqual({ page: 4, offset: 1 });
+    expect(parseReadingLocation({ page: "4", offset: 0.2 })).toBeNull();
   });
 
   it("merges annotations by stable annotation id", () => {
