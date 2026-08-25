@@ -1,0 +1,3430 @@
+{
+  "title": "The Pulse of History — verified secondary literature library",
+  "generated_at": "2026-08-25T16:30:00+08:00",
+  "schema_version": "1.0",
+  "record_count": 80,
+  "must_cite_count": 49,
+  "closest_precedent_count": 17,
+  "verification_note": "Every record was checked against its linked primary publisher, journal, repository, DOI-registration, or library record. Annotations are analytical summaries, not quotations.",
+  "categories": [
+    "canonical background",
+    "direct computational precedent",
+    "methods precedent",
+    "interpretive dialogue"
+  ],
+  "records": [
+    {
+      "id": "lit-051",
+      "year": 1966,
+      "authors": [
+        "William O. Aydelotte"
+      ],
+      "title": "Quantification in History",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "71",
+      "issue": "3",
+      "pages": "803-825",
+      "doi": "10.1086/ahr/71.3.803",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr/71.3.803",
+      "source_type": "Scholarly article",
+      "category": "canonical background",
+      "period": "mid-twentieth century",
+      "geography": "United States and Europe",
+      "method_corpus": "Programmatic assessment of quantitative history",
+      "key_claim": "Quantification can clarify comparison and inference but requires historically meaningful concepts and evidence.",
+      "relevance": "Primary marker for the quantitative turn and its method vocabulary.",
+      "dialogue": "Compare declared quantification with diffusion of statistical and data terms.",
+      "tags": [
+        "quantitative history",
+        "methods",
+        "cliometrics"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr/71.3.803",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr%2F71.3.803",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "William O. Aydelotte (1966). Quantification in History. The American Historical Review, 71(3), 803-825. https://doi.org/10.1086/ahr/71.3.803",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-053",
+      "year": 1969,
+      "authors": [
+        "Quentin Skinner"
+      ],
+      "title": "Meaning and Understanding in the History of Ideas",
+      "container_title": "History and Theory",
+      "publisher": "Wiley",
+      "volume": "8",
+      "issue": "1",
+      "pages": "3",
+      "doi": "10.2307/2504188",
+      "isbn": "",
+      "url": "https://doi.org/10.2307/2504188",
+      "source_type": "Scholarly article",
+      "category": "canonical background",
+      "period": "early modern subject matter; twentieth-century method",
+      "geography": "Britain and Europe",
+      "method_corpus": "Methodological intervention in intellectual history",
+      "key_claim": "Texts should be interpreted as historically situated linguistic actions, not timeless propositions.",
+      "relevance": "Foundational for contextualism and non-presentist political-language analysis.",
+      "dialogue": "Supports contextual validation of democracy, freedom, identity, and ideology trajectories.",
+      "tags": [
+        "political language",
+        "intellectual history",
+        "contextualism"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.2307/2504188",
+        "metadata_record": "https://api.crossref.org/works/10.2307%2F2504188",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Quentin Skinner (1969). Meaning and Understanding in the History of Ideas. History and Theory, 8(1), 3. https://doi.org/10.2307/2504188",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-007",
+      "year": 1971,
+      "authors": [
+        "E. J. Hobsbawm"
+      ],
+      "title": "From Social History to the History of Society",
+      "container_title": "Past & Present",
+      "publisher": "",
+      "volume": "",
+      "issue": "50",
+      "pages": "20-45",
+      "doi": "",
+      "isbn": "",
+      "url": "https://www.jstor.org/stable/20023989",
+      "source_type": "Contemporaneous intervention",
+      "category": "canonical background",
+      "period": "Mainly European/Anglophone social history",
+      "geography": "Mainly European/Anglophone social history",
+      "method_corpus": "Programmatic essay",
+      "key_claim": "Social history moves from margins toward history of society",
+      "relevance": "Candidate lexical/method signatures; compare claim to diffusion",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "social history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.jstor.org/stable/20023989",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "E. J. Hobsbawm (1971). From Social History to the History of Society. Past & Present(50), 20-45. https://www.jstor.org/stable/20023989",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-008",
+      "year": 1979,
+      "authors": [
+        "Lawrence Stone"
+      ],
+      "title": "THE REVIVAL OF NARRATIVE: REFLECTIONS ON A NEW OLD HISTORY",
+      "container_title": "Past and Present",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "85",
+      "issue": "1",
+      "pages": "3-24",
+      "doi": "10.1093/past/85.1.3",
+      "isbn": "",
+      "url": "https://doi.org/10.1093/past/85.1.3",
+      "source_type": "Contemporaneous intervention",
+      "category": "canonical background",
+      "period": "Prominent western historical scholarship",
+      "geography": "Prominent western historical scholarship",
+      "method_corpus": "Interpretive essay",
+      "key_claim": "Return of narrative after structural and quantitative models",
+      "relevance": "Treat form/causality separately from topic",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "quantitative"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/past/85.1.3",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Fpast%2F85.1.3",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Lawrence Stone (1979). THE REVIVAL OF NARRATIVE: REFLECTIONS ON A NEW OLD HISTORY. Past and Present, 85(1), 3-24. https://doi.org/10.1093/past/85.1.3",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-018",
+      "year": 1986,
+      "authors": [
+        "August Meier",
+        "Elliott Rudwick"
+      ],
+      "title": "Black History and the Historical Profession",
+      "container_title": "",
+      "publisher": "University of Illinois Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780252013225",
+      "url": "https://search.worldcat.org/title/Black-history-and-the-historical-profession-1915-1980/oclc/1417228681",
+      "source_type": "Professional history",
+      "category": "canonical background",
+      "period": "African American history and US profession, 1915–1980",
+      "geography": "African American history and US profession, 1915–1980",
+      "method_corpus": "Primary/secondary sources and nearly 200 interviews",
+      "key_claim": "Black history grows despite professional exclusion and later gains field presence",
+      "relevance": "Prevent race from being narrated only as a late cultural turn",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "cultural turn",
+        "race",
+        "Africa"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://search.worldcat.org/title/Black-history-and-the-historical-profession-1915-1980/oclc/1417228681",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "August Meier, Elliott Rudwick (1986). Black History and the Historical Profession. University of Illinois Press. https://search.worldcat.org/title/Black-history-and-the-historical-profession-1915-1980/oclc/1417228681",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-014",
+      "year": 1986,
+      "authors": [
+        "Joan W. Scott"
+      ],
+      "title": "Gender: A Useful Category of Historical Analysis",
+      "container_title": "The American Historical Review",
+      "publisher": "JSTOR",
+      "volume": "91",
+      "issue": "5",
+      "pages": "1053",
+      "doi": "10.2307/1864376",
+      "isbn": "",
+      "url": "https://doi.org/10.2307/1864376",
+      "source_type": "Landmark intervention",
+      "category": "canonical background",
+      "period": "Historical scholarship broadly; theory-driven",
+      "geography": "Historical scholarship broadly; theory-driven",
+      "method_corpus": "Programmatic/theoretical article",
+      "key_claim": "Gender proposed as constitutive relation and analytic of power",
+      "relevance": "Separate women-as-subject, gender-as-analysis, and field labels",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "gender"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.2307/1864376",
+        "metadata_record": "https://api.crossref.org/works/10.2307%2F1864376",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Joan W. Scott (1986). Gender: A Useful Category of Historical Analysis. The American Historical Review, 91(5), 1053. https://doi.org/10.2307/1864376",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-009",
+      "year": 1987,
+      "authors": [
+        "John E. Toews"
+      ],
+      "title": "Intellectual History after the Linguistic Turn: The Autonomy of Meaning and the Irreducibility of Experience",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "92",
+      "issue": "4",
+      "pages": "879-907",
+      "doi": "10.1086/ahr/92.4.879",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr/92.4.879",
+      "source_type": "Review essay/intervention",
+      "category": "canonical background",
+      "period": "Intellectual history",
+      "geography": "Intellectual history",
+      "method_corpus": "Review essay on meaning and experience",
+      "key_claim": "Linguistic turn established as a major late-1980s debate",
+      "relevance": "Bounded subfield marker; theory/framing may not form topic",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "linguistic turn"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr/92.4.879",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr%2F92.4.879",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "John E. Toews (1987). Intellectual History after the Linguistic Turn: The Autonomy of Meaning and the Irreducibility of Experience. The American Historical Review, 92(4), 879-907. https://doi.org/10.1086/ahr/92.4.879",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-006",
+      "year": 1988,
+      "authors": [
+        "Peter Novick"
+      ],
+      "title": "That Noble Dream",
+      "container_title": "",
+      "publisher": "Cambridge University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1017/CBO9780511816345",
+      "isbn": "9780521357456",
+      "url": "https://www.cambridge.org/core/books/that-noble-dream/0A76D046734332E36E8B33A54F5C9EA3",
+      "source_type": "Professional/epistemic history",
+      "category": "canonical background",
+      "period": "United States historical profession",
+      "geography": "United States historical profession",
+      "method_corpus": "Published debate plus extensive archival/professional correspondence",
+      "key_claim": "Establishment, crises, and fragmentation of objectivity ideal",
+      "relevance": "Look for epistemic framing beyond topic prevalence",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.cambridge.org/core/books/that-noble-dream/0A76D046734332E36E8B33A54F5C9EA3",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2FCBO9780511816345",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Peter Novick (1988). That Noble Dream. Cambridge University Press. https://doi.org/10.1017/CBO9780511816345",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-021",
+      "year": 1994,
+      "authors": [
+        "Gyan Prakash"
+      ],
+      "title": "Subaltern Studies as Postcolonial Criticism",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "99",
+      "issue": "5",
+      "pages": "1475-1490",
+      "doi": "10.1086/ahr/99.5.1475",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr/99.5.1475",
+      "source_type": "Regional genealogy/intervention",
+      "category": "canonical background",
+      "period": "South Asian/Subaltern Studies",
+      "geography": "South Asian/Subaltern Studies",
+      "method_corpus": "Critical review essay",
+      "key_claim": "Shift from subaltern social history toward critique of colonial knowledge",
+      "relevance": "Look for archive/category reflexivity as well as topics",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "social history",
+        "postcolonial"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr/99.5.1475",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr%2F99.5.1475",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Gyan Prakash (1994). Subaltern Studies as Postcolonial Criticism. The American Historical Review, 99(5), 1475-1490. https://doi.org/10.1086/ahr/99.5.1475",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-010",
+      "year": 1995,
+      "authors": [
+        "Patrick Joyce"
+      ],
+      "title": "The end of social history?",
+      "container_title": "Social History",
+      "publisher": "Informa UK Limited",
+      "volume": "20",
+      "issue": "1",
+      "pages": "73-91",
+      "doi": "10.1080/03071029508567926",
+      "isbn": "",
+      "url": "https://doi.org/10.1080/03071029508567926",
+      "source_type": "Intervention",
+      "category": "canonical background",
+      "period": "Primarily British/European social history debate",
+      "geography": "Primarily British/European social history debate",
+      "method_corpus": "Programmatic essay",
+      "key_claim": "Poststructural challenge to inherited social history",
+      "relevance": "Test semantic restructuring rather than literal disappearance",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "social history"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1080/03071029508567926",
+        "metadata_record": "https://api.crossref.org/works/10.1080%2F03071029508567926",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Patrick Joyce (1995). The end of social history?. Social History, 20(1), 73-91. https://doi.org/10.1080/03071029508567926",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-049",
+      "year": 1998,
+      "authors": [
+        "Bonnie G. Smith"
+      ],
+      "title": "The Gender of History: Men, Women, and Historical Practice",
+      "container_title": "",
+      "publisher": "Harvard University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780674002043",
+      "url": "https://search.worldcat.org/title/37721350",
+      "source_type": "Scholarly book",
+      "category": "canonical background",
+      "period": "eighteenth through twentieth centuries",
+      "geography": "Europe and North America",
+      "method_corpus": "History of historical practice and authority",
+      "key_claim": "Professional historical authority was constituted through gendered distinctions between expertise, archive, and narrative.",
+      "relevance": "Makes professionalization gendered before women/gender history becomes a topical cluster.",
+      "dialogue": "Challenges counting women/gender terms as the whole history of gender in the discipline.",
+      "tags": [
+        "gender",
+        "professionalization",
+        "epistemology"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://search.worldcat.org/title/37721350",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Bonnie G. Smith (1998). The Gender of History: Men, Women, and Historical Practice. Harvard University Press. https://search.worldcat.org/title/37721350",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-022",
+      "year": 2000,
+      "authors": [
+        "Kerwin Lee Klein"
+      ],
+      "title": "On the Emergence of Memory in Historical Discourse",
+      "container_title": "Representations",
+      "publisher": "University of California Press",
+      "volume": "69",
+      "issue": "",
+      "pages": "127-150",
+      "doi": "10.2307/2902903",
+      "isbn": "",
+      "url": "https://doi.org/10.2307/2902903",
+      "source_type": "Critical genealogy",
+      "category": "canonical background",
+      "period": "Late-twentieth-century historical discourse",
+      "geography": "Late-twentieth-century historical discourse",
+      "method_corpus": "Conceptual/historiographical essay",
+      "key_claim": "Memory keyword boom in 1980s–1990s with heterogeneous meanings",
+      "relevance": "Separate labels, topics, source practice, and epistemic claims",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "memory"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.2307/2902903",
+        "metadata_record": "https://api.crossref.org/works/10.2307%2F2902903",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Kerwin Lee Klein (2000). On the Emergence of Memory in Historical Discourse. Representations, 69, 127-150. https://doi.org/10.2307/2902903",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-028",
+      "year": 2003,
+      "authors": [
+        "J. R. McNeill"
+      ],
+      "title": "Observations on the Nature and Culture of Environmental History",
+      "container_title": "History and Theory",
+      "publisher": "Wiley",
+      "volume": "42",
+      "issue": "4",
+      "pages": "5-43",
+      "doi": "10.1046/j.1468-2303.2003.00255.x",
+      "isbn": "",
+      "url": "https://doi.org/10.1046/j.1468-2303.2003.00255.x",
+      "source_type": "International survey",
+      "category": "canonical background",
+      "period": "Environmental history across several national traditions",
+      "geography": "Environmental history across several national traditions",
+      "method_corpus": "Selective field survey",
+      "key_claim": "Growth from 1970s with varied institutional and interdisciplinary forms",
+      "relevance": "Probe material, policy, cultural, science, and geographic signatures",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "environmental history"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1046/j.1468-2303.2003.00255.x",
+        "metadata_record": "https://api.crossref.org/works/10.1046%2Fj.1468-2303.2003.00255.x",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "J. R. McNeill (2003). Observations on the Nature and Culture of Environmental History. History and Theory, 42(4), 5-43. https://doi.org/10.1046/j.1468-2303.2003.00255.x",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-004",
+      "year": 2005,
+      "authors": [
+        "Geoff Eley"
+      ],
+      "title": "A Crooked Line",
+      "container_title": "",
+      "publisher": "University of Michigan Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.3998/mpub.137664",
+      "isbn": "9780472069040; 9780472021413",
+      "url": "https://doi.org/10.3998/mpub.137664",
+      "source_type": "Retrospective/intellectual autobiography",
+      "category": "canonical background",
+      "period": "Western Europe and Anglo-American scholarship",
+      "geography": "Western Europe and Anglo-American scholarship",
+      "method_corpus": "Situated intellectual history",
+      "key_claim": "Social history, cultural turn, then renewed history of society",
+      "relevance": "Interpret recombination; not population evidence",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "social history",
+        "cultural turn"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.3998/mpub.137664",
+        "metadata_record": "https://api.crossref.org/works/10.3998%2Fmpub.137664",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Geoff Eley (2005). A Crooked Line. University of Michigan Press. https://doi.org/10.3998/mpub.137664",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-030",
+      "year": 2005,
+      "authors": [
+        "Daniel J. Cohen",
+        "Roy Rosenzweig"
+      ],
+      "title": "Digital History",
+      "container_title": "",
+      "publisher": "University of Pennsylvania Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780812219234",
+      "url": "https://www.pennpress.org/9780812219234/digital-history/",
+      "source_type": "Field guide",
+      "category": "canonical background",
+      "period": "Primarily US digital historical practice",
+      "geography": "Primarily US digital historical practice",
+      "method_corpus": "Book/guide",
+      "key_claim": "Early web, digitization, preservation, and audience stage of digital history",
+      "relevance": "Show that digital history changes meaning over time",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "digital history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.pennpress.org/9780812219234/digital-history/",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Daniel J. Cohen, Roy Rosenzweig (2005). Digital History. University of Pennsylvania Press. https://www.pennpress.org/9780812219234/digital-history/",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-048",
+      "year": 2005,
+      "authors": [
+        "Georg G. Iggers"
+      ],
+      "title": "Historiography in the Twentieth Century: From Scientific Objectivity to the Postmodern Challenge",
+      "container_title": "",
+      "publisher": "Wesleyan University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780819567666",
+      "url": "https://www.weslpress.org/9780819567666/historiography-in-the-twentieth-century/",
+      "source_type": "Scholarly book",
+      "category": "canonical background",
+      "period": "twentieth century",
+      "geography": "Europe and North America, comparative reach",
+      "method_corpus": "Synthetic intellectual history",
+      "key_claim": "Tracks social-scientific challenges to historicism and later cultural and postmodern critiques of objectivity.",
+      "relevance": "Canonical long-century chronology to test rather than impose.",
+      "dialogue": "Use as benchmark while showing heterogeneous timing across regions and subfields.",
+      "tags": [
+        "historiography",
+        "objectivity",
+        "social science",
+        "postmodernism"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.weslpress.org/9780819567666/historiography-in-the-twentieth-century/",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Georg G. Iggers (2005). Historiography in the Twentieth Century: From Scientific Objectivity to the Postmodern Challenge. Wesleyan University Press. https://www.weslpress.org/9780819567666/historiography-in-the-twentieth-century/",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-024",
+      "year": 2006,
+      "authors": [
+        "C. A. Bayly",
+        "Sven Beckert",
+        "Matthew Connelly",
+        "Isabel Hofmeyr",
+        "Wendy Kozol",
+        "Patricia Seed"
+      ],
+      "title": "AHRConversation: On Transnational History",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "111",
+      "issue": "5",
+      "pages": "1441-1464",
+      "doi": "10.1086/ahr.111.5.1441",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr.111.5.1441",
+      "source_type": "Multi-author intervention/retrospective",
+      "category": "canonical background",
+      "period": "Transnational/global/world history",
+      "geography": "Transnational/global/world history",
+      "method_corpus": "Professional conversation",
+      "key_claim": "Early-2000s label debate with older practices and contested distinctions",
+      "relevance": "Separate scale labels from concrete research operations",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "transnational"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr.111.5.1441",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr.111.5.1441",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "C. A. Bayly, Sven Beckert, Matthew Connelly, Isabel Hofmeyr, Wendy Kozol, Patricia Seed (2006). AHRConversation: On Transnational History. The American Historical Review, 111(5), 1441-1464. https://doi.org/10.1086/ahr.111.5.1441",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-055",
+      "year": 2010,
+      "authors": [
+        "David J. Bodenhamer",
+        "John Corrigan",
+        "Trevor M. Harris"
+      ],
+      "title": "The Spatial Humanities: GIS and the Future of Humanities Scholarship",
+      "container_title": "",
+      "publisher": "Indiana University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780253222176",
+      "url": "https://iupress.org/9780253222176/the-spatial-humanities/",
+      "source_type": "Edited scholarly book",
+      "category": "canonical background",
+      "period": "twenty-first century",
+      "geography": "Cross-disciplinary",
+      "method_corpus": "Essays on GIS, spatial representation, and humanities epistemology",
+      "key_claim": "Spatial technologies alter historical questions, evidence, and representation, not only visualization.",
+      "relevance": "Canonical marker for the spatial turn and historical GIS.",
+      "dialogue": "Distinguish substantive spatial history from incidental place vocabulary.",
+      "tags": [
+        "spatial turn",
+        "GIS",
+        "digital history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://iupress.org/9780253222176/the-spatial-humanities/",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "David J. Bodenhamer, John Corrigan, Trevor M. Harris (2010). The Spatial Humanities: GIS and the Future of Humanities Scholarship. Indiana University Press. https://iupress.org/9780253222176/the-spatial-humanities/",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-011",
+      "year": 2010,
+      "authors": [
+        "P. Joyce"
+      ],
+      "title": "What is the Social in Social History?",
+      "container_title": "Past &amp; Present",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "206",
+      "issue": "1",
+      "pages": "213-248",
+      "doi": "10.1093/pastj/gtp030",
+      "isbn": "",
+      "url": "https://doi.org/10.1093/pastj/gtp030",
+      "source_type": "Retrospective/intervention",
+      "category": "canonical background",
+      "period": "Anglophone and western European debate",
+      "geography": "Anglophone and western European debate",
+      "method_corpus": "Retrospective essay",
+      "key_claim": "Cultural approaches transform or partially eclipse the social",
+      "relevance": "Look for hybrid/recombined topics",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "social history"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/pastj/gtp030",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Fpastj%2Fgtp030",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "P. Joyce (2010). What is the Social in Social History?. Past &amp; Present, 206(1), 213-248. https://doi.org/10.1093/pastj/gtp030",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-019",
+      "year": 2011,
+      "authors": [
+        "Toyin Falola"
+      ],
+      "title": "African Historical Writing",
+      "container_title": "Oxford Scholarship Online",
+      "publisher": "Oxford University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1093/oso/9780199225996.003.0020",
+      "isbn": "",
+      "url": "https://doi.org/10.1093/oso/9780199225996.003.0020",
+      "source_type": "Regional retrospective survey",
+      "category": "canonical background",
+      "period": "African historical writing",
+      "geography": "African historical writing",
+      "method_corpus": "Handbook chapter",
+      "key_claim": "Pan-African, indigenous, decolonization/national, and professional currents; oral tradition central",
+      "relevance": "Regional counter-sequence and source-method probes",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "Africa"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/oso/9780199225996.003.0020",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Foso%2F9780199225996.003.0020",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Toyin Falola (2011). African Historical Writing. Oxford Scholarship Online. https://doi.org/10.1093/oso/9780199225996.003.0020",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-027",
+      "year": 2011,
+      "authors": [
+        "Dominic Sachsenmaier"
+      ],
+      "title": "Global Perspectives on Global History",
+      "container_title": "",
+      "publisher": "Cambridge University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1017/cbo9780511736544",
+      "isbn": "9781107001824; 9780521173124; 9780511736544",
+      "url": "https://doi.org/10.1017/CBO9780511736544",
+      "source_type": "Comparative meta-history",
+      "category": "canonical background",
+      "period": "United States, Germany, and China",
+      "geography": "United States, Germany, and China",
+      "method_corpus": "Comparative book case studies",
+      "key_claim": "Global history remains shaped by national institutions and traditions",
+      "relevance": "Check sources/institutions behind common English labels",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "global history"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/CBO9780511736544",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fcbo9780511736544",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Dominic Sachsenmaier (2011). Global Perspectives on Global History. Cambridge University Press. https://doi.org/10.1017/cbo9780511736544",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-029",
+      "year": 2011,
+      "authors": [
+        "J. R. McNeill"
+      ],
+      "title": "The Historiography of Environmental History",
+      "container_title": "Oxford Scholarship Online",
+      "publisher": "Oxford University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1093/oso/9780199225996.003.0009",
+      "isbn": "",
+      "url": "https://doi.org/10.1093/oso/9780199225996.003.0009",
+      "source_type": "Global field survey",
+      "category": "canonical background",
+      "period": "Environmental history",
+      "geography": "Environmental history",
+      "method_corpus": "Handbook chapter",
+      "key_claim": "Concern rises from 1960s; field flourishes from 1980s; material, policy, cultural strands",
+      "relevance": "Disaggregate environmental cluster and avoid US-only chronology",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "environmental history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/oso/9780199225996.003.0009",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Foso%2F9780199225996.003.0009",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "J. R. McNeill (2011). The Historiography of Environmental History. Oxford Scholarship Online. https://doi.org/10.1093/oso/9780199225996.003.0009",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-002",
+      "year": 2011,
+      "authors": [
+        "Axel Schneider",
+        "Daniel Woolf"
+      ],
+      "title": "The Oxford History of Historical Writing",
+      "container_title": "Oxford Scholarship Online",
+      "publisher": "Oxford University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1093/oso/9780199225996.001.0001",
+      "isbn": "9780199225996",
+      "url": "https://doi.org/10.1093/oso/9780199225996.001.0001",
+      "source_type": "Global retrospective survey",
+      "category": "canonical background",
+      "period": "Global regions and thematic fields",
+      "geography": "Global regions and thematic fields",
+      "method_corpus": "Multi-author handbook volume",
+      "key_claim": "Multiple postwar regional and thematic trajectories",
+      "relevance": "Held-out geographic and thematic scope check, not taxonomy",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/oso/9780199225996.001.0001",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Foso%2F9780199225996.001.0001",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Axel Schneider, Daniel Woolf (2011). The Oxford History of Historical Writing. Oxford Scholarship Online. https://doi.org/10.1093/oso/9780199225996.001.0001",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-013",
+      "year": 2012,
+      "authors": [
+        "Durba Ghosh"
+      ],
+      "title": "Another Set of Imperial Turns?",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "117",
+      "issue": "3",
+      "pages": "772-793",
+      "doi": "10.1086/ahr.117.3.772",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr.117.3.772",
+      "source_type": "Critical retrospective/intervention",
+      "category": "canonical background",
+      "period": "British imperial history with wider subfield comparison",
+      "geography": "British imperial history with wider subfield comparison",
+      "method_corpus": "AHR Forum essay",
+      "key_claim": "Imperial turns are plural and uneven across regions/subfields",
+      "relevance": "Disaggregate empire, region, source, and analytic vocabulary",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr.117.3.772",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr.117.3.772",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Durba Ghosh (2012). Another Set of Imperial Turns?. The American Historical Review, 117(3), 772-793. https://doi.org/10.1086/ahr.117.3.772",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-047",
+      "year": 2012,
+      "authors": [
+        "Robert B. Townsend"
+      ],
+      "title": "History's Babel: Scholarship, Professionalization, and the Historical Enterprise in the United States, 1880–1940",
+      "container_title": "",
+      "publisher": "University of Chicago Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780226923925",
+      "url": "https://press.uchicago.edu/ucp/books/book/chicago/H/bo13186131.html",
+      "source_type": "Scholarly book",
+      "category": "canonical background",
+      "period": "1880–1940",
+      "geography": "United States",
+      "method_corpus": "Institutional and publishing history of the US historical enterprise",
+      "key_claim": "Professionalization produced specialized communities, publications, and audiences rather than one unified discipline.",
+      "relevance": "Essential baseline for interpreting 1900–1944 and avoiding a post-1945 origin story.",
+      "dialogue": "Treat prewar diversification and publication infrastructure as causal context.",
+      "tags": [
+        "professionalization",
+        "discipline",
+        "pre-1945",
+        "United States"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://press.uchicago.edu/ucp/books/book/chicago/H/bo13186131.html",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Robert B. Townsend (2012). History's Babel: Scholarship, Professionalization, and the Historical Enterprise in the United States, 1880–1940. University of Chicago Press. https://press.uchicago.edu/ucp/books/book/chicago/H/bo13186131.html",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-012",
+      "year": 2012,
+      "authors": [
+        "James W. Cook"
+      ],
+      "title": "The Kids Are All Right: On the “Turning” of Cultural History",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "117",
+      "issue": "3",
+      "pages": "746-771",
+      "doi": "10.1086/ahr.117.3.746",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr.117.3.746",
+      "source_type": "Critical retrospective",
+      "category": "canonical background",
+      "period": "Cultural history and United States professional discourse",
+      "geography": "Cultural history and United States professional discourse",
+      "method_corpus": "AHR Forum essay",
+      "key_claim": "Cultural turn is also a mobile rhetoric of turning",
+      "relevance": "Analyze turn-language separately from practices",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "cultural turn"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr.117.3.746",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr.117.3.746",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "James W. Cook (2012). The Kids Are All Right: On the “Turning” of Cultural History. The American Historical Review, 117(3), 746-771. https://doi.org/10.1086/ahr.117.3.746",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-001",
+      "year": 2014,
+      "authors": [
+        "Kevin Passmore"
+      ],
+      "title": "History and Historiography since 1945",
+      "container_title": "A Historiography of the Modern Social Sciences",
+      "publisher": "Cambridge University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "29-61",
+      "doi": "10.1017/cbo9781139794817.002",
+      "isbn": "9781107037724; 9781139794817; 9781107438972",
+      "url": "https://doi.org/10.1017/CBO9781139794817.002",
+      "source_type": "Retrospective survey",
+      "category": "canonical background",
+      "period": "Postwar historiography; strong European/Anglophone emphasis",
+      "geography": "Postwar historiography; strong European/Anglophone emphasis",
+      "method_corpus": "Synthetic historiographical chapter",
+      "key_claim": "Social-scientific history and later cultural challenges; warns against reified watersheds",
+      "relevance": "Treat periodizations as hypotheses rather than explanations",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/CBO9781139794817.002",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fcbo9781139794817.002",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Kevin Passmore (2014). History and Historiography since 1945. A Historiography of the Modern Social Sciences, 29-61. https://doi.org/10.1017/cbo9781139794817.002",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-005",
+      "year": 2015,
+      "authors": [
+        "Peter Burke"
+      ],
+      "title": "The French Historical Revolution",
+      "container_title": "",
+      "publisher": "Stanford University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780804798273",
+      "url": "https://www.sup.org/books/history/french-historical-revolution",
+      "source_type": "Institutional/intellectual history",
+      "category": "canonical background",
+      "period": "France; Annales influence",
+      "geography": "France; Annales influence",
+      "method_corpus": "History of four generations of Annales",
+      "key_claim": "Expansion of historical objects, social-science relations, structures, and later pluralization",
+      "relevance": "Test distinct French lineage and methods",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.sup.org/books/history/french-historical-revolution",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Peter Burke (2015). The French Historical Revolution. Stanford University Press. https://www.sup.org/books/history/french-historical-revolution",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-026",
+      "year": 2016,
+      "authors": [
+        "Sebastian Conrad"
+      ],
+      "title": "What Is Global History?",
+      "container_title": "",
+      "publisher": "Princeton University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1515/9781400880966",
+      "isbn": "9781400880966",
+      "url": "https://doi.org/10.1515/9781400880966",
+      "source_type": "Conceptual retrospective",
+      "category": "canonical background",
+      "period": "Global history",
+      "geography": "Global history",
+      "method_corpus": "Synthetic book",
+      "key_claim": "Institutional rise c. 2000 has longer antecedents and competing forms",
+      "relevance": "Separate panorama, connection, comparison, and global integration",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "global history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1515/9781400880966",
+        "metadata_record": "https://api.crossref.org/works/10.1515%2F9781400880966",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Sebastian Conrad (2016). What Is Global History?. Princeton University Press. https://doi.org/10.1515/9781400880966",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-003",
+      "year": 2017,
+      "authors": [
+        "Georg G. Iggers",
+        "Q. Edward Wang",
+        "Supriya Mukherjee"
+      ],
+      "title": "A Global History of Modern Historiography",
+      "container_title": "",
+      "publisher": "Routledge",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9781138942264",
+      "url": "https://www.routledge.com/A-Global-History-of-Modern-Historiography/Iggers-Wang-Mukherjee/p/book/9781138942264",
+      "source_type": "Global meta-history",
+      "category": "canonical background",
+      "period": "Global; long modern period",
+      "geography": "Global; long modern period",
+      "method_corpus": "Comparative book synthesis",
+      "key_claim": "National and regional paths through professionalization, social science, postmodernism, and postcolonialism",
+      "relevance": "Counterweight to western master sequence",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "postcolonial",
+        "global history",
+        "professionalization"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.routledge.com/A-Global-History-of-Modern-Historiography/Iggers-Wang-Mukherjee/p/book/9781138942264",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Georg G. Iggers, Q. Edward Wang, Supriya Mukherjee (2017). A Global History of Modern Historiography. Routledge. https://www.routledge.com/A-Global-History-of-Modern-Historiography/Iggers-Wang-Mukherjee/p/book/9781138942264",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-068",
+      "year": 1991,
+      "authors": [
+        "Robert Whaples"
+      ],
+      "title": "A Quantitative History of the Journal of Economc History and the Cliometric Revolution",
+      "container_title": "The Journal of Economic History",
+      "publisher": "Cambridge University Press (CUP)",
+      "volume": "51",
+      "issue": "2",
+      "pages": "289-301",
+      "doi": "10.1017/s0022050700038948",
+      "isbn": "",
+      "url": "https://doi.org/10.1017/S0022050700038948",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "1941–1990",
+      "geography": "Economic history",
+      "method_corpus": "Manual coding and bibliometrics of JEH articles",
+      "key_claim": "The cliometric revolution is visible in authorship, topics, and quantitative methods within a flagship journal.",
+      "relevance": "Pre-digital fixed-venue benchmark for a recognized transformation.",
+      "dialogue": "High internal validity but limited discipline-wide representativeness.",
+      "tags": [
+        "economic history",
+        "cliometrics",
+        "fixed journal"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/S0022050700038948",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fs0022050700038948",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Robert Whaples (1991). A Quantitative History of the Journal of Economc History and the Cliometric Revolution. The Journal of Economic History, 51(2), 289-301. https://doi.org/10.1017/s0022050700038948",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-040",
+      "year": 1993,
+      "authors": [
+        "Jean-Pierre V.M. Herubel",
+        "Edward A. Goedeken"
+      ],
+      "title": "Trends in historical scholarship as evidenced in The American Historical Review: 1896–1990",
+      "container_title": "Serials Review",
+      "publisher": "Informa UK Limited",
+      "volume": "19",
+      "issue": "2",
+      "pages": "79-84",
+      "doi": "10.1016/0098-7913(93)90023-4",
+      "isbn": "",
+      "url": "https://doi.org/10.1016/0098-7913(93)90023-4",
+      "source_type": "Bibliometric/content study",
+      "category": "direct computational precedent",
+      "period": "American Historical Review, 1896–1990",
+      "geography": "American Historical Review, 1896–1990",
+      "method_corpus": "Single-journal publication analysis",
+      "key_claim": "Long-term change within an elite journal",
+      "relevance": "Illustrate stable-source strength and representativeness limit",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1016/0098-7913(93)90023-4",
+        "metadata_record": "https://api.crossref.org/works/10.1016%2F0098-7913%2893%2990023-4",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Jean-Pierre V.M. Herubel, Edward A. Goedeken (1993). Trends in historical scholarship as evidenced in The American Historical Review: 1896–1990. Serials Review, 19(2), 79-84. https://doi.org/10.1016/0098-7913(93)90023-4",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-067",
+      "year": 2008,
+      "authors": [
+        "David Hall",
+        "Daniel Jurafsky",
+        "Christopher D. Manning"
+      ],
+      "title": "Studying the history of ideas using topic models",
+      "container_title": "Proceedings of the Conference on Empirical Methods in Natural Language Processing - EMNLP '08",
+      "publisher": "Association for Computational Linguistics",
+      "volume": "",
+      "issue": "",
+      "pages": "363",
+      "doi": "10.3115/1613715.1613763",
+      "isbn": "",
+      "url": "https://aclanthology.org/D08-1038/",
+      "source_type": "Conference paper",
+      "category": "direct computational precedent",
+      "period": "1965–2008",
+      "geography": "Computational linguistics",
+      "method_corpus": "More than 14,000 ACL papers; topic models",
+      "key_claim": "Topic models recover changing research emphases and relations in a technical field.",
+      "relevance": "Early bounded-universe discipline-mapping precedent.",
+      "dialogue": "Our heterogeneous corpus needs stronger coverage and composition audits.",
+      "tags": [
+        "topic modeling",
+        "discipline mapping",
+        "NLP"
+      ],
+      "must_cite": false,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://aclanthology.org/D08-1038/",
+        "metadata_record": "https://api.crossref.org/works/10.3115%2F1613715.1613763",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "David Hall, Daniel Jurafsky, Christopher D. Manning (2008). Studying the history of ideas using topic models. Proceedings of the Conference on Empirical Methods in Natural Language Processing - EMNLP '08, 363. https://doi.org/10.3115/1613715.1613763",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-038",
+      "year": 2012,
+      "authors": [
+        "David Mimno"
+      ],
+      "title": "Computational historiography",
+      "container_title": "Journal on Computing and Cultural Heritage",
+      "publisher": "Association for Computing Machinery (ACM)",
+      "volume": "5",
+      "issue": "1",
+      "pages": "1-19",
+      "doi": "10.1145/2160165.2160168",
+      "isbn": "",
+      "url": "https://doi.org/10.1145/2160165.2160168",
+      "source_type": "Computational publication study",
+      "category": "direct computational precedent",
+      "period": "Century of Classics journals",
+      "geography": "Century of Classics journals",
+      "method_corpus": "Text mining/topic modeling",
+      "key_claim": "Intellectual, language, volume, and editorial changes can be confounded",
+      "relevance": "Track composition and compare within-journal trends",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "topic modeling"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1145/2160165.2160168",
+        "metadata_record": "https://api.crossref.org/works/10.1145%2F2160165.2160168",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "David Mimno (2012). Computational historiography. Journal on Computing and Cultural Heritage, 5(1), 1-19. https://doi.org/10.1145/2160165.2160168",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-066",
+      "year": 2014,
+      "authors": [
+        "Andrew Goldstone",
+        "Ted Underwood"
+      ],
+      "title": "The Quiet Transformations of Literary Studies: What Thirteen Thousand Scholars Could Tell Us",
+      "container_title": "New Literary History",
+      "publisher": "Project MUSE",
+      "volume": "45",
+      "issue": "3",
+      "pages": "359-384",
+      "doi": "10.1353/nlh.2014.0025",
+      "isbn": "",
+      "url": "https://doi.org/10.1353/nlh.2014.0025",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "1889–2013",
+      "geography": "Anglophone literary studies",
+      "method_corpus": "21,367 JSTOR articles; topic modeling and authorship analysis",
+      "key_claim": "Large-scale change can be gradual and distributed rather than organized by famous turns.",
+      "relevance": "Closest adjacent precedent for testing turn narratives against a long corpus.",
+      "dialogue": "Supports separating rhetorical dates from observed diffusion.",
+      "tags": [
+        "topic modeling",
+        "discipline mapping",
+        "turns"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1353/nlh.2014.0025",
+        "metadata_record": "https://api.crossref.org/works/10.1353%2Fnlh.2014.0025",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Andrew Goldstone, Ted Underwood (2014). The Quiet Transformations of Literary Studies: What Thirteen Thousand Scholars Could Tell Us. New Literary History, 45(3), 359-384. https://doi.org/10.1353/nlh.2014.0025",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-039",
+      "year": 2018,
+      "authors": [
+        "Giovanni Colavizza"
+      ],
+      "title": "A diachronic study of historiography",
+      "container_title": "Scientometrics",
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "117",
+      "issue": "3",
+      "pages": "2117-2131",
+      "doi": "10.1007/s11192-018-2934-0",
+      "isbn": "",
+      "url": "https://doi.org/10.1007/s11192-018-2934-0",
+      "source_type": "Bibliometric/textual study",
+      "category": "direct computational precedent",
+      "period": "Defined historiographical specialisms",
+      "geography": "Defined historiographical specialisms",
+      "method_corpus": "Bibliographic coupling and textual similarity",
+      "key_claim": "Citation connectivity and semantic similarity can diverge",
+      "relevance": "Use multiple relational signals; citations not ground truth",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1007/s11192-018-2934-0",
+        "metadata_record": "https://api.crossref.org/works/10.1007%2Fs11192-018-2934-0",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Giovanni Colavizza (2018). A diachronic study of historiography. Scientometrics, 117(3), 2117-2131. https://doi.org/10.1007/s11192-018-2934-0",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-058",
+      "year": 2018,
+      "authors": [
+        "Christopher N. Warren"
+      ],
+      "title": "Historiography’s Two Voices: Data Infrastructure and History at Scale in the Oxford Dictionary of National Biography (ODNB)",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "3",
+      "issue": "1",
+      "pages": "",
+      "doi": "10.22148/16.028",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/16.028",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "long historical span represented in ODNB",
+      "geography": "Britain",
+      "method_corpus": "Structured prosopographical data from the ODNB",
+      "key_claim": "Data infrastructure enables aggregate inquiry while embedding editorial categories and silences.",
+      "relevance": "Closest JCA precedent for historiography at scale and infrastructure-aware interpretation.",
+      "dialogue": "We extend to a century-scale publication graph but inherit the same category critique.",
+      "tags": [
+        "JCA",
+        "historiography at scale",
+        "data infrastructure",
+        "prosopography"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/16.028",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2F16.028",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Christopher N. Warren (2018). Historiography’s Two Voices: Data Infrastructure and History at Scale in the Oxford Dictionary of National Biography (ODNB). Journal of Cultural Analytics, 3(1). https://doi.org/10.22148/16.028",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-037",
+      "year": 2019,
+      "authors": [
+        "Lino Wehrheim"
+      ],
+      "title": "Economic history goes digital: topic modeling the Journal of Economic History",
+      "container_title": "Cliometrica",
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "13",
+      "issue": "1",
+      "pages": "83-125",
+      "doi": "10.1007/s11698-018-0171-7",
+      "isbn": "",
+      "url": "https://doi.org/10.1007/s11698-018-0171-7",
+      "source_type": "Computational publication study",
+      "category": "direct computational precedent",
+      "period": "Journal of Economic History, 1941–2016",
+      "geography": "Journal of Economic History, 1941–2016",
+      "method_corpus": "Topic model of 2,675 articles",
+      "key_claim": "Thematic evolution and cliometric reorientation within one journal",
+      "relevance": "Strong fixed-source benchmark, not whole discipline",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1007/s11698-018-0171-7",
+        "metadata_record": "https://api.crossref.org/works/10.1007%2Fs11698-018-0171-7",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Lino Wehrheim (2019). Economic history goes digital: topic modeling the Journal of Economic History. Cliometrica, 13(1), 83-125. https://doi.org/10.1007/s11698-018-0171-7",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-069",
+      "year": 2020,
+      "authors": [
+        "Martina Cioni",
+        "Giovanni Federico",
+        "Michelangelo Vasta"
+      ],
+      "title": "The long-term evolution of economic history: evidence from the top five field journals (1927–2017)",
+      "container_title": "Cliometrica",
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "14",
+      "issue": "1",
+      "pages": "1-39",
+      "doi": "10.1007/s11698-019-00186-x",
+      "isbn": "",
+      "url": "https://doi.org/10.1007/s11698-019-00186-x",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "1927–2017",
+      "geography": "International economic history",
+      "method_corpus": "Five leading journals; bibliometric and textual indicators",
+      "key_claim": "Economic history underwent cliometric and later institutional/cultural transformations.",
+      "relevance": "Long 1900s, multi-journal subdisciplinary benchmark.",
+      "dialogue": "Our broad map can test whether its periodization is subfield-specific.",
+      "tags": [
+        "economic history",
+        "cliometrics",
+        "bibliometrics"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1007/s11698-019-00186-x",
+        "metadata_record": "https://api.crossref.org/works/10.1007%2Fs11698-019-00186-x",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Martina Cioni, Giovanni Federico, Michelangelo Vasta (2020). The long-term evolution of economic history: evidence from the top five field journals (1927–2017). Cliometrica, 14(1), 1-39. https://doi.org/10.1007/s11698-019-00186-x",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-070",
+      "year": 2022,
+      "authors": [
+        "Jan Luhmann",
+        "Manuel Burghardt"
+      ],
+      "title": "Digital humanities—A discipline in its own right? An analysis of the role and position of digital humanities in the academic landscape",
+      "container_title": "Journal of the Association for Information Science and Technology",
+      "publisher": "Wiley",
+      "volume": "73",
+      "issue": "2",
+      "pages": "148-171",
+      "doi": "10.1002/asi.24533",
+      "isbn": "",
+      "url": "https://doi.org/10.1002/asi.24533",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "contemporary digital humanities",
+      "geography": "International scholarly communication",
+      "method_corpus": "Bibliometric and network mapping",
+      "key_claim": "Disciplinary position depends on publication, citation, and community relations, not self-label alone.",
+      "relevance": "Precedent for subdiscipline and interdisciplinary boundary mapping.",
+      "dialogue": "Triangulate labels, venues, topics, citations, and affiliations.",
+      "tags": [
+        "discipline mapping",
+        "bibliometrics",
+        "digital humanities"
+      ],
+      "must_cite": false,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1002/asi.24533",
+        "metadata_record": "https://api.crossref.org/works/10.1002%2Fasi.24533",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Jan Luhmann, Manuel Burghardt (2022). Digital humanities—A discipline in its own right? An analysis of the role and position of digital humanities in the academic landscape. Journal of the Association for Information Science and Technology, 73(2), 148-171. https://doi.org/10.1002/asi.24533",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-036",
+      "year": 2022,
+      "authors": [
+        "Lino Wehrheim",
+        "Mark Spoerer",
+        "Tobias A. Jopp"
+      ],
+      "title": "Turn, Turn, Turn: A Digital History of German Historiography,\n                    1950–2019",
+      "container_title": "The Journal of Interdisciplinary History",
+      "publisher": "MIT Press",
+      "volume": "53",
+      "issue": "3",
+      "pages": "471-507",
+      "doi": "10.1162/jinh_a_01871",
+      "isbn": "",
+      "url": "https://edoc.hu-berlin.de/items/ca835249-ebbb-4440-893b-00409e672531",
+      "source_type": "Computational publication study",
+      "category": "direct computational precedent",
+      "period": "Eleven leading German-language history journals, 1950–2019",
+      "geography": "Eleven leading German-language history journals, 1950–2019",
+      "method_corpus": "LDA/MALLET topic model of 9,069 full-text articles; 94.2 million processed tokens",
+      "key_claim": "Finds substantial stability plus heterogeneous and gradual turns; tests timing/diffusion only after bottom-up discovery",
+      "relevance": "Closest precedent; pre-register as held-out test, strengthen composition audits, and never seed discovery with its turn labels",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://edoc.hu-berlin.de/items/ca835249-ebbb-4440-893b-00409e672531",
+        "metadata_record": "https://api.crossref.org/works/10.1162%2Fjinh_a_01871",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Lino Wehrheim, Mark Spoerer, Tobias A. Jopp (2022). Turn, Turn, Turn: A Digital History of German Historiography,\n                    1950–2019. The Journal of Interdisciplinary History, 53(3), 471-507. https://doi.org/10.1162/jinh_a_01871",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-064",
+      "year": 2024,
+      "authors": [
+        "Malte Hagener",
+        "Diana Roig-Sanz"
+      ],
+      "title": "Digital Film Historiography: Challenges of/and Interdisciplinarity",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "9",
+      "issue": "4",
+      "pages": "",
+      "doi": "10.22148/001c.120944",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/001c.120944",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "film history across the twentieth century",
+      "geography": "Transnational",
+      "method_corpus": "Digital methods and bibliographic/cultural data for film historiography",
+      "key_claim": "Computational historiography can trace transnational structures while requiring institutional context.",
+      "relevance": "Adjacent subdisciplinary precedent for digitally remapping a historical field.",
+      "dialogue": "Shows transferability and limits across history-adjacent disciplines.",
+      "tags": [
+        "JCA",
+        "film historiography",
+        "digital methods",
+        "transnational"
+      ],
+      "must_cite": false,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/001c.120944",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2F001c.120944",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Malte Hagener, Diana Roig-Sanz (2024). Digital Film Historiography: Challenges of/and Interdisciplinarity. Journal of Cultural Analytics, 9(4). https://doi.org/10.22148/001c.120944",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-060",
+      "year": 2026,
+      "authors": [
+        "Rossana Scebba"
+      ],
+      "title": "Bibliographic metadata as relational data: A cross-disciplinary methodological reflection",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "11",
+      "issue": "1",
+      "pages": "",
+      "doi": "10.22148/jca.1787",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/jca.1787",
+      "source_type": "Scholarly article",
+      "category": "direct computational precedent",
+      "period": "twentieth-century humanities metadata",
+      "geography": "Humanities, relational",
+      "method_corpus": "Bibliographic metadata modeled as relational networks",
+      "key_claim": "Metadata can reconstruct people, institutions, venues, and fields when treated as historically produced data.",
+      "relevance": "Very close JCA precedent for discipline mapping from metadata.",
+      "dialogue": "We broaden scale while requiring the same provenance and entity resolution.",
+      "tags": [
+        "JCA",
+        "bibliometrics",
+        "networks",
+        "discipline mapping"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/jca.1787",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2Fjca.1787",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Rossana Scebba (2026). Bibliographic metadata as relational data: A cross-disciplinary methodological reflection. Journal of Cultural Analytics, 11(1). https://doi.org/10.22148/jca.1787",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-046",
+      "year": 2026,
+      "authors": [
+        "James Manzi"
+      ],
+      "title": "The ideological orientation of academic social science research 1960–2024",
+      "container_title": "Theory and Society",
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "55",
+      "issue": "2",
+      "pages": "",
+      "doi": "10.1007/s11186-026-09690-2",
+      "isbn": "",
+      "url": "https://doi.org/10.1007/s11186-026-09690-2",
+      "source_type": "LLM/OpenAlex empirical study",
+      "category": "direct computational precedent",
+      "period": "About 600,000 English-language abstracts in selected social-science journals",
+      "geography": "About 600,000 English-language abstracts in selected social-science journals",
+      "method_corpus": "Frozen 2025 snapshot; LLM scoring; extensive validation and robustness",
+      "key_claim": "Long-run ideological series on a fixed 2025 US scale",
+      "relevance": "Transfer corpus/validation/robustness design; reject anachronistic substantive scale",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "OpenAlex"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1007/s11186-026-09690-2",
+        "metadata_record": "https://api.crossref.org/works/10.1007%2Fs11186-026-09690-2",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "James Manzi (2026). The ideological orientation of academic social science research 1960–2024. Theory and Society, 55(2). https://doi.org/10.1007/s11186-026-09690-2",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-052",
+      "year": 1999,
+      "authors": [
+        "Paula Baker"
+      ],
+      "title": "The Midlife Crisis of the New Political History",
+      "container_title": "The Journal of American History",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "86",
+      "issue": "1",
+      "pages": "158",
+      "doi": "10.2307/2567411",
+      "isbn": "",
+      "url": "https://doi.org/10.2307/2567411",
+      "source_type": "Scholarly article",
+      "category": "interpretive dialogue",
+      "period": "post-1960s",
+      "geography": "United States",
+      "method_corpus": "Historiographical review of US political history",
+      "key_claim": "The new political history transformed the field, but its categories fragmented and were absorbed elsewhere.",
+      "relevance": "Key guide to changing political history beyond a simple decline story.",
+      "dialogue": "Look for recombination with social, cultural, gender, and institutional approaches.",
+      "tags": [
+        "political history",
+        "United States",
+        "quantitative history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.2307/2567411",
+        "metadata_record": "https://api.crossref.org/works/10.2307%2F2567411",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Paula Baker (1999). The Midlife Crisis of the New Political History. The Journal of American History, 86(1), 158. https://doi.org/10.2307/2567411",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-023",
+      "year": 2002,
+      "authors": [
+        "Wulf Kansteiner"
+      ],
+      "title": "Finding Meaning in Memory: A Methodological Critique of Collective Memory Studies",
+      "container_title": "History and Theory",
+      "publisher": "Wiley",
+      "volume": "41",
+      "issue": "2",
+      "pages": "179-197",
+      "doi": "10.1111/0018-2656.00198",
+      "isbn": "",
+      "url": "https://doi.org/10.1111/0018-2656.00198",
+      "source_type": "Methodological critique",
+      "category": "interpretive dialogue",
+      "period": "Collective memory studies",
+      "geography": "Collective memory studies",
+      "method_corpus": "Critical review",
+      "key_claim": "Memory wave outpaces conceptual/methodological clarity",
+      "relevance": "Do not equate publication growth with method maturation",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "memory"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1111/0018-2656.00198",
+        "metadata_record": "https://api.crossref.org/works/10.1111%2F0018-2656.00198",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Wulf Kansteiner (2002). Finding Meaning in Memory: A Methodological Critique of Collective Memory Studies. History and Theory, 41(2), 179-197. https://doi.org/10.1111/0018-2656.00198",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-025",
+      "year": 2003,
+      "authors": [
+        "Jürgen Kocka"
+      ],
+      "title": "Comparison and Beyond",
+      "container_title": "History and Theory",
+      "publisher": "Wiley",
+      "volume": "42",
+      "issue": "1",
+      "pages": "39-44",
+      "doi": "10.1111/1468-2303.00228",
+      "isbn": "",
+      "url": "https://doi.org/10.1111/1468-2303.00228",
+      "source_type": "Methodological intervention",
+      "category": "interpretive dialogue",
+      "period": "Comparative and entangled history",
+      "geography": "Comparative and entangled history",
+      "method_corpus": "Conceptual essay",
+      "key_claim": "Comparison can coexist with transfer/entanglement",
+      "relevance": "Identify method operation, not adjective alone",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1111/1468-2303.00228",
+        "metadata_record": "https://api.crossref.org/works/10.1111%2F1468-2303.00228",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Jürgen Kocka (2003). Comparison and Beyond. History and Theory, 42(1), 39-44. https://doi.org/10.1111/1468-2303.00228",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-054",
+      "year": 2003,
+      "authors": [
+        "Meg Jacobs",
+        "William J. Novak",
+        "Julian E. Zelizer"
+      ],
+      "title": "The Democratic Experiment: New Directions in American Political History",
+      "container_title": "",
+      "publisher": "Princeton University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780691120003",
+      "url": "https://press.princeton.edu/books/paperback/9780691120003/the-democratic-experiment",
+      "source_type": "Edited scholarly book",
+      "category": "interpretive dialogue",
+      "period": "nineteenth and twentieth centuries",
+      "geography": "United States",
+      "method_corpus": "Essays on institutions, political economy, culture, and governance",
+      "key_claim": "Political history was renewed through state, policy, political economy, and culturally informed approaches.",
+      "relevance": "Benchmark for political history's recombination.",
+      "dialogue": "Challenges decline narratives if institutional vocabularies expand under new labels.",
+      "tags": [
+        "political history",
+        "state",
+        "democracy"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://press.princeton.edu/books/paperback/9780691120003/the-democratic-experiment",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Meg Jacobs, William J. Novak, Julian E. Zelizer (2003). The Democratic Experiment: New Directions in American Political History. Princeton University Press. https://press.princeton.edu/books/paperback/9780691120003/the-democratic-experiment",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-015",
+      "year": 2008,
+      "authors": [
+        "Joanne Meyerowitz"
+      ],
+      "title": "A History of “Gender”",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "113",
+      "issue": "5",
+      "pages": "1346-1356",
+      "doi": "10.1086/ahr.113.5.1346",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr.113.5.1346",
+      "source_type": "Retrospective reception history",
+      "category": "interpretive dialogue",
+      "period": "Mainly United States historical scholarship",
+      "geography": "Mainly United States historical scholarship",
+      "method_corpus": "AHR Forum essay with access/citation reception evidence",
+      "key_claim": "Rapid uptake and contested reinterpretation after late 1980s",
+      "relevance": "Compare influence/citation to corpus-wide thematic uptake",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "gender"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr.113.5.1346",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr.113.5.1346",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Joanne Meyerowitz (2008). A History of “Gender”. The American Historical Review, 113(5), 1346-1356. https://doi.org/10.1086/ahr.113.5.1346",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-016",
+      "year": 2008,
+      "authors": [
+        "Heidi Tinsman"
+      ],
+      "title": "A Paradigm of Our Own: Joan Scott in Latin American History",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "113",
+      "issue": "5",
+      "pages": "1357-1374",
+      "doi": "10.1086/ahr.113.5.1357",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr.113.5.1357",
+      "source_type": "Regional retrospective",
+      "category": "interpretive dialogue",
+      "period": "Latin American history",
+      "geography": "Latin American history",
+      "method_corpus": "AHR Forum essay",
+      "key_claim": "Gender history follows a regionally specific trajectory",
+      "relevance": "Held-out check against US-centric gender chronology",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "gender"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr.113.5.1357",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr.113.5.1357",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Heidi Tinsman (2008). A Paradigm of Our Own: Joan Scott in Latin American History. The American Historical Review, 113(5), 1357-1374. https://doi.org/10.1086/ahr.113.5.1357",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-017",
+      "year": 2008,
+      "authors": [
+        "Maria Bucur"
+      ],
+      "title": "An Archipelago of Stories: Gender History in Eastern Europe",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "113",
+      "issue": "5",
+      "pages": "1375-1389",
+      "doi": "10.1086/ahr.113.5.1375",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/ahr.113.5.1375",
+      "source_type": "Regional retrospective",
+      "category": "interpretive dialogue",
+      "period": "Eastern European history",
+      "geography": "Eastern European history",
+      "method_corpus": "AHR Forum essay",
+      "key_claim": "Gender history develops unevenly across Eastern Europe",
+      "relevance": "Held-out check for institutional/geographic variation",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "gender"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/ahr.113.5.1375",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2Fahr.113.5.1375",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Maria Bucur (2008). An Archipelago of Stories: Gender History in Eastern Europe. The American Historical Review, 113(5), 1375-1389. https://doi.org/10.1086/ahr.113.5.1375",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-050",
+      "year": 2010,
+      "authors": [
+        "Pero G. Dagbovie"
+      ],
+      "title": "African American History Reconsidered",
+      "container_title": "",
+      "publisher": "University of Illinois Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "9780252077012",
+      "url": "https://www.press.uillinois.edu/books/?id=p076948",
+      "source_type": "Scholarly book",
+      "category": "interpretive dialogue",
+      "period": "twentieth and early twenty-first centuries",
+      "geography": "United States",
+      "method_corpus": "Historiography of African American history and the profession",
+      "key_claim": "Black historical scholarship has its own institutions, public purposes, and changing professional position.",
+      "relevance": "Prevents race from appearing only as a late cultural-turn topic.",
+      "dialogue": "Invites institution- and venue-aware analysis of Black historical scholarship.",
+      "tags": [
+        "African American history",
+        "race",
+        "profession"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://www.press.uillinois.edu/books/?id=p076948",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Pero G. Dagbovie (2010). African American History Reconsidered. University of Illinois Press. https://www.press.uillinois.edu/books/?id=p076948",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-057",
+      "year": 2010,
+      "authors": [
+        "Richard White"
+      ],
+      "title": "What Is Spatial History?",
+      "container_title": "Spatial History Project, Stanford University",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "",
+      "isbn": "",
+      "url": "https://web.stanford.edu/group/spatialhistory/static/publications/pub29.html",
+      "source_type": "Working paper",
+      "category": "interpretive dialogue",
+      "period": "twenty-first-century digital history",
+      "geography": "General",
+      "method_corpus": "Conceptual essay with spatial-history project examples",
+      "key_claim": "Spatial history is collaborative, visual, iterative, and concerned with relational space rather than static maps.",
+      "relevance": "Clarifies what a genuine spatial turn looks like in method and output.",
+      "dialogue": "Valuable operational distinctions, with working-paper status stated.",
+      "tags": [
+        "spatial history",
+        "visualization",
+        "digital history"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://web.stanford.edu/group/spatialhistory/static/publications/pub29.html",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Richard White (2010). What Is Spatial History?. Spatial History Project, Stanford University. https://web.stanford.edu/group/spatialhistory/static/publications/pub29.html",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-020",
+      "year": 2013,
+      "authors": [
+        "PATRICK MANNING"
+      ],
+      "title": "AFRICAN AND WORLD HISTORIOGRAPHY",
+      "container_title": "The Journal of African History",
+      "publisher": "Cambridge University Press (CUP)",
+      "volume": "54",
+      "issue": "3",
+      "pages": "319-330",
+      "doi": "10.1017/s0021853713000753",
+      "isbn": "",
+      "url": "https://doi.org/10.1017/S0021853713000753",
+      "source_type": "Regional/global review",
+      "category": "interpretive dialogue",
+      "period": "African history across multiple linguistic/institutional settings",
+      "geography": "African history across multiple linguistic/institutional settings",
+      "method_corpus": "Review essay",
+      "key_claim": "Professional African history from 1950s; changing relation to world history from 1990s",
+      "relevance": "Separate language, institution, region, and scale",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "Africa"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/S0021853713000753",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fs0021853713000753",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "PATRICK MANNING (2013). AFRICAN AND WORLD HISTORIOGRAPHY. The Journal of African History, 54(3), 319-330. https://doi.org/10.1017/s0021853713000753",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-031",
+      "year": 2013,
+      "authors": [
+        "Tim Hitchcock"
+      ],
+      "title": "Confronting the Digital",
+      "container_title": "Cultural and Social History",
+      "publisher": "Informa UK Limited",
+      "volume": "10",
+      "issue": "1",
+      "pages": "9-23",
+      "doi": "10.2752/147800413x13515292098070",
+      "isbn": "",
+      "url": "https://doi.org/10.2752/147800413X13515292098070",
+      "source_type": "Digital-method critique",
+      "category": "interpretive dialogue",
+      "period": "Academic historical research and writing",
+      "geography": "Academic historical research and writing",
+      "method_corpus": "Methodological essay",
+      "key_claim": "Search systems, OCR, and digitized print reshape ordinary research",
+      "relevance": "Treat visibility/searchability as a confound",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.2752/147800413X13515292098070",
+        "metadata_record": "https://api.crossref.org/works/10.2752%2F147800413x13515292098070",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Tim Hitchcock (2013). Confronting the Digital. Cultural and Social History, 10(1), 9-23. https://doi.org/10.2752/147800413x13515292098070",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-032",
+      "year": 2013,
+      "authors": [
+        "Ian Milligan"
+      ],
+      "title": "Illusionary Order: Online Databases, Optical Character Recognition, and Canadian History, 1997–2010",
+      "container_title": "Canadian Historical Review",
+      "publisher": "University of Toronto Press Inc. (UTPress)",
+      "volume": "94",
+      "issue": "4",
+      "pages": "540-569",
+      "doi": "10.3138/chr.694",
+      "isbn": "",
+      "url": "https://doi.org/10.3138/chr.694",
+      "source_type": "Empirical digital-method case study",
+      "category": "interpretive dialogue",
+      "period": "Canadian history, 1997–2010",
+      "geography": "Canadian history, 1997–2010",
+      "method_corpus": "Database/OCR case study",
+      "key_claim": "Database availability and OCR shape questions and findings",
+      "relevance": "Audit machine-readable coverage and source entry",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.3138/chr.694",
+        "metadata_record": "https://api.crossref.org/works/10.3138%2Fchr.694",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Ian Milligan (2013). Illusionary Order: Online Databases, Optical Character Recognition, and Canadian History, 1997–2010. Canadian Historical Review, 94(4), 540-569. https://doi.org/10.3138/chr.694",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-033",
+      "year": 2016,
+      "authors": [
+        "Lara Putnam"
+      ],
+      "title": "The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast",
+      "container_title": "The American Historical Review",
+      "publisher": "Oxford University Press (OUP)",
+      "volume": "121",
+      "issue": "2",
+      "pages": "377-402",
+      "doi": "10.1093/ahr/121.2.377",
+      "isbn": "",
+      "url": "https://doi.org/10.1093/ahr/121.2.377",
+      "source_type": "Digital/transnational retrospective",
+      "category": "interpretive dialogue",
+      "period": "Transnational historical practice",
+      "geography": "Transnational historical practice",
+      "method_corpus": "Methodological/historiographical essay",
+      "key_claim": "Digital search and transnational history are mutually enabling and shadowed by exclusions",
+      "relevance": "Test infrastructure as rival explanation for topic change",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "transnational"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/ahr/121.2.377",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Fahr%2F121.2.377",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Lara Putnam (2016). The Transnational and the Text-Searchable: Digitized Sources and the Shadows They Cast. The American Historical Review, 121(2), 377-402. https://doi.org/10.1093/ahr/121.2.377",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-034",
+      "year": 2020,
+      "authors": [
+        "C. ANNEMIEKE ROMEIN",
+        "MAX KEMMAN",
+        "JULIE M. BIRKHOLZ",
+        "JAMES BAKER",
+        "MICHEL DE GRUIJTER",
+        "ALBERT MEROÑO‐PEÑUELA",
+        "THORSTEN RIES",
+        "RUBEN ROS",
+        "STEFANIA SCAGLIOLA"
+      ],
+      "title": "State of the Field: Digital History",
+      "container_title": "History",
+      "publisher": "Wiley",
+      "volume": "105",
+      "issue": "365",
+      "pages": "291-312",
+      "doi": "10.1111/1468-229x.12969",
+      "isbn": "",
+      "url": "https://doi.org/10.1111/1468-229X.12969",
+      "source_type": "Field survey",
+      "category": "interpretive dialogue",
+      "period": "Digital history",
+      "geography": "Digital history",
+      "method_corpus": "State-of-field review",
+      "key_claim": "Digitization expands; active computation remains minority and field boundaries unsettled",
+      "relevance": "Separate source use, identity, and computational method",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "digital history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1111/1468-229X.12969",
+        "metadata_record": "https://api.crossref.org/works/10.1111%2F1468-229x.12969",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "C. ANNEMIEKE ROMEIN, MAX KEMMAN, JULIE M. BIRKHOLZ, JAMES BAKER, MICHEL DE GRUIJTER, ALBERT MEROÑO‐PEÑUELA, THORSTEN RIES, RUBEN ROS, STEFANIA SCAGLIOLA (2020). State of the Field: Digital History. History, 105(365), 291-312. https://doi.org/10.1111/1468-229x.12969",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-035",
+      "year": 2024,
+      "authors": [
+        "Gerben Zaagsma"
+      ],
+      "title": "Facing the History Machine: Toward Histories of Digital History",
+      "container_title": "History of Humanities",
+      "publisher": "University of Chicago Press",
+      "volume": "9",
+      "issue": "2",
+      "pages": "451-491",
+      "doi": "10.1086/731827",
+      "isbn": "",
+      "url": "https://doi.org/10.1086/731827",
+      "source_type": "Long digital genealogy",
+      "category": "interpretive dialogue",
+      "period": "Histories of digital history",
+      "geography": "Histories of digital history",
+      "method_corpus": "Historiographical essay",
+      "key_claim": "Machine-assisted historical work predates recent digital-humanities labels",
+      "relevance": "Avoid a single digital-turn start date",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "digital history"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1086/731827",
+        "metadata_record": "https://api.crossref.org/works/10.1086%2F731827",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Gerben Zaagsma (2024). Facing the History Machine: Toward Histories of Digital History. History of Humanities, 9(2), 451-491. https://doi.org/10.1086/731827",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-080",
+      "year": 2024,
+      "authors": [
+        "Marek Tamm",
+        "Peter Burke"
+      ],
+      "title": "Rethinking Global History",
+      "container_title": "",
+      "publisher": "Cambridge University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1017/9781009444002",
+      "isbn": "9781009444002; 9781009444040; 9781009444026",
+      "url": "https://doi.org/10.1017/9781009444002",
+      "source_type": "Edited scholarly book",
+      "category": "interpretive dialogue",
+      "period": "twenty-first-century reassessment",
+      "geography": "Global",
+      "method_corpus": "Multi-author reassessment of concepts, scales, and critiques",
+      "key_claim": "Global history is plural, institutionally situated, and being rethought after rapid expansion.",
+      "relevance": "Strong recent reassessment without triumphalism.",
+      "dialogue": "Test whether growth diversifies sources/geography or relabels Anglophone work.",
+      "tags": [
+        "global history",
+        "transnational history",
+        "reassessment"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/9781009444002",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2F9781009444002",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Marek Tamm, Peter Burke (2024). Rethinking Global History. Cambridge University Press. https://doi.org/10.1017/9781009444002",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-061",
+      "year": 2026,
+      "authors": [
+        "Javier Cha"
+      ],
+      "title": "Fine-Tuning the Historian's Macroscope: Data Reuse and Medieval Korean Biographical Records in Neo4j",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "11",
+      "issue": "1",
+      "pages": "",
+      "doi": "10.22148/jca.1027",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/jca.1027",
+      "source_type": "Scholarly article",
+      "category": "interpretive dialogue",
+      "period": "digital-historical methods",
+      "geography": "General",
+      "method_corpus": "Pedagogical and methodological inquiry into macroscale history",
+      "key_claim": "Macroscopic analysis demands movement between computation, historical interpretation, and scale awareness.",
+      "relevance": "Frames aggregate maps as prompts for explanation rather than substitutes.",
+      "dialogue": "Supports drill-down and close-reading validation.",
+      "tags": [
+        "JCA",
+        "macroscope",
+        "digital history",
+        "scale"
+      ],
+      "must_cite": false,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/jca.1027",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2Fjca.1027",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Javier Cha (2026). Fine-Tuning the Historian's Macroscope: Data Reuse and Medieval Korean Biographical Records in Neo4j. Journal of Cultural Analytics, 11(1). https://doi.org/10.22148/jca.1027",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-056",
+      "year": 2007,
+      "authors": [
+        "Ian N. Gregory",
+        "Paul S. Ell"
+      ],
+      "title": "Historical GIS",
+      "container_title": "",
+      "publisher": "Cambridge University Press",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.1017/cbo9780511493645",
+      "isbn": "9780521671705",
+      "url": "https://doi.org/10.1017/CBO9780511493645",
+      "source_type": "Scholarly book",
+      "category": "methods precedent",
+      "period": "historical datasets; published 2007",
+      "geography": "General and historical GIS",
+      "method_corpus": "GIS data models, spatial analysis, visualization, and case studies",
+      "key_claim": "Historical GIS requires explicit treatment of uncertainty, changing boundaries, and source structure.",
+      "relevance": "Method precedent for geographic mapping and uncertainty-aware claims.",
+      "dialogue": "Sets a higher bar than geocoding affiliations or counting place names.",
+      "tags": [
+        "GIS",
+        "spatial history",
+        "geography",
+        "uncertainty"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/CBO9780511493645",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fcbo9780511493645",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Ian N. Gregory, Paul S. Ell (2007). Historical GIS. Cambridge University Press. https://doi.org/10.1017/cbo9780511493645",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-077",
+      "year": 2013,
+      "authors": [
+        "Justin Grimmer",
+        "Brandon M. Stewart"
+      ],
+      "title": "Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts",
+      "container_title": "Political Analysis",
+      "publisher": "Cambridge University Press (CUP)",
+      "volume": "21",
+      "issue": "3",
+      "pages": "267-297",
+      "doi": "10.1093/pan/mps028",
+      "isbn": "",
+      "url": "https://doi.org/10.1093/pan/mps028",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "contemporary methods",
+      "geography": "General and political science",
+      "method_corpus": "Review and validation framework",
+      "key_claim": "No text method is universally best; validation must match a substantive target and design.",
+      "relevance": "Foundational measurement warning for every automated label.",
+      "dialogue": "Supports validation samples, uncertainty, and task-specific evaluation.",
+      "tags": [
+        "text as data",
+        "validation",
+        "political language"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1093/pan/mps028",
+        "metadata_record": "https://api.crossref.org/works/10.1093%2Fpan%2Fmps028",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Justin Grimmer, Brandon M. Stewart (2013). Text as Data: The Promise and Pitfalls of Automatic Content Analysis Methods for Political Texts. Political Analysis, 21(3), 267-297. https://doi.org/10.1093/pan/mps028",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-076",
+      "year": 2014,
+      "authors": [
+        "Margaret E. Roberts",
+        "Brandon M. Stewart",
+        "Dustin Tingley",
+        "Christopher Lucas",
+        "Jetson Leder‐Luis",
+        "Shana Kushner Gadarian",
+        "Bethany Albertson",
+        "David G. Rand"
+      ],
+      "title": "Structural Topic Models for Open‐Ended Survey Responses",
+      "container_title": "American Journal of Political Science",
+      "publisher": "Wiley",
+      "volume": "58",
+      "issue": "4",
+      "pages": "1064-1082",
+      "doi": "10.1111/ajps.12103",
+      "isbn": "",
+      "url": "https://doi.org/10.1111/ajps.12103",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "contemporary methods",
+      "geography": "General",
+      "method_corpus": "Structural topic model linking metadata to prevalence and content",
+      "key_claim": "Document covariates can enter topic discovery and uncertainty estimation.",
+      "relevance": "Precedent for estimating period, geography, venue, and subdiscipline associations.",
+      "dialogue": "Use with held-out interpretation and model robustness.",
+      "tags": [
+        "structural topic model",
+        "metadata",
+        "inference"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1111/ajps.12103",
+        "metadata_record": "https://api.crossref.org/works/10.1111%2Fajps.12103",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Margaret E. Roberts, Brandon M. Stewart, Dustin Tingley, Christopher Lucas, Jetson Leder‐Luis, Shana Kushner Gadarian, Bethany Albertson, David G. Rand (2014). Structural Topic Models for Open‐Ended Survey Responses. American Journal of Political Science, 58(4), 1064-1082. https://doi.org/10.1111/ajps.12103",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-071",
+      "year": 2015,
+      "authors": [
+        "Alix Rule",
+        "Jean-Philippe Cointet",
+        "Peter S. Bearman"
+      ],
+      "title": "Lexical shifts, substantive changes, and continuity in State of the Union discourse, 1790–2014",
+      "container_title": "Proceedings of the National Academy of Sciences",
+      "publisher": "National Academy of Sciences",
+      "volume": "112",
+      "issue": "35",
+      "pages": "10837-10844",
+      "doi": "10.1073/pnas.1512221112",
+      "isbn": "",
+      "url": "https://doi.org/10.1073/pnas.1512221112",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "1790–2014",
+      "geography": "United States",
+      "method_corpus": "228 State of the Union addresses; relational topic modeling",
+      "key_claim": "Lexical reorganization reveals discursive regimes and continuity; strongest break near 1917.",
+      "relevance": "Long-run political-language precedent spanning our comparison.",
+      "dialogue": "Lexical, conceptual, and document-composition change must be separated.",
+      "tags": [
+        "political language",
+        "semantic change",
+        "topic modeling"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1073/pnas.1512221112",
+        "metadata_record": "https://api.crossref.org/works/10.1073%2Fpnas.1512221112",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Alix Rule, Jean-Philippe Cointet, Peter S. Bearman (2015). Lexical shifts, substantive changes, and continuity in State of the Union discourse, 1790–2014. Proceedings of the National Academy of Sciences, 112(35), 10837-10844. https://doi.org/10.1073/pnas.1512221112",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-074",
+      "year": 2016,
+      "authors": [
+        "William L. Hamilton",
+        "Jure Leskovec",
+        "Dan Jurafsky"
+      ],
+      "title": "Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change",
+      "container_title": "Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+      "publisher": "Association for Computational Linguistics",
+      "volume": "",
+      "issue": "",
+      "pages": "1489-1501",
+      "doi": "10.18653/v1/p16-1141",
+      "isbn": "",
+      "url": "https://aclanthology.org/P16-1141/",
+      "source_type": "Conference paper",
+      "category": "methods precedent",
+      "period": "nineteenth and twentieth centuries",
+      "geography": "English-language corpora",
+      "method_corpus": "Aligned diachronic embeddings",
+      "key_claim": "Semantic change follows detectable frequency- and polysemy-related regularities.",
+      "relevance": "Core technical precedent for vocabulary and concept change.",
+      "dialogue": "Alignment and corpus-composition robustness are mandatory.",
+      "tags": [
+        "semantic change",
+        "embeddings",
+        "NLP"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://aclanthology.org/P16-1141/",
+        "metadata_record": "https://api.crossref.org/works/10.18653%2Fv1%2Fp16-1141",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "William L. Hamilton, Jure Leskovec, Dan Jurafsky (2016). Diachronic Word Embeddings Reveal Statistical Laws of Semantic Change. Proceedings of the 54th Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers), 1489-1501. https://doi.org/10.18653/v1/p16-1141",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-062",
+      "year": 2016,
+      "authors": [
+        "Sarah Allison"
+      ],
+      "title": "Other people's data: humanities edition",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "1",
+      "issue": "1",
+      "pages": "",
+      "doi": "10.22148/001c.11822",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/001c.11822",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "digital humanities",
+      "geography": "General",
+      "method_corpus": "Critical essay on reuse of humanities data",
+      "key_claim": "Reused data inherit collection decisions, ontologies, and missingness that must be documented.",
+      "relevance": "Direct support for treating OpenAlex as a contingent research object.",
+      "dialogue": "Reinforces snapshot, schema, and coverage reporting.",
+      "tags": [
+        "JCA",
+        "data reuse",
+        "metadata",
+        "provenance"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/001c.11822",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2F001c.11822",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Sarah Allison (2016). Other people's data: humanities edition. Journal of Cultural Analytics, 1(1). https://doi.org/10.22148/001c.11822",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-078",
+      "year": 2018,
+      "authors": [
+        "Matthew J. Denny",
+        "Arthur Spirling"
+      ],
+      "title": "Text Preprocessing For Unsupervised Learning: Why It Matters, When It Misleads, And What To Do About It",
+      "container_title": "Political Analysis",
+      "publisher": "Cambridge University Press (CUP)",
+      "volume": "26",
+      "issue": "2",
+      "pages": "168-189",
+      "doi": "10.1017/pan.2017.44",
+      "isbn": "",
+      "url": "https://doi.org/10.1017/pan.2017.44",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "contemporary methods",
+      "geography": "General",
+      "method_corpus": "Simulation and empirical preprocessing tests",
+      "key_claim": "Preprocessing materially alters inferred topics and should be reported and tested.",
+      "relevance": "Requires a preprocessing sensitivity analysis for long-run texts.",
+      "dialogue": "Especially important where OCR and vocabulary vary by period.",
+      "tags": [
+        "preprocessing",
+        "topic modeling",
+        "robustness"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/pan.2017.44",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fpan.2017.44",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Matthew J. Denny, Arthur Spirling (2018). Text Preprocessing For Unsupervised Learning: Why It Matters, When It Misleads, And What To Do About It. Political Analysis, 26(2), 168-189. https://doi.org/10.1017/pan.2017.44",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-072",
+      "year": 2018,
+      "authors": [
+        "Nikhil Garg",
+        "Londa Schiebinger",
+        "Dan Jurafsky",
+        "James Zou"
+      ],
+      "title": "Word embeddings quantify 100 years of gender and ethnic stereotypes",
+      "container_title": "Proceedings of the National Academy of Sciences",
+      "publisher": "National Academy of Sciences",
+      "volume": "115",
+      "issue": "16",
+      "pages": "",
+      "doi": "10.1073/pnas.1720347115",
+      "isbn": "",
+      "url": "https://doi.org/10.1073/pnas.1720347115",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "twentieth century",
+      "geography": "United States and English-language corpora",
+      "method_corpus": "Century-scale embeddings validated against census and surveys",
+      "key_claim": "Embedding associations track stereotypes and correlate with external measures.",
+      "relevance": "External-validation model for gender, race, identity, and ideology language.",
+      "dialogue": "Adopt validation logic without claiming association equals author belief.",
+      "tags": [
+        "embeddings",
+        "gender",
+        "race",
+        "semantic change"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1073/pnas.1720347115",
+        "metadata_record": "https://api.crossref.org/works/10.1073%2Fpnas.1720347115",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Nikhil Garg, Londa Schiebinger, Dan Jurafsky, James Zou (2018). Word embeddings quantify 100 years of gender and ethnic stereotypes. Proceedings of the National Academy of Sciences, 115(16). https://doi.org/10.1073/pnas.1720347115",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-079",
+      "year": 2018,
+      "authors": [
+        "Myron P. Gutmann",
+        "Emily Klancher Merchant",
+        "Evan Roberts"
+      ],
+      "title": "“Big Data” in Economic History",
+      "container_title": "The Journal of Economic History",
+      "publisher": "Cambridge University Press (CUP)",
+      "volume": "78",
+      "issue": "1",
+      "pages": "268-299",
+      "doi": "10.1017/s0022050718000177",
+      "isbn": "",
+      "url": "https://doi.org/10.1017/S0022050718000177",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "historical big data",
+      "geography": "Economic and social history",
+      "method_corpus": "Review of large linked datasets and record linkage",
+      "key_claim": "Scale creates new questions but also linkage error, selection, privacy, and representativeness risks.",
+      "relevance": "Historian-facing framework for scale and missingness.",
+      "dialogue": "Supports data-generating-process and error audits.",
+      "tags": [
+        "big data",
+        "economic history",
+        "record linkage"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1017/S0022050718000177",
+        "metadata_record": "https://api.crossref.org/works/10.1017%2Fs0022050718000177",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Myron P. Gutmann, Emily Klancher Merchant, Evan Roberts (2018). “Big Data” in Economic History. The Journal of Economic History, 78(1), 268-299. https://doi.org/10.1017/s0022050718000177",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-073",
+      "year": 2019,
+      "authors": [
+        "Austin C. Kozlowski",
+        "Matt Taddy",
+        "James A. Evans"
+      ],
+      "title": "The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings",
+      "container_title": "American Sociological Review",
+      "publisher": "SAGE Publications",
+      "volume": "84",
+      "issue": "5",
+      "pages": "905-949",
+      "doi": "10.1177/0003122419877135",
+      "isbn": "",
+      "url": "https://doi.org/10.1177/0003122419877135",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "twentieth-century cultural corpora",
+      "geography": "United States and English language",
+      "method_corpus": "Embedding cultural dimensions and cross-corpus validation",
+      "key_claim": "Relational semantic dimensions measure situated meanings, shaped by corpus and anchors.",
+      "relevance": "Method precedent for ideology, identity, democracy, and freedom axes.",
+      "dialogue": "Requires historical anchors and sensitivity tests, not a fixed present scale.",
+      "tags": [
+        "embeddings",
+        "culture",
+        "class",
+        "semantic axes"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1177/0003122419877135",
+        "metadata_record": "https://api.crossref.org/works/10.1177%2F0003122419877135",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Austin C. Kozlowski, Matt Taddy, James A. Evans (2019). The Geometry of Culture: Analyzing the Meanings of Class through Word Embeddings. American Sociological Review, 84(5), 905-949. https://doi.org/10.1177/0003122419877135",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-075",
+      "year": 2020,
+      "authors": [
+        "Melvin Wevers",
+        "Marijn Koolen"
+      ],
+      "title": "Digital begriffsgeschichte: Tracing semantic change using word embeddings",
+      "container_title": "Historical Methods: A Journal of Quantitative and Interdisciplinary History",
+      "publisher": "Informa UK Limited",
+      "volume": "53",
+      "issue": "4",
+      "pages": "226-243",
+      "doi": "10.1080/01615440.2020.1760157",
+      "isbn": "",
+      "url": "https://doi.org/10.1080/01615440.2020.1760157",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "historical newspapers",
+      "geography": "Netherlands and Europe",
+      "method_corpus": "Historical concept analysis with diachronic embeddings",
+      "key_claim": "Computational semantic change supports conceptual history when paired with source criticism.",
+      "relevance": "Direct bridge from NLP to historians' study of political concepts.",
+      "dialogue": "Supports mixed quantitative and qualitative validation.",
+      "tags": [
+        "conceptual history",
+        "semantic change",
+        "embeddings"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1080/01615440.2020.1760157",
+        "metadata_record": "https://api.crossref.org/works/10.1080%2F01615440.2020.1760157",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Melvin Wevers, Marijn Koolen (2020). Digital begriffsgeschichte: Tracing semantic change using word embeddings. Historical Methods: A Journal of Quantitative and Interdisciplinary History, 53(4), 226-243. https://doi.org/10.1080/01615440.2020.1760157",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-059",
+      "year": 2021,
+      "authors": [
+        "Sandeep Soni",
+        "Lauren F. Klein",
+        "Jacob Eisenstein"
+      ],
+      "title": "Abolitionist Networks: Modeling Language Change in Nineteenth-Century Activist Newspapers",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "6",
+      "issue": "1",
+      "pages": "",
+      "doi": "10.22148/001c.18841",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/001c.18841",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "nineteenth century",
+      "geography": "United States",
+      "method_corpus": "Abolitionist newspapers; source-conditioned embeddings and networks",
+      "key_claim": "Semantic innovation and diffusion vary across newspapers and social positions; corpus structure matters.",
+      "relevance": "Direct method precedent for contextualizing freedom, gender, identity, and political vocabulary.",
+      "dialogue": "Supports source-conditioned embeddings rather than one aggregate discourse.",
+      "tags": [
+        "JCA",
+        "semantic change",
+        "political language",
+        "embeddings"
+      ],
+      "must_cite": true,
+      "closest_precedent": true,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/001c.18841",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2F001c.18841",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Sandeep Soni, Lauren F. Klein, Jacob Eisenstein (2021). Abolitionist Networks: Modeling Language Change in Nineteenth-Century Activist Newspapers. Journal of Cultural Analytics, 6(1). https://doi.org/10.22148/001c.18841",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-063",
+      "year": 2021,
+      "authors": [
+        "Ted Underwood",
+        "Richard Jean So"
+      ],
+      "title": "Can We Map Culture?",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "6",
+      "issue": "3",
+      "pages": "",
+      "doi": "10.22148/001c.24911",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/001c.24911",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "nineteenth and twentieth centuries",
+      "geography": "Cultural datasets",
+      "method_corpus": "Critical assessment of computational cultural mapping",
+      "key_claim": "Cultural maps are model-dependent reductions whose boundaries and evaluation require argument.",
+      "relevance": "Disciplines the paper's map metaphor and novelty language.",
+      "dialogue": "A map is an instrument and viewpoint, not exhaustive territory.",
+      "tags": [
+        "JCA",
+        "mapping",
+        "cultural analytics",
+        "representation"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/001c.24911",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2F001c.24911",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Ted Underwood, Richard Jean So (2021). Can We Map Culture?. Journal of Cultural Analytics, 6(3). https://doi.org/10.22148/001c.24911",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-041",
+      "year": 2022,
+      "authors": [
+        "Jason Priem",
+        "Heather Piwowar",
+        "Richard Orr"
+      ],
+      "title": "OpenAlex",
+      "container_title": "",
+      "publisher": "Zenodo",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.5281/zenodo.6936226",
+      "isbn": "",
+      "url": "https://doi.org/10.5281/zenodo.6936226",
+      "source_type": "Database/platform paper",
+      "category": "methods precedent",
+      "period": "Open scholarly metadata",
+      "geography": "Open scholarly metadata",
+      "method_corpus": "Platform description",
+      "key_claim": "Open scholarly graph and entity design",
+      "relevance": "Cite provenance; freeze snapshot, schema, taxonomy, and query",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "OpenAlex"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.5281/zenodo.6936226",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Jason Priem, Heather Piwowar, Richard Orr (2022). OpenAlex. Zenodo. https://doi.org/10.5281/zenodo.6936226",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-065",
+      "year": 2023,
+      "authors": [
+        "Ramona Roller"
+      ],
+      "title": "Theory-Driven Statistics for the Digital Humanities: Presenting Pitfalls and a Practical Guide by the Example of the Reformation",
+      "container_title": "Journal of Cultural Analytics",
+      "publisher": "CA: Journal of Cultural Analytics",
+      "volume": "7",
+      "issue": "4",
+      "pages": "",
+      "doi": "10.22148/001c.57764",
+      "isbn": "",
+      "url": "https://doi.org/10.22148/001c.57764",
+      "source_type": "Scholarly article",
+      "category": "methods precedent",
+      "period": "digital humanities methods",
+      "geography": "General",
+      "method_corpus": "Statistical workflow centered on theory and inference",
+      "key_claim": "Descriptive patterns become evidence through theory-linked measurement and uncertainty.",
+      "relevance": "Supports effect estimates, uncertainty, and robustness rather than dashboard-only claims.",
+      "dialogue": "Raises the evidentiary standard for long-run trends.",
+      "tags": [
+        "JCA",
+        "statistics",
+        "inference",
+        "theory"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.22148/001c.57764",
+        "metadata_record": "https://api.crossref.org/works/10.22148%2F001c.57764",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Ramona Roller (2023). Theory-Driven Statistics for the Digital Humanities: Presenting Pitfalls and a Practical Guide by the Example of the Reformation. Journal of Cultural Analytics, 7(4). https://doi.org/10.22148/001c.57764",
+      "search_provenance": [
+        "targeted primary-record search 2026-08-25",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-043",
+      "year": 2024,
+      "authors": [
+        "Lucía Céspedes et al."
+      ],
+      "title": "Evaluating the Linguistic Coverage of OpenAlex",
+      "container_title": "arXiv",
+      "publisher": "",
+      "volume": "",
+      "issue": "",
+      "pages": "",
+      "doi": "10.48550/arXiv.2409.10633",
+      "isbn": "",
+      "url": "https://arxiv.org/abs/2409.10633",
+      "source_type": "Database metadata study/preprint",
+      "category": "methods precedent",
+      "period": "OpenAlex language metadata",
+      "geography": "OpenAlex language metadata",
+      "method_corpus": "Cross-database comparison plus manual checks",
+      "key_claim": "Broad language coverage but consequential language errors including English distortion",
+      "relevance": "Validate language; English-language is not institutional geography",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "OpenAlex",
+        "geography"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://arxiv.org/abs/2409.10633",
+        "metadata_record": "",
+        "notes": "linked primary publisher, journal, repository, or library record."
+      },
+      "citation": "Lucía Céspedes et al. (2024). Evaluating the Linguistic Coverage of OpenAlex. arXiv. https://doi.org/10.48550/arXiv.2409.10633",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-044",
+      "year": 2025,
+      "authors": [
+        "Abdelghani Maddi",
+        "Marion Maisonobe",
+        "Chérifa Boukacem-Zeghmouri"
+      ],
+      "title": "Geographical and disciplinary coverage of open access journals: OpenAlex, Scopus, and WoS",
+      "container_title": "PLOS ONE",
+      "publisher": "Public Library of Science (PLoS)",
+      "volume": "20",
+      "issue": "4",
+      "pages": "e0320347",
+      "doi": "10.1371/journal.pone.0320347",
+      "isbn": "",
+      "url": "https://doi.org/10.1371/journal.pone.0320347",
+      "source_type": "Database coverage study",
+      "category": "methods precedent",
+      "period": "Open-access journals in ROAD",
+      "geography": "Open-access journals in ROAD",
+      "method_corpus": "OpenAlex vs Scopus/WoS journal coverage",
+      "key_claim": "OpenAlex is broader but still geographically/disciplinarily uneven",
+      "relevance": "Broader is not unbiased; journal-level is not work-level",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "OpenAlex"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1371/journal.pone.0320347",
+        "metadata_record": "https://api.crossref.org/works/10.1371%2Fjournal.pone.0320347",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Abdelghani Maddi, Marion Maisonobe, Chérifa Boukacem-Zeghmouri (2025). Geographical and disciplinary coverage of open access journals: OpenAlex, Scopus, and WoS. PLOS ONE, 20(4), e0320347. https://doi.org/10.1371/journal.pone.0320347",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-042",
+      "year": 2025,
+      "authors": [
+        "Jack H. Culbert",
+        "Anne Hobert",
+        "Najko Jahn",
+        "Nick Haupka",
+        "Marion Schmidt",
+        "Paul Donner",
+        "Philipp Mayr"
+      ],
+      "title": "Reference coverage analysis of OpenAlex compared to Web of Science and Scopus",
+      "container_title": "Scientometrics",
+      "publisher": "Springer Science and Business Media LLC",
+      "volume": "130",
+      "issue": "4",
+      "pages": "2475-2492",
+      "doi": "10.1007/s11192-025-05293-3",
+      "isbn": "",
+      "url": "https://doi.org/10.1007/s11192-025-05293-3",
+      "source_type": "Database comparison",
+      "category": "methods precedent",
+      "period": "16.8 million shared recent publications, 2015–2022",
+      "geography": "16.8 million shared recent publications, 2015–2022",
+      "method_corpus": "OpenAlex vs Web of Science/Scopus",
+      "key_claim": "Comparable reference coverage but metadata/abstract and journal heterogeneity; full universe differs",
+      "relevance": "Run History-specific older-period coverage audit",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "OpenAlex"
+      ],
+      "must_cite": true,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.1007/s11192-025-05293-3",
+        "metadata_record": "https://api.crossref.org/works/10.1007%2Fs11192-025-05293-3",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Jack H. Culbert, Anne Hobert, Najko Jahn, Nick Haupka, Marion Schmidt, Paul Donner, Philipp Mayr (2025). Reference coverage analysis of OpenAlex compared to Web of Science and Scopus. Scientometrics, 130(4), 2475-2492. https://doi.org/10.1007/s11192-025-05293-3",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    },
+    {
+      "id": "lit-045",
+      "year": 2026,
+      "authors": [
+        "Güleda Doğan",
+        "Ayça Nur Sezen"
+      ],
+      "title": "OpenAlex in focus: Metadata quality of publication type and language fields in an open peer review corpus",
+      "container_title": "Information Research an international electronic journal",
+      "publisher": "University of Borås",
+      "volume": "31",
+      "issue": "iConf",
+      "pages": "1011-1020",
+      "doi": "10.47989/ir31iconf64207",
+      "isbn": "",
+      "url": "https://doi.org/10.47989/ir31iConf64207",
+      "source_type": "Metadata validation study",
+      "category": "methods precedent",
+      "period": "6,640 recent open-peer-review records",
+      "geography": "6,640 recent open-peer-review records",
+      "method_corpus": "Manual comparison of type and language",
+      "key_claim": "Substantial type discrepancies and smaller language mismatches",
+      "relevance": "Validate document type/language on stratified History sample",
+      "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
+      "tags": [
+        "OpenAlex"
+      ],
+      "must_cite": false,
+      "closest_precedent": false,
+      "verification": {
+        "status": "verified",
+        "checked_at": "2026-08-25",
+        "primary_record": "https://doi.org/10.47989/ir31iConf64207",
+        "metadata_record": "https://api.crossref.org/works/10.47989%2Fir31iconf64207",
+        "notes": "Crossref DOI registration + linked primary record."
+      },
+      "citation": "Güleda Doğan, Ayça Nur Sezen (2026). OpenAlex in focus: Metadata quality of publication type and language fields in an open peer review corpus. Information Research an international electronic journal, 31(iConf), 1011-1020. https://doi.org/10.47989/ir31iconf64207",
+      "search_provenance": [
+        "verified seed matrix 2026-08-16",
+        "dedupe: DOI, then ISBN, then normalized title-year"
+      ]
+    }
+  ]
+}

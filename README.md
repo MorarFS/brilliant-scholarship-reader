@@ -8,6 +8,8 @@ Brilliant is a standalone, static tracker with three deliberately separated rese
 
 **Audit mode** keeps every available article record collected from the configured ISSNs that did not pass the history rule. It reports collection totals per venue and known volume/issue labels when metadata supplies them, so borderline work is reviewable rather than silently excluded.
 
+**Canonical literature** is a separate, versioned library of verified books and articles for *The Pulse of History*. It preserves source-level provenance, analytical annotations, must-cite and closest-precedent flags, and browser-local review states/tags without changing the rolling feeds.
+
 Generic history and generic AI papers are excluded. Chronicle uses open scholarly metadata, preserves the evidence behind every match, and links readers to the article. The collector never scrapes publisher full text or signs into a library. The browser Reading Room processes only a direct legal OA PDF that the source allows it to fetch, or a PDF the user attaches locally.
 
 The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the two-calendar-year archive weekly, commits the generated JSON, verifies the project, and republishes the static site.
@@ -26,6 +28,7 @@ The site is designed for GitHub Pages. A GitHub Actions workflow refreshes the t
 - opens the DOI resolver first, or falls back to the specific article landing page when a DOI is absent;
 - labels DOI, Article page, Journal, and legal Open-access copy links separately;
 - publishes the complete monitored-journal list, ISSNs, feed membership, Q1 edition/note, result count, journal link, and last scan time on the site.
+- exposes the canonical secondary-literature library with full-text search, review-layer/period/priority/status filters, source annotations, primary-record links, and private browser-local review tags;
 - lets readers save or unsave papers in a private browser-local reading list, with JSON export/import for backup and transfer.
 - opens a local-first Reading Room with selectable extracted PDF text, original-PDF view, passage highlights, attached notes, paper-level notes, citation copy, and RIS export;
 - allows a legally obtained PDF to be attached to an existing tracked paper and processed only in the browser, without upload or library automation.

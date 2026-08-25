@@ -434,3 +434,73 @@ button, a, select { -webkit-tap-highlight-color: transparent; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; }
 }
+
+/* Canonical secondary-literature library */
+.literature-library { margin: 96px 0 110px; padding-top: 4px; scroll-margin-top: 90px; }
+.literature-hero { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(340px, .8fr); gap: 48px; align-items: end; padding: 44px 48px; border: 1px solid #234b3e; background: var(--green); color: white; }
+.literature-hero .kicker { color: #d6dfd8; }
+.literature-hero h2 { margin: 5px 0 12px; font: 500 clamp(42px, 6vw, 72px)/.95 "Newsreader", Georgia, serif; }
+.literature-hero > div > p:last-child { max-width: 720px; margin: 0; color: #dfe7e1; font: 400 16px/1.65 "Newsreader", Georgia, serif; }
+.literature-hero dl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 0; border: 1px solid rgba(255,255,255,.26); }
+.literature-hero dl div { min-height: 100px; display: grid; align-content: center; padding: 16px; border-right: 1px solid rgba(255,255,255,.2); }
+.literature-hero dl div:last-child { border-right: 0; }
+.literature-hero dt { color: #c7d5cc; font-size: 8px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
+.literature-hero dd { margin: 4px 0 0; font: 500 34px "Newsreader", Georgia, serif; }
+.literature-loading { padding: 42px; border: 1px solid var(--line); border-top: 0; background: white; color: var(--ink-soft); text-align: center; }
+.literature-controls { display: grid; grid-template-columns: minmax(270px, 1.65fr) repeat(5, minmax(130px, 1fr)); border: 1px solid var(--line); border-top: 0; background: white; }
+.literature-controls label { min-width: 0; border-right: 1px solid var(--line); }
+.literature-controls label:last-child { border-right: 0; }
+.literature-controls select, .literature-controls input { width: 100%; height: 54px; padding: 0 13px; border: 0; background: white; color: var(--ink); font: 600 10px "DM Sans", sans-serif; }
+.literature-controls select:focus, .literature-controls input:focus { outline: 2px solid var(--green); outline-offset: -2px; }
+.literature-search { position: relative; }
+.literature-search input { padding-right: 42px; }
+.literature-search button { position: absolute; right: 12px; top: 14px; width: 26px; height: 26px; border: 0; background: var(--paper-deep); color: var(--green); cursor: pointer; }
+.literature-summary { min-height: 62px; display: grid; grid-template-columns: auto 1fr auto; gap: 24px; align-items: center; padding: 12px 16px; border: 1px solid var(--line); border-top: 0; background: #f2f1e9; }
+.literature-summary p { margin: 0; color: var(--ink-soft); font-size: 10px; line-height: 1.45; }
+.literature-summary p:first-child { color: var(--ink); white-space: nowrap; }
+.literature-summary button { padding: 9px 12px; border: 1px solid var(--green); background: transparent; color: var(--green); font-size: 9px; font-weight: 700; cursor: pointer; }
+.literature-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; padding: 30px 0 24px; }
+.literature-card { min-width: 0; display: flex; flex-direction: column; padding: 27px; border: 1px solid var(--line); background: #fffefa; box-shadow: 0 8px 28px rgba(35,49,43,.035); }
+.literature-card__meta { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.literature-card__meta span, .literature-card__meta strong { padding: 4px 6px; background: var(--paper-deep); color: var(--ink-soft); font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.literature-card__meta strong { background: #e0ebe3; color: var(--green); }
+.literature-card__meta strong:last-child:not(:first-child) { background: #f6e4dc; color: #924b36; }
+.literature-card h3 { margin: 18px 0 6px; font: 500 28px/1.08 "Newsreader", Georgia, serif; }
+.literature-authors { margin: 0 0 18px; color: var(--green); font-size: 10px; font-weight: 700; }
+.literature-card details { margin-bottom: 16px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.literature-card summary { padding: 11px 0; color: var(--green); font-size: 9px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; cursor: pointer; }
+.literature-card details dl { margin: 0 0 14px; }
+.literature-card details dl div { margin-bottom: 11px; }
+.literature-card details dt { color: var(--ink-soft); font-size: 8px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; }
+.literature-card details dd { margin: 3px 0 0; color: var(--ink); font: 400 13px/1.55 "Newsreader", Georgia, serif; }
+.literature-citation { margin: 0 0 14px; color: var(--ink-soft); font-size: 10px; line-height: 1.5; }
+.literature-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 17px; }
+.literature-tags span, .literature-tags button { padding: 4px 6px; border: 0; background: #eef0e8; color: #596960; font-size: 8px; }
+.literature-tags button { background: #e6eee8; color: var(--green); cursor: pointer; }
+.literature-review { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; padding-top: 15px; border-top: 1px solid var(--line); }
+.literature-review label { display: grid; gap: 5px; color: var(--ink-soft); font-size: 8px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; }
+.literature-review select, .literature-review input { min-width: 0; height: 35px; padding: 0 9px; border: 1px solid #cbd0c5; background: white; color: var(--ink); font-size: 10px; }
+.literature-card footer { display: flex; justify-content: space-between; gap: 15px; align-items: center; margin-top: 14px; }
+.literature-card footer a { color: var(--green); font-size: 9px; font-weight: 800; }
+.literature-card footer span { color: var(--ink-soft); font-size: 8px; }
+
+@media (max-width: 1050px) {
+  .literature-hero { grid-template-columns: 1fr; }
+  .literature-controls { grid-template-columns: repeat(3, 1fr); }
+  .literature-search { grid-column: span 3; border-bottom: 1px solid var(--line); }
+}
+
+@media (max-width: 700px) {
+  .literature-library { margin-top: 70px; }
+  .literature-hero { padding: 32px 22px; }
+  .literature-hero dl { grid-template-columns: 1fr; }
+  .literature-hero dl div { min-height: 72px; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+  .literature-hero dl div:last-child { border-bottom: 0; }
+  .literature-controls { grid-template-columns: 1fr; }
+  .literature-controls label, .literature-search { grid-column: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .literature-summary { grid-template-columns: 1fr; gap: 8px; padding: 16px; }
+  .literature-summary button { justify-self: start; }
+  .literature-grid { grid-template-columns: 1fr; }
+  .literature-card { padding: 22px 19px; }
+  .literature-review { grid-template-columns: 1fr; }
+}
