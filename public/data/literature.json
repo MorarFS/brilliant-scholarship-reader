@@ -3,7 +3,7 @@
   "generated_at": "2026-08-25T16:30:00+08:00",
   "schema_version": "1.0",
   "record_count": 80,
-  "must_cite_count": 49,
+  "must_cite_count": 30,
   "closest_precedent_count": 17,
   "verification_note": "Every record was checked against its linked primary publisher, journal, repository, DOI-registration, or library record. Annotations are analytical summaries, not quotations.",
   "categories": [
@@ -41,7 +41,7 @@
         "methods",
         "cliometrics"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -125,7 +125,7 @@
       "tags": [
         "social history"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -166,7 +166,7 @@
       "tags": [
         "quantitative"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -210,7 +210,7 @@
         "race",
         "Africa"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -292,7 +292,7 @@
       "tags": [
         "linguistic turn"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -457,7 +457,7 @@
         "professionalization",
         "epistemology"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -498,7 +498,7 @@
       "tags": [
         "memory"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -922,7 +922,7 @@
       "tags": [
         "environmental history"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -1205,7 +1205,7 @@
       "tags": [
         "global history"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -1293,7 +1293,7 @@
         "cliometrics",
         "fixed journal"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": true,
       "verification": {
         "status": "verified",
@@ -1502,7 +1502,7 @@
       "relevance": "Use multiple relational signals; citations not ground truth",
       "dialogue": "Use as a benchmark to test timing, diffusion, recombination, and representativeness.",
       "tags": [],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": true,
       "verification": {
         "status": "verified",
@@ -1888,7 +1888,7 @@
         "United States",
         "quantitative history"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -2431,7 +2431,7 @@
       "tags": [
         "digital history"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -2472,7 +2472,7 @@
       "tags": [
         "digital history"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -2516,7 +2516,7 @@
         "transnational history",
         "reassessment"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -2833,7 +2833,7 @@
         "metadata",
         "provenance"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -2924,7 +2924,7 @@
         "race",
         "semantic change"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -3015,7 +3015,7 @@
         "class",
         "semantic axes"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
@@ -3279,7 +3279,7 @@
         "OpenAlex",
         "geography"
       ],
-      "must_cite": true,
+      "must_cite": false,
       "closest_precedent": false,
       "verification": {
         "status": "verified",
