@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-10-19T13:26:47+00:00",
+  "generatedAt": "2026-10-26T13:12:27+00:00",
   "windowStart": "2025-01-01",
-  "windowEnd": "2026-10-19",
+  "windowEnd": "2026-10-26",
   "journalCount": 20,
   "sjrYear": 2024,
   "sourceCounts": {
-    "OpenAlex": 622,
-    "Crossref": 615
+    "OpenAlex": 621,
+    "Crossref": 623
   },
   "feedCounts": {
-    "digital-humanities": 634,
-    "ai-history": 9
+    "digital-humanities": 641,
+    "ai-history": 10
   },
   "emotionFeedCount": 143,
   "audit": {
-    "candidateCount": 3865,
-    "historyIncludedCount": 643,
+    "candidateCount": 3882,
+    "historyIncludedCount": 651,
     "emotionIncludedCount": 143,
-    "unreviewedCount": 3222,
+    "unreviewedCount": 3231,
     "definition": "Every available article record from each configured ISSN, retained when it does not pass the history rule so it can be inspected instead of silently discarded."
   },
   "journals": [
@@ -35,10 +35,10 @@
       "journalUrl": "https://academic.oup.com/dsh",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-humanities venue",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 142,
+      "resultCount": 144,
       "emotionResultCount": 56,
-      "candidateCount": 300,
-      "unreviewedCount": 158,
+      "candidateCount": 304,
+      "unreviewedCount": 160,
       "knownIssueCount": 9
     },
     {
@@ -73,9 +73,9 @@
       "journalUrl": "https://link.springer.com/journal/42803",
       "qualificationNote": "Field-significant specialist venue; explicitly retained even without an SJR claim",
       "inclusionBasis": "user-curated specialist",
-      "resultCount": 24,
+      "resultCount": 26,
       "emotionResultCount": 5,
-      "candidateCount": 46,
+      "candidateCount": 48,
       "unreviewedCount": 22,
       "knownIssueCount": 5
     },
@@ -94,8 +94,8 @@
       "inclusionBasis": "user-curated specialist",
       "resultCount": 17,
       "emotionResultCount": 4,
-      "candidateCount": 35,
-      "unreviewedCount": 18,
+      "candidateCount": 37,
+      "unreviewedCount": 20,
       "knownIssueCount": 7
     },
     {
@@ -111,10 +111,10 @@
       "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
       "qualificationNote": "User-curated specialist journal launched in 2025; online ISSN and scope verified through Cambridge University Press and the ISSN International Centre",
       "inclusionBasis": "user-curated specialist",
-      "resultCount": 24,
+      "resultCount": 23,
       "emotionResultCount": 8,
       "candidateCount": 46,
-      "unreviewedCount": 22,
+      "unreviewedCount": 23,
       "knownIssueCount": 2
     },
     {
@@ -149,10 +149,10 @@
       "journalUrl": "https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-heritage venue",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 117,
+      "resultCount": 118,
       "emotionResultCount": 7,
-      "candidateCount": 199,
-      "unreviewedCount": 82,
+      "candidateCount": 201,
+      "unreviewedCount": 83,
       "knownIssueCount": 8
     },
     {
@@ -169,10 +169,10 @@
       "journalUrl": "https://dl.acm.org/journal/jocch",
       "qualificationNote": "2024 SJR best quartile Q1; computing-and-heritage specialist",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 126,
+      "resultCount": 128,
       "emotionResultCount": 24,
-      "candidateCount": 182,
-      "unreviewedCount": 56,
+      "candidateCount": 187,
+      "unreviewedCount": 59,
       "knownIssueCount": 7
     },
     {
@@ -227,9 +227,9 @@
       "journalUrl": "https://polipapers.upv.es/index.php/var",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-archaeology venue",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 32,
+      "resultCount": 33,
       "emotionResultCount": 3,
-      "candidateCount": 46,
+      "candidateCount": 47,
       "unreviewedCount": 14,
       "knownIssueCount": 5
     },
@@ -287,9 +287,9 @@
       "journalUrl": "https://academic.oup.com/past",
       "qualificationNote": "2024 SJR best quartile Q1 in History; only dual-evidence computational papers qualify",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 0,
+      "resultCount": 1,
       "emotionResultCount": 0,
-      "candidateCount": 69,
+      "candidateCount": 70,
       "unreviewedCount": 69,
       "knownIssueCount": 6
     },
@@ -415,6 +415,419 @@
     }
   ],
   "papers": [
+    {
+      "id": "doi:10.1007/s42803-026-00146-8",
+      "title": "Filtering Time at a Site of Memory: Temporal Filtering Interfaces for Situated Historic Photo Exploration in Mobile Augmented Reality",
+      "authors": [
+        "Markus Passecker",
+        "Paolo Buono",
+        "Franziska Proksa",
+        "Silvia Miksch",
+        "Wolfgang Aigner"
+      ],
+      "publicationDate": "2026-10-26",
+      "journal": "International Journal of Digital Humanities",
+      "issn": "2524-7832",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1007/s42803-026-00146-8",
+      "doiUrl": "https://doi.org/10.1007/s42803-026-00146-8",
+      "articleUrl": "https://doi.org/10.1007/s42803-026-00146-8",
+      "journalUrl": "https://link.springer.com/journal/42803",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract Places marked by conflict carry layered pasts that are difficult to perceive on site today: structures destroyed and rebuilt, landscapes reshaped by war, traces since erased. Historical photographs document these transformations, and mobile augmented reality (AR) can return them to the locations where they were taken, letting visitors encounter a site’s conflicted history in situ. Such photographic records, however, span many decades: displaying everything at once overwhelms a handheld screen and competes with the visitor’s attention to the place itself. We present a mobile AR system with three temporal filtering interfaces – Map-Based , Temporal Distribution Filter , and a space-time-cube-inspired Temporal Lens – and two initial display conditions ( Full Display , On-Demand Display ). We evaluate the system in a mixed-design field study (N = 14) at the Wiener Prater in Vienna, whose photographic record spans 150 years of everyday park life, including the site’s destruction in 1945 and its reconstruction, combining wearable eye-tracking with workload, clutter, and engagement measures. Our results reveal that display condition impacts free exploration, attention shifted toward the spatial-temporal visualization when tasks demanded temporal comparison, and attention to the physical environment remained low throughout (7.1% of time on average). At sites of memory, this screen absorption is an ethical-design concern rather than a usability metric: keeping visitors present to a place, and not only to its screen, emerges as a central challenge for situated digital remembrance.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 63,
+        "reason": "Matched computational evidence (visual or spatial computing method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "visual or spatial computing method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "visual or spatial computing method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag099",
+      "title": "A new exploration of Zheng Xuan’s Confucian classics studies and thoughts based on machine learning analysis of “Zheng Zhi”",
+      "authors": [
+        "Yixuan Zhang",
+        "Jixin Liu",
+        "Yishuo Wang"
+      ],
+      "publicationDate": "2026-10-22",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag099",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag099",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag099",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract Zheng Zhi (⟪鄭志⟫) records the dialogs between Zheng Xuan (鄭玄) and his disciples and is a key source for late Eastern Han Confucianism. Its surviving fragments are scattered and transmission-biased, and existing scholarship has focused on textual recovery rather than systematic analysis of Zheng Xuan’s intellectual architecture. Two unresolved problems underlie this scholarship: the fragmentation of Zheng Xuan studies into isolated domains, and the widely accepted but potentially reductive characterization of his scholarship as organized around Rites of Zhou (⟪周禮⟫) alone. This study proposes two analytically distinct dimensions for understanding Zheng Xuan’s classical system. The classical dimension identifies a Classic of Poetry (⟪詩經⟫)–Rites of Zhou dual-center structure at the chapter level of Zheng Zhi, challenging the single-center model. The conceptual dimension reveals a deeper binary framework of fa (institution, 法) and ji (history, 迹). Fa—“Duke of Zhou’s (周公) method for achieving great peace”—is the normative system of governance; ji—“Duke of Zhou’s deeds in achieving great peace”—is the empirical record of how institutions were realized across dynasties. On the surface, fa and ji are a distinction among classical texts; at the deeper conceptual level, they constitute an integrated historical philosophy of “varying institutions of successive dynasties.” Within this framework, Zheng Xuan’s “li” (ritual, 禮) undergoes a fundamental transformation from ritual ceremony to institutional system—from political ceremony into historical philosophy. He subsumes military systems, feudal geography, and astronomical numerology under the institution–history binary. These findings are supported by BERTopic topic modeling, co-occurrence networks, and word-embedding semantic networks applied to the entire corpus of 174 entries.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 81,
+        "reason": "Matched computational evidence (AI / ML / LLM method, NLP or text-as-data method) and humanities evidence (historical research or sources) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "NLP or text-as-data method",
+          "historical research or sources"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1007/s42803-026-00143-x",
+      "title": "Semantic enrichment of historical archives: semi-automated topical annotation of Heritage of Nazi Persecution collections",
+      "authors": [
+        "Christopher Brückner",
+        "Nicklas Sindlev Andersen",
+        "Artem Revenko",
+        "Uladzislau Yorsh",
+        "Klára Tauchmanová",
+        "Adam Turčan",
+        "Pavel Pecina"
+      ],
+      "publicationDate": "2026-10-22",
+      "journal": "International Journal of Digital Humanities",
+      "issn": "2524-7832",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1007/s42803-026-00143-x",
+      "doiUrl": "https://doi.org/10.1007/s42803-026-00143-x",
+      "articleUrl": "https://doi.org/10.1007/s42803-026-00143-x",
+      "journalUrl": "https://link.springer.com/journal/42803",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract Natural Language Processing (NLP) has recently gained interest among Holocaust researchers as NLP tools can assist with the exploration and curation of vast document collections. We present a unified NLP framework for the processing of documents related to the Heritage of Nazi Persecution, such as testimonies or diaries. The framework includes newly trained tools achieving state-of-the-art performance in the domain for Topical Text Segmentation, Semantic Tagging of text segments, Named Entity Recognition, Emotive Phrase Extraction, as well as a Machine Translation system and a Data Curation Tool, which provides a Graphical User Interface to manually pipeline and post-process the outputs of the NLP models. Furthermore, we describe the underlying architecture and data ingestion pipelines orchestrating all components on a platform that can serve as a central hub for researchers to assist them with the processing of their documents.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 80,
+        "reason": "Matched computational evidence (NLP or text-as-data method) and humanities evidence (archives or documentary evidence, heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "NLP or text-as-data method",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3858626",
+      "title": "A Provenance-First Framework for Evidence-Linked FAIR Data and Visual Analytics of Chaoshan Drawnwork Heritage",
+      "authors": [
+        "Jiajun Chen",
+        "Ya Zhang",
+        "Hongxin Li"
+      ],
+      "publicationDate": "2026-10-20",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3858626",
+      "doiUrl": "https://doi.org/10.1145/3858626",
+      "articleUrl": "https://doi.org/10.1145/3858626",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Chaoshan drawnwork is a nationally designated intangible cultural heritage of China. It encompasses thread work, lace making, and embroidery techniques with a broader historical background extending to the 1860s; this study focuses on documented development from 1886 to 2000. Historical records are scattered across archives and exist mostly as scanned documents with mixed text and visual plates. A structured openly reusable dataset for computational research is currently missing. This paper asks how restricted, heterogeneous, and OCR degraded heritage archives can be transformed into reusable structured evidence while preserving provenance, uncertainty, and human interpretive authority. We present a two stage framework. First, a FAIR compliant processing pipeline creates citable snippets, canonical entities, confidence scored candidate relations, and Chinese CLIP based visual retrieval links. Second, a web based visual analytics system helps experts inspect evidence chains rather than accept computational outputs as ground truth. The resulting dataset comprises 180 processed documents, 70,863 text snippets, 19,197 visual snippets, and 1,753 evidence backed candidate relations. The evaluation reports provenance, leakage, confidence, and expert verification checks, while leaving full precision, recall, top-k accuracy, and cross-domain validation to future work.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 79,
+        "reason": "Matched computational evidence (OCR / HTR method) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "OCR / HTR method",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "OCR / HTR method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag128",
+      "title": "The Questio de aqua et terra : a computational authorship verification study",
+      "authors": [
+        "Martina Leocata",
+        "Alejandro Moreo",
+        "Fabrizio Sebastiani"
+      ],
+      "publicationDate": "2026-10-20",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag128",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag128",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag128",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract The Questio de aqua et terra is a cosmological treatise traditionally attributed to Dante Alighieri. However, the authenticity of this text is controversial, due to discrepancies with Dante’s established works and to the absence of contemporary references. This study investigates the authenticity of the Questio via computational authorship verification (AV), a class of techniques that combine supervised machine learning and stylometry. We build a family of AV systems and we assemble a corpus of 330 thirteenth- and fourteenth-century Latin texts, which we use to comparatively evaluate the AV systems through leave-one-out cross-validation. Our best-performing system achieves high verification accuracy (F1=0.941) despite the heterogeneity of the corpus in terms of textual genre. The key contribution to the accuracy of this system is shown to come from Distributional Random Oversampling (DRO), a technique specially tailored to text classification, which is here used for the first time in AV. The application of the AV system to the Questio returns a highly confident prediction that Dante is indeed its author. These findings contribute to the debate on the authorship of the Questio and highlight DRO’s potential in the application of AV to cultural heritage.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 70,
+        "reason": "Matched computational evidence (AI / ML / LLM method) and humanities evidence (heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3856988",
+      "title": "Participatory 3D Documentation of Thousands of Balinese Temples: A Preliminary Study",
+      "authors": [
+        "Kadek Ananta Satriadi",
+        "Made Windu Antara Kesiman",
+        "Putu Hendra Suputra",
+        "I Gede Mahendra Darmawiguna",
+        "Tom Chandler",
+        "Bernhard Jenny",
+        "Kadek Teguh Dermawan",
+        "I Made Gede Sunarya",
+        "Joshua Seguin",
+        "Viviane Frings-Hessami",
+        "I Gede Danan Aria Satwika Punia",
+        "I Kadek Dwi Angga Sathya Nanda",
+        "Lanang Surya Darma",
+        "I Putu Bayu Ananta Surya",
+        "Anthony Wilson"
+      ],
+      "publicationDate": "2026-10-20",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3856988",
+      "doiUrl": "https://doi.org/10.1145/3856988",
+      "articleUrl": "https://doi.org/10.1145/3856988",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Documenting cultural heritage sites at scale through community-participatory approaches offers considerable promise. Our work investigates the feasibility of participatory 3D documentation techniques in the context of Balinese temples. Bali is home to thousands of sacred temples whose physical appearance has never been comprehensively documented. Documenting them presents four challenges: (1) the number of temples; (2) variation in temple size, environmental setting, and access; (3) time pressure from ongoing natural and developmental changes; and (4) complications arising from their religious significance. Using an action research methodology, we iteratively designed a participatory 3D documentation approach, realized through the BADHI (Bali Digital Heritage Initiative) digital platform. BADHI platform is an integrated system comprising a mobile application for video collection, a monitoring dashboard, a video-to-3D reconstruction pipeline, and a web viewer. Across three project phases, we carried out cycles of planning, action, and reflection. Phase 1 includes design, implementation, and evaluation of the mobile application for data contribution. Phase 2 includes a limited field deployment of open participatory 3D documentation on our campus in Bali. Phase 3 includes community studies in four villages. This paper presents the reflections and adaptations formulated across these phases, community feedback, and an initial descriptive evaluation of the collected metadata, videos, and 3D models. Overall, we demonstrate that our approach is capable of supporting participatory 3D documentation of Balinese temples. Our key findings emphasize the importance of building relationships with local communities rather than relying solely on open participation, accommodating community preferences regarding data collection, storage, and use, providing proper contributor training, and attending carefully to the semi-automated video-to-3D reconstruction process. Encouraged by these results, we also identify the need for further policy development to enable full-scale deployment.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 62,
+        "reason": "Matched computational evidence (visual or spatial computing method) and humanities evidence (heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "visual or spatial computing method",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "visual or spatial computing method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.4995/var.2027.25826",
+      "title": "Design and cultural heritage in architecture in the age of artificial intelligence: generative models, HBIM, and evidence-based digital reconstruction",
+      "authors": [
+        "Ömer Faruk Pamak",
+        "Cemile Feyzan Şimşek"
+      ],
+      "publicationDate": "2026-10-19",
+      "journal": "Virtual Archaeology Review",
+      "issn": "1989-9947",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.4995/var.2027.25826",
+      "doiUrl": "https://doi.org/10.4995/var.2027.25826",
+      "articleUrl": "https://doi.org/10.4995/var.2027.25826",
+      "journalUrl": "https://polipapers.upv.es/index.php/var",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "18",
+      "issue": "36",
+      "abstract": "This article examines how artificial intelligence (AI), especially generative AI, is reshaping architectural design, historic buildinginformation modelling (HBIM), and digital reconstruction in cultural heritage contexts. It clarifies a central distinction: AI outputs may be visually persuasive, but they become architectural or heritage knowledge only when they can be validated against historical evidence, spatial and material constraints, and conservation requirements. The article brings togethertwo bodies of literature: generative AI in architectural representation, early design, spatial exploration, and studio practice; and AI-supported HBIM, scan-to-HBIM, semantic enrichment, digital twins, and evidence-based reconstruction. Methodologically, this study is a thematic narrativeliterature review and conceptual synthesis, not an empirical case study, systematic review, or bibliometric analysis. The literature is analysed through three lenses: design stage, information form, and epistemic claim. The review shows that generative AI is most visible in conceptual design, visualisation, prompt-based exploration, and rapid production of alternatives. By contrast, AI-supported HBIM research is concerned mainly with point-cloud processing, semantic segmentation, scan-to-HBIM automation, ontology-based enrichment, data quality, and heritage-management workflows. This comparison reveals a persistent gap between thespeed of representation and thereliability of information. In heritage contexts, the gap is critical because HBIM models and reconstructions can guide conservation decisions, interpretation, and public memory.The article concludes that AI-supported heritage modelling should be assessed usingevidence, uncertainty, authenticity, provenance, metadata, paradata, and expert validation, rather thanvisual plausibility alone. Its original contribution is to frame evidence-based generative HBIM as an operational validation workflow. In this workflow, AI-generated elements remain provisional until they are linked to sources, marked by uncertainty, checked againstsurvey data, archival evidence, typological and material knowledge, and expert judgement, and integrated into HBIM as traceable information rather than as anautonomous reconstruction.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (AI / ML / LLM method, digital knowledge infrastructure) and humanities evidence (archives or documentary evidence, heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "digital knowledge infrastructure",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/pastj/gtag026",
+      "title": "The Irrational Computer: Randomness and Unreason in the History of Artificial Intelligence",
+      "authors": [
+        "Benjamin Lindquist"
+      ],
+      "publicationDate": "2026-10-19",
+      "journal": "Past & Present",
+      "issn": "0031-2746",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/pastj/gtag026",
+      "doiUrl": "https://doi.org/10.1093/pastj/gtag026",
+      "articleUrl": "https://doi.org/10.1093/pastj/gtag026",
+      "journalUrl": "https://academic.oup.com/past",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract How did the computer, a machine built for logic and calculation, come to model the messy human mind? To answer that, ‘The Irrational Computer’ breaks with a familiar narrative of rationalization and quantification that stretches from the Enlightenment to the Cold War. Against this story of rational mastery, this project shows how influential British and American engineers came in the middle of the last century to see controlled chaos as essential to machine intelligence. They intentionally injected randomness into otherwise deterministic systems to achieve their desired result: ‘a slight error of reasoning’. Archival records, technical reports, internal memos, and popular coverage reveal the appeal and controversy of randomness in the history of AI. Rooted in theories of invention, modernist art, and wartime mathematics, notions of randomness allowed engineers to mechanize and materialize murky conceptions of creativity, intuition, and the unconscious. The evidence is abundant, but the argument is simple: today’s AI emerged from the conviction that replicating original thought required modelling not only logic but something deeply human, in other words, the irrational.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 80,
+        "reason": "Matched computational evidence (AI / ML / LLM method) and humanities evidence (historical research or sources, archives or documentary evidence) in the AI & LLMs in History feed.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "AI / ML / LLM method",
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
     {
       "id": "doi:10.1145/3845617",
       "title": "Finding The Image: Tracking The Circulation of Early News Pictures in The Press with Contrastive Learning and Historically Informed Augmentations",
@@ -1654,6 +2067,53 @@
           "named emotion or affective state"
         ],
         "emotionQualifies": true,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.daach.2026.e00603",
+      "title": "From spectators to explorers: Reframing visitor experience through Augmented and Virtual Reality in museums",
+      "authors": [
+        "Nuria Recuero Virto",
+        "Nuan Bo"
+      ],
+      "publicationDate": "2026-10-01",
+      "journal": "Digital Applications in Archaeology and Cultural Heritage",
+      "issn": "2212-0548",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/j.daach.2026.e00603",
+      "doiUrl": "https://doi.org/10.1016/j.daach.2026.e00603",
+      "articleUrl": "https://doi.org/10.1016/j.daach.2026.e00603",
+      "journalUrl": "https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 62,
+        "reason": "Matched computational evidence (visual or spatial computing method) and humanities evidence (heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "visual or spatial computing method",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "visual or spatial computing method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
         "qualifies": true,
         "classifier": "rules-v3"
       }
@@ -6766,70 +7226,6 @@
         ],
         "emotionSignals": [],
         "emotionQualifies": false,
-        "qualifies": true,
-        "classifier": "rules-v3"
-      }
-    },
-    {
-      "id": "doi:10.1017/chr.2026.10046",
-      "title": "Collective Memory and Narrative Cohesion: A Computational Study of Palestinian Refugee Oral Histories in Lebanon",
-      "authors": [
-        "Ghadeer Awwad",
-        "Lavinia Dunagan",
-        "David Gamba",
-        "Tamara N. Rayan"
-      ],
-      "publicationDate": "2026-08-12",
-      "journal": "Computational Humanities Research",
-      "issn": "2977-8158",
-      "quartile": "User-curated specialist",
-      "sjrYear": null,
-      "feed": "digital-humanities",
-      "doi": "10.1017/chr.2026.10046",
-      "doiUrl": "https://doi.org/10.1017/chr.2026.10046",
-      "articleUrl": "https://doi.org/10.1017/chr.2026.10046",
-      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
-      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10046",
-      "openAccessPdfUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/14A93A29D31ECA24AFF7FD6976CAE87F/S2977815826100463a.pdf/div-class-title-collective-memory-and-narrative-cohesion-a-computational-study-of-palestinian-refugee-oral-histories-in-lebanon-div.pdf",
-      "openAccessStatus": "gold",
-      "volume": null,
-      "issue": null,
-      "abstract": "This study uses the Palestinian Oral History Archive (POHA) to investigate how Palestinian refugees in Lebanon sustain a cohesive collective memory of the Nakba through shared narratives.Grounded in Halbwachs theory of collective memory, we employ statistical analysis of narrative pairwise similarities, examining the influence of shared gender and geography.We use textual representations and semantic embeddings to represent the interviews.Our analysis yields robust findings.Shared origin emerges as the primary driver of narrative similarity across thematic, factual, and semantic measures.This foundational connection is significantly amplified by a shared residence in Lebanon, with refugees sharing both origin and residence, exhibiting the highest narrative cohesion.Additionally, women's narratives show greater thematic cohesion, particularly in recounting experiences of the British occupation, underscoring the gendered dimensions of memory formation.This research deepens understanding of collective memory in diasporic settings, emphasizing the critical role of oral histories in safeguarding Palestinian identity and resisting erasure. Plain Language SummaryFor over seventy-five years, Palestinian refugees in Lebanon have kept memories of 1948 alive through storytelling.These oral histories describe life before the Nakba, the trauma of displacement, and the hardships of exile.More than personal records, they sustain collective identity across generations.Our research asks: Do refugees from different villages and backgrounds tell similar stories?What shapes those patterns?Drawing on theories of collective memory to form two hypotheses.First, gender would shape storytelling, since men and women experienced the Nakba and exile differently.Second, geography would matter, particularly when refugees from the same village settled in the same Lebanese camp, reinforcing shared narratives through continued proximity.We tested these ideas using the Palestinian Oral History Archive (POHA), one of the largest collections of refugee testimonies, preserving hundreds of Arabic semi-structured interviews documenting displacement, survival, and community life.We analyzed the collection using two complementary computational approaches.First, we examined archival metadata cataloging the people, places, and events mentioned in each interview.Comparing these references reveals whether refugee groups consistently highlight the same historical figures, landmarks, or episodes.Second, we developed a method for comparing narrative themes.We segmented interviews into topic-specific passages (such as Nakba-era violence or camp life), used language models to generate concise summaries, and then converted those summaries into numerical representations called semantic embeddings.This allowed us to measure how similar or different stories are thematically.Together, these methods provide distinct perspectives on collective memory.Our findings strongly confirm that gender structures memory.Women's narratives consistently cluster with other women's accounts, while men's stories show greater similarity to other men's.We also found that geographic continuity (when people from the same village are exiled to the same Lebanese camp) increased narrative similarity.However, shared origin or shared residence alone produced mixed results.This research demonstrates both the endurance of Palestinian collective memory in exile and the potential of computational methods to illuminate patterns in oral history at scale.By combining archival metadata with semantic analysis, we show how digital humanities approaches reveal structure in large collections of testimonies while respecting their complexity and human significance.",
-      "topics": [
-        "Memory, History, Trauma, Identity",
-        "Oral History, Memory, Narrative Analysis",
-        "Memory, Trauma, and Commemoration",
-        "Middle East Politics and Society",
-        "Middle East and Rwanda Conflicts",
-        "Jewish and Middle Eastern Studies"
-      ],
-      "metadataSources": [
-        "Crossref",
-        "OpenAlex"
-      ],
-      "relevance": {
-        "score": 93,
-        "reason": "Matched computational evidence (digital or computational humanities) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
-        "signals": [
-          "Digital & Computational Humanities venue",
-          "digital or computational humanities",
-          "historical research or sources",
-          "archives or documentary evidence",
-          "heritage, memory, or collections",
-          "named emotion or affective state"
-        ],
-        "methodSignals": [
-          "digital or computational humanities"
-        ],
-        "humanitiesSignals": [
-          "historical research or sources",
-          "archives or documentary evidence",
-          "heritage, memory, or collections"
-        ],
-        "emotionSignals": [
-          "named emotion or affective state"
-        ],
-        "emotionQualifies": true,
         "qualifies": true,
         "classifier": "rules-v3"
       }
@@ -39026,7 +39422,7 @@
     },
     {
       "id": "doi:10.1017/chr.2026.10046",
-      "title": "Collective Memory and Narrative Cohesion: A Computational Study of Palestinian Refugee Oral Histories in Lebanon",
+      "title": "Collective memory and narrative cohesion: A computational study of Palestinian refugee oral histories in Lebanon",
       "authors": [
         "Ghadeer Awwad",
         "Lavinia Dunagan",
@@ -39046,9 +39442,9 @@
       "openAccessUrl": "https://doi.org/10.1017/chr.2026.10046",
       "openAccessPdfUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/14A93A29D31ECA24AFF7FD6976CAE87F/S2977815826100463a.pdf/div-class-title-collective-memory-and-narrative-cohesion-a-computational-study-of-palestinian-refugee-oral-histories-in-lebanon-div.pdf",
       "openAccessStatus": "gold",
-      "volume": null,
+      "volume": "2",
       "issue": null,
-      "abstract": "This study uses the Palestinian Oral History Archive (POHA) to investigate how Palestinian refugees in Lebanon sustain a cohesive collective memory of the Nakba through shared narratives.Grounded in Halbwachs theory of collective memory, we employ statistical analysis of narrative pairwise similarities, examining the influence of shared gender and geography.We use textual representations and semantic embeddings to represent the interviews.Our analysis yields robust findings.Shared origin emerges as the primary driver of narrative similarity across thematic, factual, and semantic measures.This foundational connection is significantly amplified by a shared residence in Lebanon, with refugees sharing both origin and residence, exhibiting the highest narrative cohesion.Additionally, women's narratives show greater thematic cohesion, particularly in recounting experiences of the British occupation, underscoring the gendered dimensions of memory formation.This research deepens understanding of collective memory in diasporic settings, emphasizing the critical role of oral histories in safeguarding Palestinian identity and resisting erasure. Plain Language SummaryFor over seventy-five years, Palestinian refugees in Lebanon have kept memories of 1948 alive through storytelling.These oral histories describe life before the Nakba, the trauma of displacement, and the hardships of exile.More than personal records, they sustain collective identity across generations.Our research asks: Do refugees from different villages and backgrounds tell similar stories?What shapes those patterns?Drawing on theories of collective memory to form two hypotheses.First, gender would shape storytelling, since men and women experienced the Nakba and exile differently.Second, geography would matter, particularly when refugees from the same village settled in the same Lebanese camp, reinforcing shared narratives through continued proximity.We tested these ideas using the Palestinian Oral History Archive (POHA), one of the largest collections of refugee testimonies, preserving hundreds of Arabic semi-structured interviews documenting displacement, survival, and community life.We analyzed the collection using two complementary computational approaches.First, we examined archival metadata cataloging the people, places, and events mentioned in each interview.Comparing these references reveals whether refugee groups consistently highlight the same historical figures, landmarks, or episodes.Second, we developed a method for comparing narrative themes.We segmented interviews into topic-specific passages (such as Nakba-era violence or camp life), used language models to generate concise summaries, and then converted those summaries into numerical representations called semantic embeddings.This allowed us to measure how similar or different stories are thematically.Together, these methods provide distinct perspectives on collective memory.Our findings strongly confirm that gender structures memory.Women's narratives consistently cluster with other women's accounts, while men's stories show greater similarity to other men's.We also found that geographic continuity (when people from the same village are exiled to the same Lebanese camp) increased narrative similarity.However, shared origin or shared residence alone produced mixed results.This research demonstrates both the endurance of Palestinian collective memory in exile and the potential of computational methods to illuminate patterns in oral history at scale.By combining archival metadata with semantic analysis, we show how digital humanities approaches reveal structure in large collections of testimonies while respecting their complexity and human significance.",
+      "abstract": "Abstract This study uses the Palestinian Oral History Archive to investigate how Palestinian refugees in Lebanon sustain a cohesive collective memory of the Nakba through shared narratives. Grounded in Halbwachs’ theory of collective memory, we employ statistical analysis of narrative pairwise similarities, examining the influence of shared gender and geography. We use textual representations and semantic embeddings to represent the interviews. Our analysis yields robust findings. Shared origin emerges as the primary driver of narrative similarity across thematic, factual, and semantic measures. This foundational connection is significantly amplified by a shared residence in Lebanon, with refugees sharing both origin and residence, exhibiting the highest narrative cohesion. Additionally, women’s narratives show greater thematic cohesion, particularly in recounting experiences of the British occupation, underscoring the gendered dimensions of memory formation. This research deepens understanding of collective memory in diasporic settings, emphasizing the critical role of oral histories in safeguarding Palestinian identity and resisting erasure.",
       "topics": [
         "Memory, History, Trauma, Identity",
         "Oral History, Memory, Narrative Analysis",
@@ -39062,29 +39458,24 @@
         "OpenAlex"
       ],
       "relevance": {
-        "score": 93,
-        "reason": "Matched computational evidence (digital or computational humanities) and humanities evidence (historical research or sources, archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "score": 55,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
         "signals": [
           "Digital & Computational Humanities venue",
-          "digital or computational humanities",
           "historical research or sources",
           "archives or documentary evidence",
-          "heritage, memory, or collections",
           "named emotion or affective state"
         ],
-        "methodSignals": [
-          "digital or computational humanities"
-        ],
+        "methodSignals": [],
         "humanitiesSignals": [
           "historical research or sources",
-          "archives or documentary evidence",
-          "heritage, memory, or collections"
+          "archives or documentary evidence"
         ],
         "emotionSignals": [
           "named emotion or affective state"
         ],
         "emotionQualifies": true,
-        "qualifies": true,
+        "qualifies": false,
         "classifier": "rules-v3"
       }
     },
@@ -46119,6 +46510,225 @@
   ],
   "auditPapers": [
     {
+      "id": "doi:10.1145/3857913",
+      "title": "Pose Estimation in Indian Sculptures using Hierarchical Assembly of Keypoints",
+      "authors": [
+        "Ankur Srivastava",
+        "Kousik Sarathy Sridharan",
+        "Mohan Raghavan"
+      ],
+      "publicationDate": "2026-10-23",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3857913",
+      "doiUrl": "https://doi.org/10.1145/3857913",
+      "articleUrl": "https://doi.org/10.1145/3857913",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Pose (or posture) of human figures in various art forms, including sculptures, provide significant cues for their interpretation and appreciation of the theme depicted therein. While human pose estimation in various contexts is an established domain in computer vision, there is a lack of work on pose estimation of human figures in art forms, especially of sculptures. Deep models trained for human pose estimation are seen to not work as well on human figure in art forms. The lack of work in this area is possibly symptomatic of a lack of annotated pose datasets of human figures in art forms which is necessary to retrain and fine tune these models. We present here, a new dataset of more than 9000 images of Indian sculptures which have been manually annotated with pose information for sculptures containing humanoid forms. Pose estimation in Indian sculptures presents a unique challenge as several deities are depicted with multiple limbs and heads, markedly different from a typical human anatomy. This makes the current pose estimation models unusable as they presume a standard human anatomy with fixed number of joints (keypoints) and represent person instances as a flat array of keypoints. We propose a new model with hierarchical assembly of keypoints as a tree, rather than a flat array. This reformulation of keypoint assembly retains rich information of keypoint pair connections in the final output and accommodates the possibility of multiple limbs of the same type. We also present a new similarity metric that generalizes the commonly used Object Keypoint Similarity (OKS) metric, and is suitable for ”tree-like” instances. Lastly, we highlight the relevance of proposed method of hierarchical assembly of keypoints for other areas in computer vision beyond pose estimation of sculptures.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 37,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "visual or spatial computing method"
+        ],
+        "methodSignals": [
+          "visual or spatial computing method"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3859376",
+      "title": "Designing a Software Framework for Multimodal Hyperspectral Image Analysis in Painting Conservation",
+      "authors": [
+        "Nina Eckertz",
+        "Jon Y. Hardeberg",
+        "Hilda Deborah",
+        "Irina C.A. Sandu"
+      ],
+      "publicationDate": "2026-10-23",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3859376",
+      "doiUrl": "https://doi.org/10.1145/3859376",
+      "articleUrl": "https://doi.org/10.1145/3859376",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Multimodal imaging, encompassing hyperspectral imaging (HSI), macro X-ray fluorescence (MA-XRF), and RGB photography, is essential for the scientific investigation of paintings. However, analysis workflows remain fragmented across specialised tools, scripting environments, and image editors, complicating cross-modal reasoning and constraining integrated analysis. To address this, this paper introduces a software concept for investigating structured integration strategies for multimodal painting analysis tools. The concept is implemented in SpectraPaint , a prototype web application under active development. The purpose of this work is to establish the foundations for such an environment: an extensible core infrastructure, a conceptual data model adequate to multimodal painting analysis focusing on HSI, and a prototype instantiation that demonstrates both. The architecture follows a microkernel-style design that separates stable infrastructure from extensible analytical components, while the domain-informed conceptual data model maps the data, metadata, and paradata of multimodal painting analysis onto established interoperability standards, e.g., Dublin Core or FAIR practices. The data model is structured around a configurable Extract-Transform-Load (ETL) pipeline that links spectral extraction and classification as reproducible steps. By investigating these elements, the work also identifies and explores central technical requirements for this type of application. The technical decisions regarding the storage and deployment are geared toward a local prototype that enables rapid development; the data model, however, is not bound to this setting and remains valid beyond it, including for a potential cloud-based deployment. The framework is demonstrated through a case study on Edvard Munch's Old Man in Warnemünde , illustrating how multimodal datasets can be integrated into a unified exploratory environment supporting iterative spectral extraction and region-of-interest (ROI)-based comparison. SpectraPaint serves as a reusable architectural foundation for systems bridging computational imaging and interdisciplinary conservation practice.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag141",
+      "title": "AI lexicography and literary texts: applying Gricean maxims to evaluate ChatGPT’s performance on Shakespearean vocabulary",
+      "authors": [
+        "Amal Barik",
+        "Rachid Ed-Dali"
+      ],
+      "publicationDate": "2026-10-22",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag141",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag141",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag141",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract This study evaluates the reliability of ChatGPT-3.5, accessed via its 2024 public web interface, in identifying and contextualizing Shakespearean lexical items within Elizabethan English. Using five lexical items (bread, blood, grace, honest, and wit) as test cases, ChatGPT’s outputs are systematically compared with established reference resources, including Shakespeare’s Words and the Shakespeare Complete Works. The analysis adopts Grice’s cooperative principle—Quality, Quantity, Relevance, and Manner—as an evaluative framework for assessing the accuracy, proportionality, relevance, and clarity of artificial intelligence (AI)-generated responses. A total of eighty responses were independently coded by six raters, yielding perfect inter-rater agreement (Fleiss’ κ = 1.00). Results show that violations of the maxim of Quality—particularly factual inaccuracies, misattribution, and fabricated citations—were dominant across all lexical items, despite variation in semantic domain. While ChatGPT demonstrates fluency and occasional contextual sensitivity, its outputs exhibit instability and limited reliability in historically grounded literary tasks. The findings, specific to ChatGPT-3.5, suggest that this model generation may function as a supplementary tool for exploratory or pedagogical purposes but cannot replace curated lexicographic resources in Shakespearean scholarship; whether these limitations persist in more recent model generations remains an open question for future comparative work.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 45,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1173",
+      "title": "The role of film school collaboration in film industry network formation: an empirical analysis of data from the Australian Film Television and Radio School (AFTRS)",
+      "authors": [
+        "Pete Jones",
+        "Deb Verhoeven",
+        "Alejandro Espinosa-Rada"
+      ],
+      "publicationDate": "2026-10-22",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1173",
+      "doiUrl": "https://doi.org/10.22148/jca.1173",
+      "articleUrl": "https://doi.org/10.22148/jca.1173",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1173",
+      "openAccessPdfUrl": null,
+      "openAccessStatus": "diamond",
+      "volume": "11",
+      "issue": "3",
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag136",
+      "title": "Research on the application scenarios of Chinese memory heritage from the perspective of digital humanities",
+      "authors": [
+        "Da Geng",
+        "Minghao Li"
+      ],
+      "publicationDate": "2026-10-20",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag136",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag136",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag136",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract The value of Chinese memory heritage is mainly reflected in memory storage, information services, ethnic group governance, and cultural innovation, with distinctive uniqueness. With the continuous development of digital technology, digital humanities have been increasingly and extensively applied in the field of memory heritage. Based on the theory of spatial production, the integration of digital humanities and memory heritage has created a production space of “digital memory,” which breaks the traditional forms of exhibition and communication and gives rise to new business formats and interactive experiences. Using fuzzy-set qualitative comparative analysis, this study selected innovative digitalization practices of Chinese memory heritage. Four development paths for the application scenarios of Chinese memory heritage have been summarized from the perspective of digital humanities: digital exhibition, digital performance, digital participation, and digital commodities. It also integrated the development strategies of memory heritage along different digitalization paths, aiming to provide references for the digital development of memory heritage based on various application scenarios. This study provides a theoretical framework and analytical approaches for the digital development of memory heritage, and carries out a critical reflection on the limitations in the digital development of memory heritage through the analytical lens of spatial folding between the digital and humanistic dimensions.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 53,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities"
+        ],
+        "methodSignals": [
+          "digital or computational humanities"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1007/s42803-026-00137-9",
       "title": "LLM benchmarking for HTR on french historical death records",
       "authors": [
@@ -46208,6 +46818,52 @@
         "humanitiesSignals": [
           "historical research or sources",
           "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3859284",
+      "title": "A 3D Point-Cloud Dataset of Prehistoric Pottery Impressions, with Size-Aware Classification and Denoising Baselines",
+      "authors": [
+        "Rio Fukuda",
+        "Masayoshi Aritsugi",
+        "Hiroki Obata",
+        "Israel Mendonça"
+      ],
+      "publicationDate": "2026-10-19",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3859284",
+      "doiUrl": "https://doi.org/10.1145/3859284",
+      "articleUrl": "https://doi.org/10.1145/3859284",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Pottery excavated from Japan's Jōmon-Yayoi period preserves impressions of seeds and insects that offer rare evidence of early agriculture and food storage, yet identifying the species that formed them is labor-intensive and demands scarce expert knowledge. We present a 3D point-cloud dataset of prehistoric pottery impressions, acquired non-destructively by X-ray CT and released as triangulated surface meshes. The dataset pairs clean laboratory replicas with genuine archaeological specimens across five species—four plant seeds and the maize weevil—together with a Noise-Pair subset of archaeological impressions and their expert-cleaned ground truth. Its defining challenges—classes that share shape but differ in archaeologically meaningful size, structured real-world noise, a built-in laboratory-to-archaeological domain gap, and limited, imbalanced samples—make it a demanding benchmark beyond its heritage context. We provide comprehensive baseline results spanning classical shape descriptors, point-cloud classification networks, and denoising methods. Among these, a size-aware baseline that reintroduces absolute bounding-box dimensions raises cross-domain accuracy on the archaeological data from 34.3% to 71.1% (Macro-F1 35.4% to 61.6%), and morphological denoising raises it further to 73.7% (Macro-F1 66.0%). The dataset and code are released publicly at https://github.com/dbms-ku/jomon-yayoi-3d-impressions to support research in computational cultural heritage and 3D point-cloud learning.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
           "heritage, memory, or collections"
         ],
         "emotionSignals": [],
@@ -47829,6 +48485,49 @@
         "methodSignals": [
           "spatial or network method"
         ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.daach.2026.e00604",
+      "title": "A Raster-Based Multi-Sensor Workflow for Risk Mapping and Safety Assessment of Built Heritage",
+      "authors": [
+        "Tiziana D’Angelo",
+        "Marco Limongiello",
+        "Chiara Cammarano",
+        "Luigi Petti"
+      ],
+      "publicationDate": "2026-10-01",
+      "journal": "Digital Applications in Archaeology and Cultural Heritage",
+      "issn": "2212-0548",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/j.daach.2026.e00604",
+      "doiUrl": "https://doi.org/10.1016/j.daach.2026.e00604",
+      "articleUrl": "https://doi.org/10.1016/j.daach.2026.e00604",
+      "journalUrl": "https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
         "humanitiesSignals": [],
         "emotionSignals": [],
         "emotionQualifies": false,
@@ -67038,6 +67737,65 @@
         "humanitiesSignals": [],
         "emotionSignals": [],
         "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1017/chr.2026.10046",
+      "title": "Collective memory and narrative cohesion: A computational study of Palestinian refugee oral histories in Lebanon",
+      "authors": [
+        "Ghadeer Awwad",
+        "Lavinia Dunagan",
+        "David Gamba",
+        "Tamara N. Rayan"
+      ],
+      "publicationDate": "2026-08-12",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10046",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10046",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10046",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": "https://doi.org/10.1017/chr.2026.10046",
+      "openAccessPdfUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/14A93A29D31ECA24AFF7FD6976CAE87F/S2977815826100463a.pdf/div-class-title-collective-memory-and-narrative-cohesion-a-computational-study-of-palestinian-refugee-oral-histories-in-lebanon-div.pdf",
+      "openAccessStatus": "gold",
+      "volume": "2",
+      "issue": null,
+      "abstract": "Abstract This study uses the Palestinian Oral History Archive to investigate how Palestinian refugees in Lebanon sustain a cohesive collective memory of the Nakba through shared narratives. Grounded in Halbwachs’ theory of collective memory, we employ statistical analysis of narrative pairwise similarities, examining the influence of shared gender and geography. We use textual representations and semantic embeddings to represent the interviews. Our analysis yields robust findings. Shared origin emerges as the primary driver of narrative similarity across thematic, factual, and semantic measures. This foundational connection is significantly amplified by a shared residence in Lebanon, with refugees sharing both origin and residence, exhibiting the highest narrative cohesion. Additionally, women’s narratives show greater thematic cohesion, particularly in recounting experiences of the British occupation, underscoring the gendered dimensions of memory formation. This research deepens understanding of collective memory in diasporic settings, emphasizing the critical role of oral histories in safeguarding Palestinian identity and resisting erasure.",
+      "topics": [
+        "Memory, History, Trauma, Identity",
+        "Oral History, Memory, Narrative Analysis",
+        "Memory, Trauma, and Commemoration",
+        "Middle East Politics and Society",
+        "Middle East and Rwanda Conflicts",
+        "Jewish and Middle Eastern Studies"
+      ],
+      "metadataSources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "relevance": {
+        "score": 55,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "named emotion or affective state"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [
+          "named emotion or affective state"
+        ],
+        "emotionQualifies": true,
         "qualifies": false,
         "classifier": "rules-v3"
       }
@@ -93114,7 +93872,7 @@
       "openAccessStatus": "hybrid",
       "volume": "131",
       "issue": "1",
-      "abstract": "Abstract Contrary to the prevailing assumption, the genealogy of nakbadoes not begin in 1948 Palestine but stretches far back into the Ottoman past. This study examines the formation of nakba in Arabic as a concept of disaster and a social practice of catastrophic ideation. In the nineteenth century, intellectual constructions of nakba referred to famed medieval episodes of downfall. Diverse Arab intellectuals and the genre of social science redeployed these centuries-old constructions during the Hamidian massacres of 1894–97 and the Armenian Genocide of 1915 as well as subsequent colonial wars, including the Great Syrian Revolt of 1925 and the Great Arab Revolt of 1936–39. These events, among others, entrenched a malleable image, a mode of interpellation, and a structure of catastrophic ideation profoundly shaping how nakba became enmeshed with social formation and political action in echo with a wider conceptual landscape. The Nakba of 1948 Palestine prompted a generation of Arab intellectuals to redefine standards of selfhood, sovereignty, and objectivity. The layered genealogy of nakba prior to 1948 reveals how catastrophic ideation foregrounded persistent idioms in Arabic, Turkish, Armenian, and English beginning in the nineteenth century to mark varying degrees of political urgency and exceptionality.",
+      "abstract": "Abstract Contrary to the prevailing assumption, the genealogy of nakba does not begin in 1948 Palestine but stretches far back into the Ottoman past. This study examines the formation of nakba in Arabic as a concept of disaster and a social practice of catastrophic ideation. In the nineteenth century, intellectual constructions of nakba referred to famed medieval episodes of downfall. Diverse Arab intellectuals and the genre of social science redeployed these centuries-old constructions during the Hamidian massacres of 1894–97 and the Armenian Genocide of 1915 as well as subsequent colonial wars, including the Great Syrian Revolt of 1925 and the Great Arab Revolt of 1936–39. These events, among others, entrenched a malleable image, a mode of interpellation, and a structure of catastrophic ideation profoundly shaping how nakba became enmeshed with social formation and political action in echo with a wider conceptual landscape. The Nakba of 1948 Palestine prompted a generation of Arab intellectuals to redefine standards of selfhood, sovereignty, and objectivity. The layered genealogy of nakba prior to 1948 reveals how catastrophic ideation foregrounded persistent idioms in Arabic, Turkish, Armenian, and English beginning in the nineteenth century to mark varying degrees of political urgency and exceptionality.",
       "topics": [
         "Jewish and Middle Eastern Studies",
         "Islamic Studies and History",
@@ -114832,50 +115590,6 @@
       }
     },
     {
-      "id": "doi:10.22148/jca.1173",
-      "title": "Title Pending",
-      "authors": [
-        "Pete Jones",
-        "Deb Verhoeven",
-        "Alejandro Espinosa-Rada"
-      ],
-      "publicationDate": "2026-01-01",
-      "journal": "Journal of Cultural Analytics",
-      "issn": "2371-4549",
-      "quartile": "User-curated specialist",
-      "sjrYear": null,
-      "feed": "digital-humanities",
-      "doi": "10.22148/jca.1173",
-      "doiUrl": "https://doi.org/10.22148/jca.1173",
-      "articleUrl": "https://doi.org/10.22148/jca.1173",
-      "journalUrl": "https://culturalanalytics.org/",
-      "openAccessUrl": "https://doi.org/10.22148/jca.1173",
-      "openAccessPdfUrl": null,
-      "openAccessStatus": "diamond",
-      "volume": null,
-      "issue": null,
-      "abstract": null,
-      "topics": [],
-      "metadataSources": [
-        "Crossref",
-        "OpenAlex"
-      ],
-      "relevance": {
-        "score": 0,
-        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
-        "signals": [
-          "Digital & Computational Humanities venue",
-          "non-research item signal"
-        ],
-        "methodSignals": [],
-        "humanitiesSignals": [],
-        "emotionSignals": [],
-        "emotionQualifies": false,
-        "qualifies": false,
-        "classifier": "rules-v3"
-      }
-    },
-    {
       "id": "doi:10.22148/jca.1354",
       "title": "Title Pending",
       "authors": [
@@ -115118,6 +115832,89 @@
       "metadataSources": [
         "Crossref",
         "OpenAlex"
+      ],
+      "relevance": {
+        "score": 0,
+        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "non-research item signal"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1481",
+      "title": "Title Pending",
+      "authors": [
+        "Rongqian Ma",
+        "Zhibo Zhuang"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1481",
+      "doiUrl": "https://doi.org/10.22148/jca.1481",
+      "articleUrl": "https://doi.org/10.22148/jca.1481",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 0,
+        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "non-research item signal"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1437",
+      "title": "Title Pending",
+      "authors": [
+        "Giacomo Alliata"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1437",
+      "doiUrl": "https://doi.org/10.22148/jca.1437",
+      "articleUrl": "https://doi.org/10.22148/jca.1437",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
       ],
       "relevance": {
         "score": 0,
@@ -137717,7 +138514,7 @@
       "openAccessStatus": "closed",
       "volume": "60",
       "issue": "1",
-      "abstract": "Abstract This article traces the long career of the term “minority” in the United States, tracking both its continuities and its shapeshifting in the twentieth century American vernacular. I argue that the changing uses of minority reflected a protean politics of language that reflected changes in racial ideology across the twentieth century, which I explore by analyzing the evolving tension between ascriptive language and demands for self-description by Black and Latino Americans in particular. The earliest usage of minority as a social category emerged after the First World War, when Black journalists and advocates argued that African Americans needed protection as a “racial minority” in the U.S. Social scientists popularized a broader version of the term in the 1930s—which included immigrants and their offsprings—that held sway until a postwar shift in racial schema enabled second- and third-generation European ethnics to escape the minority category. The phrases “disadvantaged minority” and “underprivileged minority” gained currency around that time, entangling Black, Latino, and other “non-white” Americans in a shared but fragmented marginalized status. While the development of affirmative action policies in the late 1960s lent minority status an important form of leverage, the category continued to signal exclusions from the benefits of full citizenship. Even by the late twentieth century, members of groups labeled minorities still resided figuratively and often literally on the periphery of American society, a position from which many continued to critique and rework the language of minority to challenge its normative power.",
+      "abstract": "Abstract This article traces the long career of the term “minority” in the United States, tracking both its continuities and its shapeshifting in the twentieth century American vernacular. I argue that the changing uses of minority represented a protean politics of language that reflected changes in racial ideology across the twentieth century, which I explore by analyzing the evolving tension between ascriptive language and demands for self-description by Black and Latino Americans in particular. The earliest usage of minority as a social category emerged after the First World War, when Black journalists and advocates argued that African Americans needed protection as a “racial minority” in the U.S. Social scientists popularized a broader version of the term in the 1930s—which included immigrants and their offsprings—that held sway until a postwar shift in racial schema enabled second- and third-generation European ethnics to escape the minority category. The phrases “disadvantaged minority” and “underprivileged minority” gained currency around that time, entangling Black, Latino, and other “non-white” Americans in a shared but fragmented marginalized status. While the development of affirmative action policies in the late 1960s lent minority status an important form of leverage, the category continued to signal exclusions from the benefits of full citizenship. Even by the late twentieth century, members of groups labeled minorities still resided figuratively and often literally on the periphery of American society, a position from which many continued to critique and rework the language of minority to challenge its normative power.",
       "topics": [
         "Race, History, and American Society",
         "Latin American and Latino Studies",
