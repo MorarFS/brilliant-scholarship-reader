@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-02T16:06:19+00:00",
+  "generatedAt": "2026-11-09T16:30:19+00:00",
   "windowStart": "2025-01-01",
-  "windowEnd": "2026-11-02",
+  "windowEnd": "2026-11-09",
   "journalCount": 20,
   "sjrYear": 2024,
   "sourceCounts": {
     "OpenAlex": 621,
-    "Crossref": 632
+    "Crossref": 635
   },
   "feedCounts": {
-    "digital-humanities": 646,
+    "digital-humanities": 649,
     "ai-history": 11
   },
-  "emotionFeedCount": 144,
+  "emotionFeedCount": 145,
   "audit": {
-    "candidateCount": 3939,
-    "historyIncludedCount": 657,
-    "emotionIncludedCount": 144,
-    "unreviewedCount": 3282,
+    "candidateCount": 3955,
+    "historyIncludedCount": 660,
+    "emotionIncludedCount": 145,
+    "unreviewedCount": 3295,
     "definition": "Every available article record from each configured ISSN, retained when it does not pass the history rule so it can be inspected instead of silently discarded."
   },
   "journals": [
@@ -36,9 +36,9 @@
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-humanities venue",
       "inclusionBasis": "sjr-q1",
       "resultCount": 145,
-      "emotionResultCount": 57,
-      "candidateCount": 307,
-      "unreviewedCount": 162,
+      "emotionResultCount": 58,
+      "candidateCount": 309,
+      "unreviewedCount": 164,
       "knownIssueCount": 9
     },
     {
@@ -96,7 +96,7 @@
       "emotionResultCount": 4,
       "candidateCount": 37,
       "unreviewedCount": 20,
-      "knownIssueCount": 7
+      "knownIssueCount": 8
     },
     {
       "title": "Computational Humanities Research",
@@ -169,10 +169,10 @@
       "journalUrl": "https://dl.acm.org/journal/jocch",
       "qualificationNote": "2024 SJR best quartile Q1; computing-and-heritage specialist",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 129,
+      "resultCount": 132,
       "emotionResultCount": 24,
-      "candidateCount": 189,
-      "unreviewedCount": 60,
+      "candidateCount": 195,
+      "unreviewedCount": 63,
       "knownIssueCount": 7
     },
     {
@@ -191,8 +191,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 70,
       "emotionResultCount": 16,
-      "candidateCount": 482,
-      "unreviewedCount": 412,
+      "candidateCount": 484,
+      "unreviewedCount": 414,
       "knownIssueCount": 12
     },
     {
@@ -229,8 +229,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 34,
       "emotionResultCount": 3,
-      "candidateCount": 48,
-      "unreviewedCount": 14,
+      "candidateCount": 49,
+      "unreviewedCount": 15,
       "knownIssueCount": 5
     },
     {
@@ -289,8 +289,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 1,
       "emotionResultCount": 0,
-      "candidateCount": 70,
-      "unreviewedCount": 69,
+      "candidateCount": 72,
+      "unreviewedCount": 71,
       "knownIssueCount": 6
     },
     {
@@ -329,8 +329,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 1,
       "emotionResultCount": 0,
-      "candidateCount": 136,
-      "unreviewedCount": 135,
+      "candidateCount": 139,
+      "unreviewedCount": 138,
       "knownIssueCount": 9
     },
     {
@@ -415,6 +415,167 @@
     }
   ],
   "papers": [
+    {
+      "id": "doi:10.1145/3844148",
+      "title": "When OCR Is Not Enough: Semantic Limits in the Digitization of Historical Computer Music Code",
+      "authors": [
+        "Anna Zuccante",
+        "Luca Siri",
+        "Sergio Canazza"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3844148",
+      "doiUrl": "https://doi.org/10.1145/3844148",
+      "articleUrl": "https://doi.org/10.1145/3844148",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "The preservation of early computer music faces a critical bottleneck caused by the inability of standard digitization workflows to recover executable code from degraded physical media. This paper presents a first study on the recovery of source code from the Music-N family, contributing a new dataset of historical computer music scores from the Centro di Sonologia Computazionale (CSC) archive. We evaluate the performance of four recognition architectures spanning two paradigms: Tesseract, EasyOCR, and TrOCR as representative OCR systems, and Qwen2.5-VL as a modern Vision-Language Model (VLM) applied to documents characterized by high symbolic density, obsolete syntax, and physical degradation. Our methodological contribution consists of a specialized preprocessing pipeline involving binarization, skew correction, and rescaling to mitigate the noise inherent in source code printouts. The results show a clear improvement in representative OCR systems performance following the application of the pipeline. However, the analysis also identifies a significant divergence between visual accuracy and syntactic validity. This demonstrates that visual digitization alone cannot guarantee the functional preservation of software-based heritage. This work represents an initial step toward the recovery of this heritage, highlighting the need for future systems to incorporate structural constraints, such as Large Language Model (LLM) fine-tuning or Retrieval Augmented Generation (RAG) integrations, to handle the specific syntax of historical programming languages.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 80,
+        "reason": "Matched computational evidence (AI / ML / LLM method, OCR / HTR method) and humanities evidence (archives or documentary evidence) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "OCR / HTR method",
+          "digital knowledge infrastructure",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method",
+          "OCR / HTR method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3859241",
+      "title": "Streamlining Exploitation of Digital Archaeological Sites: A Scalable Authoring Platform to Build Digital Twins of Cultural Heritage for Research and Dissemination",
+      "authors": [
+        "Federico De Lorenzis",
+        "Lorenzo Valente",
+        "Giovanni Pachera",
+        "Roberta Spallone",
+        "Fabrizio Lamberti",
+        "Corinna Rossi",
+        "Enrico Ferraris",
+        "Paolo Del Vesco",
+        "Federico Taverni",
+        "Christian Greco"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3859241",
+      "doiUrl": "https://doi.org/10.1145/3859241",
+      "articleUrl": "https://doi.org/10.1145/3859241",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Archaeological sites and artifacts are critical for understanding historical contexts, and maintaining their integrity is a vital undertaking. At the same time, ensuring their accessibility to enable direct study and exploration is essential for both researchers and the general public. To this aim, various works have explored the use of Digital Twins (DTs) for Cultural Heritage (CH) preservation and dissemination. However, the current state of the art remains fragmented and heterogeneous, with most approaches relying on ad hoc, case-specific solutions that are rarely reusable. In particular, existing research is often centered on individual digitization projects rather than on scalable frameworks that support the systematic creation and reuse of multiple DTs. Building on these considerations, this paper presents a scalable platform designed to streamline the construction and exploitation of archaeological DTs, enabling the rapid creation of case studies for both research and dissemination purposes. Specifically, we propose a no-code authoring environment that integrates 3D reconstructions of sites and artifacts with associated semantic information (e.g., annotations and points of interest), allowing users with limited technical expertise to create and manage DT-based experiences. The resulting case studies can be edited, organized, shared, and explored through both desktop and Virtual Reality interfaces. The platform positioning with respect to existing solutions has been explicitly investigated through a comparative analysis against representative state-of-the-art systems. In addition, the proposed approach has been evaluated through quantitative performance measurements, a comparative study, and two user studies targeting the Research and Dissemination modes, respectively. The platform was co-designed with curators from the Egyptian Museum in Turin, Italy, and validated through case studies based on two archaeological sites from Deir el-Medina, Egypt.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 80,
+        "reason": "Matched computational evidence (visual or spatial computing method, digital knowledge infrastructure) and humanities evidence (heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "visual or spatial computing method",
+          "digital knowledge infrastructure",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "visual or spatial computing method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3848518",
+      "title": "M 2 LIC: Democratizing the Creation of Relightable Images using a Targetless, Free-Form, Automated Capture Workflow",
+      "authors": [
+        "Ruggero Pintus",
+        "Antonio Zorcolo",
+        "Alberto Jaspe-Villanueva",
+        "Nicola Pagani",
+        "Pietro Francesco Serreli",
+        "Giovanna Pietra",
+        "Enrico Gobbetti"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3848518",
+      "doiUrl": "https://doi.org/10.1145/3848518",
+      "articleUrl": "https://doi.org/10.1145/3848518",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Multi-Light Image Collections (MLIC) are fundamental for virtual re-lighting and detailed surface analysis. In cultural heritage, the most common acquisition approach is free-form moving-light capture, where images taken under varying illumination are later processed to derive shape, material properties, or relightable image models. Despite its flexibility, this workflow remains limited by the need for trained operators, calibration targets, and often significant manual processing. To address these challenges, we present M \\({{}^{2}}\\) LIC (Mobile Multi-Light Image Collection), an automated, target-free pipeline utilizing video recordings from a fixed camera and a moving camera attached to an illuminator. Realizing this setup with just two commodity smartphones lowers hardware costs and technical barriers to entry by leveraging devices that users already own and operate daily. Our framework combines video synchronization, estimation of light directions directly from the scene structure, relighting-aware frame processing, and automatic generation of relightable models ready for web viewing. The protocol is fast and simple, requiring only the simultaneous recording of short videos, allowing operators to produce usable relightable models with minimal training and effort. Validated on a diverse set of artifacts, this open-source system helps lower the barrier to MLIC acquisition and aims to support more scalable MLIC digitization workflows.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 58,
+        "reason": "Matched computational evidence (digital knowledge infrastructure) and humanities evidence (heritage, memory, or collections) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital knowledge infrastructure",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
     {
       "id": "doi:10.1016/j.culher.2026.09.006",
       "title": "The encased cuneiform clay tablets at the archaeological museum of Florence: First evidence of the hidden texts through micro-CT",
@@ -38476,6 +38637,51 @@
   ],
   "emotionPapers": [
     {
+      "id": "doi:10.1093/llc/fqag146",
+      "title": "Emotional polyphony in Milan Kundera’s The Joke : a computational analysis of narrative voices through SenticNet",
+      "authors": [
+        "Matteo Bona"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag146",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag146",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag146",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract This article investigates the affective architecture underlying narrative polyphony in Milan Kundera’s The Joke through a computational analysis of emotion dynamics. The study addresses a central narratological question: how distinct narrative voices construct differentiated emotional domains within a polyphonic framework. To explore this issue, the text is segmented according to Kundera’s four first-person narrators, and each segment is examined through SenticNet-based emotion modeling. For every narrative voice, the four core affective dimensions of the Hourglass of Emotion (attitude, introspection, sensitivity, temper) are computed together with a polarity-based sentiment index. The resulting trajectories are visualized across the novel, and key turning points—such as Ludvik’s deportation to the labor camp—are marked to assess how major events shape affective modulation. Radar charts and comparative boxplots reveal clear divergences among the emotional profiles of the narrators, indicating that Kundera’s polyphony operates not only on stylistic or ideological levels but also through the distribution of distinct affective regions. These results demonstrate that computational emotion analysis can operationalize interpretive intuitions commonly addressed through qualitative close reading, offering an empirically grounded perspective on the internal architecture of polyphonic fiction. The study highlights the interpretive potential of affective computing in literary analysis and suggests possible extensions to broader corpora of Central European narrative.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "emotion, affect, sentiment, or feeling",
+          "computational emotion or sentiment analysis"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [
+          "emotion, affect, sentiment, or feeling",
+          "computational emotion or sentiment analysis"
+        ],
+        "emotionQualifies": true,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1093/llc/fqag139",
       "title": "Tracing affective change: topic modeling and emotional semantics of gender in eighteenth-century British fiction",
       "authors": [
@@ -46864,6 +47070,416 @@
   ],
   "auditPapers": [
     {
+      "id": "doi:10.1017/s0018246x26102027",
+      "title": "The Great Syrian Revolt and Gender Models amongst Male and Female Toughs of the Northern Bekaa",
+      "authors": [
+        "Cyma Farah"
+      ],
+      "publicationDate": "2026-11-06",
+      "journal": "The Historical Journal",
+      "issn": "0018-246X",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1017/s0018246x26102027",
+      "doiUrl": "https://doi.org/10.1017/s0018246x26102027",
+      "articleUrl": "https://doi.org/10.1017/s0018246x26102027",
+      "journalUrl": "https://www.cambridge.org/core/journals/historical-journal",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract This article discusses events of the Great Syrian Revolt (1925–7) against the French mandate’s Armée du Levant away from the main battlefields in Syria proper. It discusses events across the Lebanese border in the northern Bekaa district of Baalbek-Hermel, a peripheral area marginalized in the historiography of the revolt. This previously untold story integrates the colonial archives with the private papers of the rebel fighter Tawfiq Hawlu Haydar, oral interviews, and a collection of rare Arabic books and articles. I closely analyse the activism of Tawfiq and his mother, Shahina, in the revolt and the role of their senior relatives. Through the lens of gendered modes of behaviour, the article seeks to uncover the culture of resistance among the local population. I demonstrate how manly ideals of pride, chivalry, land, and honour functioned as mobilizing ethics – rather than remnants of outdated traditionalist values – pushing men to fight against the odds. Simultaneously and unexpectedly, these ideals were adaptable enough to authorize women’s transgressions of gender hierarchies in defence of the community.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1017/s0018246x26102167",
+      "title": "Calligraphy after Print: Script, Self, and Society in the Material Renaissance",
+      "authors": [
+        "Hannah Murphy"
+      ],
+      "publicationDate": "2026-11-06",
+      "journal": "The Historical Journal",
+      "issn": "0018-246X",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1017/s0018246x26102167",
+      "doiUrl": "https://doi.org/10.1017/s0018246x26102167",
+      "articleUrl": "https://doi.org/10.1017/s0018246x26102167",
+      "journalUrl": "https://www.cambridge.org/core/journals/historical-journal",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract What did it mean to write – and to write beautifully – in the century after print? Existing scholarship on Renaissance calligraphy has focused on printed manuals, associating them with standardization, codification, and discipline. This article is the first to offer an account centred on use. Drawing on the influential manuals of the Nuremberg calligrapher Johann Neudörffer (1497–1563), alongside manuscript copies, material interventions by owners, and civic and domestic records, it traces the relationship between the Renaissance ‘invention’ of script and the calligraphic imagination it enabled in practice. At the heart of the craft of calligraphy sat the first powerful argument for what scholars today might term a psychology of writing – a special form of meaning in the making of script. Observing both the power of that claim and its instability, this article aims to establish calligraphy, and more importantly calligraphic practice, as a historiographical subject, one which it argues is of critical importance to understanding crucial elements of the early modern: self, subjectivity, and expressiveness on the one hand, and community, codified style, and discipline on the other.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.4995/var.2027.26575",
+      "title": "AI-assisted generation of heritage-informed 3D assets from sketches and historical images",
+      "authors": [
+        "Iris López de Armas",
+        "José Luis Saorín",
+        "Dámari Melián Díaz",
+        "Jorge de la Torre-Cantero"
+      ],
+      "publicationDate": "2026-11-06",
+      "journal": "Virtual Archaeology Review",
+      "issn": "1989-9947",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.4995/var.2027.26575",
+      "doiUrl": "https://doi.org/10.4995/var.2027.26575",
+      "articleUrl": "https://doi.org/10.4995/var.2027.26575",
+      "journalUrl": "https://polipapers.upv.es/index.php/var",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "18",
+      "issue": "36",
+      "abstract": "This paper presents a hybrid workflow for the artificial intelligence (AI)-assisted three-dimensional (3D) modelling of lost or fragmentarily documented architectural heritage assets from sketches, historical photographs and partial graphic references. The approach addresses cases in which conventional photogrammetry or 3D scanning cannot provide a complete record because the object has disappeared, survives only partially or is documented through indirect sources. The methodology is applied to three domestic heritage elements associated with the House of Amaro Pargo in Tenerife, Spain: a lookout window, an oven and a wooden trough. The workflow combines documentary interpretation, AI-assisted image generation and editing, image-to-3D mesh generation, manual geometric correction, texturing at the visual-reference stage and contextual integration in digital or physical outputs. The case studies compare different generative tools and evaluate the resulting models as interpretative assets rather than as metrically validated reconstructions, according to their correspondence with visible source features, visual plausibility, geometric and technical usability, mesh closure and suitability for digital visualisation or 3D printing. The results show that generative AI (GenAI) can support the production of preliminary 3D hypotheses, especially when the available evidence is incomplete and a complete metric restitution is not feasible. However, they also reveal limitations related to documentary uncertainty, variability between tools, hidden or ambiguous geometries, mesh errors and the need for manual review. The paper concludes that AI should not be understood as a substitute for rigorous surveying, photogrammetry, 3D scanning or expert modelling, but as an intermediate and revisable tool within a supervised workflow. Its main contribution lies in documenting the practical possibilities, recurrent limitations and manual interventions involved in transforming AI-generated outputs into usable 3D assets for the interpretation and visualisation of domestic heritage from fragmentary sources.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 45,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/pastj/gtag034",
+      "title": "Refusing International Debt and the Postcolonial Politics of Yentua in 1970s Ghana",
+      "authors": [
+        "Bianca Murillo"
+      ],
+      "publicationDate": "2026-11-05",
+      "journal": "Past & Present",
+      "issn": "0031-2746",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/pastj/gtag034",
+      "doiUrl": "https://doi.org/10.1093/pastj/gtag034",
+      "articleUrl": "https://doi.org/10.1093/pastj/gtag034",
+      "journalUrl": "https://academic.oup.com/past",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract In 1972 the government of Ghana refused to repay loans contracted on the international debt market. As a pivotal moment in the history of decolonization, the policy of Yentua, or ‘We Shall Not Pay’, marked an unprecedented move in Ghana’s relationship with its foreign creditors. Eight years of debt negotiations had exposed the persistence not only of Western financial economic and political control, but also of debt as a mechanism to assert neocolonial power. At the same time, negotiations opened up the possibility of challenging creditors and the continuing relationships of dependency, violence, and extraction. While across Africa the 1970s were marked by increasing economic uncertainty and militarism, this situation did not diminish the will of the Ghanaian public to reimagine the emancipatory potential of debt repudiation. At public events, in the press, and in the streets, students, chiefs, journalists, intellectuals, and trade unionists demanded accountability and criticized international as well as domestic policies they believed were transforming Ghana into a ‘beggar nation’. Ultimately, it was constant public pressure on the leadership and broad-based support that made Yentua possible. This history is a powerful reminder that global financial systems, however abstract, impersonal, and impenetrable they may seem, can be shaped by individuals and movements.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1017/s0018246x26102052",
+      "title": "The Gothic Republic, British Liberty, and Icelandic Philologists in the Revolutions of 1848",
+      "authors": [
+        "Sveinn M. Jóhannesson"
+      ],
+      "publicationDate": "2026-11-05",
+      "journal": "The Historical Journal",
+      "issn": "0018-246X",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1017/s0018246x26102052",
+      "doiUrl": "https://doi.org/10.1017/s0018246x26102052",
+      "articleUrl": "https://doi.org/10.1017/s0018246x26102052",
+      "journalUrl": "https://www.cambridge.org/core/journals/historical-journal",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract This article argues that Gothic republican ideas of liberty – defining freedom as independence and participation in lawmaking within the ancient Gothic ‘free state’ – formed an overlooked intellectual background to debates within the Danish composite monarchy during the revolutions of 1848. Focusing on Copenhagen-based Icelandic philologists, it shows that they mobilized the new discipline of comparative-historical philology not as an instrument of nationalism, with which it is usually associated, but to reinvent the Gothic republic. Drawing on Icelandic medieval manuscripts, they constructed an Indo-European genealogy of liberty grounded in a partnership between nobility and people. They thereby recast British liberty as the modern expression of institutions originating not among the Anglo-Saxons but in an Indo-European world extending through Scandinavia to Iceland. In 1848, they translated this genealogy into a political programme reviving open-air assemblies, medieval law codes, juries, and hereditary aristocracy, while modernizing them through British constitutional models. Recovering this programme revises national narratives of 1848, reveals the continuing diversity of nineteenth-century republicanism, and shows how intellectuals on Europe’s peripheries could reshape wider ideas of liberty. Rather than disappearing into nationalism or racialized Teutonism, or necessarily assuming democratic forms, republicanism could provide an aristocratic, anti-national language of resistance to absolutism and national-liberal projects.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1431",
+      "title": "Princeton Prosody, from Archive to Dataset",
+      "authors": [
+        "Rebecca Sutton Koeser",
+        "Mary Naydan",
+        "Laure Thompson",
+        "Meredith Martin"
+      ],
+      "publicationDate": "2026-11-05",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1431",
+      "doiUrl": "https://doi.org/10.22148/jca.1431",
+      "articleUrl": "https://doi.org/10.22148/jca.1431",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1431",
+      "openAccessPdfUrl": null,
+      "openAccessStatus": "diamond",
+      "volume": "11",
+      "issue": "4",
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1736",
+      "title": "Begin Again: The Ends of Prosody",
+      "authors": [
+        "Meredith Martin",
+        "Wouter Haverals"
+      ],
+      "publicationDate": "2026-11-05",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1736",
+      "doiUrl": "https://doi.org/10.22148/jca.1736",
+      "articleUrl": "https://doi.org/10.22148/jca.1736",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1736",
+      "openAccessPdfUrl": null,
+      "openAccessStatus": "diamond",
+      "volume": "11",
+      "issue": "4",
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/pastj/gtag032",
+      "title": "The Quackery Question and Medical Authority in Imperial Germany",
+      "authors": [
+        "Albert Monshan Wu"
+      ],
+      "publicationDate": "2026-11-03",
+      "journal": "Past & Present",
+      "issn": "0031-2746",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/pastj/gtag032",
+      "doiUrl": "https://doi.org/10.1093/pastj/gtag032",
+      "articleUrl": "https://doi.org/10.1093/pastj/gtag032",
+      "journalUrl": "https://academic.oup.com/past",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract In the late nineteenth and early twentieth centuries, German physicians, bureaucrats, and legislators became preoccupied with the ‘quackery question’ (Kurpfuscherfrage): the problem of how to distinguish legitimate healing from dangerous deception. Their anxiety registered a mounting mistrust of medical authority. Drawing on Prussian ministerial and Foreign Office archives, this article reconstructs a struggle over medical trust in Imperial Germany. Academic physicians held the credentials and the prestige of science, yet patients repeatedly placed their confidence elsewhere. Patient testimonials and direct petitions reveal working people and the educated middle classes alike deciding for themselves whom to trust. Meanwhile, transnational patent-medicine networks and itinerant practitioners operating across colonial medical regimes made credentials increasingly difficult to verify. Quacks flourished in conditions the period itself had created: a marketplace the state had opened but could not police, and a traffic in healers and remedies that crossed borders faster than any authority could check them. Their persistence marked the limits of expertise in a modern, mobile society.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "archives or documentary evidence",
+          "historical period or archaeology",
+          "named emotion or affective state"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [
+          "named emotion or affective state"
+        ],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3842394",
+      "title": "Interpretable Visual Exploration of Archaeological Signs",
+      "authors": [
+        "Stefano Valtolina",
+        "Giovanna Gianni Bagnasco",
+        "Jennifer Alvino"
+      ],
+      "publicationDate": "2026-11-03",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3842394",
+      "doiUrl": "https://doi.org/10.1145/3842394",
+      "articleUrl": "https://doi.org/10.1145/3842394",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "The study of archaeological signs and non-verbal markings requires navigating complex relationships between artefacts, symbolic forms, and contextual metadata. While digital heritage platforms increasingly provide cataloguing and metadata services, they still offer limited support for visual exploration and comparison, particularly when signs are small, spatially unconstrained, and embedded within deteriorated artefacts. This paper presents the International Etruscan Sigla Project (IESP), an integrated visual heritage system that combines structured cataloguing, intelligent document-based knowledge extraction, and AI-assisted visual similarity retrieval within a unified archaeological exploration environment. Rather than introducing these capabilities as independent tools, IESP supports the complete archaeological workflow, from knowledge acquisition and catalogue navigation to image-based exploration and comparative analysis. The system stores and models artefacts and sign elements, automatically extracts structured information from publicly available archaeological documents, and enables similarity-driven exploration through a dual-encoder architecture specifically designed for fine-grained comparison of archaeological signs. The proposed retrieval strategy aligns global sign representations with spatial feature maps extracted from artefact images, enabling similarity-based retrieval while preserving the local visual evidence required for archaeological interpretation. Users can interact with the system through multiple retrieval modalities, including sketch-based queries, image-based sign retrieval, and support-based exploration. The paper also presents the system's software architecture and reports the results of an expert-centred user study conducted through realistic archaeological tasks. The evaluation combines task performance, usability, cognitive workload, technology acceptance, and qualitative observations, demonstrating that the proposed interaction paradigm effectively supports archaeological exploration while preserving human interpretation and scholarly transparency. Overall, IESP demonstrates how integrating structured knowledge management, document understanding, and interpretable AI can transform digital heritage repositories into interactive environments that actively support archaeological research and visual analysis.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1093/llc/fqag140",
       "title": "Meaning-based retrieval of Kannada Vachana literary works: a comparative analysis of retrieval techniques",
       "authors": [
@@ -46903,6 +47519,182 @@
           "AI / ML / LLM method",
           "NLP or text-as-data method"
         ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3859865",
+      "title": "ARIP: An Interactive Framework for Digital Dissemination of Yangzhou Paper-Cutting",
+      "authors": [
+        "Zhuyu Liu",
+        "Yang Cao"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3859865",
+      "doiUrl": "https://doi.org/10.1145/3859865",
+      "articleUrl": "https://doi.org/10.1145/3859865",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Intangible cultural heritage (ICH) embodies collective memory and creative practices, yet many traditions rooted in manual skills and oral transmission face increasing risk under globalization. Conventional digital documentation—such as images, videos, and static visualizations—provides archival value but offers limited support for computational style analysis and lacks real-time interactivity, particularly for engaging younger audiences. To address these limitations, this paper proposes ARIP, an integrative design framework for the AI-assisted interactive dissemination of pattern-based ICH. Using Yangzhou paper-cutting as a case study, ARIP organizes four complementary design functions—AI-mediated style modeling, real-time response, interactive participation, and pattern-oriented visual constraints—within a unified implementation process. A user study with secondary school students assessed self-reported engagement using the User Engagement Scale (UES). Participants in the interactive condition reported higher engagement across the measured UES dimensions than those in the conventional digital-material condition. Qualitative feedback further suggests that the interactive experience encouraged participants to attend to the visual characteristics and culturally associated motifs of paper-cutting. These findings provide preliminary evidence for the feasibility of ARIP in the Yangzhou paper-cutting case and suggest its potential as a design reference for future AI-assisted interactive heritage applications.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 55,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag145",
+      "title": "Headedness, overlap, and salience: the multi-dimensional tension in English blends",
+      "authors": [
+        "Huitao Tang",
+        "Haitao Liu"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag145",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag145",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag145",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract A recent contribution to Digital Scholarship in the Humanities by Meng and Hilpert (‘Measuring the Semantic Headedness of English Blends with Token-Based Semantic Vector Space Modelling: A Corpus-Based Study’, 2024, 39 (4), 1075–1091) applied distributional semantics to English lexical blends but conflated three conceptually independent dimensions: semantic headedness, semantic overlap, and semantic salience, while relying on static word embeddings that cannot adequately handle polysemy. To address these gaps, the present study distinguishes the three metrics and quantifies them using the contextualized language model BERT on a dataset of eighty-seven English blends. The research findings are threefold: (1) semantic headedness is right-headed in 52.9% and left-headed in 47.1% of the eighty-seven blends; semantic overlap is left‑oriented in 43.7% and right‑oriented in 56.3% of the eighty-seven blends; (2) in terms of semantic salience, 56.3% of the eighty-seven blends are left-oriented and 43.7% are right-oriented; (3) the three metrics exhibit systematic directional inconsistency, revealing that English blends function as multi-dimensional semantic objects in which categorical inheritance, distributional similarity, and contextual prominence need not converge, which calls for a more empirically grounded and multi-faceted account of blend semantics. Theoretically, our findings corroborate the gradient view of Meng and Hilpert, moving blend research beyond taxonomic classification towards a usage-grounded, multi-dimensional model that requires a multivariate approach. Methodologically, the study demonstrates the necessity of cross-validating conclusions using multiple metrics in morphological research, illustrating how digital methods can address longstanding problems in word formation.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "NLP or text-as-data method"
+        ],
+        "methodSignals": [
+          "NLP or text-as-data method"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag146",
+      "title": "Emotional polyphony in Milan Kundera’s The Joke : a computational analysis of narrative voices through SenticNet",
+      "authors": [
+        "Matteo Bona"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag146",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag146",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag146",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract This article investigates the affective architecture underlying narrative polyphony in Milan Kundera’s The Joke through a computational analysis of emotion dynamics. The study addresses a central narratological question: how distinct narrative voices construct differentiated emotional domains within a polyphonic framework. To explore this issue, the text is segmented according to Kundera’s four first-person narrators, and each segment is examined through SenticNet-based emotion modeling. For every narrative voice, the four core affective dimensions of the Hourglass of Emotion (attitude, introspection, sensitivity, temper) are computed together with a polarity-based sentiment index. The resulting trajectories are visualized across the novel, and key turning points—such as Ludvik’s deportation to the labor camp—are marked to assess how major events shape affective modulation. Radar charts and comparative boxplots reveal clear divergences among the emotional profiles of the narrators, indicating that Kundera’s polyphony operates not only on stylistic or ideological levels but also through the distribution of distinct affective regions. These results demonstrate that computational emotion analysis can operationalize interpretive intuitions commonly addressed through qualitative close reading, offering an empirically grounded perspective on the internal architecture of polyphonic fiction. The study highlights the interpretive potential of affective computing in literary analysis and suggests possible extensions to broader corpora of Central European narrative.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "emotion, affect, sentiment, or feeling",
+          "computational emotion or sentiment analysis"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [
+          "emotion, affect, sentiment, or feeling",
+          "computational emotion or sentiment analysis"
+        ],
+        "emotionQualifies": true,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3842673",
+      "title": "Tracking the Progress of Generative Models in Artistic Style Imitation",
+      "authors": [
+        "Andrea Asperti",
+        "Francesco Erpichini"
+      ],
+      "publicationDate": "2026-11-02",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3842673",
+      "doiUrl": "https://doi.org/10.1145/3842673",
+      "articleUrl": "https://doi.org/10.1145/3842673",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Replicating the style of historical artistic traditions remains a notoriously challenging task for vision-based generative models, as artistic style encodes complex visual, cultural, and contextual dimensions that extend beyond surface-level appearance. Despite rapid advances in generative modeling, it remains unclear to what extent recent systems have achieved substantive improvements in stylistic emulation across diverse historical traditions. This article presents a systematic evaluation of contemporary generative models in artistic style imitation, comparing their outputs to those of earlier model generations. The study builds upon the AI-Pastiche dataset by incorporating six additional recent state-of-the-art models, thereby enabling a longitudinal assessment of performance progression over time. To ensure methodological consistency and comparability, the evaluation adopts the same experimental protocol used in the original release of the dataset. The analysis combines controlled prompt-based image generation with extensive user studies designed to assess multiple dimensions of aesthetic and stylistic performance. These dimensions include: (i) visual plausibility and perceptual realism; (ii) stylistic coherence and fidelity to historical conventions; (iii) versatility across a broad range of artistic traditions; (iv) adherence to prompt-specified content and stylistic constraints; and (v) the absence of structural artifacts or semantic inconsistencies. The results indicate substantial and measurable improvements in stylistic emulation in recent models. Nevertheless, persistent limitations remain, particularly in the consistent reproduction of deeper compositional structures and culturally embedded stylistic features. These findings suggest that progress in surface-level resemblance does not necessarily equate to structural or contextual understanding.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
         "humanitiesSignals": [],
         "emotionSignals": [],
         "emotionQualifies": false,
@@ -48207,6 +48999,60 @@
       }
     },
     {
+      "id": "doi:10.1016/j.culher.2026.09.015",
+      "title": "Enhancing the Oddy test for assessing the suitability of museums display cases materials: Insights from a comparative emission study",
+      "authors": [
+        "Lucrezia Barchi",
+        "Francesca Rosi",
+        "Gabriele Cencetti",
+        "Fabiana Di Gianvincenzo",
+        "Francesca Ieri",
+        "Sara Mattana",
+        "Aldo Romani",
+        "Barbara Salvadori",
+        "Lisa Volpe",
+        "Matija Strlič",
+        "Cristiano Riminesi",
+        "Costanza Miliani"
+      ],
+      "publicationDate": "2026-11-01",
+      "journal": "Journal of Cultural Heritage",
+      "issn": "1296-2074",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/j.culher.2026.09.015",
+      "doiUrl": "https://doi.org/10.1016/j.culher.2026.09.015",
+      "articleUrl": "https://doi.org/10.1016/j.culher.2026.09.015",
+      "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "82",
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1525/tph.2026.48.4.7",
       "title": "Public Statuary in Modern Japan",
       "authors": [
@@ -49037,6 +49883,48 @@
       "doi": "10.1016/j.culher.2026.10.014",
       "doiUrl": "https://doi.org/10.1016/j.culher.2026.10.014",
       "articleUrl": "https://doi.org/10.1016/j.culher.2026.10.014",
+      "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "82",
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1016/j.culher.2026.10.015",
+      "title": "Manufacturing of mortars in Kommos, Crete, during the Bronze Age period",
+      "authors": [
+        "Pagona Noni Maravelaki",
+        "Farkas Pintér",
+        "James Wright"
+      ],
+      "publicationDate": "2026-11-01",
+      "journal": "Journal of Cultural Heritage",
+      "issn": "1296-2074",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/j.culher.2026.10.015",
+      "doiUrl": "https://doi.org/10.1016/j.culher.2026.10.015",
+      "articleUrl": "https://doi.org/10.1016/j.culher.2026.10.015",
       "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
@@ -118291,51 +119179,6 @@
       }
     },
     {
-      "id": "doi:10.22148/jca.1431",
-      "title": "Title Pending",
-      "authors": [
-        "Rebecca Sutton Koeser",
-        "Mary Naydan",
-        "Laure Thompson",
-        "Meredith Martin"
-      ],
-      "publicationDate": "2026-01-01",
-      "journal": "Journal of Cultural Analytics",
-      "issn": "2371-4549",
-      "quartile": "User-curated specialist",
-      "sjrYear": null,
-      "feed": "digital-humanities",
-      "doi": "10.22148/jca.1431",
-      "doiUrl": "https://doi.org/10.22148/jca.1431",
-      "articleUrl": "https://doi.org/10.22148/jca.1431",
-      "journalUrl": "https://culturalanalytics.org/",
-      "openAccessUrl": "https://doi.org/10.22148/jca.1431",
-      "openAccessPdfUrl": null,
-      "openAccessStatus": "diamond",
-      "volume": null,
-      "issue": null,
-      "abstract": null,
-      "topics": [],
-      "metadataSources": [
-        "Crossref",
-        "OpenAlex"
-      ],
-      "relevance": {
-        "score": 0,
-        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
-        "signals": [
-          "Digital & Computational Humanities venue",
-          "non-research item signal"
-        ],
-        "methodSignals": [],
-        "humanitiesSignals": [],
-        "emotionSignals": [],
-        "emotionQualifies": false,
-        "qualifies": false,
-        "classifier": "rules-v3"
-      }
-    },
-    {
       "id": "doi:10.22148/jca.1433",
       "title": "Title Pending",
       "authors": [
@@ -118352,49 +119195,6 @@
       "articleUrl": "https://doi.org/10.22148/jca.1433",
       "journalUrl": "https://culturalanalytics.org/",
       "openAccessUrl": "https://doi.org/10.22148/jca.1433",
-      "openAccessPdfUrl": null,
-      "openAccessStatus": "diamond",
-      "volume": null,
-      "issue": null,
-      "abstract": null,
-      "topics": [],
-      "metadataSources": [
-        "Crossref",
-        "OpenAlex"
-      ],
-      "relevance": {
-        "score": 0,
-        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
-        "signals": [
-          "Digital & Computational Humanities venue",
-          "non-research item signal"
-        ],
-        "methodSignals": [],
-        "humanitiesSignals": [],
-        "emotionSignals": [],
-        "emotionQualifies": false,
-        "qualifies": false,
-        "classifier": "rules-v3"
-      }
-    },
-    {
-      "id": "doi:10.22148/jca.1736",
-      "title": "Title Pending",
-      "authors": [
-        "Meredith Martin",
-        "Wouter Haverals"
-      ],
-      "publicationDate": "2026-01-01",
-      "journal": "Journal of Cultural Analytics",
-      "issn": "2371-4549",
-      "quartile": "User-curated specialist",
-      "sjrYear": null,
-      "feed": "digital-humanities",
-      "doi": "10.22148/jca.1736",
-      "doiUrl": "https://doi.org/10.22148/jca.1736",
-      "articleUrl": "https://doi.org/10.22148/jca.1736",
-      "journalUrl": "https://culturalanalytics.org/",
-      "openAccessUrl": "https://doi.org/10.22148/jca.1736",
       "openAccessPdfUrl": null,
       "openAccessStatus": "diamond",
       "volume": null,
