@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-09T16:30:19+00:00",
+  "generatedAt": "2026-11-16T15:56:32+00:00",
   "windowStart": "2025-01-01",
-  "windowEnd": "2026-11-09",
+  "windowEnd": "2026-11-16",
   "journalCount": 20,
   "sjrYear": 2024,
   "sourceCounts": {
     "OpenAlex": 621,
-    "Crossref": 635
+    "Crossref": 638
   },
   "feedCounts": {
-    "digital-humanities": 649,
+    "digital-humanities": 652,
     "ai-history": 11
   },
   "emotionFeedCount": 145,
   "audit": {
-    "candidateCount": 3955,
-    "historyIncludedCount": 660,
+    "candidateCount": 3968,
+    "historyIncludedCount": 663,
     "emotionIncludedCount": 145,
-    "unreviewedCount": 3295,
+    "unreviewedCount": 3305,
     "definition": "Every available article record from each configured ISSN, retained when it does not pass the history rule so it can be inspected instead of silently discarded."
   },
   "journals": [
@@ -35,10 +35,10 @@
       "journalUrl": "https://academic.oup.com/dsh",
       "qualificationNote": "2024 SJR best quartile Q1; specialist digital-humanities venue",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 145,
+      "resultCount": 147,
       "emotionResultCount": 58,
-      "candidateCount": 309,
-      "unreviewedCount": 164,
+      "candidateCount": 312,
+      "unreviewedCount": 165,
       "knownIssueCount": 9
     },
     {
@@ -94,8 +94,8 @@
       "inclusionBasis": "user-curated specialist",
       "resultCount": 17,
       "emotionResultCount": 4,
-      "candidateCount": 37,
-      "unreviewedCount": 20,
+      "candidateCount": 41,
+      "unreviewedCount": 24,
       "knownIssueCount": 8
     },
     {
@@ -169,10 +169,10 @@
       "journalUrl": "https://dl.acm.org/journal/jocch",
       "qualificationNote": "2024 SJR best quartile Q1; computing-and-heritage specialist",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 132,
+      "resultCount": 133,
       "emotionResultCount": 24,
-      "candidateCount": 195,
-      "unreviewedCount": 63,
+      "candidateCount": 197,
+      "unreviewedCount": 64,
       "knownIssueCount": 7
     },
     {
@@ -191,8 +191,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 70,
       "emotionResultCount": 16,
-      "candidateCount": 484,
-      "unreviewedCount": 414,
+      "candidateCount": 485,
+      "unreviewedCount": 415,
       "knownIssueCount": 12
     },
     {
@@ -311,7 +311,7 @@
       "emotionResultCount": 0,
       "candidateCount": 62,
       "unreviewedCount": 62,
-      "knownIssueCount": 3
+      "knownIssueCount": 4
     },
     {
       "title": "The Historical Journal",
@@ -349,8 +349,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 0,
       "emotionResultCount": 0,
-      "candidateCount": 67,
-      "unreviewedCount": 67,
+      "candidateCount": 69,
+      "unreviewedCount": 69,
       "knownIssueCount": 7
     },
     {
@@ -369,8 +369,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 0,
       "emotionResultCount": 0,
-      "candidateCount": 177,
-      "unreviewedCount": 177,
+      "candidateCount": 178,
+      "unreviewedCount": 178,
       "knownIssueCount": 7
     },
     {
@@ -415,6 +415,165 @@
     }
   ],
   "papers": [
+    {
+      "id": "doi:10.1093/llc/fqag127",
+      "title": "Research on ancient text entity extraction based on domain-specific large language models",
+      "authors": [
+        "Wenhua Zhao",
+        "Zhixiao Zhao",
+        "Wenhao Ye",
+        "Dongbo Wang"
+      ],
+      "publicationDate": "2026-11-14",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag127",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag127",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag127",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract Large language models (LLMs) are well-known for their natural language generation abilities, but their performance in domain-specific text comprehension, particularly for Classical Chinese and English, has been less explored. This study focuses on bilingual data from Zizhi Tongjian in Classical Chinese and English. We construct an entity extraction instruction dataset by manually annotating official titles in fifteen volumes of Zizhi Tongjian. The annotations are verified using a BERT-based model. Based on this, we build an instruction dataset for entity extraction to fine-tune LLMs. The study involves fine-tuning two types of LLMs: the Xunzi series (domain-specific models for ancient texts) and general open-source LLMs using the LoRA framework. We experiment with different prompt formats to assess their impact on performance. Results show that, under identical conditions, the Xunzi-Qwen2-7B model outperforms other models. The best results were achieved by constructing instruction data from annotated original text, with entity-only instruction data also showing improvements. After fine-tuning with 5,000 samples, the Xunzi-Qwen2-7B model achieved an accuracy of 85.90 per cent, recall of 86.75 per cent, and F1 score of 86.32 per cent for official title extraction in Zizhi Tongjian.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 67,
+        "reason": "Matched computational evidence (AI / ML / LLM method) and humanities evidence (historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag144",
+      "title": "From digital archives to co-intelligence: reconstructing the Shanghai Library’s digital humanities platform with Generative AI",
+      "authors": [
+        "Wei Liu",
+        "Qianqian Liu",
+        "Jiaqin Jin",
+        "Simon Mahony"
+      ],
+      "publicationDate": "2026-11-13",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag144",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag144",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag144",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract The field of Digital Humanities (DH) is experiencing a significant methodological shift in response to Generative AI (GenAI). While platforms such as the Shanghai Library digital humanities (SLDH) Platform have already advanced the integration of digital archives, linked data, knowledge bases, and analytical tools, Large Language Models (LLMs) now require a more critical and evidence-oriented reconstruction of platform design. This paper presents a design science research-oriented framework grounded in Shanghai Library practice: the linked-data integration of ancient books, genealogies, manuscripts, Republican-era periodicals, authority files, and the Shanghai Memory project. It asks how GenAI can be embedded in existing librarian workflows without weakening scholarly agency, evidential traceability, or methodological transparency. The paper proposes a three-layer AI-native architecture consisting of a Data Layer based on a Lakehouse model, an Intelligence Layer integrating LLMs and knowledge graphs through neuro-symbolic methods, and an Application Layer offering modular, human-in-the-loop (HITL) toolsets. It clarifies how co-intelligence differs from augmented intelligence, human–AI collaboration, symbiotic AI, and generic AI co-pilot systems, and it compares the SLDH Platform with DARIAH, HathiTrust Research Center, Europeana, and Huma-Num to specify its institutional contribution. Instead of treating GenAI as a uniformly superior replacement for established methods, the paper argues for benchmarked, task-specific comparison with traditional stylometry, information retrieval, and knowledge organization approaches. A Shanghai Library-oriented pilot workflow and evaluation matrix are added to make the proposal minimally verifiable. The result is a bounded framework for transforming the SLDH Platform from a data aggregator into a critically governed research environment for AI-assisted humanities scholarship.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 95,
+        "reason": "Matched computational evidence (digital or computational humanities, AI / ML / LLM method) and humanities evidence (archives or documentary evidence, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "digital knowledge infrastructure",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities",
+          "AI / ML / LLM method",
+          "digital knowledge infrastructure"
+        ],
+        "humanitiesSignals": [
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3848130",
+      "title": "Graphic Compensation in Ancient Greek Documentary Hands: A Computational Paleographic Analysis from Handwritten Character Recognition",
+      "authors": [
+        "Paraskevi Platanou",
+        "Lavinia Ferretti",
+        "Isabelle Marthot-Santaniello",
+        "Giuseppe De Gregorio",
+        "Spyros Barbakos",
+        "Maria Konstantinidou",
+        "Asimina Paparrigopoulou",
+        "John Pavlopoulos"
+      ],
+      "publicationDate": "2026-11-10",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3848130",
+      "doiUrl": "https://doi.org/10.1145/3848130",
+      "articleUrl": "https://doi.org/10.1145/3848130",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Historical scripts are structured visual systems whose internal organization has traditionally been explored through qualitative paleographic analysis. However, many of the principles shaping their evolution remain difficult to test empirically across corpora. One such principle, formulated by Jean Irigoin, is the hypothesis of graphic compensation, according to which graphic systems tend to maximize visual distinctiveness between letters that share similar phonetic functions while allowing greater visual proximity in other cases. In this work, we develop a computational approach to explore the visual structure of historical scripts and apply it to the cursive Greek writing of Hellenistic papyri. Building on a previously introduced representation-learning framework for ancient Greek letterforms, we analyze the behavior of a ConvNeXt-V2 character recognizer trained with lacuna-based fragmentation and dynamically learned supervised contrastive loss in order to extract the similarity relations that structure the script. Rather than treating classification errors as poor technical results, we interpret them as paleographically meaningful patterns that reveal the internal organization of the graphic system. The resulting analysis shows that several of the strongest confusions occur between visually similar but phonetically distinct letters, including Alpha–Lambda, Omicron–Theta, Iota–Rho, Epsilon–Sigma, Tau–Upsilon, and Eta–Pi, providing quantitative support for Irigoin's hypothesis and suggesting that the principle of graphic compensation continues to operate even in the less controlled domain of cursive handwriting. This tendency is supported by a global pairwise comparison of same-category and vowel–consonant confusions, by stability checks across alternative training variants, by evaluation on damaged characters, and by a papyrus-level split designed to reduce leakage between train and test material. More broadly, this study proposes a methodological framework for computational paleography, in which model behavior can be used to extract interpretable descriptions of script structure from large collections of cultural heritage material. Finally, we suggest that the learned relationship between phonetic difference and visual confusion may itself serve as paleographic background knowledge and be incorporated into future HTR pipelines, helping recognition systems resolve visual ambiguity when visual evidence and linguistic expectations compete during decoding.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 79,
+        "reason": "Matched computational evidence (OCR / HTR method) and humanities evidence (heritage, memory, or collections, historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "OCR / HTR method",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "OCR / HTR method"
+        ],
+        "humanitiesSignals": [
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
     {
       "id": "doi:10.1145/3844148",
       "title": "When OCR Is Not Enough: Semantic Limits in the Digitization of Historical Computer Music Code",
@@ -47070,6 +47229,317 @@
   ],
   "auditPapers": [
     {
+      "id": "doi:10.22148/jca.1429",
+      "title": "Canon Dynamics in the Princeton Prosody Archive, 1559–1929",
+      "authors": [
+        "Wouter Haverals",
+        "Artjoms Šeļa",
+        "Petr Plecháč"
+      ],
+      "publicationDate": "2026-11-16",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1429",
+      "doiUrl": "https://doi.org/10.22148/jca.1429",
+      "articleUrl": "https://doi.org/10.22148/jca.1429",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "11",
+      "issue": "4",
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1354",
+      "title": "How Early Modern is the PPA? Tracing Prosodic Influence By Combining Data Sets",
+      "authors": [
+        "John Ladd"
+      ],
+      "publicationDate": "2026-11-16",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1354",
+      "doiUrl": "https://doi.org/10.22148/jca.1354",
+      "articleUrl": "https://doi.org/10.22148/jca.1354",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": "https://doi.org/10.22148/jca.1354",
+      "openAccessPdfUrl": null,
+      "openAccessStatus": "diamond",
+      "volume": "11",
+      "issue": "4",
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref",
+        "OpenAlex"
+      ],
+      "relevance": {
+        "score": 37,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/jsh/shag064",
+      "title": "Black Catholic Worlds: Religious Geographies of Eighteenth-Century Afro-Colombia. By Bethan Fisk",
+      "authors": [
+        "Joan C Bristol"
+      ],
+      "publicationDate": "2026-11-15",
+      "journal": "Journal of Social History",
+      "issn": "0022-4529",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/jsh/shag064",
+      "doiUrl": "https://doi.org/10.1093/jsh/shag064",
+      "articleUrl": "https://doi.org/10.1093/jsh/shag064",
+      "journalUrl": "https://academic.oup.com/jsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 32,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/llc/fqag147",
+      "title": "Adaptive simplification of English sentences using unsupervised semantic representations: integrating audience needs with improved pre-training strategies",
+      "authors": [
+        "Zhang Wenlong",
+        "Zhou Jianxin"
+      ],
+      "publicationDate": "2026-11-13",
+      "journal": "Digital Scholarship in the Humanities",
+      "issn": "2055-7671",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1093/llc/fqag147",
+      "doiUrl": "https://doi.org/10.1093/llc/fqag147",
+      "articleUrl": "https://doi.org/10.1093/llc/fqag147",
+      "journalUrl": "https://academic.oup.com/dsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract Text simplification can improve access to information when source sentences exceed a reader’s language proficiency. This study developed an adaptive English sentence simplification framework that combines unsupervised semantic representations with reader-level controls and does not require a parallel complex-simple corpus. Bidirectional Encoder Representations from Transformers embeddings were corrected with singular value decomposition (SVD) by removing the five dominant directions. Mean pairwise cosine similarity decreased from μ = 0.75 (σ = 0.12) to μ = 0.62 (σ = 0.08), indicating reduced anisotropy. The corpus contained 10,000 English sentences from academic, professional, and general sources. Reader adaptation used seven proficiency tiers anchored to the Common European Framework of Reference for Languages, with an additional expert tier. System quality was evaluated with System Output Against References and Against the Input Sentence (SARI), Flesch-Kincaid Grade Level (FKGL), cosine similarity, clustering measures, and blinded expert ratings. SARI increased from 0.40 to 0.57, a 42.5 per cent relative increase, while FKGL decreased from 9.0 to 7.0. After SVD, cosine-similarity skewness decreased from 0.8 to 0.1, and the silhouette score increased from 0.45 to 0.68. Ten experts rated 200 randomized sentence pairs; the weighted mean score was 4.32/5.00 (ICC(2, k) = 0.89). Average processing time was 150 ms per sentence. The results indicate that geometric correction and reader-specific decision rules can improve simplification quality while preserving meaning.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 45,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "AI / ML / LLM method"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1111/hith.70054",
+      "title": "DOCUMENTARY CONSTRAINT AND THE HISTORICAL IMAGINATION",
+      "authors": [
+        "Kalle Pihlainen"
+      ],
+      "publicationDate": "2026-11-11",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70054",
+      "doiUrl": "https://doi.org/10.1111/hith.70054",
+      "articleUrl": "https://doi.org/10.1111/hith.70054",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT This review essay reads Mauricio Tenorio‐Trillo's Clio's Laws: On History and Language as a meditation on how historical knowledge is produced under documentary constraint. It argues that the book's governing metaphor—history as interpretation that “levitates” yet remains pulled back toward the archive—offers a distinctive account of evidentiary discipline as constraint within interpretation. Through an ironic engagement with the limits of the craft, Tenorio‐Trillo presents a series of “laws,” highlighting how historical explanation remains inseparable from language, selection, and narrative form. The essay underscores his reminder that imagination is not a stylistic supplement applied after research but is already at work in the recognition of evidence and its assembly into intelligible objects of inquiry. This emphasis navigates between caricatured assumptions of the past as reductively subsumed by discourse and naive views of documentary transparency. The discussion concludes by examining how these commitments regarding constraint and rhetoric come to bear when historical narratives meet institutional and public demands.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1111/hith.70045",
+      "title": "EDITING THE ENCYCLOPEDIA: MEMORY WARS AND THE POLITICS OF MEANING",
+      "authors": [
+        "Valentina Pisanty"
+      ],
+      "publicationDate": "2026-11-11",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70045",
+      "doiUrl": "https://doi.org/10.1111/hith.70045",
+      "articleUrl": "https://doi.org/10.1111/hith.70045",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT Placing Umberto Eco's encyclopedic model at the center of its theoretical framework, this article interprets contemporary “memory wars” as semiotic conflicts about the organization of shared meaning. Drawing on Eco, it shows how meanings and comparative practices—such as those involved in controversies surrounding the International Holocaust Remembrance Alliance (IHRA) definition of antisemitism and the legitimacy of Holocaust comparisons—stabilize through processes of sedimentation and repetition, eventually entering the Average Encyclopedia as seemingly self‐evident associations. On this basis, the article identifies a limitation in Eco's model: its relative neglect of power relations and asymmetries that shape access to and control over the Encyclopedia. To address this gap, it introduces the concept of illocutionary power, understood as the socially recognized authority to perform metalinguistic acts that redefine the interpretive boundaries and conditions under which meanings can be articulated. In doing so, the article reconceptualizes the Encyclopedia as an inherently conflictual semiotic space, advancing a critical semiotics of memory that is attentive to the political dimension of language.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 10,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3849479",
+      "title": "Stylish Pieces: Advancing Deep Visual Style Recognition of Archaeological Fragments",
+      "authors": [
+        "Gur Elkin",
+        "Ofir Itzhak Shahar",
+        "Nadav Alali",
+        "Maria Cristina Napolitano",
+        "Alessandra Zambrano",
+        "Ohad Ben-Shahar"
+      ],
+      "publicationDate": "2026-11-10",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3849479",
+      "doiUrl": "https://doi.org/10.1145/3849479",
+      "articleUrl": "https://doi.org/10.1145/3849479",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Reconstructing fragmented archaeological artifacts is a central challenge in the study and preservation of ancient cultural heritage. A crucial step in this process often involves identifying the stylistic origin of isolated fragments, in part to dissociate fragments that could not originate from the same object. However, this task is inherently difficult: fragments often preserve only limited visual information, such as partial motifs or degraded surface details, and are frequently detached from their original archaeological context. Ancient Pompeian wall paintings, traditionally categorized into four styles, provide a compelling and historically significant case study. Over time, natural disasters and human activity caused many of the decorated structures to collapse, dispersing and mixing fragments from diverse sources. As a result, stylistic attribution has become a complex and labor-intensive task. In this work, we demonstrate how recent advances in deep image classification can be leveraged to develop highly accurate systems for fragment style recognition, addressing key challenges faced by archaeologists on site. To support this task, we introduce a new dataset for fragment-style classification based on the shapes of real fragments recovered from Pompeii excavations. Our research spans large-scale foundation models down to lightweight, edge-compatible networks, significantly improving on previous state-of-the-art methods while maintaining a balance between accuracy and computational efficiency.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 55,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "heritage, memory, or collections",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1017/s0018246x26102027",
       "title": "The Great Syrian Revolt and Gender Models amongst Male and Female Toughs of the Northern Bekaa",
       "authors": [
@@ -49951,6 +50421,48 @@
       }
     },
     {
+      "id": "doi:10.1016/j.culher.2026.10.019",
+      "title": "Energy prediction in heritage courtyard houses converted into boutique hotels: A machine-learning surrogate modelling framework with cross-building validation",
+      "authors": [
+        "Mohammad Nazififard",
+        "Erwin Franquet",
+        "Ahmad Sedaghat"
+      ],
+      "publicationDate": "2026-11-01",
+      "journal": "Journal of Cultural Heritage",
+      "issn": "1296-2074",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/j.culher.2026.10.019",
+      "doiUrl": "https://doi.org/10.1016/j.culher.2026.10.019",
+      "articleUrl": "https://doi.org/10.1016/j.culher.2026.10.019",
+      "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "82",
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1525/tph.2026.48.4.127",
       "title": "Dear America , National Gallery of Art, Washington, DC",
       "authors": [
@@ -50887,8 +51399,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract More than thirty years ago, a team of amateur archaeologists swept up dust from underneath the floorboards of Hackney’s oldest home, Sutton House. Hundreds of pieces of ephemera were discovered, including coloured and cut prints and folded paper from the seventeenth century, products of an early modern schoolgirl art that has almost no material survival. This article explores these fragments’ connection to seventeenth-century girls’ schooling in the Hackney area and the well documented but rarely extant schoolgirl art of adorning domestic spaces with prints of the natural world and built environment.",
       "topics": [],
       "metadataSources": [
@@ -51343,7 +51855,7 @@
       "openAccessStatus": null,
       "volume": "9",
       "issue": "1",
-      "abstract": null,
+      "abstract": "This article explores the theory content of the Computer Applications and Quantitative Methods in Archaeology (CAA) International conferences. The article compares this content to the themes presented in computing sessions in the Theoretical Archaeology Group (TAG) conferences. The article highlights the importance of the DigiTAG sessions in 2016, but also points out the existence of precedents. At the beginning, the processual paradigm meant that computer applications were part of the mainstream of the discipline and so the same theoretical underpinnings were shared between computer archaeology and theoretical archaeology. This changed with post-processual archaeology and there was a surge of theoretical soul-searching within the computing community in the mid-1990s. Relatively speaking, computing has been discussed more in the TAG conferences than theory has been considered in the CAA conferences and with the ‘digital turn’ this content is also present in more generally themed TAG sessions.",
       "topics": [],
       "metadataSources": [
         "Crossref"
@@ -51757,8 +52269,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract The British lodging houses of the late nineteenth and early twentieth centuries are often portrayed as sites of poverty, illness, and crime. This article reexamines them by highlighting their positive impact on itinerant traders. These cheap dwellings offered more than affordable beds: in them, pedlars found allies and assistance. Staying in one could be a way to evade police control and migration restrictions. Lodging houses thus played a strategic role in pedlars’ networks well into the 1930s, despite their numerical decline. The article emphasizes the agency of petty capitalists and questions the effectiveness of state surveillance over these cheap lodgings.",
       "topics": [],
       "metadataSources": [
@@ -51894,8 +52406,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": null,
       "topics": [],
       "metadataSources": [
@@ -52521,9 +53033,9 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
-      "abstract": "ABSTRACT Studying the history of sexual violence in marriage is an ethically complex endeavour, demanding consideration of both historical individuals subjected to violence and the contemporary audience engaging with this history. This article examines the ethical and methodological challenges inherent in such research, using twentieth-century Denmark as a case. It explores three interrelated problems: 1) why it is necessary to document historical sexual violence in marriage despite its difficulties; 2) how to identify instances of sexual violence in historical records, given the evolving definitions and silences imposed by hierarchically structured archives; and 3) how to present evidence without replicating historical violence.",
+      "volume": "102",
+      "issue": "1",
+      "abstract": "Abstract Studying the history of sexual violence in marriage is an ethically complex endeavour, demanding consideration of both historical individuals subjected to violence and the contemporary audience engaging with this history. This article examines the ethical and methodological challenges inherent in such research, using twentieth-century Denmark as a case. It explores three interrelated problems: 1) why it is necessary to document historical sexual violence in marriage despite its difficulties; 2) how to identify instances of sexual violence in historical records, given the evolving definitions and silences imposed by hierarchically structured archives; and 3) how to present evidence without replicating historical violence.",
       "topics": [],
       "metadataSources": [
         "Crossref"
@@ -52720,8 +53232,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract Three decades ago, Shani D’Cruze warned historians that ‘research into sexual violence…is not lightly undertaken,’ but replete with political, methodological, and ethical challenges. Since her cautioning, researchers have worked to contextualise sexual violence, demonstrating how its meanings and experiences are historically and culturally specific, and how understandings of what constitutes harmful sex change across time and place. Yet how historians go about conducting such research – what questions they ask, what sources they use, and how they position themselves in their work – remains little explored. Today, historians of sexual violence are moving beyond the previous reliance on court documents and increasingly using interdisciplinary methods, drawing on work in medicine, psychology, and anthropology, and looking for sources beyond the traditional archive through oral histories and participatory methodologies. This special feature explores the methodological challenges and ethical complexities of researching histories of sexual violence. It argues that these concerns are foundational to the work that we do and can benefit from explicit interrogatation in our research, analysis, and writing. The special feature’s articles were developed through an online workshop held in 2022 and an international conference in 2023.",
       "topics": [],
       "metadataSources": [
@@ -53526,8 +54038,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract This article argues for the recognition of children as important subjects in sexual violence histories. We apply Lois Prosser’s criminological framework of ‘unsaid analysis’ to a close reading of the records of the Inquiry into Child Abuse in Cleveland, UK (1987/88) to expose the many ways in which the abuse of children was denied and their voices silenced. We use this to advocate for greater attention to the methodologies and conceptual tools that historians can employ, which we argue have particular utility in recovering the histories of children and those who experience multiple marginalizations such as disabled, queer and trans people.",
       "topics": [],
       "metadataSources": [
@@ -64461,8 +64973,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract When francophone women selling sex in London evaded expulsion by claiming to have been born in Quebec, Canada, and therefore to be British subjects who could not be deported, the police did not know what to do. The cases of women who used this strategy in the 1910s and the 1930s illustrate the possibilities these women afforded themselves by selling sex in London and the difficulties of documentary legibility and legal ambiguity. The article shows how ‘parastatal’ organizations shaped the moral enforcement of British borders and how negotiations over dominion sovereignty and imperial mobility hinged on the categories of desirability.",
       "topics": [],
       "metadataSources": [
@@ -64602,8 +65114,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract This article examines the methodological challenges of using oral history to research histories of sexual violence. Drawing on a project exploring rape in apartheid South Africa, it asks questions about how interviews should be conducted and how the resulting narratives can be sensitively analysed. While oral histories are subjective sources, inherently shaped by present contexts and co-created in a unique relationship between interviewee and interviewer, the article argues that these very complexities make them uniquely valuable. Oral histories do more than fill archival gaps; they also highlight how histories of violence are lived, contested, and understood in the present.",
       "topics": [],
       "metadataSources": [
@@ -65285,8 +65797,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract In the era of decolonization, politicians and activists in newly independent states had to confront local histories, languages, and cultural practices to define who could contribute to post-independence nation and state-building. Looking inwards, rather than outwards, opened new spaces of contestation, as different groups and organizations asserted competing political projects. This article centres Pakistan’s National Awami Party to examine debates that informed the rise of post-independence politics. It reflects on what constitutes ‘progressive’ politics, the Pakistani state’s efforts to de-radicalize opposition groups, and the need to address inbuilt colonial-era prejudices as a means of writing new histories of decolonization.",
       "topics": [],
       "metadataSources": [
@@ -65517,8 +66029,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract While clearing out her mother’s personal possessions after her death, a Canadian woman discovered a parcel of letters hidden in the jewellery drawer, which seemed to indicate her mother’s love affair with another woman. This article considers the possibility of lesbian desire hidden in plain sight within the post-war nuclear family as a case study opening up broader questions of the ethics of historical practice. As the ‘imaginative turn’ in history prompts scholars to adopt methodologies which speculate on, or imagine, their subjects’ intimate experiences and emotions, this article explores whether and how those stories can ethically be told.",
       "topics": [],
       "metadataSources": [
@@ -65666,8 +66178,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract This article interrogates British anarchist responses to Mohandas Gandhi during the 1940s, a pivotal period marked by the reemergence of British anarchism and the intensification of Indian independence efforts. It argues that while anarchists supported Indian self-liberation, they were deeply divided over Gandhi. For some, he was an inspiration for nonviolent tactics; for others, he represented the flaws of nationalist-led independence, auguring poorly for genuine freedom for ordinary Indians. This study critically challenges prevailing scholarship that posits a natural affinity between Gandhism and anarchism. Drawing on unexplored primary material, it demonstrates that British anarchists never reached consensus on Gandhi’s ideas or his significance.",
       "topics": [],
       "metadataSources": [
@@ -70743,8 +71255,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract This article traces the research itinerary of the authors, beginning in the archives of UNHCR, the United Nations refugee agency. Engagement with holdings that had until recently remained beyond historians’ reach redirected their inquiries to focus on a UNHCR officer, Candida Toscani. Her professional trajectory offers insights into the role and conduct of UNHCR personnel in the postwar international refugee regime. Drawing on official documents, personnel files, private memoirs, and information provided by Toscani’s daughter, the article examines what these materials disclose about an institution coming under closer historical scrutiny, while reflecting on the epistemological dilemmas that shape historical research.",
       "topics": [],
       "metadataSources": [
@@ -72822,8 +73334,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract Drawing on Home Office records, anti-deportation campaign archives, memoirs, and interviews, this article examines the role of emotion and discretion in British deportation policy during the 1980s. It argues that deportation decisions were not simply the product of legislation or administrative procedure, but were shaped by the discretionary judgments of politicians and civil servants. While officials invoked the language of compassion and human rights, they simultaneously narrowed the practical scope of such protections. Tracing the emotional dynamics between campaigners and state actors, the article reveals how deportation became normalized as an instrument of immigration control by the 1990s.",
       "topics": [],
       "metadataSources": [
@@ -73220,8 +73732,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "102",
+      "issue": "1",
       "abstract": "Abstract This article examines how Atlantic slavery debates interacted with domestic reform demands in industrial Sheffield between 1823-48. It explores the shifting language of slavery, which has an ancient political tradition, but in the nineteenth century increasingly involved allegories between Britain’s working classes and enslaved Africans. The article first analyses Sheffield’s specific economic and sociopolitical heritage. Next, it investigates how slavery metaphors emerged in middle-class reform culture. Finally, it examines how slavery tropes impacted working-class radicalism. Highlighting the ways slavery terminology evolved across these different social movements unearths how broad ideas of human difference were conceptualized within provincial nineteenth-century Britain.",
       "topics": [],
       "metadataSources": [
@@ -119095,48 +119607,6 @@
       }
     },
     {
-      "id": "doi:10.22148/jca.1354",
-      "title": "Title Pending",
-      "authors": [
-        "John Ladd"
-      ],
-      "publicationDate": "2026-01-01",
-      "journal": "Journal of Cultural Analytics",
-      "issn": "2371-4549",
-      "quartile": "User-curated specialist",
-      "sjrYear": null,
-      "feed": "digital-humanities",
-      "doi": "10.22148/jca.1354",
-      "doiUrl": "https://doi.org/10.22148/jca.1354",
-      "articleUrl": "https://doi.org/10.22148/jca.1354",
-      "journalUrl": "https://culturalanalytics.org/",
-      "openAccessUrl": "https://doi.org/10.22148/jca.1354",
-      "openAccessPdfUrl": null,
-      "openAccessStatus": "diamond",
-      "volume": null,
-      "issue": null,
-      "abstract": null,
-      "topics": [],
-      "metadataSources": [
-        "Crossref",
-        "OpenAlex"
-      ],
-      "relevance": {
-        "score": 0,
-        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
-        "signals": [
-          "Digital & Computational Humanities venue",
-          "non-research item signal"
-        ],
-        "methodSignals": [],
-        "humanitiesSignals": [],
-        "emotionSignals": [],
-        "emotionQualifies": false,
-        "qualifies": false,
-        "classifier": "rules-v3"
-      }
-    },
-    {
       "id": "doi:10.22148/jca.1102",
       "title": "Title Pending",
       "authors": [
@@ -119322,6 +119792,133 @@
       "doi": "10.22148/jca.1437",
       "doiUrl": "https://doi.org/10.22148/jca.1437",
       "articleUrl": "https://doi.org/10.22148/jca.1437",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 0,
+        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "non-research item signal"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1826",
+      "title": "Title Pending",
+      "authors": [
+        "Cecelia Ramsey"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1826",
+      "doiUrl": "https://doi.org/10.22148/jca.1826",
+      "articleUrl": "https://doi.org/10.22148/jca.1826",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 0,
+        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "non-research item signal"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1833",
+      "title": "Title Pending",
+      "authors": [
+        "Javier Cha",
+        "Matt Erlin",
+        "Susan Schreibman"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1833",
+      "doiUrl": "https://doi.org/10.22148/jca.1833",
+      "articleUrl": "https://doi.org/10.22148/jca.1833",
+      "journalUrl": "https://culturalanalytics.org/",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 0,
+        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "non-research item signal"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.22148/jca.1519",
+      "title": "Title Pending",
+      "authors": [
+        "Andrew Piper",
+        "Miranda Pate",
+        "Robert Budac"
+      ],
+      "publicationDate": "2026-01-01",
+      "journal": "Journal of Cultural Analytics",
+      "issn": "2371-4549",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.22148/jca.1519",
+      "doiUrl": "https://doi.org/10.22148/jca.1519",
+      "articleUrl": "https://doi.org/10.22148/jca.1519",
       "journalUrl": "https://culturalanalytics.org/",
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
