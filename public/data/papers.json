@@ -1,23 +1,23 @@
 {
-  "generatedAt": "2026-11-16T15:56:32+00:00",
+  "generatedAt": "2026-11-23T18:19:49+00:00",
   "windowStart": "2025-01-01",
-  "windowEnd": "2026-11-16",
+  "windowEnd": "2026-11-23",
   "journalCount": 20,
   "sjrYear": 2024,
   "sourceCounts": {
     "OpenAlex": 621,
-    "Crossref": 638
+    "Crossref": 639
   },
   "feedCounts": {
-    "digital-humanities": 652,
+    "digital-humanities": 653,
     "ai-history": 11
   },
   "emotionFeedCount": 145,
   "audit": {
-    "candidateCount": 3968,
-    "historyIncludedCount": 663,
+    "candidateCount": 3985,
+    "historyIncludedCount": 664,
     "emotionIncludedCount": 145,
-    "unreviewedCount": 3305,
+    "unreviewedCount": 3321,
     "definition": "Every available article record from each configured ISSN, retained when it does not pass the history rule so it can be inspected instead of silently discarded."
   },
   "journals": [
@@ -39,7 +39,7 @@
       "emotionResultCount": 58,
       "candidateCount": 312,
       "unreviewedCount": 165,
-      "knownIssueCount": 9
+      "knownIssueCount": 10
     },
     {
       "title": "Digital Humanities Quarterly",
@@ -113,8 +113,8 @@
       "inclusionBasis": "user-curated specialist",
       "resultCount": 23,
       "emotionResultCount": 8,
-      "candidateCount": 47,
-      "unreviewedCount": 24,
+      "candidateCount": 48,
+      "unreviewedCount": 25,
       "knownIssueCount": 2
     },
     {
@@ -151,8 +151,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 118,
       "emotionResultCount": 7,
-      "candidateCount": 202,
-      "unreviewedCount": 84,
+      "candidateCount": 203,
+      "unreviewedCount": 85,
       "knownIssueCount": 8
     },
     {
@@ -169,10 +169,10 @@
       "journalUrl": "https://dl.acm.org/journal/jocch",
       "qualificationNote": "2024 SJR best quartile Q1; computing-and-heritage specialist",
       "inclusionBasis": "sjr-q1",
-      "resultCount": 133,
+      "resultCount": 134,
       "emotionResultCount": 24,
-      "candidateCount": 197,
-      "unreviewedCount": 64,
+      "candidateCount": 200,
+      "unreviewedCount": 66,
       "knownIssueCount": 7
     },
     {
@@ -191,8 +191,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 70,
       "emotionResultCount": 16,
-      "candidateCount": 485,
-      "unreviewedCount": 415,
+      "candidateCount": 487,
+      "unreviewedCount": 417,
       "knownIssueCount": 12
     },
     {
@@ -289,8 +289,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 1,
       "emotionResultCount": 0,
-      "candidateCount": 72,
-      "unreviewedCount": 71,
+      "candidateCount": 73,
+      "unreviewedCount": 72,
       "knownIssueCount": 6
     },
     {
@@ -329,8 +329,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 1,
       "emotionResultCount": 0,
-      "candidateCount": 139,
-      "unreviewedCount": 138,
+      "candidateCount": 141,
+      "unreviewedCount": 140,
       "knownIssueCount": 9
     },
     {
@@ -349,8 +349,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 0,
       "emotionResultCount": 0,
-      "candidateCount": 69,
-      "unreviewedCount": 69,
+      "candidateCount": 74,
+      "unreviewedCount": 74,
       "knownIssueCount": 7
     },
     {
@@ -369,8 +369,8 @@
       "inclusionBasis": "sjr-q1",
       "resultCount": 0,
       "emotionResultCount": 0,
-      "candidateCount": 178,
-      "unreviewedCount": 178,
+      "candidateCount": 180,
+      "unreviewedCount": 180,
       "knownIssueCount": 7
     },
     {
@@ -415,6 +415,59 @@
     }
   ],
   "papers": [
+    {
+      "id": "doi:10.1145/3847117",
+      "title": "JoinPap V2: a Human-Centric AI Approach for Papyrus Fragment Reassembly",
+      "authors": [
+        "Nicola Messina",
+        "Giulia Mirante",
+        "Valentina Iannace",
+        "Fabio Carrara",
+        "Massimiliano Corsini",
+        "Paolo Cignoni",
+        "Fabrizio Falchi",
+        "Francesca Maltomini"
+      ],
+      "publicationDate": "2026-11-16",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3847117",
+      "doiUrl": "https://doi.org/10.1145/3847117",
+      "articleUrl": "https://doi.org/10.1145/3847117",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Reconstructing large-scale textual artifacts such as fragmented ancient papyri remains a major challenge in digital humanities, requiring labor-intensive expert intervention. This paper introduces a new interactive AI-based system, JoinPap V2 , that follows a Human-Centric AI (HCAI) approach to support experts in this complex task. We employ a deep binary classifier to evaluate the plausibility of a proposed join by simultaneously checking the geometric fit of fragment borders and the continuity of visual content (e.g., fiber structure and ink traces). A key component of the approach is a data preparation pipeline that generates virtual positive tears to mitigate data scarcity. We integrate this fragment matching model into the JoinPap interface, which aggregates scores across both the fragment recto and verso and visualizes plausible joins together with their confidence. We provide a quantitative assessment of the model on a validation set, showing its ability to distinguish positive and negative joins. We also report qualitative feedback from expert papyrologists on the interface, together with a case-study evaluation of AI-suggested joins on two challenging fragment rolls, showing promising improvements in the ranking of plausible join proposals and demonstrating the system's potential to support papyrological reassembly work.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 75,
+        "reason": "Matched computational evidence (digital or computational humanities) and humanities evidence (historical period or archaeology) in the Digital & Computational Humanities feed.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "digital or computational humanities",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [
+          "digital or computational humanities"
+        ],
+        "humanitiesSignals": [
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": true,
+        "classifier": "rules-v3"
+      }
+    },
     {
       "id": "doi:10.1093/llc/fqag127",
       "title": "Research on ancient text entity extraction based on domain-specific large language models",
@@ -3118,8 +3171,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article examines how gendered meaning was constructed in late Ottoman Turkish periodicals by applying word-embedding models to a research-grade corpus that we digitized and processed through Optical Character Recognition/Handwritten Text Recognition. Ottoman Turkish presents distinctive challenges for computational analysis: it was written in a now-obsolete script, incorporates extensive Arabic and Persian vocabulary, and has agglutinative morphology. Very little of this material has been digitized, making Ottoman Turkish a severely under-resourced language for computational study. In light of these constraints, we approach corpus preparation not as a neutral prelude but as a constitutive stage of the research itself, since text recognition and preprocessing shape the semantic relations recoverable through modeling. Using Word2Vec, we analyzed gendered semantics through similarity measures, clustering, and projection along a constructed gender axis. Across parameter settings, the results converge on a consistent asymmetry: femininity is explicitly marked within reformist and domestic registers, while masculinity appears as an unmarked and diffuse norm spanning civic, institutional, and familial vocabularies. We argue that this structure arises not from grammatical encoding but from cultural discourse, and that word embeddings provide a heuristic means of rendering such asymmetries analytically visible. More broadly, the study demonstrates how computational methods can serve interpretive historical–linguistic inquiry in non-Western and digitally under-resourced contexts, where corpus construction and modeling decisions are inseparable from scholarly interpretation.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -3174,8 +3227,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag129",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Intangible cultural heritage (ICH) is a high-dimensional cultural knowledge space that remains largely inaccessible to computational design workflows due to fragmented representation and non-scalable manual curation. This study proposes a data-driven framework that integrates term frequency–inverse document frequency textual features with structured metadata to support unsupervised clustering and content-based recommendation of ICH elements. Using 500 United Nations Educational, Scientific and Cultural Organization (UNESCO)-referenced entries, a hybrid feature space was constructed and clustered using K-means (k = 4), with a silhouette score of 0.304, yielding interpretable cultural structure aligned with heritage typologies. Principal component analysis projections, distributional analyses, and similarity graphs demonstrate stable separation and semantically coherent retrieval. The results show that modest lexical signals, when fused with categorical metadata, are sufficient to recover interpretable, data-driven approximations of cultural structure and support similarity-based ideation. This work provides an interpretable, scalable, and domain-portable machine learning pipeline that advances computational cultural informatics and supports downstream creative tasks where cultural grounding is required.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -7235,8 +7288,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study focuses on the cultural heritage of the Mogao Caves, adopts a mixed research method of field observation and questionnaire, and through multi-dimensional data fusion analysis, it reveals the balanced relationships and gaps between the existing virtual reality (VR), Augmented Reality technological capabilities and viewers’ experiential needs, and constructs an innovative MGDO-VR/AR strategy framework model. The framework systematically clarifies the optimized priority relationship between user experience, technical implementation, and content expression during the construction of VR and AR application frameworks. This study provides an empirical theoretical basis and sustainable decision-making reference for the optimization and improvement of VR and AR display applications in the Mogao Grottoes in the future, as well as for the management and operation of other similar grotto heritage sites.",
       "topics": [
         "Museums and Cultural Heritage",
@@ -7288,8 +7341,8 @@
       "openAccessUrl": "https://hdl.handle.net/10316/123620",
       "openAccessPdfUrl": "https://estudogeral.uc.pt/bitstream/10316/123620/1/DSH-2025-1019.R3_Proof_hi.pdf",
       "openAccessStatus": "green",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study addresses linguistic diversity in Digital Humanities (DH), specifically within its scientific publication. Its core objective is to contribute to the development of DH’s self-knowledge—particularly its multilingual nature—through the characterization of scientific publication in the field. A bibliometric analysis of DH scientific publication indexed in Web of Science and Scopus between 2012 and 2021 is conducted. The following parameters are examined: distribution by year of publication, by country of author(s), by journal (considering the language in which each journal is published), by document language, and by DH subfields (Web of Science Categories). Bibliometric network visualizations of country co-authorship and bibliographic source co-citation analyses are also conducted using the software VOSviewer. The number of multilingual publications has been increasing, with a total of 29 distinct languages identified. Setting aside the expected and pronounced supremacy of English, Spanish and German are the most prominent languages. Spain and Germany are the most productive countries, and Spain has collaborated most extensively in multilingual scientific publication. The hegemony of the West and of Western languages is conspicuous, hence the underrepresentation of languages using non-Latin scripts. Literature and History predominate in multilingual DH, whereas Philosophy, Religion, Classics, and the Arts lag behind. Whereas discussion of linguistic diversity in DH has remained largely theoretical, this research offers an empirical examination of DH’s multilingualism. The study’s main contribution lies in deepening DH’s self-knowledge as a discipline, with practical implications at the level of conferences, journals, and project funding.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -7988,8 +8041,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag108",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article examines historical relations between gay and transgender communities by analyzing hyperlink structures among Dutch LGBT websites archived in 2020. While the acronym LGBT suggests a cohesive “rainbow coalition,” historical relations between gay and transgender groups have been marked by tensions and uneven forms of integration. Drawing on a corpus of 192 websites archived by the Dutch National Library, this study uses hyperlink network analysis to investigate patterns of affiliation, boundary maintenance, and cross-identity engagement at scale. Hyperlinks are treated as traces of social and organizational orientation, making it possible to reconstruct relational structures within and between online communities. A combination of cluster analysis and in- and out-linking analysis yields three main findings. First, a distinct and internally cohesive transgender cluster emerges alongside a less cohesive but still pronounced gay cluster, complicating narratives of a post-gay era. Second, transgender websites display a significantly stronger internal orientation, receiving a higher proportion of in-links from within their own community, reflecting the enduringly different needs and experiences of trans people. Third, cross-linking across identities was sporadic, suggesting the persistence of relatively stable identity-based orientations rather than an integrated LGBT web sphere. Methodologically, the article demonstrates the value of archived hyperlink networks for historical research on digital, and particularly marginalized, communities. Substantively, it contributes to scholarship on LGBT history by providing the first systematic, web-historical analysis of gay–transgender relations. More broadly, it shows how network-based approaches can help digital humanities scholars study community formation, separation, and coalition-building in historical web environments.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -8224,8 +8277,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag112",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract In the last decades, European policies have highlighted the need to digitize cultural heritage material to enable Member States to be active actors in the long-term preservation, accessibility, and usage of heritage. So far, many institutions have grappled with diverse technologies to expand their digital offer, enrich the promotion of their collections, and enhance visitors’ experiences. However, many others still fight to find their place in the digital space. In this article, I will discuss the level of digitization reached by museums in Cyprus. The work integrates traditional approaches with quantitative and qualitative methods to identify the needs and challenges organizations and professionals face in dealing with digitization. The results show that a variety of digitization projects are underway across several museums, yet the majority have not been completed due to financial, organizational, and technical constraints. Moreover, a set of needs such as digitizing the collection, investing in technology for collection management, and enhancing on-site visitor experiences has been identified as a priority by professionals. The comprehensive review of the results contributes to giving visibility to the recent achievements in the digitization of heritage in an underexplored context of the South-Eastern Mediterranean, while also highlighting areas for improvement that serve as a foundation for theoretical reflections and practical solutions about the museum digitization.",
       "topics": [
         "Museums and Cultural Heritage",
@@ -8563,8 +8616,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Hadith scholarship requires tracing semantically related reports across collections, variants, and transmission settings, yet existing computational work concentrates on lexical search, narrow question answering, or heterogeneous evaluation setups that limit scholarly usefulness and weaken cross-study comparability. This article specifies semantic takhrij as a distinct cross-collection retrieval task in which a query Hadith is used to recover canonically grounded, semantically related evidence across collections, and constructs a leakage-controlled evaluation framework suited to the structural properties of Hadith corpora. The framework defines the query unit, candidate evidence space, graded relevance schema, provenance-aware output record, annotation logic, family-aware split philosophy, stable canonical identifiers, transparent normalization rules, and documentation requirements needed for auditable and reproducible evaluation. A four-level relevance model treats exact matches, near-parallel reports, semantically supportive evidence, and nonrelevant results as distinct outcomes rather than collapsing them into a single similarity class, while a family-aware partitioning strategy prevents evaluation-breaking leakage inherent in cross-collection Hadith settings. This is the first work to formalize semantic takhrij as a provenance-aware, graded, and leakage-controlled retrieval task, integrating task definition, annotation logic, and split discipline as a single coherent methodological unit, thereby advancing digital humanities scholarship by providing operational design vocabulary for evidence-oriented retrieval in Arabic religious corpora and directly supporting reproducible and source-grounded computational study of Islamic textual traditions.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -8621,8 +8674,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article examines the structural technological disadvantages faced by low-resource minority languages in India through a case study of Sindhi within contemporary Natural Language Processing and digital language infrastructures. While state-of-the-art language technologies depend on large standardized corpora, in post-Partition India, Sindhi’s territorial displacement, orthographic plurality, and declining formal language education have substantially impacted the development of digital corpus, annotation frameworks, and speech-resources suitable for the language. The study combines a dataset-level analysis of major Indian language technology initiatives with semi-structured interviews with Sindhi corpus practitioners to investigate how infrastructural design assumptions, such as script stability, Optical Character Recognition (OCR) compatibility, and broadcast-based speech pipelines, shape the language’s limited representation across digital platforms. The findings demonstrate that Sindhi’s marginal presence across digital language infrastructures reflects structural misalignment rather than simple data absence. In response, the article advances a community-integrated Digital Humanities framework that situates native linguistic expertise at the center of corpus creation. A collaborative Sindhi audio archival initiative is presented as a model for culturally grounded digitization that derives from the language’s historical and cultural context rather than adapting it to dominant technical standards. The article argues that minority language digitization must be understood as an infrastructural and cultural process, requiring language-specific strategies capable of sustaining both technological participation and long-term linguistic continuity.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -8745,8 +8798,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article evaluates whether a generic large language model (LLM) can be used to support literary scholarship by (1) identifying relevant passages and (2) producing explanations for those selections in response to a research question. We designed a workflow that combined semantic retrieval, vector search, and GPT-4o-based evaluation, and applied it to ninety novels set in Paris between 1838 and 1928, including works by Flaubert, Zola, Colette, and Proust, as well as lesser-known authors. Asked to identify passages in which artificial light played a role in the depiction of romantic or loving feelings, the model was relatively successful. Although it recovered only about 16 per cent of examples already located through manual reading, 56 per cent of the 506 additional passages it suggested were judged potentially valid in a scholar-evaluated sample. However, the model failed to generate explanations that would be convincing close readings. Critiquing the notion of ‘automatic close reading’, we apply our own close reading to the model’s imitations of close reading, and identify four recurrent shortcomings: (1) the problem of contemporary semantics being applied to a historical corpus, (2) a possible sentimentalist bias, (3) difficulty in detecting irony, and (4) misattribution of causality. We conclude that, if LLMs were to be trained for literary research, a model would need ‘knowledge’ of the whole text, extensive cultural and historical awareness, and training in reasoning informed by literary scholarship.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -8927,8 +8980,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Building syntactically annotated corpora, such as treebanks, for historical languages is a challenging yet vital task in digital humanities, as it underpins linguistic analysis and facilitates a range of interdisciplinary research. However, the scarcity of annotated data and the need for extensive expertise in historical linguistics make this process particularly demanding. In this study, we explore the potential of cross-lingual natural language processing (NLP) techniques as a semiautomatic solution for treebank construction in low-resource historical languages. We use Middle High German (MHG) as a case study. Leveraging the linguistic continuity and structural similarities between MHG and Modern German (MG), we effectively utilize the extensive MG treebank resources to develop a constituency parsing system tailored for MHG. Specifically, to design a semiautomatic system that integrates automatic annotation with manual validation, we explore two cross-lingual transfer techniques: zero-shot transfer and delexicalization; the latter removes lexical information to focus on syntactic structure. In our experiments, we first train parsers on MG treebanks, and then transfer them to MHG using the two cross-lingual transfer techniques. The delexicalization method achieves a parsing performance of 67.3 per cent in terms of F1-score. This performance significantly surpasses the zero-shot cross-lingual method by a margin of 28.6 percentage points. These investigations validate the effectiveness and feasibility of cross-lingual transfer techniques for historical language treebank construction. This study highlights the potential of NLP tools to streamline the semiautomatic annotation process, reducing the reliance on extensive linguistic expertise and manual effort, and paving the way for broader applications in digital humanities research.",
       "topics": [
         "Natural Language Processing Techniques",
@@ -9039,8 +9092,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Ancient Greek manuscripts present major challenges for computational analysis due to the lack of diacritics, orthographic variation, and scribal conventions. Consequently, current state-of-the-art parsers perform poorly at lemmatization and morphological analysis. In this paper, we address this challenge by developing a new method that automatically collates annotated printed editions and manuscript traditions to generate silver-annotated datasets, using New Testament uncial manuscripts written in Koine Greek as our use case. After training a neural parser on this dataset, called UncCy (Uncial-Spacy), we demonstrate on a manually annotated manuscript that our parser reaches 93.6% performance on lemmatization, 96.9% on morphology, and 98.8% on POS, which corresponds to a gain of +40 pp in lemmatization, +34 pp in morphology, and +8 pp in Part-of-Speech (POS) compared to the current state-of-the-art parsers. This study thus provides the first production-ready parser for the study of New Testament uncials, opening the perspective of studying hundreds of currently unexploited transcriptions. All the resources generated during this study are fully available as Open-Source software and datasets.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -9095,8 +9148,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The t-test is an important and commonly used statistical tool that produces a probability known as a p-value. In computational stylistics, a t-test is often used to make sense of the data arising from counting the frequencies of certain words in different texts. These frequencies may vary across different texts from different eras, in different genres, and by different authors. In a recent essay in Digital Scholarship in the Humanities, Pervez Rizvi argued that Hugh Craig had, in an article published elsewhere, misused the t-test in an attempt to show that in early modern plays word-choice frequencies vary more significantly across different authors than they vary across writings in different genres by one author. The present essay shows that Craig in fact used t-test’s responsibly, that Rizvi’s essay misrepresents this branch of statistics, and that Rizvi recurrently committed a well-known statistical ‘howler’—his claim that a p-value tells us how likely it is that our null hypothesis is true—that vitiates his entire critique.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -9656,8 +9709,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag093",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article introduces the Early Islamic Conquests Database–Balādhurī (EICD-B), a structured dataset extracted from al-Balādhurī’s ninth-century chronicle Futūḥ al-buldān using large language models (LLMs). Building on the OpenITI/KITAB digital corpus, a four-stage workflow transforms narrative historical material into machine-readable conquest records: pre-processing, schema-guided extraction, normalization, and validation. Each record contains the Hijrī year, toponym, commander name, caliph name, and mode of conquest (Capitulation/ṣulḥan, Subjugation/ʿanwatan, or Reconsolidation), with a textual evidence snippet enabling source verification. The validated dataset comprises 226 conquest events dated primarily to 11–97 AH (632–716 CE), with three events (99 and 221 AH) retained as temporal outliers, all successfully geocoded. Results indicate 52.2% Capitulation, 42.5% Subjugation, and 5.3% Reconsolidation. ʿUmar’s caliphate dominates with 99 conquests (43.8%), while fitna periods show a marked decline in conquest activity. EICD-B provides the first machine-readable, evidence-linked dataset of early Islamic conquest events extracted from a classical Arabic chronicle, enabling quantitative testing of historiographical hypotheses such as Noth’s schemata thesis. The study demonstrates a replicable LLM-based workflow for schema-guided extraction from historically inflected Arabic, while emphasizing the methodological importance of retaining textual evidence spans for verification. The transparent methodology and reproducible dataset enable new computational approaches to early Islamic history.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -10269,8 +10322,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study analyzes the symbolic recurrence and thematic plasticity in Federico García Lorca’s poetry through an interdisciplinary approach combining literary analysis and natural language processing. An extensive corpus—19 poetry collections, 390 poems, and nearly 9,000 verses—was analyzed using lexical metrics, frequency analysis, topic modeling, and LLM-assisted semantic interpretation to identify characteristic isotopies. The findings reveal sustained lexical richness and four major thematic axes that, while persistent, shift in prominence across Lorca’s creative periods, reflecting both aesthetic coherence and expressive reinvention. Notably, significant semantic plasticity emerges at the verse level, especially in youthful and traditional phases, where verses flow between multiple thematic spaces. The presence of frontier verses—marked by thematic ambiguity and polyvalence—offers a quantifiable indicator of semantic density and stylistic evolution, and reveals the poet’s capacity to activate multiple symbolic resonances. This research demonstrates how digital humanities and artificial intelligence can illuminate complex artistic phenomena, offering quantitative support to traditional philological interpretations of Lorca’s imagery.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -10338,8 +10391,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The relationship between local elite groups and regional cultural evolution across temporal and spatial dimensions has long been critical for understanding how civilizations change. This study employed interdisciplinary methodologies from digital humanities and historical geography to conduct an empirical analysis of 32,207 biographies recorded in local chronicles from the Zhejiang region, spanning the Eastern Zhou Dynasty to the modern era (i.e., 770 BCE–1945 CE). The social composition, achievements, spatial concentration, and diffusion patterns of local elites within the context of different historical periods were of particular interest, alongside their interactions with regional cultural development. It was found that the diversification of local elite types in the Zhejiang region was pronounced, with distinct temporal characteristics, encompassing roles in science and education, politics, literature and art, and medicine. Elites in the field of science and education had the highest probability distribution, accounting for 30.8 per cent, while those in medicine and the military had the lowest, at 13.6 per cent and 12.2 per cent, respectively. The criteria for selecting and recording elite figures changed over time but consistently reflected the trajectory of alterations in mainstream societal values. The importance of cultural heritage and regional characteristics was particularly evident for literature and the arts but was less apparent in science, technology, and education, perhaps due to rapid technological progress and frequent shifts in policy orientation.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -10397,8 +10450,8 @@
       "openAccessUrl": "https://orbilu.uni.lu/handle/10993/68600",
       "openAccessPdfUrl": null,
       "openAccessStatus": "green",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Multimodal deep learning (MDL) has potential for digital history (DH) research, from simple tasks such as image or text classification, to more sophisticated ones such as information retrieval (IR). We propose a novel IR method based on vision language models (VLMs), a class of MDL models, to extract embeddings from images and text to find connections among unrelated image and text datasets that are challenging to find using conventional approaches such as keyword search. We evaluate our method with a proof-of-concept case study on debates surrounding the civil usage of nuclear power in Europe, based on poster images from the Landelijk Kernenergie Archief website and German newspaper articles found in the Impresso corpus, where both datasets are assumed to share some common themes. We find that poster images and newspaper articles can be automatically matched from independent sources based on representations extracted by pre-trained VLMs. We further find that VLMs achieve better performance when translating newspaper articles to English or summarizing them in English. Ultimately, our work bridges the gap of cross-modal and cross-lingual IR for DH, showing real-world applicability of MDL and opening new avenues in DH research. Our code and data are available at https://github.com/StevenXuf/MatchMeIfYouCan.",
       "topics": [
         "Multimodal Machine Learning Applications",
@@ -10458,8 +10511,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": null,
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Digital archives function as critical infrastructures for the preservation, circulation, and reinterpretation of Shakespearean texts and performances. Despite substantial practical development, the interdisciplinary research landscape of Shakespeare digital archiving has not yet been systematically synthesized. A Preferred Reporting Items for Systematic reviews and Meta-Analyses-guided systematic review is therefore conducted, drawing on thirty-two studies published between 1990 and 2025 in the Web of Science and Scopus databases. By integrating cross-analysis of thematic and methodological development, this review provides the first structured synthesis of the field’s evolution over thirty-five years. Although participation from non-Western regions has increased, institutional leadership and scholarly authority remain largely concentrated within Western academic contexts. Research themes have broadened from early technical implementation to include pedagogy and interculturality, but conventional infrastructural and editorial standards continue to shape practice. Methodologically, qualitative case-based inquiry persists as the dominant paradigm, while quantitative and user-centered approaches remain comparatively marginal. This review positions Shakespeare digital archiving as a critical site where technological standards and institutional authority intersect, contributing to broader debates in digital humanities regarding openness, participation, and democratization.",
       "topics": [],
       "metadataSources": [
@@ -39693,8 +39746,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag121",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The suitability of encoder-based and generative language models (E and GLMs) for annotating grammatical phenomena, such as change of grammatical use, is unclear. We explore two instances of grammatical change, one in progress and one almost completed, and compare E and GLM classifiers created to annotate occurrences of these in text. ELMs fine-tuned with a relatively low number of examples achieve similar performance to few-shot GLMs (outperforming GLMs by 3% in one case, and underperforming by 3% in the second). A detailed error analysis shows that some ELM errors are systematic, providing an avenue for improvement of accuracy. An exploration of substitution-based semi-automatic labelling of training data revealed challenges in the use of such approaches for linguistic phenomenon labelling and highlighted the need for manual preparation of training data. GLMs are found to use more examples than expected in a few shot learning setting with limited ability to adjust to small changes of use of training examples. An analysis of misclassifications detected specific linguistic features that affect model performance. These findings point to the value of combining model training with linguistic analysis for both annotation and theoretical insight.",
       "topics": [
         "Natural Language Processing Techniques",
@@ -40040,8 +40093,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Purpose: This study examines how narrative content in detective fiction is associated with indicators of reading immersion, using narrative transportation theory to connect textual topics with readers’ emotional and cognitive responses. Design/methodology/approach: The study analyses 27,999 reader-selected excerpts from 100 highly ranked detective novels on Douban, posted between February 2011 and January 2024. Latent Dirichlet allocation (LDA) was used to identify narrative topics, and a BERT classifier assigned excerpts to the resulting categories. Sentiment dictionaries and the Text Mind system generated emotional and cognitive indicators. Non-parametric tests examined temporal trends and differences across subtopics. Findings: The excerpts formed three narrative dimensions (plot, humanity, and society) and seven subtopics. Plot-related content received consistently high attention; attention to humanity-level content declined over time, whereas attention to society-level content increased. Positive and negative sentiment indicators both rose, and the seven subtopics showed distinct emotional and cognitive profiles. These patterns inform a three-stage interpretive model linking content accessibility, emotional and cognitive engagement, and intellectual extension. Originality: The study moves beyond reviews and self-reports by treating reader-selected excerpts as digital traces of textual salience and by integrating topic modelling, supervised classification, sentiment analysis, and cognitive-semantic analysis. Contribution to the field of digital humanities: It provides a content-sensitive framework and a reproducible computational workflow for investigating how literary form, reader selection, and interpretive response interact at scale.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -40226,8 +40279,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Rhyme is deceptively intuitive: what is or is not a rhyme is constructed historically, scholars struggle with rhyme classification, and people disagree on whether two words are rhymed or not. This complicates automated rhymed recognition and evaluation, especially in cross-language research contexts. This article investigates how much training data are needed for reliable unsupervised rhyme recognition using RhymeTagger, a language-independent tool that identifies rhymes based on repeating patterns in poetry corpora. We evaluate its performance across seven languages (Czech, German, English, French, Italian, Russian, and Slovene), examining how training size and language differences affect accuracy. To set a realistic performance benchmark, we assess inter-annotator agreement on a manually annotated subset of poems and analyze factors contributing to disagreement in expert annotations: phonetic similarity between rhyming words and their distance from each other in a poem. We also compare RhymeTagger to three large language models (LLMs) using a one-shot learning strategy. Our findings show that, once provided with sufficient training data, RhymeTagger consistently outperforms human agreement, while LLMs lacking phonetic representation significantly struggle with the task.",
       "topics": [
         "Natural Language Processing Techniques",
@@ -40287,8 +40340,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract As a significant medium of literary art, overseas Chinese poetry not only conveys the personal emotions of poets but also reflects the social ethos and cultural landscape of specific eras, serving as a century-spanning legacy of nostalgia and memory for overseas Chinese. To address the problems of fragmented emotional semantics and ambiguous emotional attribution correlation in centennial overseas Chinese poetry, this study proposes a knowledge graph (KG) construction framework centered on the emotional context attention mechanism. Through the emotional semantic fusion encoder and poetic entity decoder, the triple of emotion–imagery–author is accurately extracted, and the KG of emotional attribution of overseas Chinese poetry is constructed. The system can realize intelligent retrieval, emotional correlation analysis and trend mining, providing a replicable digital humanities method for the research of overseas Chinese hometown literature and homesickness.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -40349,8 +40402,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article evaluates whether a generic large language model (LLM) can be used to support literary scholarship by (1) identifying relevant passages and (2) producing explanations for those selections in response to a research question. We designed a workflow that combined semantic retrieval, vector search, and GPT-4o-based evaluation, and applied it to ninety novels set in Paris between 1838 and 1928, including works by Flaubert, Zola, Colette, and Proust, as well as lesser-known authors. Asked to identify passages in which artificial light played a role in the depiction of romantic or loving feelings, the model was relatively successful. Although it recovered only about 16 per cent of examples already located through manual reading, 56 per cent of the 506 additional passages it suggested were judged potentially valid in a scholar-evaluated sample. However, the model failed to generate explanations that would be convincing close readings. Critiquing the notion of ‘automatic close reading’, we apply our own close reading to the model’s imitations of close reading, and identify four recurrent shortcomings: (1) the problem of contemporary semantics being applied to a historical corpus, (2) a possible sentimentalist bias, (3) difficulty in detecting irony, and (4) misattribution of causality. We conclude that, if LLMs were to be trained for literary research, a model would need ‘knowledge’ of the whole text, extensive cultural and historical awareness, and training in reasoning informed by literary scholarship.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -40413,8 +40466,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Theme, as the core content of literary works, serves as a linguistic style marker, reflecting authorial characteristics. Thematic studies facilitate profound comprehension of literary texts. Thematic concentration, a quantitative linguistic measurement, indicates an author’s intentional emphasis on specific themes, while thematic diversity quantifies the lexical-semantic richness within literary expressions. As a significant branch of Sinophone diaspora literature, Southeast Asian Chinese-language literature constitutes modern Chinese “New Literature” with discernible Chinese cultural imprints. Scholarly investigations in this domain represent a crucial subset of Chinese literary studies. Current research exhibits a paucity of empirical comparative studies regarding stylometric similarities between Southeast Asian Chinese New Poetry and Mainland Chinese New Poetry. This study therefore employs computational stylometry through SPSS 27.0 and Python programming, implementing thematic concentration metrics for cross-regional poetic comparison. Through corpus-driven methodology, integrating high-frequency lexical analysis and Latent Dirichlet Allocation topic modeling, we quantitatively assess thematic configurations. Findings reveal: (1) significantly lower thematic concentration in Southeast Asian works versus Mainland counterparts, indicating a stronger monothematic tendency in Mainland poetry versus polythematic expressions in diaspora creations; (2) divergent thematic salience patterns—Mainland poetry emphasizes quotidian narratives, whereas Southeast Asian works prioritize natural imagery; (3) the inclusion of prose as control texts further elucidates genre-specific thematic distributions between poetic and prose forms.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -40766,8 +40819,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study investigates how human participants evaluate the human likeness of Chat Generative Pretrained Transformer (ChatGPT)-generated texts compared to human-authored texts in terms of register alignment and functional appropriateness. It involved eighty-three participants who evaluated four texts (two by ChatGPT and two by humans) representing university textbook and blog registers. Participants answered questions about text authorship, register identification and alignment, and purpose identification and functional appropriateness. Findings showed that participants struggled with identifying ChatGPT-generated texts accurately, with only one ChatGPT text correctly identified by the majority, while they performed better in identifying human-authored texts. Participants were also challenged in identifying the correct register, with no notable differences between human-authored and ChatGPT-generated texts. However, participants generally rated all texts as aligning with their chosen registers, with texts identified as human-authored perceived as more aligned. Moreover, although participants had difficulty distinguishing between human and artificial intelligence (AI)-generated texts and identifying registers, they could successfully recognize the communicative purposes of texts regardless of authorship, which suggests that ChatGPT can convey the communicative purpose of a text. Nonetheless, texts identified as human-authored were perceived as more functionally appropriate. This study provides insights into the current state of AI-generated text quality. The findings suggest caution when considering the integration of ChatGPT-generated texts into language education. While ChatGPT shows potential in providing language practice and development, the perceived lower quality in terms of register alignment and functional appropriateness may affect its effectiveness. Educators should critically evaluate the use of AI-generated texts to ensure they meet the linguistic standards required for educational purposes.",
       "topics": [
         "Discourse Analysis in Language Studies",
@@ -40820,8 +40873,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study analyzes the symbolic recurrence and thematic plasticity in Federico García Lorca’s poetry through an interdisciplinary approach combining literary analysis and natural language processing. An extensive corpus—19 poetry collections, 390 poems, and nearly 9,000 verses—was analyzed using lexical metrics, frequency analysis, topic modeling, and LLM-assisted semantic interpretation to identify characteristic isotopies. The findings reveal sustained lexical richness and four major thematic axes that, while persistent, shift in prominence across Lorca’s creative periods, reflecting both aesthetic coherence and expressive reinvention. Notably, significant semantic plasticity emerges at the verse level, especially in youthful and traditional phases, where verses flow between multiple thematic spaces. The presence of frontier verses—marked by thematic ambiguity and polyvalence—offers a quantifiable indicator of semantic density and stylistic evolution, and reveals the poet’s capacity to activate multiple symbolic resonances. This research demonstrates how digital humanities and artificial intelligence can illuminate complex artistic phenomena, offering quantitative support to traditional philological interpretations of Lorca’s imagery.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -40884,8 +40937,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study aims to systematically examine discourse polarization on Chinese social media through an integrated cognitive and computational lens. It proposes a three-dimensional semantic–structural–strategic framework to capture how linguistic meaning, network structure, and discursive strategy interact to produce polarization in digital discourse. Two highly contentious cases, the Delayed Retirement policy and Yang Li’s endorsement of JD.com, are analyzed across Weibo and Little Red Book. The study focuses on posts containing adversarial language, combining BERTopic clustering, semantic network construction, Louvain community detection, and critical discourse analysis. Structural indicators quantify polarization, while cohesion and fragmentation are assessed through community purity, intra-/inter-community similarity, and cross-community edges. Ten discourse strategies are coded, and sentiment analysis reveals affective feedback mechanisms. Results show that Weibo functions as a mass polarization accelerator, characterized by rapid isolate–integrate cycles and high emotional contagion, whereas Little Red Book exhibits low-intensity, niche polarization grounded in personal narratives. The findings demonstrate a feedback loop between extreme negative emotions and intra-community interaction, reinforcing group boundaries and antagonistic framing. This study develops a novel multidimensional framework that bridges micro-level discursive cognition and macro-level network structure, advancing the methodological integration of computational linguistics and cognitive discourse analysis. By operationalizing semantic, structural, and affective dimensions of online discourse, this research expands digital humanities approaches to include networked cognition and emotion-driven polarization. It provides empirical and conceptual tools for understanding collective meaning-making in digital environments and offers actionable insights for mitigating online hostility through platform-level discourse design.",
       "topics": [
         "Sentiment Analysis and Opinion Mining",
@@ -47229,6 +47282,534 @@
   ],
   "auditPapers": [
     {
+      "id": "doi:10.1111/hith.70052",
+      "title": "WE HAVE NEVER BEEN VERNACULAR",
+      "authors": [
+        "RAJBIR SINGH JUDGE"
+      ],
+      "publicationDate": "2026-11-23",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70052",
+      "doiUrl": "https://doi.org/10.1111/hith.70052",
+      "articleUrl": "https://doi.org/10.1111/hith.70052",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT Scholars continue to press for vernacular archives as solutions to loss. Tracing the arguments of Prophetic Maharaja: Loss, Sovereignty, and the Sikh Tradition in Colonial South Asia , this essay questions that conclusion. Rather than treating loss as a problem to be overcome, it centers the problem of interpretive risk, challenging both liberal and certain decolonial investments in History. What emerges is a different orientation to loss, sovereignty, and community—one that refuses the promise of recovery and instead dwells in the dislocations theorized within the Sikh tradition itself. In doing so, the essay interrogates the stakes of South Asian historians and their truth games, asking them to question the fantasies and fears that organize their work, especially the sense of betrayal that arises when they do not receive the Sikh they want, and the moralism that proceeds from that sense of betrayal.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1111/hith.70055",
+      "title": "CHOREOGRAPHING A BIOGRAPHY: DANCE AND THE WRITING OF HISTORY",
+      "authors": [
+        "Susan Leigh Foster"
+      ],
+      "publicationDate": "2026-11-23",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70055",
+      "doiUrl": "https://doi.org/10.1111/hith.70055",
+      "articleUrl": "https://doi.org/10.1111/hith.70055",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT In Like the Sea: Dancing with Mary Glass , Carol Mavor offers a biography of Mary Glass, a nearly unknown mid‐century dancer who lived in the Bay Area and rubbed shoulders with renowned artists, such as Anna Halprin, Simone Forti, and Merce Cunningham, but remained submerged in an extraordinary ordinary life. Or does she? Mavor's portrait of Glass is based, seemingly, on shards of archival evidence, all embellished with the sensorial richness of Northern California's sea shore, mountains, and forests. She packs the biography with the sensual vividness of things, securing Glass's life with telling detail—something Glass saw or smelled that stands out. Such details cannot be ignored, but they are also ordinary. Yet, the further one reads, the more urgently one begins to ask, “How does Mavor know this?” In provoking readers to pose this question repeatedly, Mavor seems to suggest, “Isn't history always forged at the intersection between speculation and certainty?” Mavor's work thus lies adjacent to dance historians’ biographies, some of which reflect a keen awareness of the relative impermanence of dance as a subject and of the unevenness, including breathtaking absences in what remains, within the archive. Dance historians are also cognizant of their role in narrating their subjects’ lives, and some show this awareness through the formal structures they implement in crafting their histories. Like dance historians, Mavor, a student of Hayden White, seemingly wants to foreground what he called “the content of the form” and to use this to reflect on the projects of writing about dance and writing history. Emphasizing how meaning itself is constructed, the contents of her form reinforce the claim that creative conjecture necessarily informs the writing of history itself.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1111/hith.70050",
+      "title": "A DESOLATE FORCE",
+      "authors": [
+        "ADAM Y. STERN"
+      ],
+      "publicationDate": "2026-11-23",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70050",
+      "doiUrl": "https://doi.org/10.1111/hith.70050",
+      "articleUrl": "https://doi.org/10.1111/hith.70050",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT In this short essay, I respond to Rajbir Singh Judge's Prophetic Maharaja : Loss, Sovereignty, and the Sikh Tradition in Colonial South Asia by exploring the book's critique of reparative historicism as well as its methodological rejoinder “to take … incompletion seriously.” I argue that Judge challenges his readers to reconsider the well‐known, if little understood, relationship between history and prophecy as different modes of timing. I demonstrate, moreover, that Judge's prophetic critique of history also conditions his writing: a stylistic hermeticism that consistently and unrelentingly threatens to devastate the prose of history that he nonetheless continues to propagate. Beginning with a brief account of “prophecy” as a theological, aesthetic, and political category, I turn to Judge's own invocation of Maurice Blanchot's concept of “prophetic speech.” In doing so, I mark out the desert as an important element of Blanchot's argument, where it represents both a site of prophecy and the experience of its desolate force. In its deformation of all future certainties, and its refusal of everything there is, prophecy becomes a name for the dislocation of historical time itself. For Blanchot, its watchword is the simple particle: yet . The remainder of the essay explores Judge's own use of these yets of history as a key to understanding how prophecy informs his reading of the Sikh tradition.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1111/hith.70044",
+      "title": "THE FORCE OF THE FALSE AND THE WEAKNESS OF TRUTH",
+      "authors": [
+        "Anna Maria Lorusso"
+      ],
+      "publicationDate": "2026-11-23",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70044",
+      "doiUrl": "https://doi.org/10.1111/hith.70044",
+      "articleUrl": "https://doi.org/10.1111/hith.70044",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT This article revisits Umberto Eco's reflections on falsehood, invention, and fictionality to address the contemporary semiotic condition of truth in an era marked by pervasive falsification and generative artificial intelligence. Drawing on Eco's theory of lying, his analyses of forgery, and his later reflections on narrative fiction, the article argues that falsehood and invention are not marginal deviations from meaning but constitutive resources of semiosis. Although analytically distinct, lying, falsification, and fiction converge in actual cultural practices, producing powerful and persuasive textual constructions. Particular attention is given to the role of cultural codes, typologies of fakes, and interpretive communities in shaping regimes of truth. Against the commonsensical assumption (rooted in the Western philosophical and religious tradition) that truth is inherently strong and self‐imposing, the article advances the provocative thesis that truth is semiotically weak: It is fragile, demanding, and often less persuasive than strategically constructed falsehoods.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no history / heritage evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "AI / ML / LLM method"
+        ],
+        "methodSignals": [
+          "AI / ML / LLM method"
+        ],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1017/s0018246x26102179",
+      "title": "The Conservation of Absence: How Dead Elephants Animate the Living in Malaysia’s Nature Reserves",
+      "authors": [
+        "Faizah Zakaria"
+      ],
+      "publicationDate": "2026-11-19",
+      "journal": "The Historical Journal",
+      "issn": "0018-246X",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1017/s0018246x26102179",
+      "doiUrl": "https://doi.org/10.1017/s0018246x26102179",
+      "articleUrl": "https://doi.org/10.1017/s0018246x26102179",
+      "journalUrl": "https://www.cambridge.org/core/journals/historical-journal",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract The origins of wildlife conservation in Malaysia are usually presented as part of a narrative about British imperial environmental consciousness that ushered in the formation of game reserves, wildlife sanctuaries and national parks worldwide. However, these spaces are more than just protected sites; they are also layered cultural landscapes that embed complex stories of inter-species interactions. Through a long history of human-elephant relations in the Malay peninsula, this article examines how such spaces were not created only through colonial policies but also local cultures, memories and senses of loss. A nature reserve could thus become many things: a place that underscored the magnitude of deforestation, a lost realm instrumentalized for current political relevance and a site of mourning by diverse publics. Conservation in this context leveraged on the bodies and memories of absent elephants as much as it did on the intimacy of close encounters with present ones. Through this case study, I nudge the discourse on commodification of animals away from an emphasis on liveliness towards a greater sensitivity to how death – as spectacle and spectre – shadows our encounters with lively commodities such as elephants.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "historical period or archaeology",
+          "named emotion or affective state"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [
+          "named emotion or affective state"
+        ],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1017/s0018246x26102192",
+      "title": "‘The Order of the Cannibal’: British Royal Diplomacy and the Bestowing of Decorations on Non-European Monarchs, 1856–1954",
+      "authors": [
+        "Antony Best"
+      ],
+      "publicationDate": "2026-11-19",
+      "journal": "The Historical Journal",
+      "issn": "0018-246X",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1017/s0018246x26102192",
+      "doiUrl": "https://doi.org/10.1017/s0018246x26102192",
+      "articleUrl": "https://doi.org/10.1017/s0018246x26102192",
+      "journalUrl": "https://www.cambridge.org/core/journals/historical-journal",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract One of the values of studying royal diplomacy as a field in modern international history is that it can provide insights into the broad and long-term changes that take place in the international order. To illustrate this phenomenon, this article deals with the seemingly arcane world of how Britain decided what chivalric decorations to bestow on non-European monarchs from the time of the Crimean War until the First World War. It sheds light on how Britain initially was forced through strategic considerations to break with precedent and bestow its highest honour, the Order of the Garter, on the Ottoman sultan and the Persian shah. However, distaste for the practice of honouring non-Christians in this manner and pessimism about the future of these polities led the British court by the 1890s to introduce a new policy – the ‘Rosebery line’ – that symbolically assigned them and the other Asian monarchies to a position of clear inferiority. It shows why imperial Japan came to be the only exception to this policy and how the intensity of this royal diplomacy came to an end in the aftermath of the First World War.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 50,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources",
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1017/chr.2026.10052",
+      "title": "Quantifying lighting consistency in Impressionist painting",
+      "authors": [
+        "Anushcka Joshi",
+        "Lizhen Zhu",
+        "Kathryn Brown",
+        "Sitao Zhang",
+        "James Z. Wang"
+      ],
+      "publicationDate": "2026-11-19",
+      "journal": "Computational Humanities Research",
+      "issn": "2977-8158",
+      "quartile": "User-curated specialist",
+      "sjrYear": null,
+      "feed": "digital-humanities",
+      "doi": "10.1017/chr.2026.10052",
+      "doiUrl": "https://doi.org/10.1017/chr.2026.10052",
+      "articleUrl": "https://doi.org/10.1017/chr.2026.10052",
+      "journalUrl": "https://www.cambridge.org/core/journals/computational-humanities-research",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/pastj/gtag033",
+      "title": "Coal miners as abortionists in Germany, c .1930–1955",
+      "authors": [
+        "Emma Teworte"
+      ],
+      "publicationDate": "2026-11-19",
+      "journal": "Past & Present",
+      "issn": "0031-2746",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/pastj/gtag033",
+      "doiUrl": "https://doi.org/10.1093/pastj/gtag033",
+      "articleUrl": "https://doi.org/10.1093/pastj/gtag033",
+      "journalUrl": "https://academic.oup.com/past",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Abstract Abortion is commonly gendered as a women’s issue. This article centres the role of men in reproductive histories by examining a cohort of twelve coal miners who terminated pregnancies illegally in Germany’s industrial heartland, the Ruhr, between the early 1930s and mid-1950s. The miner-abortionists shed light on two aspects of working-class life: masculinity and community. In a period before the contraceptive pill provided an individualized and feminized method of birth control, working-class men often helped limit their families’ size: birth control was both a material and a gendered issue. For this cohort of coal miners, performing abortions even became an empathetically masculine, boast-worthy skill. Within their communities, the abortions provided by the miners can be classed as one of the many forms of remunerated neighbourly help: it was care work performed within the neighbourhood’s moral economy. The abortions were therefore embedded within, not divorced from, the patriarchal norms that structured working-class communities— meaning the abortion encounter was marked by both misogyny and empathy. Inscribing the miner-abortionists within working-class everyday life, this social history of reproduction goes beyond ‘adding men and stirring’. Rather, recognizing abortion as a form of work helps de-essentialize conceptions of masculinity, community, and care.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 10,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "emotion, affect, sentiment, or feeling"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [
+          "emotion, affect, sentiment, or feeling"
+        ],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1111/hith.70046",
+      "title": "SEMIOTICS AND THE LABOR THEORY OF HISTORICAL KNOWLEDGE",
+      "authors": [
+        "FEDERICO MARCON"
+      ],
+      "publicationDate": "2026-11-18",
+      "journal": "History and Theory",
+      "issn": "0018-2656",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1111/hith.70046",
+      "doiUrl": "https://doi.org/10.1111/hith.70046",
+      "articleUrl": "https://doi.org/10.1111/hith.70046",
+      "journalUrl": "https://onlinelibrary.wiley.com/journal/14682303",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "ABSTRACT This article advocates for a historiography more semiotico by arguing that the longstanding aporias between epistemological truth, political meaning, and rhetorical presentation in historical writing are not obstacles to be overcome but constitutive features of all knowledge production. Taking the 1989 UCLA debate between Hayden White and Carlo Ginzburg as its point of departure, the article identifies three dominant epistemological paradigms in historiography—relativist, realist, and contractualist—and contends that all three rely on dyadic models of cognition that systematically efface the mediating role of historians’ labor. Drawing on Umberto Eco's interpretive semiotics and Charles Sanders Peirce's pragmaticist epistemology, the article proposes a triadic model of historical knowledge production in which cognitive claims, a socially shared Encyclopedia of concepts and methods, and a world that exercises negative resistance are held in constant, dynamic negotiation. Applied to historiography, this model reframes the past as an absent dynamical object whose reconstruction as a conjectural “possible world” is entirely dependent on the transparency and rigor of historians’ semiotic labor. The article argues that this labor is irreducibly political in that it shapes collective memory, consolidates or transforms shared epistemological frameworks, and carries direct consequences for how societies understand and act upon the present. Rather than defending objectivity through appeals to realism or disciplinary consensus, the article proposes that the truth‐value of historical knowledge be assessed by critically attending to the conditions, methods, and social embeddedness of the cognitive labor that produces it.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 10,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3862860",
+      "title": "Decoding Traditional Chinese Patterns with the WenYi Structured Corpus",
+      "authors": [
+        "Ziyao Gao",
+        "Huangjing Zhou",
+        "Wei Zeng"
+      ],
+      "publicationDate": "2026-11-17",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3862860",
+      "doiUrl": "https://doi.org/10.1145/3862860",
+      "articleUrl": "https://doi.org/10.1145/3862860",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Traditional Chinese patterns serve as a key visual language of Chinese culture, with unique aesthetic and symbolic value. However, the lack of comprehensive digital resources and structured representations has limited both large-scale cultural analysis and the culture-grounded reuse of patterns in contemporary design and generative workflows. In response, we construct WenYi , a structured corpus of traditional Chinese patterns. WenYi contains 2978 pattern instances covering 154 motifs across more than 2000 years of Chinese history, organized through a four-dimensional schema of Context, Content, Visual Form, and Cultural Semantics. The corpus is constructed through a hybrid annotation strategy that combines hierarchical metadata fields, controlled vocabularies, and open-ended semantic descriptions. Users can access the corpus through an explorer system we developed. We demonstrate the utility of WenYi through four cases: motif co-occurrence analysis, visual trend exploration, text-to-image model fine-tuning, and semantic-guided design ideation. The study provides a structured foundation for analyzing and reusing traditional Chinese patterns, while also discussing insights into structuring cultural complexity and making visual culture data explicit.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 41,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "historical research or sources"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical research or sources"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/jsh/shag057",
+      "title": "The Dreaded Pox: Sex and Disease in Early Modern London. By Olivia Weisser",
+      "authors": [
+        "Emily Cock"
+      ],
+      "publicationDate": "2026-11-17",
+      "journal": "Journal of Social History",
+      "issn": "0022-4529",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/jsh/shag057",
+      "doiUrl": "https://doi.org/10.1093/jsh/shag057",
+      "articleUrl": "https://doi.org/10.1093/jsh/shag057",
+      "journalUrl": "https://academic.oup.com/jsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 32,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue",
+          "historical period or archaeology"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "historical period or archaeology"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1093/jsh/shag058",
+      "title": "Unwilling to Know: Male Homosexuality at the Crossroads of Europe, 1870-1965. By Wannes Dupont",
+      "authors": [
+        "Andrew Israel Ross"
+      ],
+      "publicationDate": "2026-11-17",
+      "journal": "Journal of Social History",
+      "issn": "0022-4529",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "ai-history",
+      "doi": "10.1093/jsh/shag058",
+      "doiUrl": "https://doi.org/10.1093/jsh/shag058",
+      "articleUrl": "https://doi.org/10.1093/jsh/shag058",
+      "journalUrl": "https://academic.oup.com/jsh",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 10,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "AI & LLMs in History venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.22148/jca.1429",
       "title": "Canon Dynamics in the Princeton Prosody Archive, 1559–1929",
       "authors": [
@@ -47266,6 +47847,53 @@
         "methodSignals": [],
         "humanitiesSignals": [
           "archives or documentary evidence"
+        ],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1145/3849870",
+      "title": "Agentic SHIFT: A Multi-Agent AI Framework for Visual and Context-Aware Cultural Heritage Exploration",
+      "authors": [
+        "Abdessamad Imider",
+        "Abderrahmane Samali",
+        "John Kingston",
+        "Sara Qassimi",
+        "Omar Bencharef"
+      ],
+      "publicationDate": "2026-11-16",
+      "journal": "ACM Journal on Computing and Cultural Heritage",
+      "issn": "1556-4673",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1145/3849870",
+      "doiUrl": "https://doi.org/10.1145/3849870",
+      "articleUrl": "https://doi.org/10.1145/3849870",
+      "journalUrl": "https://dl.acm.org/journal/jocch",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": "Historic urban destinations contain culturally significant places whose digital visibility, accessibility, and suitability for visitation vary substantially. This paper presents Agentic SHIFT, the Smart Heritage Itinerary Framework for Transmission, a context-aware multi-agent framework for auditable cultural heritage itinerary recommendation. Nine specialised agents coordinate visitor profiling, context modelling, heritage retrieval, operational eligibility, heritage and under-exposure scoring, expected suitability, pedestrian routing, evidence-bounded narration, and visual verification. The Marrakech benchmark contains 196 cultural POIs across ten heritage categories. Twenty calibration configurations were used to select the utility weights, and forty held-out paired configurations were used for the final comparison. On the held-out set, Agentic SHIFT achieved mean heritage coverage of 0.757, digital under-exposure of 0.767, cultural diversity of 0.522, expected suitability of 0.631, and a mean walking distance of 1.973 km. Relative to popularity ranking, it increased heritage coverage by 0.047 and digital under-exposure by 0.448 while reducing walking distance by 0.375 km. Removing the operational gate reduced operational validity from 1.000 to 0.696. Two stored OSMnx routes confirmed pedestrian-network execution within a four-hour budget. A documentary audit of thirteen narrative claims found eleven directly supported claims and two claims retained with explicit qualification, while a detailed audit of four visual records confirmed identity, creator, licence, and publication-suitable resolution for all four audited images.",
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 40,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "heritage, memory, or collections"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [
+          "heritage, memory, or collections"
         ],
         "emotionSignals": [],
         "emotionQualifies": false,
@@ -49738,6 +50366,50 @@
       }
     },
     {
+      "id": "doi:10.1016/j.daach.2026.e00610",
+      "title": "A Quality-Guided AI Framework for UAV–TLS Point Cloud Integration in Archaeological Contexts",
+      "authors": [
+        "Angelo Lorusso",
+        "Michele Pellegrino",
+        "Maria Luigia Rizzo",
+        "Michele Scafuro",
+        "Antonia Serritella"
+      ],
+      "publicationDate": "2026-11-01",
+      "journal": "Digital Applications in Archaeology and Cultural Heritage",
+      "issn": "2212-0548",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/j.daach.2026.e00610",
+      "doiUrl": "https://doi.org/10.1016/j.daach.2026.e00610",
+      "articleUrl": "https://doi.org/10.1016/j.daach.2026.e00610",
+      "journalUrl": "https://www.sciencedirect.com/journal/digital-applications-in-archaeology-and-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": null,
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1016/j.culher.2026.08.009",
       "title": "Collapse mechanisms and conservation strategies for waterlogged archaeological wood: Advances in chemical and structural stabilization",
       "authors": [
@@ -50463,6 +51135,44 @@
       }
     },
     {
+      "id": "doi:10.1016/s1296-2074(26)00244-x",
+      "title": "ours Elsevier",
+      "authors": [],
+      "publicationDate": "2026-11-01",
+      "journal": "Journal of Cultural Heritage",
+      "issn": "1296-2074",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/s1296-2074(26)00244-x",
+      "doiUrl": "https://doi.org/10.1016/s1296-2074(26)00244-x",
+      "articleUrl": "https://doi.org/10.1016/s1296-2074(26)00244-x",
+      "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "82",
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 15,
+        "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
+        "signals": [
+          "Digital & Computational Humanities venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
       "id": "doi:10.1525/tph.2026.48.4.127",
       "title": "Dear America , National Gallery of Art, Washington, DC",
       "authors": [
@@ -50653,6 +51363,45 @@
         "reason": "Excluded because no computational-method evidence was found in the available title, abstract, or topics.",
         "signals": [
           "AI & LLMs in History venue"
+        ],
+        "methodSignals": [],
+        "humanitiesSignals": [],
+        "emotionSignals": [],
+        "emotionQualifies": false,
+        "qualifies": false,
+        "classifier": "rules-v3"
+      }
+    },
+    {
+      "id": "doi:10.1016/s1296-2074(26)00242-6",
+      "title": "Editorial Board",
+      "authors": [],
+      "publicationDate": "2026-11-01",
+      "journal": "Journal of Cultural Heritage",
+      "issn": "1296-2074",
+      "quartile": "Q1",
+      "sjrYear": 2024,
+      "feed": "digital-humanities",
+      "doi": "10.1016/s1296-2074(26)00242-6",
+      "doiUrl": "https://doi.org/10.1016/s1296-2074(26)00242-6",
+      "articleUrl": "https://doi.org/10.1016/s1296-2074(26)00242-6",
+      "journalUrl": "https://www.sciencedirect.com/journal/journal-of-cultural-heritage",
+      "openAccessUrl": null,
+      "openAccessPdfUrl": null,
+      "openAccessStatus": null,
+      "volume": "82",
+      "issue": null,
+      "abstract": null,
+      "topics": [],
+      "metadataSources": [
+        "Crossref"
+      ],
+      "relevance": {
+        "score": 0,
+        "reason": "Excluded as likely editorial, review, correction, or other non-research matter.",
+        "signals": [
+          "Digital & Computational Humanities venue",
+          "non-research item signal"
         ],
         "methodSignals": [],
         "humanitiesSignals": [],
@@ -52928,8 +53677,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study examines how French mainstream newspapers discursively constructed women’s roles and political subjectivity in debates surrounding pension reform between 2013 and 2023. Using a mixed-methods design that combines dynamic topic modelling (DTM) with close reading informed by feminist critical discourse analysis, the study analyses 742 articles from Le Monde and Le Figaro to identify global thematic structures and trace their changing prominence over time. Topic trajectories reveal three phases of women’s representation: an early period here denoted ‘awakened minority’ (2013–16), followed by a period of ‘disciplined visibility’ (2017–21) and subsequently one of ‘diversified collective resistance’ (2022–3). Across these phases, media representations moved from individualized portrayals towards more abstract collectivity and, in later debates, more differentiated and embodied political subjectivity. While pension reform emerged as a key site for the articulation of gendered political consciousness, women’s increased media visibility largely took the form of reactive and conditional recognition, surfacing only when their collective presence became difficult to ignore in the news agenda. Methodologically, this study demonstrates how phase-oriented use of DTM, combined with qualitative close reading, can provide an interpretive framework for identifying historically situated discursive regimes rather than treating topic change as a linear trend. This study offers a replicable approach to analysing gendered representations in large-scale media corpora.",
       "topics": [
         "Gender, Feminism, and Media",
@@ -53080,8 +53829,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The ‘Deutsche Wortatlas’ (DWA), published between 1951 and 1980, is a comprehensive language atlas covering the dialectal lexicon of Germany and Austria at the beginning of the twentieth century. This was based on an indirect dialect survey conducted using questionnaires sent to around 50,000 schools. A pilot study entitled ‘DWA Austria’ was conducted at the Austrian Centre for Digital Humanities to digitize these questionnaires using the artificial intelligence–powered platform Transkribus. The study compared the effectiveness of a general text recognition model and an adapted model for transcribing handwritten text in Kurrent script. The steps involved in building a text recognition model and the time required to do so are presented. A comparison is made between the time required for manual transcription and transcription using the public or specific text recognition model. The role of the character error rate is also discussed in this context. The article is intended as an aid for the preparation of future projects in the field of automatic text recognition and supports the use of customized models by providing both performance benchmarks and time metrics for workflow planning.",
       "topics": [
         "Handwritten Text Recognition Techniques",
@@ -53386,8 +54135,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag135",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Magazine front covers serve as a powerful visual gateway to capturing attention, communicating editorial positions, and reflecting prevailing social values. Despite their recognized influence, front covers of children’s magazines remain understudied, particularly concerning their role in the formation of children’s gender identity through the visual presentation of role models. To address these gaps, this study analysed 150 front covers from Modern Children (1941–51), one of Hong Kong’s most influential children’s literary magazines. Anchored in visual critical discourse analysis, this study applied machine learning to assess the accuracy of gender classification based on visual features, namely the characters’ behaviour, setting, and clothing colours. Ensemble learning achieved around 70 per cent accuracy, indicating notable differences in the representations of female and male characters. Logistic regression revealed the presence of colour stereotypes, whereas behaviour and setting were not significant predictors. The salient presence of females demonstrates strong female visibility, while the frequent portrayals of boys and girls in outdoor activities reflect the magazine’s promotion of play—a departure from traditional education and a response to national crises. This study represents an innovative application of machine learning techniques to the analysis of gender representations. It offers insights into cultural and social norms in Hong Kong in the 1940s and sheds light on how visual representations on magazine covers may contribute to child socialization. The study also illustrates the new research perspective that machine learning brings to critical discourse analysis.",
       "topics": [
         "Media, Gender, and Advertising",
@@ -53482,8 +54231,8 @@
       "openAccessUrl": "https://arxiv.org/abs/2609.17762",
       "openAccessPdfUrl": "https://arxiv.org/pdf/2609.17762",
       "openAccessStatus": "green",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract According to Christian tradition, Luke is credited with authoring a Gospel and the Acts of the Apostles, even if his name does not appear in either book, both originally written in Koine Greek. Several biblical scholars assume that both texts were written by a common author, while others deduce the presence of two authors. Different studies have been found to support either finding, some based on qualitative evaluation, while a few others consider the occurrence frequency differences between the two books. To propose an enhanced quantitative analysis, this study is grounded on two recent authorship attribution models. The Burrows’ Delta, applied with eleven different feature sizes, demonstrates common authorship. An author verification model confirms this finding. The following experiments consider several stylistic representations, feature sizes, and distance functions to confirm that Luke is the true author of both books.",
       "topics": [
         "Authorship Attribution and Profiling",
@@ -65066,8 +65815,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract To promote the modern inheritance and fashion-oriented transformation of traditional Chinese opera costume culture, and address the core issue that existing style transfer techniques fail to simultaneously ensure cultural symbol integrity, costume structural stability, and embroidery craftsmanship fidelity, this study proposes a high-fidelity transfer method for opera costume elements for modern fashion design. The FLUX–Cross-modal Patch-level Style Control (FLUX–CPSC) paradigm is proposed, which includes two core modules: a multimodal hierarchical fusion module and an opera costume-specific Cross-modal Patch-level Style Control–Low-Rank Adaptation (CPSC–LoRA) semantic calibration module. It integrates FLUX-Redux with Segment Anything Model-based segmentation for interference-free core style feature extraction, uses DepthAnythingV2 to construct spatial constraints and obtain modern costume depth features, dynamically allocates text, style, and depth feature fusion weights by constraint priority, generates preliminary transfer images via FLUX sampling, and adopts pretrained CPSC–LoRA for targeted pattern semantic deviation calibration. Experimental results demonstrate that FLUX–CPSC outperforms mainstream methods in both objective metrics and subjective evaluations, and exhibits superior performance in pattern recognizability, color fidelity, and structural retention. This verifies its effectiveness in the high-fidelity transfer of opera costume cultural symbols. Proposing a constraint priority-based multimodal fusion mechanism to resolve feature interference in high-semantic-density tasks. Designing a lightweight CPSC–LoRA module for accurate semantic mapping of opera costume patterns. Integrating FLUX-Redux to realize high-fidelity style transfer under few-shot conditions. It provides a reusable technical paradigm for the digital inheritance of opera costume culture, bridges Chinese opera costume heritage and AI-assisted design, and promotes digital innovation and inheritance of traditional costume elements.",
       "topics": [
         "Generative Adversarial Networks and Image Synthesis",
@@ -65329,8 +66078,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag121",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The suitability of encoder-based and generative language models (E and GLMs) for annotating grammatical phenomena, such as change of grammatical use, is unclear. We explore two instances of grammatical change, one in progress and one almost completed, and compare E and GLM classifiers created to annotate occurrences of these in text. ELMs fine-tuned with a relatively low number of examples achieve similar performance to few-shot GLMs (outperforming GLMs by 3% in one case, and underperforming by 3% in the second). A detailed error analysis shows that some ELM errors are systematic, providing an avenue for improvement of accuracy. An exploration of substitution-based semi-automatic labelling of training data revealed challenges in the use of such approaches for linguistic phenomenon labelling and highlighted the need for manual preparation of training data. GLMs are found to use more examples than expected in a few shot learning setting with limited ability to adjust to small changes of use of training examples. An analysis of misclassifications detected specific linguistic features that affect model performance. These findings point to the value of combining model training with linguistic analysis for both annotation and theoretical insight.",
       "topics": [
         "Natural Language Processing Techniques",
@@ -65589,8 +66338,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study aims to investigate the evolutionary patterns of the Panhu myth among the She people in southeastern China and to explore how mythological variation can provide insights into historical migration and cultural transmission. The research adopts a phylogenetic approach informed by digital humanities and cultural computation. A dataset of thirty-six homologous variants of the Panhu myth is analyzed to reconstruct their lineage relationships. Methods of distant reading and narrative data mining are employed to identify structural patterns and evolutionary trajectories across variants. The analysis identifies three major mythological systems centered in southeastern Guangdong, the Fujian–Guangdong corridor, and the Fujian–Zhejiang corridor. The latter two emerged later and exhibit further internal differentiation. Despite this divergence, continuous interaction among the three systems is evident. Combined with historical and ethnological evidence, the findings suggest that since the Song dynasty, the primary migration route of the She people followed a trajectory from Guangdong through Fujian to Zhejiang, accompanied by sustained cultural exchange. This study integrates phylogenetic modeling with mythological analysis, demonstrating the applicability of computational methods to the study of narrative traditions. It moves beyond traditional qualitative approaches by quantitatively reconstructing myth evolution and linking it to population movement. By applying phylogenetic analysis to mythological corpora, this research highlights the potential of digital humanities methods for uncovering large-scale cultural patterns. It provides a methodological framework for using narrative data to infer migration histories, offering new perspectives for the study of early populations.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -65643,8 +66392,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Eugene O’Neill’s obsession with death is well-known. Many critics have written about the death motif in his plays. However, most studies are based on intuitive knowledge and are qualitative in nature. With a self-developed corpus, a quantitative study of the representation of the death motif in the play The Iceman Cometh is conducted, in combination with turn-taking and semantic domain analyses. It not only maps out the trajectory of the development of the death motif in the play but also confirms the correlation between the Iceman and death. This method opens up a new avenue for digital humanities in O’Neill criticism.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -65890,8 +66639,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Construction and evolution of the clothing color-matching system in the Ming Dynasty represent an important historical accumulation of Chinese clothing culture, holding great value for the inheritance, innovation, and cultural identity of contemporary ethnic costumes. This study established a framework of “color extraction-feature analysis-cultural interpretation,” sorted out figure paintings from the mid-to-late Ming Dynasty, and classified female clothing based on social class and dressing occasion. By adopting the K-means clustering algorithm and combining it with the color network model, this study quantitatively analyzed clothing color features, refined color-matching rules, and explored their influencing factors and cultural connotations. The results showed that, during the mid-to-late Ming Dynasty, there was a significant correlation between female clothing color-matching and dressing occasions, but only a weak correlation with social class. The color-matching rules for ten different types of clothing were summarized. These findings provide theoretical support and practical references for enriching traditional clothing color design paradigms, enhancing relevant theories, and promoting innovative transformation.",
       "topics": [
         "Fashion and Cultural Textiles",
@@ -71197,8 +71946,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Purpose: This study examines how narrative content in detective fiction is associated with indicators of reading immersion, using narrative transportation theory to connect textual topics with readers’ emotional and cognitive responses. Design/methodology/approach: The study analyses 27,999 reader-selected excerpts from 100 highly ranked detective novels on Douban, posted between February 2011 and January 2024. Latent Dirichlet allocation (LDA) was used to identify narrative topics, and a BERT classifier assigned excerpts to the resulting categories. Sentiment dictionaries and the Text Mind system generated emotional and cognitive indicators. Non-parametric tests examined temporal trends and differences across subtopics. Findings: The excerpts formed three narrative dimensions (plot, humanity, and society) and seven subtopics. Plot-related content received consistently high attention; attention to humanity-level content declined over time, whereas attention to society-level content increased. Positive and negative sentiment indicators both rose, and the seven subtopics showed distinct emotional and cognitive profiles. These patterns inform a three-stage interpretive model linking content accessibility, emotional and cognitive engagement, and intellectual extension. Originality: The study moves beyond reviews and self-reports by treating reader-selected excerpts as digital traces of textual salience and by integrating topic modelling, supervised classification, sentiment analysis, and cognitive-semantic analysis. Contribution to the field of digital humanities: It provides a content-sensitive framework and a reproducible computational workflow for investigating how literary form, reader selection, and interpretive response interact at scale.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -71624,8 +72373,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study selects eight registers of modern Japanese: interview, speech, official document, sci-tech text, political commentary, essay, poem, and novel, as corpora. Undirected and unweighted Japanese word co-occurrence networks are constructed using MeCab and Gephi. Based on complex network theory, this paper investigates the small-world and scale-free properties of Japanese linguistic networks. It applies quantitative tools: Erdős-Rényi random network benchmark, small-world index S, two-way analysis of variance, nonlinear fitting, piecewise regression, and Bootstrap resampling. Power-law tests follow the Clauset et al. method. Results indicate network size and register type exert significant main and interaction effects on small-world strength. The theoretically critical node number for small-world emergence is ninety-one, the empirical threshold eighty-nine, both falling within the 95 per cent confidence interval (81–146), confirming consistent theoretical and empirical findings. However, after removing high-frequency function words such as particles and auxiliary verbs, the network S-values are generally lower than 3, the threshold effect disappears, and the small-world property becomes unstable. The small-world property is neither an inherent attribute of the Japanese lexical system nor a direct outcome of the internal structure of word co-occurrence; instead, it heavily relies on the grammatical scaffolding constructed by high-frequency function words serving as hub nodes. Of the 119 sampled networks, 88 per cent pass power-law tests and show standard hierarchical scale-free features: core words form dense hubs, while peripheral words have sparse connections. There exists a moderately weak yet statistically significant correlation between the number of nodes and the power-law exponent. This research provides theoretical and methodological support for stylometry, Japanese structural linguistic analysis, and natural language processing.",
       "topics": [
         "Complex Network Analysis Techniques",
@@ -71931,8 +72680,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract When debunking Serpa Pinto’s exaggerations about the perils encountered in Africa, Hermenegildo Capelo and Roberto Ivens strongly stated he had been accompanied by ‘the best men of the expedition’. But Serpa Pinto was not the only one who had company. An analysis of the two volumes of Capelo and Ivens’ From Benguella to the territory of Yacca reveals the duo was assisted by a vast network of local agents that included guides, porters, translators, and many other natives who contributed to the construction of scientific knowledge and the formation of the collections gathered during their journey. In this article, we use the network visualization software Gephi to map the relationships between the travellers and those mentioned in the travel book to demonstrate the importance of sociability to nineteenth-century scientific expeditions. While kept invisible for most of the historiography on these expeditions, the contributions of local agents have recently been the focus of work centred on circulation. With dedicated software, we can now visualize these networks, bringing into light the social nature of fieldwork.",
       "topics": [
         "History of Science and Natural History",
@@ -73283,8 +74032,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This article examines how anthropomorphism, the attribution of human characteristics to non-human systems, acquires distinctive cultural, ethical, and technological significance in African societies, and develops a relational framework for understanding human–machine interaction that challenges prevailing Western narratives. The study adopts a critical interpretivist, narrative–synthesis approach, drawing on African philosophy, science and technology studies, artificial intelligence (AI) ethics, cultural anthropology, and posthumanism to construct an interpretive account of how technologies are domesticated, reinterpreted, and morally evaluated within African cosmologies. African anthropomorphism is rooted in traditions such as animism, totemism, oral storytelling, and communal ethics, and embodies a relational ontology in which personhood and agency are shared among human and non-human actors. Robots, AI systems, and Information and Communication Technologies are variously interpreted as moral subjects, children-in-training, or spiritually charged instruments, with notable regional variation across West, East, and Southern Africa. The article synthesizes a fragmented body of African scholarship on technology, animism, and relational ethics into a single, sustained framework for anthropomorphism, treating African cosmologies as a primary analytical lens rather than a comparative aside to Euro-American theory. The article contributes to a pluralistic understanding of technology ethics and offers a framework relevant to the design, governance, and study of AI and robotics in culturally diverse settings. This is done by foregrounding African relational epistemologies in debates on human–machine interaction.",
       "topics": [
         "African cultural and philosophical studies",
@@ -73537,8 +74286,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Rhyme is deceptively intuitive: what is or is not a rhyme is constructed historically, scholars struggle with rhyme classification, and people disagree on whether two words are rhymed or not. This complicates automated rhymed recognition and evaluation, especially in cross-language research contexts. This article investigates how much training data are needed for reliable unsupervised rhyme recognition using RhymeTagger, a language-independent tool that identifies rhymes based on repeating patterns in poetry corpora. We evaluate its performance across seven languages (Czech, German, English, French, Italian, Russian, and Slovene), examining how training size and language differences affect accuracy. To set a realistic performance benchmark, we assess inter-annotator agreement on a manually annotated subset of poems and analyze factors contributing to disagreement in expert annotations: phonetic similarity between rhyming words and their distance from each other in a poem. We also compare RhymeTagger to three large language models (LLMs) using a one-shot learning strategy. Our findings show that, once provided with sufficient training data, RhymeTagger consistently outperforms human agreement, while LLMs lacking phonetic representation significantly struggle with the task.",
       "topics": [
         "Natural Language Processing Techniques",
@@ -73970,8 +74719,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag103",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The imperial cult is generally seen as a main instrument used by Roman emperors to ensure their subjects’ fidelity and, at the same time, as a central aspect in the public life of Eastern cities of the Empire that changed dramatically over time. Building on Hellenistic ruler cults that already framed the relationship between rulers and ruled in the Greek-speaking world, Roman emperor worship in the East developed as a polycentric and locally negotiated phenomenon rather than as a top-down imposition by Rome. The aim of this paper is to analyze the relationship between the establishment of Roman rule and the development of the imperial cult in the Greek cities of the Eastern Mediterranean, from 27 BCE to 235 CE. We focus on the Eastern Mediterranean, with particular emphasis on Asia Minor, where evidence for the imperial cult is densest and inter-city competition for imperial honors is most clearly attested. Methodologically, the relationship between emperors, the Greek cities of the Eastern Mediterranean and the sites where emperors were worshiped can be seen as a complex network data structure, and, as such, this paper applies a multimode network approach to chart the evolution of the imperial cult. Following a brief explanation of how the emperor was worshiped, and the political and religious implications of their worship, the paper addresses the dataset constructed and the methodology adopted, before dividing into a discussion of the results. The methodology section includes accessible explanations of key network measures, including betweenness centrality—which identifies nodes that serve as bridges between different parts of the network—and community detection, which reveals clusters of closely connected entities. The final section is devoted to some general conclusions. Considering the inherently incomplete and fragmented nature of evidence related to the ancient world, this approach allows for a more accurate and nuanced comprehension of intricate interactions and dynamics, and it indicates that the imperial cult is best understood as an adaptive, locally driven phenomenon rather than a uniformly imposed state religion.",
       "topics": [
         "Classical Antiquity Studies",
@@ -74125,8 +74874,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract As a significant medium of literary art, overseas Chinese poetry not only conveys the personal emotions of poets but also reflects the social ethos and cultural landscape of specific eras, serving as a century-spanning legacy of nostalgia and memory for overseas Chinese. To address the problems of fragmented emotional semantics and ambiguous emotional attribution correlation in centennial overseas Chinese poetry, this study proposes a knowledge graph (KG) construction framework centered on the emotional context attention mechanism. Through the emotional semantic fusion encoder and poetic entity decoder, the triple of emotion–imagery–author is accurately extracted, and the KG of emotional attribution of overseas Chinese poetry is constructed. The system can realize intelligent retrieval, emotional correlation analysis and trend mining, providing a replicable digital humanities method for the research of overseas Chinese hometown literature and homesickness.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -74228,8 +74977,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Theme, as the core content of literary works, serves as a linguistic style marker, reflecting authorial characteristics. Thematic studies facilitate profound comprehension of literary texts. Thematic concentration, a quantitative linguistic measurement, indicates an author’s intentional emphasis on specific themes, while thematic diversity quantifies the lexical-semantic richness within literary expressions. As a significant branch of Sinophone diaspora literature, Southeast Asian Chinese-language literature constitutes modern Chinese “New Literature” with discernible Chinese cultural imprints. Scholarly investigations in this domain represent a crucial subset of Chinese literary studies. Current research exhibits a paucity of empirical comparative studies regarding stylometric similarities between Southeast Asian Chinese New Poetry and Mainland Chinese New Poetry. This study therefore employs computational stylometry through SPSS 27.0 and Python programming, implementing thematic concentration metrics for cross-regional poetic comparison. Through corpus-driven methodology, integrating high-frequency lexical analysis and Latent Dirichlet Allocation topic modeling, we quantitatively assess thematic configurations. Findings reveal: (1) significantly lower thematic concentration in Southeast Asian works versus Mainland counterparts, indicating a stronger monothematic tendency in Mainland poetry versus polythematic expressions in diaspora creations; (2) divergent thematic salience patterns—Mainland poetry emphasizes quotidian narratives, whereas Southeast Asian works prioritize natural imagery; (3) the inclusion of prose as control texts further elucidates genre-specific thematic distributions between poetic and prose forms.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -74444,8 +75193,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Fashionable clothing has always been associated with cultural identities, self-expression, and social hierarchy in traditional fashion studies. However, established understandings and ways of examining garments, which prioritize symbolic representation in the form of pattern and material, for example, are being expanded due to the impact brought about by continuously developing digital technologies. This research, therefore, focuses on the intersection of bodily experience in digital making, the ‘flattened’ garment in virtual space, and digital fashion design in terms of fashion design education. Digital-only fashion design extends cultural understanding and self-expression into the world of the virtual while reshaping the design process. The article proposes that digital-only fashion design offers a new type of haptic experience in the present-day mixed reality environment. The article examines how digital-only garment design transforms bodily experience, haptic engagement, and spatial meaning-making in virtual environments, while considering the cultural and experiential dimensions of dematerialization. Case studies from the Digital Fashion programme at the Beijing Institute of Fashion Technology (BIFT) are examined to understand how digital-only fashion design involves body–space relation and spatial storytelling to make meaning in the digital world.",
       "topics": [
         "Cultural and Historical Studies",
@@ -81446,8 +82195,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This paper addresses digital humanities and digital humanism by defining, characterizing, and distinguishing them, while also making a critical reflection about the limits of the digital humanities regarding the analogical humanities and quantum humanities. Also, as digital humanities transcend humanities and are practiced by social scientists, we characterize them from the Science and Technology Studies and based on its practice as technosciences. This seek to resolve different discussions that have taken place and those that might arise regarding digital humanities, which must be aware of fashionable nonsenses, which can occur in interdisciplinary projects.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -82360,8 +83109,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study investigates how human participants evaluate the human likeness of Chat Generative Pretrained Transformer (ChatGPT)-generated texts compared to human-authored texts in terms of register alignment and functional appropriateness. It involved eighty-three participants who evaluated four texts (two by ChatGPT and two by humans) representing university textbook and blog registers. Participants answered questions about text authorship, register identification and alignment, and purpose identification and functional appropriateness. Findings showed that participants struggled with identifying ChatGPT-generated texts accurately, with only one ChatGPT text correctly identified by the majority, while they performed better in identifying human-authored texts. Participants were also challenged in identifying the correct register, with no notable differences between human-authored and ChatGPT-generated texts. However, participants generally rated all texts as aligning with their chosen registers, with texts identified as human-authored perceived as more aligned. Moreover, although participants had difficulty distinguishing between human and artificial intelligence (AI)-generated texts and identifying registers, they could successfully recognize the communicative purposes of texts regardless of authorship, which suggests that ChatGPT can convey the communicative purpose of a text. Nonetheless, texts identified as human-authored were perceived as more functionally appropriate. This study provides insights into the current state of AI-generated text quality. The findings suggest caution when considering the integration of ChatGPT-generated texts into language education. While ChatGPT shows potential in providing language practice and development, the perceived lower quality in terms of register alignment and functional appropriateness may affect its effectiveness. Educators should critically evaluate the use of AI-generated texts to ensure they meet the linguistic standards required for educational purposes.",
       "topics": [
         "Discourse Analysis in Language Studies",
@@ -82616,8 +83365,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag064",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The rise of large language models such as ChatGPT has intensified debates about authorship, originality, and integrity in academic and creative writing. Distinguishing between human- and artificial intelligence (AI)-generated texts is therefore not only a technical task but also a pressing concern for the digital humanities, where style, creativity, and attribution remain central. In this study, we adapt stylometric techniques to this new setting, introducing a dataset of paired human- and AI-authored essays across 110 subject areas. We evaluate three established classifiers, analysing how essay length, training data size, and topical variation influence performance, and whether human writing is better represented as a single category or as distinct authorial voices. Our findings show that while AI-generated texts exhibit striking stylistic uniformity, human writing is marked by variability and individuality. This contrast demonstrates both the continuing effectiveness of stylometry for AI detection and its wider relevance for authorship, originality, and voice in the age of generative AI.",
       "topics": [
         "Authorship Attribution and Profiling",
@@ -82724,8 +83473,8 @@
       "openAccessUrl": "https://doi.org/10.1093/llc/fqag080",
       "openAccessPdfUrl": null,
       "openAccessStatus": "hybrid",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract Amateur book reviews published on Digital Social Reading (DSR) platforms play a crucial role in sharing reading experiences and capturing reader preferences. However, little attention has been given to the linguistic features that influence the way reading experiences are conveyed and shape readers’ perceptions of the aspects discussed in reviews. This study addresses this gap by combining Computational Stylometry and Machine Learning techniques to examine how the linguistic features of book reviews combined with the demographic characteristics of review readers impact the reception of book reviews, focusing in particular on three key aspects that might make a book review compelling, namely informativeness, writing style, and enjoyment. To this aim, we relied on a corpus of Italian Goodreads reviews to investigate how amateur reviewers communicate their reading experience and on a survey to collect human judgments about review reception. Additionally, we investigated the extent to which the review style and the demographic characteristics of review readers can predict the different aspects of review perception. Our findings revealed that linguistic characteristics play a crucial role in shaping reader perceptions and are equally or even more predictive than demographic information in automatic classification models. Nevertheless, while demographic factors such as gender and birth year offer limited utility in forming homogeneous reader groups, reading habits emerged as a relevant factor in identifying shared trends among readers. These insights contribute to a deeper understanding of reader involvement in DSR communities and offer valuable insights for both publishers and review platforms in defining book recommender systems.",
       "topics": [
         "Digital Humanities and Scholarship",
@@ -82778,8 +83527,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study aims to systematically examine discourse polarization on Chinese social media through an integrated cognitive and computational lens. It proposes a three-dimensional semantic–structural–strategic framework to capture how linguistic meaning, network structure, and discursive strategy interact to produce polarization in digital discourse. Two highly contentious cases, the Delayed Retirement policy and Yang Li’s endorsement of JD.com, are analyzed across Weibo and Little Red Book. The study focuses on posts containing adversarial language, combining BERTopic clustering, semantic network construction, Louvain community detection, and critical discourse analysis. Structural indicators quantify polarization, while cohesion and fragmentation are assessed through community purity, intra-/inter-community similarity, and cross-community edges. Ten discourse strategies are coded, and sentiment analysis reveals affective feedback mechanisms. Results show that Weibo functions as a mass polarization accelerator, characterized by rapid isolate–integrate cycles and high emotional contagion, whereas Little Red Book exhibits low-intensity, niche polarization grounded in personal narratives. The findings demonstrate a feedback loop between extreme negative emotions and intra-community interaction, reinforcing group boundaries and antagonistic framing. This study develops a novel multidimensional framework that bridges micro-level discursive cognition and macro-level network structure, advancing the methodological integration of computational linguistics and cognitive discourse analysis. By operationalizing semantic, structural, and affective dimensions of online discourse, this research expands digital humanities approaches to include networked cognition and emotion-driven polarization. It provides empirical and conceptual tools for understanding collective meaning-making in digital environments and offers actionable insights for mitigating online hostility through platform-level discourse design.",
       "topics": [
         "Sentiment Analysis and Opinion Mining",
@@ -82890,8 +83639,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract This study examines how traditional Chinese painting (guohua) is framed and diffused through two major Chinese short-form video platforms: Douyin and Red Note. Drawing on framing theory and diffusion of innovations theory, the research examines how narrative and visual framing strategies shape user engagement and content diffusion in digital heritage communication. A dataset of 1,642 videos was collected and coded, and statistical analyses were conducted to test four hypotheses related to framing type, engagement, diffusion, and platform moderation. Results reveal that Douyin predominantly uses entertainment-oriented frames, while Red Note emphasizes educational and esthetic framings. In addition, educational and culturally symbolic content generates significantly higher levels of engagement and broader diffusion than purely performative content, with these effects being especially pronounced on Red Note. These findings highlight the role of platform-specific affordances in shaping the communication of traditional art and provide practical insights for creators and cultural institutions aiming to balance authenticity with algorithmic visibility.",
       "topics": [
         "Media and Digital Communication",
@@ -83195,8 +83944,8 @@
       "openAccessUrl": null,
       "openAccessPdfUrl": null,
       "openAccessStatus": "closed",
-      "volume": null,
-      "issue": null,
+      "volume": "41",
+      "issue": "4",
       "abstract": "Abstract The Sing-Song Girls of Shanghai marks the inception of urban modernity narrative in Chinese literature, and it features the narrative structure of the ‘implicit narration’ and ‘intermittent revelation’. This paper proposes a conceptual model and an operational methodology for dissecting and quantifying this narrative structure. Integrating narrative theory with quantitative text analysis, we identify and extract key markers across three dimensions: character, place, and event. In the character dimension, we analyse word frequency, distribution, and co-occurrence networks among characters. The spatial dimension is examined through kernel density analysis of plot movement, while the event dimension is investigated using character-event and place-event co-occurrence matrices. The results reveal three core mechanisms: (1) Key characters function as agents of ‘intermittent revelation’, bridging disparate narrative threads; (2) Spatial organization is strategically deployed, with the Fourth Avenue brothel district enabling the rapid scene shifts of ‘implicit narration’, and the Conical Hat Garden serving as a consolidated stage for the suspension and reactivation of multiple plots in ‘intermittent revelation’; (3) Drinking parties act as narrative springboards for ‘implicit narration’, while the strategic shift from private encounters to public conversations refines ‘intermittent revelation’ through controlled disclosure and sustained suspense. In summary, this study elucidates how Han Bangqing orchestrated these elements into a distinctive narrative architecture and provides a replicable quantitative framework for analysing narrative structure.",
       "topics": [
         "Narrative Theory and Analysis",
